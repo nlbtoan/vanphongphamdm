@@ -1,0 +1,405 @@
+2011-04-16 13:21:42,734 INFO  [org.jboss.web.WebService] (main) Using RMI server codebase: http://192.168.99.240:8083/
+2011-04-16 13:21:49,515 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) JBoss Web Services - Stack Native Core
+2011-04-16 13:21:49,531 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) 3.1.2.GA
+2011-04-16 13:21:50,000 INFO  [org.jboss.dependency.plugins.AttributeCallbackItem] (main) Owner callback not implemented.
+2011-04-16 13:21:51,343 INFO  [org.jboss.logbridge.LogNotificationListener] (main) Adding notification listener for logging mbean "jboss.system:service=Logging,type=Log4jService" to server org.jboss.mx.server.MBeanServerImpl@9b59a2[ defaultDomain='null' ]
+2011-04-16 13:22:07,734 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@29065712{vfsfile:/D:/jboss-5.1.0.GA/server/all/deploy/profileservice-secured.jar/}
+2011-04-16 13:22:07,734 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@29065712{vfsfile:/D:/jboss-5.1.0.GA/server/all/deploy/profileservice-secured.jar/}
+2011-04-16 13:22:07,734 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@29065712{vfsfile:/D:/jboss-5.1.0.GA/server/all/deploy/profileservice-secured.jar/}
+2011-04-16 13:22:07,734 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@29065712{vfsfile:/D:/jboss-5.1.0.GA/server/all/deploy/profileservice-secured.jar/}
+2011-04-16 13:22:09,140 INFO  [org.jboss.iiop.CorbaNamingService] (main) CORBA Naming Started
+2011-04-16 13:22:12,750 INFO  [org.jboss.mx.remoting.service.JMXConnectorServerService] (main) JMX Connector server: service:jmx:rmi://192.168.99.240/jndi/rmi://192.168.99.240:1090/jmxconnector
+2011-04-16 13:22:13,000 INFO  [org.jboss.mail.MailService] (main) Mail Service bound to java:/Mail
+2011-04-16 13:22:13,640 INFO  [org.jboss.jmx.adaptor.snmp.agent.SnmpAgentService] (main) SNMP agent going active
+2011-04-16 13:22:15,750 INFO  [org.jboss.ha.framework.interfaces.HAPartition.nlbtoan] (main) Initializing partition nlbtoan
+2011-04-16 13:22:15,859 INFO  [STDOUT] (JBoss System Threads(1)-3) 
+---------------------------------------------------------
+GMS: address is 192.168.99.240:2970 (cluster=nlbtoan)
+---------------------------------------------------------
+2011-04-16 13:22:15,921 INFO  [org.jboss.cache.jmx.PlatformMBeanServerRegistration] (main) JBossCache MBeans were successfully registered to the platform mbean server.
+2011-04-16 13:22:15,984 INFO  [STDOUT] (main) 
+---------------------------------------------------------
+GMS: address is 192.168.99.240:2970 (cluster=nlbtoan-HAPartitionCache)
+---------------------------------------------------------
+2011-04-16 13:22:18,906 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:19,000 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:21,921 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:22,015 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:24,921 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:25,015 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:27,921 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:28,015 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:30,937 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:31,031 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:33,937 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:34,031 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:36,937 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:37,031 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:39,953 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:40,046 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:42,953 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:43,046 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:45,953 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:46,046 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:48,968 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:49,062 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:51,968 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:52,062 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:54,968 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:55,062 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:57,984 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:22:58,062 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:00,984 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:01,078 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:03,984 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:04,078 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:07,000 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:07,078 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:10,000 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:10,093 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:13,000 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:13,093 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:16,015 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:16,093 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:19,015 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:19,109 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:22,015 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:22,109 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:25,031 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:25,109 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:28,031 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:28,109 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:31,031 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:31,125 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:34,046 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:34,125 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:37,046 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:37,125 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:40,046 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:40,140 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:43,046 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:43,140 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:46,046 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:46,140 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:49,062 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:49,140 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:52,062 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:52,140 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:55,062 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:55,140 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:58,062 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:23:58,156 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:01,062 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:01,156 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:04,062 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:04,156 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:07,078 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:07,156 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:10,078 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:10,156 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:13,078 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:13,171 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:16,078 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:16,171 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:19,078 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:19,171 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:22,093 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:22,171 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:25,093 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:25,171 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:28,093 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:28,187 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:31,093 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:31,187 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:34,093 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:34,187 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:37,093 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:37,187 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:40,109 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:40,187 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:43,109 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:43,187 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:46,109 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:46,203 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:49,109 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:49,203 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:52,109 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:52,203 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:55,125 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:55,203 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:58,125 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:24:58,203 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:01,125 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:01,218 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:04,125 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:04,218 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:07,125 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:07,218 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:10,140 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:10,218 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:13,140 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:13,234 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:16,140 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:16,234 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:19,140 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:19,234 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:22,140 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:22,234 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:25,140 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:25,234 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:28,156 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:28,250 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:31,156 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:31,250 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:34,156 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:34,250 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:37,156 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:37,250 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:40,156 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:40,250 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:43,203 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:43,250 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:46,234 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:46,281 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:49,234 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:49,296 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:52,234 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:52,296 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:55,250 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:55,296 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:58,250 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:25:58,296 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:01,265 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:01,296 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:04,265 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:04,312 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:07,265 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:07,312 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:10,265 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:10,312 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:13,281 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:13,312 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:16,281 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:16,312 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:19,281 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:19,312 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:22,281 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:22,328 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:25,281 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:25,328 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:28,281 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:28,328 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:31,296 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:31,328 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:34,296 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:34,328 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:37,296 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:37,328 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:40,296 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:40,343 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:43,296 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:43,343 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:46,296 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:46,343 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:49,312 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:49,343 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:52,312 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:52,343 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:55,312 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:55,359 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:58,312 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:26:58,359 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:01,312 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:01,359 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:04,312 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:04,359 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:07,328 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:07,359 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:10,328 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:10,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:13,328 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:13,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:16,328 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:16,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:19,328 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:19,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:22,343 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:22,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:25,343 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:25,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:28,343 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:28,375 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:31,343 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:31,390 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:34,343 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:34,390 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:37,359 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:37,390 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:40,359 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:40,390 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:43,359 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:43,390 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:46,359 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:46,390 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:49,359 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:49,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:52,375 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:52,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:55,375 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:55,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:58,375 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:27:58,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:01,375 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:01,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:04,375 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:04,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:07,390 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:07,406 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:10,390 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:10,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:13,390 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:13,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:16,390 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:16,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:19,406 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:19,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:22,406 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:22,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:25,406 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:25,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:28,406 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:28,421 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:31,406 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:31,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:34,406 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:34,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:37,421 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:37,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:40,421 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:40,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:43,421 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:43,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:46,421 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:46,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:49,421 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:49,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:52,421 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:52,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:55,437 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:55,437 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:58,437 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:28:58,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:01,437 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:01,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:04,437 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:04,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:07,453 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:07,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:10,453 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:10,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:13,453 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:13,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:16,453 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:16,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:19,453 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:19,453 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:22,453 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:22,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:25,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:25,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:28,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:28,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:31,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:31,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:34,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:34,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:37,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:37,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:40,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:40,468 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:43,468 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:43,484 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:46,484 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:46,484 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:49,484 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:49,484 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:50,031 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (JBoss Shutdown Hook) Runtime shutdown hook called, forceHalt: true
+2011-04-16 13:29:50,031 WARN  [org.jboss.system.server.profileservice.ProfileServiceBootstrap] (JBoss Shutdown Hook) Error deactivating profile: ProfileKey@19872ad[domain=default, server=default, name=all]
+org.jboss.profileservice.spi.NoSuchProfileException: No active profile for: ProfileKey@19872ad[domain=default, server=default, name=all]
+	at org.jboss.system.server.profileservice.repository.AbstractProfileService.deactivateProfile(AbstractProfileService.java:391)
+	at org.jboss.system.server.profileservice.ProfileServiceBootstrap.shutdown(ProfileServiceBootstrap.java:327)
+	at org.jboss.bootstrap.AbstractServerImpl.shutdownServer(AbstractServerImpl.java:571)
+	at org.jboss.bootstrap.AbstractServerImpl$ShutdownHook.run(AbstractServerImpl.java:909)
+2011-04-16 13:29:51,296 WARN  [org.jboss.security.plugins.JaasSecurityManagerService] (JBoss Shutdown Hook) Stopping failed jboss.security:service=JaasSecurityManager
+javax.naming.NameNotFoundException: jaas not bound
+	at org.jnp.server.NamingServer.getBinding(NamingServer.java:771)
+	at org.jnp.server.NamingServer.getBinding(NamingServer.java:779)
+	at org.jnp.server.NamingServer.unbind(NamingServer.java:349)
+	at org.jnp.interfaces.NamingContext.unbind(NamingContext.java:871)
+	at org.jnp.interfaces.NamingContext.unbind(NamingContext.java:854)
+	at javax.naming.InitialContext.unbind(InitialContext.java:416)
+	at org.jboss.security.plugins.JaasSecurityManagerService.stopService(JaasSecurityManagerService.java:494)
+	at org.jboss.system.ServiceMBeanSupport.jbossInternalStop(ServiceMBeanSupport.java:405)
+	at org.jboss.system.ServiceMBeanSupport.jbossInternalLifecycle(ServiceMBeanSupport.java:324)
+	at sun.reflect.GeneratedMethodAccessor80.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:25)
+	at java.lang.reflect.Method.invoke(Method.java:597)
+	at org.jboss.mx.interceptor.ReflectedDispatcher.invoke(ReflectedDispatcher.java:157)
+	at org.jboss.mx.server.Invocation.dispatch(Invocation.java:96)
+	at org.jboss.mx.server.Invocation.invoke(Invocation.java:88)
+	at org.jboss.mx.server.AbstractMBeanInvoker.invoke(AbstractMBeanInvoker.java:264)
+	at org.jboss.mx.server.MBeanServerImpl.invoke(MBeanServerImpl.java:668)
+	at org.jboss.system.server.jmx.LazyMBeanServer.invoke(LazyMBeanServer.java:283)
+	at org.jboss.system.microcontainer.ServiceProxy.invoke(ServiceProxy.java:189)
+	at $Proxy38.stop(Unknown Source)
+	at org.jboss.system.microcontainer.StartStopLifecycleAction.uninstallAction(StartStopLifecycleAction.java:56)
+	at org.jboss.system.microcontainer.StartStopLifecycleAction.uninstallAction(StartStopLifecycleAction.java:37)
+	at org.jboss.dependency.plugins.action.SimpleControllerContextAction.simpleUninstallAction(SimpleControllerContextAction.java:79)
+	at org.jboss.dependency.plugins.action.AccessControllerContextAction.uninstall(AccessControllerContextAction.java:131)
+	at org.jboss.dependency.plugins.AbstractControllerContextActions.uninstall(AbstractControllerContextActions.java:58)
+	at org.jboss.dependency.plugins.AbstractControllerContext.uninstall(AbstractControllerContext.java:354)
+	at org.jboss.dependency.plugins.AbstractController.uninstall(AbstractController.java:1664)
+	at org.jboss.dependency.plugins.AbstractController.uninstallContext(AbstractController.java:1275)
+	at org.jboss.dependency.plugins.AbstractController.change(AbstractController.java:827)
+	at org.jboss.dependency.plugins.AbstractController.change(AbstractController.java:553)
+	at org.jboss.system.ServiceController.doChange(ServiceController.java:688)
+	at org.jboss.system.ServiceController.stop(ServiceController.java:510)
+	at org.jboss.system.deployers.ServiceDeployer.stop(ServiceDeployer.java:170)
+	at org.jboss.system.deployers.ServiceDeployer.undeploy(ServiceDeployer.java:150)
+	at org.jboss.system.deployers.ServiceDeployer.undeploy(ServiceDeployer.java:46)
+	at org.jboss.deployers.spi.deployer.helpers.AbstractSimpleRealDeployer.internalUndeploy(AbstractSimpleRealDeployer.java:69)
+	at org.jboss.deployers.spi.deployer.helpers.AbstractRealDeployer.undeploy(AbstractRealDeployer.java:112)
+	at org.jboss.deployers.plugins.deployers.DeployerWrapper.undeploy(DeployerWrapper.java:196)
+	at org.jboss.deployers.plugins.deployers.DeployersImpl.doUndeploy(DeployersImpl.java:1469)
+	at org.jboss.deployers.plugins.deployers.DeployersImpl.doUninstallParentLast(DeployersImpl.java:1376)
+	at org.jboss.deployers.plugins.deployers.DeployersImpl.doUninstallParentLast(DeployersImpl.java:1369)
+	at org.jboss.deployers.plugins.deployers.DeployersImpl.uninstall(DeployersImpl.java:1331)
+	at org.jboss.dependency.plugins.AbstractControllerContext.uninstall(AbstractControllerContext.java:354)
+	at org.jboss.dependency.plugins.AbstractController.uninstall(AbstractController.java:1664)
+	at org.jboss.dependency.plugins.AbstractController.uninstallContext(AbstractController.java:1275)
+	at org.jboss.dependency.plugins.AbstractController.change(AbstractController.java:827)
+	at org.jboss.dependency.plugins.AbstractController.change(AbstractController.java:553)
+	at org.jboss.deployers.plugins.deployers.DeployersImpl.process(DeployersImpl.java:694)
+	at org.jboss.deployers.plugins.main.MainDeployerImpl.process(MainDeployerImpl.java:679)
+	at org.jboss.system.server.profileservice.repository.MainDeployerAdapter.process(MainDeployerAdapter.java:117)
+	at org.jboss.system.server.profileservice.repository.ProfileDeployAction.uninstall(ProfileDeployAction.java:95)
+	at org.jboss.system.server.profileservice.repository.AbstractProfileAction.uninstall(AbstractProfileAction.java:70)
+	at org.jboss.system.server.profileservice.repository.AbstractProfileService.uninstall(AbstractProfileService.java:375)
+	at org.jboss.dependency.plugins.AbstractControllerContext.uninstall(AbstractControllerContext.java:354)
+	at org.jboss.dependency.plugins.AbstractController.uninstall(AbstractController.java:1664)
+	at org.jboss.dependency.plugins.AbstractController.uninstallContext(AbstractController.java:1275)
+	at org.jboss.dependency.plugins.AbstractController.uninstallContext(AbstractController.java:1179)
+	at org.jboss.dependency.plugins.AbstractController.uninstallContext(AbstractController.java:1234)
+	at org.jboss.dependency.plugins.AbstractController.change(AbstractController.java:827)
+	at org.jboss.dependency.plugins.AbstractController.change(AbstractController.java:553)
+	at org.jboss.system.server.profileservice.repository.AbstractProfileService.deactivateProfile(AbstractProfileService.java:402)
+	at org.jboss.system.server.profileservice.ProfileServiceBootstrap.deactivateProfiles(ProfileServiceBootstrap.java:388)
+	at org.jboss.system.server.profileservice.ProfileServiceBootstrap.shutdown(ProfileServiceBootstrap.java:345)
+	at org.jboss.bootstrap.AbstractServerImpl.shutdownServer(AbstractServerImpl.java:571)
+	at org.jboss.bootstrap.AbstractServerImpl$ShutdownHook.run(AbstractServerImpl.java:909)
+2011-04-16 13:29:52,484 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:52,484 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:55,484 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:55,500 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:58,500 WARN  [org.jgroups.protocols.pbcast.GMS] (JBoss System Threads(1)-3) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying
+2011-04-16 13:29:58,500 WARN  [org.jgroups.protocols.pbcast.GMS] (main) join(192.168.99.240:2970) sent to 192.168.95.24:37694 timed out (after 3000 ms), retrying

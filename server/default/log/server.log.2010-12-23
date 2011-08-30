@@ -1,0 +1,72 @@
+2010-12-23 08:20:26,012 INFO  [STDOUT] (http-127.0.0.1-8080-1) ddddddddddddddddddddddddd
+2010-12-23 08:20:34,465 INFO  [STDOUT] (http-127.0.0.1-8080-1) xoaaaaaaaaaaaaaa
+2010-12-23 08:21:09,043 INFO  [javax.servlet.ServletContextListener] (http-127.0.0.1-8080-1) Welcome to Seam 2.1.0.SP1
+2010-12-23 08:21:14,965 WARN  [org.jboss.seam.Component] (http-127.0.0.1-8080-1) Component class should be serializable: org.jboss.seam.ui.facelet.mockHttpSession
+2010-12-23 08:21:15,012 WARN  [org.jboss.seam.security.permission.PersistentPermissionResolver] (http-127.0.0.1-8080-1) no permission store available - please install a PermissionStore with the name 'org.jboss.seam.security.jpaPermissionStore' if persistent permissions are required.
+2010-12-23 08:21:54,012 INFO  [org.jboss.on.embedded.ui.BootstrapAction] (http-127.0.0.1-8080-2) Initializing Administration Console v1.2.0.GA...
+2010-12-23 08:21:55,434 WARN  [org.rhq.core.system.SystemInfoFactory] (http-127.0.0.1-8080-2) System info API not accessible on this platform (native shared library not found in java.library.path).
+2010-12-23 08:21:55,574 INFO  [org.jboss.on.embedded.manager.pc.PluginContainerResourceManager] (http-127.0.0.1-8080-2) Discovering Resources...
+2010-12-23 08:21:57,028 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,028 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,043 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,106 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,106 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,106 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,121 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,121 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:21:57,137 WARN  [org.jboss.managed.plugins.factory.AbstractManagedObjectPopulator] (ResourceDiscoveryComponent.invoker.daemon-1) Cannot create String name from non-Simple property: ManagedProperty{JNDIName,JNDIName,metaType=SimpleMetaType:java.lang.String}, value=null
+2010-12-23 08:23:28,324 INFO  [STDOUT] (RMI TCP Connection(222)-127.0.0.1) ddddddddddddddddddddddddd
+2010-12-23 08:23:34,824 INFO  [STDOUT] (RMI TCP Connection(222)-127.0.0.1) xoaaaaaaaaaaaaaa
+2010-12-23 08:23:38,949 INFO  [STDOUT] (RMI TCP Connection(227)-127.0.0.1) ddddddddddddddddddddddddd
+2010-12-23 08:24:49,137 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-1) A problem has been detected with the connection to remote client 5c4o2r6o-5g23a0-gi0yy63f-1-gi0yy6e9-4, jmsClientID=b-vg6yy0ig-1-f36yy0ig-0a32g5-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2010-12-23 08:25:00,028 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-1) A problem has been detected with the connection to remote client 5c4o2r6o-lve81c-gi0yyeg7-1-gi0yyesc-4, jmsClientID=b-eveyy0ig-1-7geyy0ig-c18evl-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2010-12-23 08:28:11,262 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (JBoss Shutdown Hook) Runtime shutdown hook called, forceHalt: true
+2010-12-23 08:28:11,262 INFO  [org.apache.coyote.http11.Http11Protocol] (JBoss Shutdown Hook) Pausing Coyote HTTP/1.1 on http-127.0.0.1-8080
+2010-12-23 08:28:11,262 INFO  [org.apache.coyote.http11.Http11Protocol] (JBoss Shutdown Hook) Stopping Coyote HTTP/1.1 on http-127.0.0.1-8080
+2010-12-23 08:28:11,262 INFO  [org.apache.coyote.ajp.AjpProtocol] (JBoss Shutdown Hook) Pausing Coyote AJP/1.3 on ajp-127.0.0.1-8009
+2010-12-23 08:28:11,278 INFO  [org.apache.coyote.ajp.AjpProtocol] (JBoss Shutdown Hook) Stopping Coyote AJP/1.3 on ajp-127.0.0.1-8009
+2010-12-23 08:28:11,371 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@d38ce8 undeployed
+2010-12-23 08:28:11,371 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@b19970 undeployed
+2010-12-23 08:28:11,371 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@15f02ff undeployed
+2010-12-23 08:28:11,371 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@19bc302 undeployed
+2010-12-23 08:28:11,387 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/web-console
+2010-12-23 08:28:11,403 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/testDurableTopic] stopped
+2010-12-23 08:28:11,403 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/testTopic] stopped
+2010-12-23 08:28:11,403 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/queueA] stopped
+2010-12-23 08:28:11,403 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/B] stopped
+2010-12-23 08:28:11,403 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/A] stopped
+2010-12-23 08:28:11,418 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/notiMusic] stopped
+2010-12-23 08:28:11,418 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/room1] stopped
+2010-12-23 08:28:11,418 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/ExpiryQueue] stopped
+2010-12-23 08:28:11,418 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/DLQ] stopped
+2010-12-23 08:28:11,434 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2010-12-23 08:28:11,496 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureProfileServiceBean ejbName: SecureProfileService
+2010-12-23 08:28:11,621 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2010-12-23 08:28:11,824 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureDeploymentManager ejbName: SecureDeploymentManager
+2010-12-23 08:28:11,981 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2010-12-23 08:28:11,996 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureManagementView ejbName: SecureManagementView
+2010-12-23 08:28:12,043 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=ConnectionFactoryBinding,name=JmsXA' from JNDI name 'java:JmsXA'
+2010-12-23 08:28:12,059 INFO  [org.jboss.jms.server.ServerPeer] (JBoss Shutdown Hook) JMS ServerPeer[0] stopped
+2010-12-23 08:28:12,074 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/invoker
+2010-12-23 08:28:12,106 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/jbossws
+2010-12-23 08:28:12,121 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/admin-console
+2010-12-23 08:28:12,153 INFO  [org.jboss.on.embedded.ui.BootstrapAction] (JBoss Shutdown Hook) Shutting down Administration Console...
+2010-12-23 08:28:12,168 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/
+2010-12-23 08:28:12,168 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/jmx-console
+2010-12-23 08:28:12,184 INFO  [org.apache.catalina.core.StandardService] (JBoss Shutdown Hook) Stopping service jboss.web
+2010-12-23 08:28:12,246 INFO  [org.jboss.mail.MailService] (JBoss Shutdown Hook) Mail service 'java:/Mail' removed from JNDI
+2010-12-23 08:28:12,356 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=DefaultDS' from JNDI name 'java:DefaultDS'
+2010-12-23 08:28:12,371 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' from JNDI name 'java:MySqlDS'
+2010-12-23 08:28:12,418 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2010-12-23 08:28:12,418 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2010-12-23 08:28:12,434 INFO  [org.quartz.simpl.SimpleThreadPool] (JBoss Shutdown Hook) There are still 40 worker threads active. See javadoc runInThread(Runnable) for a possible explanation
+2010-12-23 08:28:12,434 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2010-12-23 08:28:12,762 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (JBoss Shutdown Hook) Stopping transaction recovery manager
+2010-12-23 08:28:12,762 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (JBoss Shutdown Hook) Destroying TransactionManagerService
+2010-12-23 08:28:13,215 INFO  [org.jboss.jdbc.HypersonicDatabase] (JBoss Shutdown Hook) Database standalone closed clean
+2010-12-23 08:28:13,231 INFO  [org.springframework.context.support.ClassPathXmlApplicationContext] (JBoss Shutdown Hook) Closing org.springframework.context.support.ClassPathXmlApplicationContext@b9cb6f: startup date [Wed Dec 22 16:27:45 GMT+07:00 2010]; root of context hierarchy
+2010-12-23 08:28:13,231 INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] (JBoss Shutdown Hook) Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@15b734b: defining beans [jndiTemplate,jmsTopicConnectionFactory,sendDestination,jmsTemplate,jmsSender,musicSessionFactory,musicManagement,mbeanServer,exporter]; root of factory hierarchy
+2010-12-23 08:28:13,231 INFO  [org.springframework.jmx.export.MBeanExporter] (JBoss Shutdown Hook) Unregistering JMX-exposed beans on shutdown
+2010-12-23 08:28:13,246 INFO  [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] (JBoss Shutdown Hook) Closing Hibernate SessionFactory
+2010-12-23 08:28:13,246 INFO  [org.hibernate.impl.SessionFactoryImpl] (JBoss Shutdown Hook) closing
+2010-12-23 08:28:17,496 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (JBoss Shutdown Hook) Shutdown complete

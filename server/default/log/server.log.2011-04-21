@@ -1,0 +1,906 @@
+2011-04-21 10:08:24,046 INFO  [org.jboss.web.WebService] (main) Using RMI server codebase: http://192.168.99.240:8083/
+2011-04-21 10:08:30,921 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) JBoss Web Services - Stack Native Core
+2011-04-21 10:08:30,921 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) 3.1.2.GA
+2011-04-21 10:08:31,328 INFO  [org.jboss.dependency.plugins.AttributeCallbackItem] (main) Owner callback not implemented.
+2011-04-21 10:08:32,406 INFO  [org.jboss.logbridge.LogNotificationListener] (main) Adding notification listener for logging mbean "jboss.system:service=Logging,type=Log4jService" to server org.jboss.mx.server.MBeanServerImpl@9b59a2[ defaultDomain='null' ]
+2011-04-21 10:08:46,593 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@15900710{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 10:08:46,593 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@15900710{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 10:08:46,593 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@15900710{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 10:08:46,593 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@15900710{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 10:08:50,109 INFO  [org.jboss.mx.remoting.service.JMXConnectorServerService] (main) JMX Connector server: service:jmx:rmi://192.168.99.240/jndi/rmi://192.168.99.240:1090/jmxconnector
+2011-04-21 10:08:50,281 INFO  [org.jboss.mail.MailService] (main) Mail Service bound to java:/Mail
+2011-04-21 10:08:52,359 WARN  [org.jboss.jms.server.jbosssx.JBossASSecurityMetadataStore] (main) WARNING! POTENTIAL SECURITY RISK. It has been detected that the MessageSucker component which sucks messages from one node to another has not had its password changed from the installation default. Please see the JBoss Messaging user guide for instructions on how to do this.
+2011-04-21 10:08:52,375 WARN  [org.jboss.annotation.factory.AnnotationCreator] (main) No ClassLoader provided, using TCCL: org.jboss.managed.api.annotation.ManagementComponent
+2011-04-21 10:08:52,453 WARN  [org.jboss.annotation.factory.AnnotationCreator] (main) No ClassLoader provided, using TCCL: org.jboss.managed.api.annotation.ManagementComponent
+2011-04-21 10:08:52,531 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) JBossTS Transaction Service (JTA version - tag:JBOSSTS_4_6_1_GA) - JBoss Inc.
+2011-04-21 10:08:52,531 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Setting up property manager MBean and JMX layer
+2011-04-21 10:08:52,812 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Initializing recovery manager
+2011-04-21 10:08:53,359 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Recovery manager configured
+2011-04-21 10:08:53,359 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Binding TransactionManager JNDI Reference
+2011-04-21 10:08:53,390 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Starting transaction recovery manager
+2011-04-21 10:08:53,843 INFO  [org.apache.catalina.core.AprLifecycleListener] (main) The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_21\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Java\jdk1.6.0_21\bin;D:\apache-ant-1.8.1\bin;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\ESTsoft\ALZip;C:\Program Files\ESTsoft\ALZip
+2011-04-21 10:08:53,906 INFO  [org.apache.coyote.http11.Http11Protocol] (main) Initializing Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 10:08:53,906 INFO  [org.apache.coyote.ajp.AjpProtocol] (main) Initializing Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 10:08:53,953 INFO  [org.apache.catalina.core.StandardService] (main) Starting service jboss.web
+2011-04-21 10:08:53,953 INFO  [org.apache.catalina.core.StandardEngine] (main) Starting Servlet Engine: JBoss Web/2.1.3.GA
+2011-04-21 10:08:53,984 INFO  [org.apache.catalina.startup.Catalina] (main) Server startup in 79 ms
+2011-04-21 10:08:54,000 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/web-console
+2011-04-21 10:08:54,953 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/invoker
+2011-04-21 10:08:55,015 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/jbossws
+2011-04-21 10:08:55,109 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jboss-local-jdbc.rar/META-INF/ra.xml
+2011-04-21 10:08:55,125 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jboss-xa-jdbc.rar/META-INF/ra.xml
+2011-04-21 10:08:55,156 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jms-ra.rar/META-INF/ra.xml
+2011-04-21 10:08:55,171 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/mail-ra.rar/META-INF/ra.xml
+2011-04-21 10:08:55,203 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/quartz-ra.rar/META-INF/ra.xml
+2011-04-21 10:08:55,296 INFO  [org.quartz.simpl.SimpleThreadPool] (main) Job execution threads will use class loader of thread: main
+2011-04-21 10:08:55,312 INFO  [org.quartz.core.QuartzScheduler] (main) Quartz Scheduler v.1.5.2 created.
+2011-04-21 10:08:55,328 INFO  [org.quartz.simpl.RAMJobStore] (main) RAMJobStore initialized.
+2011-04-21 10:08:55,328 INFO  [org.quartz.impl.StdSchedulerFactory] (main) Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2011-04-21 10:08:55,328 INFO  [org.quartz.impl.StdSchedulerFactory] (main) Quartz scheduler version: 1.5.2
+2011-04-21 10:08:55,328 INFO  [org.quartz.core.QuartzScheduler] (main) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2011-04-21 10:08:55,968 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=DefaultDS' to JNDI name 'java:DefaultDS'
+2011-04-21 10:08:56,578 INFO  [org.jboss.jms.server.ServerPeer] (main) JBoss Messaging 1.4.3.GA server [0] started
+2011-04-21 10:08:56,671 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/testDurableTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,687 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/ExpiryQueue] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,687 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/testTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,687 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/queueA] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@f1d7a8 started
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactoryJNDIMapper] (main) supportsFailover attribute is true on connection factory: jboss.messaging.connectionfactory:service=ClusteredConnectionFactory but post office is non clustered. So connection factory will *not* support failover
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactoryJNDIMapper] (main) supportsLoadBalancing attribute is true on connection factory: jboss.messaging.connectionfactory:service=ClusteredConnectionFactory but post office is non clustered. So connection factory will *not* support load balancing
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@1d0f59a started
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/room1] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,734 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/notiChat] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@1e8ff29 started
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/A] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/B] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@ea348e started
+2011-04-21 10:08:56,750 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/DLQ] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 10:08:56,828 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=ConnectionFactoryBinding,name=JmsXA' to JNDI name 'java:JmsXA'
+2011-04-21 10:08:56,875 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' to JNDI name 'java:MySqlDS'
+2011-04-21 10:08:56,968 INFO  [org.springframework.context.support.ClassPathXmlApplicationContext] (main) Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@105b710: startup date [Thu Apr 21 10:08:56 GMT+07:00 2011]; root of context hierarchy
+2011-04-21 10:08:57,078 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] (main) Loading XML bean definitions from class path resource [META-INF/spring-jms.xml]
+2011-04-21 10:08:57,265 INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] (main) Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@17d93a9: defining beans [jndiTemplate,jmsTopicConnectionFactory,sendDestination,jmsTemplate,jmsSender,userSessionFactory,userDAO,userManagement,mbeanServer,exporter]; root of factory hierarchy
+2011-04-21 10:08:57,546 INFO  [org.hibernate.cfg.annotations.Version] (main) Hibernate Annotations 3.4.0.GA
+2011-04-21 10:08:57,562 INFO  [org.hibernate.cfg.Environment] (main) Hibernate 3.3.1.GA
+2011-04-21 10:08:57,578 INFO  [org.hibernate.cfg.Environment] (main) hibernate.properties not found
+2011-04-21 10:08:57,578 INFO  [org.hibernate.cfg.Environment] (main) Bytecode provider name : javassist
+2011-04-21 10:08:57,578 INFO  [org.hibernate.cfg.Environment] (main) using JDK 1.4 java.sql.Timestamp handling
+2011-04-21 10:08:57,687 INFO  [org.hibernate.annotations.common.Version] (main) Hibernate Commons Annotations 3.1.0.GA
+2011-04-21 10:08:57,750 INFO  [org.hibernate.cfg.AnnotationBinder] (main) Binding entity from annotated class: tma.com.vn.chat.server.app.User
+2011-04-21 10:08:57,812 INFO  [org.hibernate.cfg.annotations.EntityBinder] (main) Bind entity tma.com.vn.chat.server.app.User on table UserChat
+2011-04-21 10:08:57,875 INFO  [org.hibernate.validator.Version] (main) Hibernate Validator 3.1.0.GA
+2011-04-21 10:08:57,906 INFO  [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] (main) Building new Hibernate SessionFactory
+2011-04-21 10:08:57,921 INFO  [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] (main) Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2011-04-21 10:08:58,031 INFO  [org.hibernate.util.NamingHelper] (main) JNDI InitialContext properties:{}
+2011-04-21 10:08:58,031 INFO  [org.hibernate.connection.DatasourceConnectionProvider] (main) Using datasource: java:MySqlDS
+2011-04-21 10:08:58,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) RDBMS: MySQL, version: 5.1.47-community
+2011-04-21 10:08:58,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.13 ( Revision: ${bzr.revision-id} )
+2011-04-21 10:08:58,453 INFO  [org.hibernate.dialect.Dialect] (main) Using dialect: org.hibernate.dialect.MySQLDialect
+2011-04-21 10:08:58,468 INFO  [org.hibernate.transaction.TransactionFactoryFactory] (main) Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2011-04-21 10:08:58,468 INFO  [org.hibernate.transaction.TransactionManagerLookupFactory] (main) No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Automatic flush during beforeCompletion(): disabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Automatic session close at end of transaction: disabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC batch size: 15
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC batch updates for versioned data: disabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Scrollable result sets: enabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC3 getGeneratedKeys(): enabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Connection release mode: auto
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Maximum outer join fetch depth: 2
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Default batch fetch size: 1
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Generate SQL with comments: disabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Order SQL updates by primary key: enabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Order SQL inserts for batching: disabled
+2011-04-21 10:08:58,468 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2011-04-21 10:08:58,484 INFO  [org.hibernate.hql.ast.ASTQueryTranslatorFactory] (main) Using ASTQueryTranslatorFactory
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query language substitutions: {}
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) JPA-QL strict compliance: disabled
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) Second-level cache: enabled
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query cache: disabled
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) Optimize cache for minimal puts: disabled
+2011-04-21 10:08:58,484 INFO  [org.hibernate.cfg.SettingsFactory] (main) Structured second-level cache entries: disabled
+2011-04-21 10:08:58,500 INFO  [org.hibernate.cfg.SettingsFactory] (main) Statistics: disabled
+2011-04-21 10:08:58,500 INFO  [org.hibernate.cfg.SettingsFactory] (main) Deleted entity synthetic identifier rollback: disabled
+2011-04-21 10:08:58,500 INFO  [org.hibernate.cfg.SettingsFactory] (main) Default entity-mode: pojo
+2011-04-21 10:08:58,500 INFO  [org.hibernate.cfg.SettingsFactory] (main) Named query checking : enabled
+2011-04-21 10:08:58,593 INFO  [org.hibernate.impl.SessionFactoryImpl] (main) building session factory
+2011-04-21 10:08:58,843 INFO  [org.hibernate.impl.SessionFactoryObjectFactory] (main) Not binding factory to JNDI, no JNDI name configured
+2011-04-21 10:08:58,843 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) Running hbm2ddl schema update
+2011-04-21 10:08:58,843 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) fetching database metadata
+2011-04-21 10:08:58,859 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) updating schema
+2011-04-21 10:08:58,937 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) table found: userchats.userchat
+2011-04-21 10:08:58,937 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) columns: [passwd, username]
+2011-04-21 10:08:58,937 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) foreign keys: []
+2011-04-21 10:08:58,937 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) indexes: [username, primary]
+2011-04-21 10:08:58,937 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) schema update complete
+2011-04-21 10:08:59,046 INFO  [org.springframework.jmx.export.MBeanExporter] (main) Registering beans for JMX exposure on startup
+2011-04-21 10:08:59,062 INFO  [org.springframework.jmx.export.MBeanExporter] (main) Located managed bean 'ServerChat:service=UserManagement': registering with JMX server as MBean [ServerChat:service=UserManagement]
+2011-04-21 10:08:59,468 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Created KernelDeployment for: profileservice-secured.jar
+2011-04-21 10:08:59,468 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 10:08:59,468 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 10:08:59,468 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.profileservice.spi.ProfileService
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureProfileService/remote
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureProfileService/remote-org.jboss.profileservice.spi.ProfileService
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 10:08:59,484 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureDeploymentManager/remote-org.jboss.deployers.spi.management.deploy.DeploymentManager
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.deployers.spi.management.deploy.DeploymentManager
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureDeploymentManager/remote
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.deployers.spi.management.ManagementView
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@192f987{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@1d951dc{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 10:08:59,500 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@1123549{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 10:08:59,781 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 10:08:59,796 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureDeploymentManager ejbName: SecureDeploymentManager
+2011-04-21 10:08:59,843 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureDeploymentManager/remote - EJB3.x Default Remote Business Interface
+	SecureDeploymentManager/remote-org.jboss.deployers.spi.management.deploy.DeploymentManager - EJB3.x Remote Business Interface
+
+2011-04-21 10:08:59,937 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 10:08:59,937 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureManagementView ejbName: SecureManagementView
+2011-04-21 10:08:59,968 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureManagementView/remote - EJB3.x Default Remote Business Interface
+	SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView - EJB3.x Remote Business Interface
+
+2011-04-21 10:09:00,140 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 10:09:00,140 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureProfileServiceBean ejbName: SecureProfileService
+2011-04-21 10:09:00,171 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureProfileService/remote - EJB3.x Default Remote Business Interface
+	SecureProfileService/remote-org.jboss.profileservice.spi.ProfileService - EJB3.x Remote Business Interface
+
+2011-04-21 10:09:00,437 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/admin-console
+2011-04-21 10:09:00,562 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (main) Initializing Mojarra (1.2_12-b01-FCS) for context '/admin-console'
+2011-04-21 10:09:03,031 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/
+2011-04-21 10:09:03,125 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/jmx-console
+2011-04-21 10:09:03,218 INFO  [org.apache.coyote.http11.Http11Protocol] (main) Starting Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 10:09:03,234 INFO  [org.apache.coyote.ajp.AjpProtocol] (main) Starting Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 10:09:03,250 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (main) JBoss (Microcontainer) [5.1.0.GA (build: SVNTag=JBoss_5_1_0_GA date=200905221634)] Started in 47s:782ms
+2011-04-21 10:10:19,750 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(8)-192.168.99.37) Check login
+2011-04-21 10:10:22,953 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(8)-192.168.99.37) Check login
+2011-04-21 10:10:35,234 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(11)-192.168.99.37) Check login
+2011-04-21 10:13:33,312 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(19)-192.168.99.37) Check login
+2011-04-21 10:17:10,062 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(36)-192.168.99.37) Check login
+2011-04-21 10:19:47,406 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(44)-192.168.99.37) Check login
+2011-04-21 10:19:53,765 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(47)-192.168.99.37) Check login
+2011-04-21 10:21:52,671 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(54)-192.168.99.37) Check login
+2011-04-21 10:22:04,640 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(57)-192.168.99.37) Check login
+2011-04-21 10:24:33,375 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(63)-192.168.99.37) Check login
+2011-04-21 10:25:07,734 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(68)-192.168.99.37) Check login
+2011-04-21 10:25:18,265 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(71)-192.168.99.37) Check login
+2011-04-21 10:28:12,359 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(75)-192.168.99.37) Check login
+2011-04-21 10:28:18,093 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(78)-192.168.99.37) Check login
+2011-04-21 10:31:36,062 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(84)-192.168.99.205) Check login
+2011-04-21 10:32:00,015 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(87)-192.168.99.205) Check login
+2011-04-21 10:47:47,343 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(99)-192.168.99.205) Check login
+2011-04-21 10:48:17,359 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(102)-192.168.99.205) Check login
+2011-04-21 10:51:27,968 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-47oxfr-gmr5n52l-1-gmr5n5dg-4, jmsClientID=b-qo5n5rmg-1-l25n5rmg-rfxo74-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 10:53:58,046 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-sb2bd8-gmr5nsaj-1-gmr5nsky-4, jmsClientID=b-8wsn5rmg-1-jasn5rmg-8db2bs-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 10:59:48,000 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(119)-192.168.99.205) Check login
+2011-04-21 11:00:48,375 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(123)-192.168.99.205) Check login
+2011-04-21 11:09:11,218 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(144)-192.168.99.205) Check login
+2011-04-21 11:09:33,203 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(147)-192.168.99.205) Check login
+2011-04-21 11:11:21,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(153)-192.168.99.37) Check login
+2011-04-21 11:11:30,875 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(157)-192.168.99.37) Check login
+2011-04-21 11:15:13,671 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-nl6swx-gmr6f4ps-1-gmr6f4vf-4, jmsClientID=b-705f6rmg-1-sp4f6rmg-xws6ln-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 11:16:32,828 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(172)-192.168.99.205) Check login
+2011-04-21 11:16:51,937 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(175)-192.168.99.205) Check login
+2011-04-21 11:19:52,421 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-atrjvg-gmr6oj9a-1-gmr6ojex-4, jmsClientID=b-pjjo6rmg-1-a9jo6rmg-gvjrta-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 11:20:49,656 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(184)-192.168.99.37) Check login
+2011-04-21 11:20:56,000 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(187)-192.168.99.37) Check login
+2011-04-21 11:22:36,609 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(194)-192.168.99.37) Check login
+2011-04-21 11:22:43,109 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(197)-192.168.99.37) Check login
+2011-04-21 11:27:00,296 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(203)-192.168.99.37) Check login
+2011-04-21 11:31:08,562 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(211)-192.168.99.37) Check login
+2011-04-21 11:37:49,546 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(224)-192.168.99.37) Check login
+2011-04-21 11:39:21,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(231)-192.168.99.37) Check login
+2011-04-21 11:44:29,968 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(240)-192.168.99.37) Check login
+2011-04-21 11:51:14,953 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(247)-192.168.99.37) Check login
+2011-04-21 11:51:58,750 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(250)-192.168.99.37) Check login
+2011-04-21 11:54:42,562 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(254)-192.168.99.205) Check login
+2011-04-21 11:54:59,296 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(257)-192.168.99.205) Check login
+2011-04-21 12:38:06,937 INFO  [org.jboss.web.WebService] (main) Using RMI server codebase: http://192.168.99.240:8083/
+2011-04-21 12:38:14,296 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) JBoss Web Services - Stack Native Core
+2011-04-21 12:38:14,296 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) 3.1.2.GA
+2011-04-21 12:38:14,984 INFO  [org.jboss.dependency.plugins.AttributeCallbackItem] (main) Owner callback not implemented.
+2011-04-21 12:38:15,984 INFO  [org.jboss.logbridge.LogNotificationListener] (main) Adding notification listener for logging mbean "jboss.system:service=Logging,type=Log4jService" to server org.jboss.mx.server.MBeanServerImpl@119db9e[ defaultDomain='null' ]
+2011-04-21 12:38:32,500 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@9161283{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 12:38:32,500 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@9161283{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 12:38:32,500 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@9161283{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 12:38:32,500 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@9161283{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 12:38:35,625 INFO  [org.jboss.mx.remoting.service.JMXConnectorServerService] (main) JMX Connector server: service:jmx:rmi://192.168.99.240/jndi/rmi://192.168.99.240:1090/jmxconnector
+2011-04-21 12:38:35,734 INFO  [org.jboss.mail.MailService] (main) Mail Service bound to java:/Mail
+2011-04-21 12:38:37,609 WARN  [org.jboss.jms.server.jbosssx.JBossASSecurityMetadataStore] (main) WARNING! POTENTIAL SECURITY RISK. It has been detected that the MessageSucker component which sucks messages from one node to another has not had its password changed from the installation default. Please see the JBoss Messaging user guide for instructions on how to do this.
+2011-04-21 12:38:37,625 WARN  [org.jboss.annotation.factory.AnnotationCreator] (main) No ClassLoader provided, using TCCL: org.jboss.managed.api.annotation.ManagementComponent
+2011-04-21 12:38:37,687 WARN  [org.jboss.annotation.factory.AnnotationCreator] (main) No ClassLoader provided, using TCCL: org.jboss.managed.api.annotation.ManagementComponent
+2011-04-21 12:38:37,765 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) JBossTS Transaction Service (JTA version - tag:JBOSSTS_4_6_1_GA) - JBoss Inc.
+2011-04-21 12:38:37,765 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Setting up property manager MBean and JMX layer
+2011-04-21 12:38:38,031 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Initializing recovery manager
+2011-04-21 12:38:38,250 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Recovery manager configured
+2011-04-21 12:38:38,250 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Binding TransactionManager JNDI Reference
+2011-04-21 12:38:38,281 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Starting transaction recovery manager
+2011-04-21 12:38:38,843 INFO  [org.apache.catalina.core.AprLifecycleListener] (main) The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_21\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Java\jdk1.6.0_21\bin;D:\apache-ant-1.8.1\bin;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\ESTsoft\ALZip;C:\Program Files\ESTsoft\ALZip
+2011-04-21 12:38:38,906 INFO  [org.apache.coyote.http11.Http11Protocol] (main) Initializing Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 12:38:38,921 INFO  [org.apache.coyote.ajp.AjpProtocol] (main) Initializing Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 12:38:38,953 INFO  [org.apache.catalina.core.StandardService] (main) Starting service jboss.web
+2011-04-21 12:38:38,953 INFO  [org.apache.catalina.core.StandardEngine] (main) Starting Servlet Engine: JBoss Web/2.1.3.GA
+2011-04-21 12:38:38,984 INFO  [org.apache.catalina.startup.Catalina] (main) Server startup in 73 ms
+2011-04-21 12:38:39,015 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/web-console
+2011-04-21 12:38:40,031 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/invoker
+2011-04-21 12:38:40,125 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/jbossws
+2011-04-21 12:38:40,218 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jboss-local-jdbc.rar/META-INF/ra.xml
+2011-04-21 12:38:40,234 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jboss-xa-jdbc.rar/META-INF/ra.xml
+2011-04-21 12:38:40,265 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jms-ra.rar/META-INF/ra.xml
+2011-04-21 12:38:40,281 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/mail-ra.rar/META-INF/ra.xml
+2011-04-21 12:38:40,312 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/quartz-ra.rar/META-INF/ra.xml
+2011-04-21 12:38:40,390 INFO  [org.quartz.simpl.SimpleThreadPool] (main) Job execution threads will use class loader of thread: main
+2011-04-21 12:38:40,421 INFO  [org.quartz.core.QuartzScheduler] (main) Quartz Scheduler v.1.5.2 created.
+2011-04-21 12:38:40,421 INFO  [org.quartz.simpl.RAMJobStore] (main) RAMJobStore initialized.
+2011-04-21 12:38:40,421 INFO  [org.quartz.impl.StdSchedulerFactory] (main) Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2011-04-21 12:38:40,421 INFO  [org.quartz.impl.StdSchedulerFactory] (main) Quartz scheduler version: 1.5.2
+2011-04-21 12:38:40,421 INFO  [org.quartz.core.QuartzScheduler] (main) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2011-04-21 12:38:41,281 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=DefaultDS' to JNDI name 'java:DefaultDS'
+2011-04-21 12:38:41,828 INFO  [org.jboss.jms.server.ServerPeer] (main) JBoss Messaging 1.4.3.GA server [0] started
+2011-04-21 12:38:41,968 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 12:38:41,968 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@15f02ff started
+2011-04-21 12:38:41,968 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 12:38:41,968 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@480241 started
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/ExpiryQueue] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/testTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@10abe66 started
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/DLQ] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/B] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:41,984 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/room1] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/queueA] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactoryJNDIMapper] (main) supportsFailover attribute is true on connection factory: jboss.messaging.connectionfactory:service=ClusteredConnectionFactory but post office is non clustered. So connection factory will *not* support failover
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactoryJNDIMapper] (main) supportsLoadBalancing attribute is true on connection factory: jboss.messaging.connectionfactory:service=ClusteredConnectionFactory but post office is non clustered. So connection factory will *not* support load balancing
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@be0018 started
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/A] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/notiChat] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:42,000 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/testDurableTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 12:38:42,078 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=ConnectionFactoryBinding,name=JmsXA' to JNDI name 'java:JmsXA'
+2011-04-21 12:38:42,140 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' to JNDI name 'java:MySqlDS'
+2011-04-21 12:38:42,250 INFO  [org.springframework.context.support.ClassPathXmlApplicationContext] (main) Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@1363a43: startup date [Thu Apr 21 12:38:42 GMT+07:00 2011]; root of context hierarchy
+2011-04-21 12:38:42,468 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] (main) Loading XML bean definitions from class path resource [META-INF/spring-jms.xml]
+2011-04-21 12:38:42,640 INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] (main) Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1e47e65: defining beans [jndiTemplate,jmsTopicConnectionFactory,sendDestination,jmsTemplate,jmsSender,userSessionFactory,userDAO,userManagement,mbeanServer,exporter]; root of factory hierarchy
+2011-04-21 12:38:42,875 INFO  [org.hibernate.cfg.annotations.Version] (main) Hibernate Annotations 3.4.0.GA
+2011-04-21 12:38:42,890 INFO  [org.hibernate.cfg.Environment] (main) Hibernate 3.3.1.GA
+2011-04-21 12:38:42,906 INFO  [org.hibernate.cfg.Environment] (main) hibernate.properties not found
+2011-04-21 12:38:42,906 INFO  [org.hibernate.cfg.Environment] (main) Bytecode provider name : javassist
+2011-04-21 12:38:42,906 INFO  [org.hibernate.cfg.Environment] (main) using JDK 1.4 java.sql.Timestamp handling
+2011-04-21 12:38:43,015 INFO  [org.hibernate.annotations.common.Version] (main) Hibernate Commons Annotations 3.1.0.GA
+2011-04-21 12:38:43,093 INFO  [org.hibernate.cfg.AnnotationBinder] (main) Binding entity from annotated class: tma.com.vn.chat.server.app.User
+2011-04-21 12:38:43,156 INFO  [org.hibernate.cfg.annotations.EntityBinder] (main) Bind entity tma.com.vn.chat.server.app.User on table UserChat
+2011-04-21 12:38:43,234 INFO  [org.hibernate.validator.Version] (main) Hibernate Validator 3.1.0.GA
+2011-04-21 12:38:43,250 INFO  [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] (main) Building new Hibernate SessionFactory
+2011-04-21 12:38:43,265 INFO  [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] (main) Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2011-04-21 12:38:43,359 INFO  [org.hibernate.util.NamingHelper] (main) JNDI InitialContext properties:{}
+2011-04-21 12:38:43,359 INFO  [org.hibernate.connection.DatasourceConnectionProvider] (main) Using datasource: java:MySqlDS
+2011-04-21 12:38:43,750 INFO  [org.hibernate.cfg.SettingsFactory] (main) RDBMS: MySQL, version: 5.1.47-community
+2011-04-21 12:38:43,750 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.13 ( Revision: ${bzr.revision-id} )
+2011-04-21 12:38:43,796 INFO  [org.hibernate.dialect.Dialect] (main) Using dialect: org.hibernate.dialect.MySQLDialect
+2011-04-21 12:38:43,812 INFO  [org.hibernate.transaction.TransactionFactoryFactory] (main) Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2011-04-21 12:38:43,812 INFO  [org.hibernate.transaction.TransactionManagerLookupFactory] (main) No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Automatic flush during beforeCompletion(): disabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Automatic session close at end of transaction: disabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC batch size: 15
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC batch updates for versioned data: disabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Scrollable result sets: enabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC3 getGeneratedKeys(): enabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Connection release mode: auto
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Maximum outer join fetch depth: 2
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Default batch fetch size: 1
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Generate SQL with comments: disabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Order SQL updates by primary key: enabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Order SQL inserts for batching: disabled
+2011-04-21 12:38:43,812 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2011-04-21 12:38:43,828 INFO  [org.hibernate.hql.ast.ASTQueryTranslatorFactory] (main) Using ASTQueryTranslatorFactory
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query language substitutions: {}
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) JPA-QL strict compliance: disabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Second-level cache: enabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query cache: disabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Optimize cache for minimal puts: disabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Structured second-level cache entries: disabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Statistics: disabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Deleted entity synthetic identifier rollback: disabled
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Default entity-mode: pojo
+2011-04-21 12:38:43,828 INFO  [org.hibernate.cfg.SettingsFactory] (main) Named query checking : enabled
+2011-04-21 12:38:43,906 INFO  [org.hibernate.impl.SessionFactoryImpl] (main) building session factory
+2011-04-21 12:38:44,640 INFO  [org.hibernate.impl.SessionFactoryObjectFactory] (main) Not binding factory to JNDI, no JNDI name configured
+2011-04-21 12:38:44,656 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) Running hbm2ddl schema update
+2011-04-21 12:38:44,656 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) fetching database metadata
+2011-04-21 12:38:44,656 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) updating schema
+2011-04-21 12:38:44,734 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) table found: userchats.userchat
+2011-04-21 12:38:44,734 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) columns: [passwd, username]
+2011-04-21 12:38:44,734 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) foreign keys: []
+2011-04-21 12:38:44,734 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) indexes: [username, primary]
+2011-04-21 12:38:44,734 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) schema update complete
+2011-04-21 12:38:44,859 INFO  [org.springframework.jmx.export.MBeanExporter] (main) Registering beans for JMX exposure on startup
+2011-04-21 12:38:44,859 INFO  [org.springframework.jmx.export.MBeanExporter] (main) Located managed bean 'ServerChat:service=UserManagement': registering with JMX server as MBean [ServerChat:service=UserManagement]
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Created KernelDeployment for: profileservice-secured.jar
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.profileservice.spi.ProfileService
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureProfileService/remote
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureProfileService/remote-org.jboss.profileservice.spi.ProfileService
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureDeploymentManager/remote-org.jboss.deployers.spi.management.deploy.DeploymentManager
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.deployers.spi.management.deploy.DeploymentManager
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureDeploymentManager/remote
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.deployers.spi.management.ManagementView
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote
+2011-04-21 12:38:45,343 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 12:38:45,359 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@1442cd0{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 12:38:45,359 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@e57250{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 12:38:45,359 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@10cb02b{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 12:38:45,765 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 12:38:45,781 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureDeploymentManager ejbName: SecureDeploymentManager
+2011-04-21 12:38:45,843 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureDeploymentManager/remote - EJB3.x Default Remote Business Interface
+	SecureDeploymentManager/remote-org.jboss.deployers.spi.management.deploy.DeploymentManager - EJB3.x Remote Business Interface
+
+2011-04-21 12:38:45,953 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 12:38:45,953 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureManagementView ejbName: SecureManagementView
+2011-04-21 12:38:45,984 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureManagementView/remote - EJB3.x Default Remote Business Interface
+	SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView - EJB3.x Remote Business Interface
+
+2011-04-21 12:38:46,156 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 12:38:46,156 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureProfileServiceBean ejbName: SecureProfileService
+2011-04-21 12:38:46,171 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureProfileService/remote - EJB3.x Default Remote Business Interface
+	SecureProfileService/remote-org.jboss.profileservice.spi.ProfileService - EJB3.x Remote Business Interface
+
+2011-04-21 12:38:46,453 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/admin-console
+2011-04-21 12:38:46,578 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (main) Initializing Mojarra (1.2_12-b01-FCS) for context '/admin-console'
+2011-04-21 12:38:49,046 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/
+2011-04-21 12:38:49,140 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/jmx-console
+2011-04-21 12:38:49,281 INFO  [org.apache.coyote.http11.Http11Protocol] (main) Starting Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 12:38:50,046 INFO  [org.apache.coyote.ajp.AjpProtocol] (main) Starting Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 12:38:50,062 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (main) JBoss (Microcontainer) [5.1.0.GA (build: SVNTag=JBoss_5_1_0_GA date=200905221634)] Started in 52s:672ms
+2011-04-21 12:39:08,468 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(4)-192.168.99.205) Check login
+2011-04-21 12:39:30,031 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(7)-192.168.99.205) Check login
+2011-04-21 12:48:10,562 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-tu70zp-gmr9msb3-1-gmr9mshm-4, jmsClientID=b-4osm9rmg-1-3bsm9rmg-pz07ut-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 12:50:31,484 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(32)-192.168.99.205) Check login
+2011-04-21 12:50:43,421 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(35)-192.168.99.205) Check login
+2011-04-21 13:03:29,468 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(70)-192.168.99.205) Check login
+2011-04-21 13:03:55,343 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(74)-192.168.99.205) Check login
+2011-04-21 13:11:22,890 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(92)-192.168.99.37) Check login
+2011-04-21 13:11:56,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(95)-192.168.99.37) Check login
+2011-04-21 14:54:53,453 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(120)-192.168.99.37) Check login
+2011-04-21 15:03:42,859 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(134)-192.168.99.37) Check login
+2011-04-21 15:04:42,031 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(138)-192.168.99.37) Check login
+2011-04-21 15:06:34,000 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(144)-192.168.99.37) Check login
+2011-04-21 15:09:43,984 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(151)-192.168.99.37) Check login
+2011-04-21 15:36:21,609 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(163)-192.168.99.37) Check login
+2011-04-21 15:37:07,421 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(166)-192.168.99.37) Check login
+2011-04-21 15:37:28,750 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(169)-192.168.99.37) Check login
+2011-04-21 15:38:06,218 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(172)-192.168.99.37) Check login
+2011-04-21 15:43:02,015 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(180)-192.168.99.37) Check login
+2011-04-21 16:03:03,859 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(223)-192.168.99.37) Check login
+2011-04-21 16:11:05,187 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(232)-192.168.99.37) Check login
+2011-04-21 16:12:26,687 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(235)-192.168.99.37) Check login
+2011-04-21 16:12:39,593 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(238)-192.168.99.240) Check login
+2011-04-21 16:13:42,296 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(243)-192.168.99.240) Check login
+2011-04-21 16:14:57,093 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(246)-192.168.99.37) Check login
+2011-04-21 16:20:06,703 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(256)-192.168.99.37) Check login
+2011-04-21 16:20:29,765 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(259)-192.168.99.37) Check login
+2011-04-21 16:27:00,078 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(270)-192.168.99.37) Check login
+2011-04-21 16:27:32,015 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(276)-192.168.99.37) Inser user
+2011-04-21 16:27:36,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(276)-192.168.99.37) Check login
+2011-04-21 16:34:47,828 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(288)-192.168.99.37) Check login
+2011-04-21 16:39:07,937 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(297)-192.168.99.240) Check login
+2011-04-21 16:39:22,875 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(300)-192.168.99.240) Check login
+2011-04-21 16:42:58,375 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(316)-192.168.99.240) Check login
+2011-04-21 16:43:06,843 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(319)-192.168.99.240) Check login
+2011-04-21 16:44:55,968 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(325)-192.168.99.37) Check login
+2011-04-21 16:47:17,093 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(336)-192.168.99.37) Check login
+2011-04-21 16:48:34,437 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(345)-192.168.99.37) Check login
+2011-04-21 16:49:27,375 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(352)-192.168.99.37) Check login
+2011-04-21 16:50:53,437 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(362)-192.168.99.37) Check login
+2011-04-21 16:52:55,703 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(369)-192.168.99.37) Check login
+2011-04-21 16:54:00,234 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(376)-192.168.99.37) Check login
+2011-04-21 16:58:40,718 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(394)-192.168.99.240) Check login
+2011-04-21 16:58:51,078 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(397)-192.168.99.240) Check login
+2011-04-21 17:00:51,968 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(415)-192.168.99.37) Check login
+2011-04-21 17:23:59,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(450)-192.168.99.37) Check login
+2011-04-21 17:26:18,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(456)-192.168.99.37) Check login
+2011-04-21 17:32:40,078 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(474)-192.168.99.37) Check login
+2011-04-21 17:34:47,531 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(482)-192.168.99.37) Check login
+2011-04-21 17:35:23,640 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(490)-192.168.99.37) Check login
+2011-04-21 17:40:05,515 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(494)-192.168.99.37) Check login
+2011-04-21 17:46:23,062 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(506)-192.168.99.37) Check login
+2011-04-21 17:49:59,578 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(516)-192.168.99.240) Check login
+2011-04-21 17:50:25,375 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(522)-192.168.99.240) Check login
+2011-04-21 17:52:06,031 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(531)-192.168.99.240) Check login
+2011-04-21 17:52:13,718 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(534)-192.168.99.240) Check login
+2011-04-21 17:55:13,593 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(545)-192.168.99.240) Check login
+2011-04-21 17:55:28,843 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(549)-192.168.99.240) Check login
+2011-04-21 17:56:20,234 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(555)-192.168.99.240) Check login
+2011-04-21 17:56:31,656 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(560)-192.168.99.240) Check login
+2011-04-21 18:00:25,093 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(574)-192.168.99.240) Check login
+2011-04-21 18:00:30,468 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(577)-192.168.99.240) Check login
+2011-04-21 18:02:06,265 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(586)-192.168.99.240) Check login
+2011-04-21 18:02:17,765 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(589)-192.168.99.240) Check login
+2011-04-21 18:06:55,453 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(606)-192.168.99.240) Check login
+2011-04-21 18:07:01,015 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(609)-192.168.99.240) Check login
+2011-04-21 18:08:41,453 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-ibwamo-gmrl6z77-1-gmrl6zel-4, jmsClientID=b-rgz6lrmg-1-77z6lrmg-omawbi-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 18:09:45,968 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(622)-192.168.99.240) Check login
+2011-04-21 19:16:40,656 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(687)-192.168.99.37) Check login
+2011-04-21 19:16:43,000 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(687)-192.168.99.37) Check login
+2011-04-21 19:16:59,578 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(690)-192.168.99.37) Check login
+2011-04-21 19:28:20,953 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-fhkwhi-gmro2p8k-1-gmro2pkp-4, jmsClientID=b-mop2ormg-1-k8p2ormg-ihwkhf-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 19:29:22,656 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-9vgbun-gmro40y0-1-gmro4174-4, jmsClientID=b-q914ormg-1-0y04ormg-nubgv9-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 19:31:43,515 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-yvg4x9-gmro71mr-1-gmro71vw-4, jmsClientID=b-xy17ormg-1-rm17ormg-9x4gvy-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 19:34:13,937 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(705)-192.168.99.37) Check login
+2011-04-21 19:34:54,015 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-rwfn82-gmroa9rb-1-gmroaa0g-4, jmsClientID=b-13aaormg-1-br9aormg-28nfwr-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 19:34:59,390 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-hsa5kq-gmroatc6-1-gmroatlb-4, jmsClientID=b-wntaormg-1-6ctaormg-qk5ash-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 19:36:25,375 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(709)-192.168.99.37) Check login
+2011-04-21 19:43:26,875 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(713)-192.168.99.37) Check login
+2011-04-21 19:47:01,546 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(720)-192.168.99.37) Check login
+2011-04-21 19:48:43,437 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/testDurableTopic] stopped
+2011-04-21 19:48:43,437 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/testTopic] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/queueA] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/B] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/A] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/notiChat] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/room1] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/ExpiryQueue] stopped
+2011-04-21 19:48:43,453 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/DLQ] stopped
+2011-04-21 19:48:43,578 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/DLQ] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,593 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/ExpiryQueue] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,609 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/room1] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,625 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/notiChat] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,671 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/ChatMsg] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,687 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/A] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,703 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/B] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,703 INFO  [org.jboss.jms.server.destination.QueueService] (HDScanner) Queue[/queue/queueA] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,718 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/testTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:48:43,734 INFO  [org.jboss.jms.server.destination.TopicService] (HDScanner) Topic[/topic/testDurableTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 19:49:32,812 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(727)-192.168.99.37) Check login
+2011-04-21 19:50:10,875 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(731)-192.168.99.37) Check login
+2011-04-21 19:52:07,984 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(741)-192.168.99.37) Check login
+2011-04-21 19:58:11,453 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(766)-192.168.99.37) Check login
+2011-04-21 19:58:13,781 ERROR [org.jboss.messaging.util.ExceptionUtil] (WorkerThread#0[192.168.99.37:1313]) ConsumerEndpoint[wp1-ywlrormg-1-c9tf9rmg-cqudfb-o6r2o4c5] close [qs1-htz5prmg-1-c9tf9rmg-cqudfb-o6r2o4c5]
+java.lang.NullPointerException
+	at org.jboss.jms.server.endpoint.ServerConsumerEndpoint.localClose(ServerConsumerEndpoint.java:542)
+	at org.jboss.jms.server.endpoint.ServerConsumerEndpoint.close(ServerConsumerEndpoint.java:388)
+	at org.jboss.jms.server.endpoint.advised.ConsumerAdvised.org$jboss$jms$server$endpoint$advised$ConsumerAdvised$close$aop(ConsumerAdvised.java:59)
+	at org.jboss.jms.server.endpoint.advised.ConsumerAdvised$close_N4742752445160157748.invokeTarget(ConsumerAdvised$close_N4742752445160157748.java)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:111)
+	at org.jboss.jms.server.container.ServerLogInterceptor.invoke(ServerLogInterceptor.java:105)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:102)
+	at org.jboss.jms.server.endpoint.advised.ConsumerAdvised.close(ConsumerAdvised.java)
+	at org.jboss.jms.wireformat.CloseRequest.serverInvoke(CloseRequest.java:66)
+	at org.jboss.jms.server.remoting.JMSServerInvocationHandler.invoke(JMSServerInvocationHandler.java:143)
+	at org.jboss.remoting.ServerInvoker.invoke(ServerInvoker.java:891)
+	at org.jboss.remoting.transport.socket.ServerThread.completeInvocation(ServerThread.java:744)
+	at org.jboss.remoting.transport.socket.ServerThread.processInvocation(ServerThread.java:697)
+	at org.jboss.remoting.transport.socket.ServerThread.dorun(ServerThread.java:551)
+	at org.jboss.remoting.transport.socket.ServerThread.run(ServerThread.java:232)
+2011-04-21 19:58:13,781 WARN  [org.jboss.jms.wireformat.Dispatcher] (WorkerThread#0[192.168.99.37:1313]) Cannot find object with id wp1-ywlrormg-1-c9tf9rmg-cqudfb-o6r2o4c5 to register
+2011-04-21 19:58:13,781 ERROR [org.jboss.messaging.util.ExceptionUtil] (WorkerThread#0[192.168.99.37:1313]) SessionEndpoint[vp1-sulrormg-1-c9tf9rmg-cqudfb-o6r2o4c5] close [rs1-htz5prmg-1-c9tf9rmg-cqudfb-o6r2o4c5]
+java.lang.NullPointerException
+	at org.jboss.jms.server.endpoint.ServerConsumerEndpoint.localClose(ServerConsumerEndpoint.java:542)
+	at org.jboss.jms.server.endpoint.ServerSessionEndpoint.localClose(ServerSessionEndpoint.java:1153)
+	at org.jboss.jms.server.endpoint.ServerSessionEndpoint.close(ServerSessionEndpoint.java:338)
+	at org.jboss.jms.server.endpoint.advised.SessionAdvised.org$jboss$jms$server$endpoint$advised$SessionAdvised$close$aop(SessionAdvised.java:72)
+	at org.jboss.jms.server.endpoint.advised.SessionAdvised$close_N4742752445160157748.invokeTarget(SessionAdvised$close_N4742752445160157748.java)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:111)
+	at org.jboss.jms.server.container.ServerLogInterceptor.invoke(ServerLogInterceptor.java:105)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:102)
+	at org.jboss.jms.server.endpoint.advised.SessionAdvised.close(SessionAdvised.java)
+	at org.jboss.jms.wireformat.CloseRequest.serverInvoke(CloseRequest.java:66)
+	at org.jboss.jms.server.remoting.JMSServerInvocationHandler.invoke(JMSServerInvocationHandler.java:143)
+	at org.jboss.remoting.ServerInvoker.invoke(ServerInvoker.java:891)
+	at org.jboss.remoting.transport.socket.ServerThread.completeInvocation(ServerThread.java:744)
+	at org.jboss.remoting.transport.socket.ServerThread.processInvocation(ServerThread.java:697)
+	at org.jboss.remoting.transport.socket.ServerThread.dorun(ServerThread.java:551)
+	at org.jboss.remoting.transport.socket.ServerThread.run(ServerThread.java:232)
+2011-04-21 19:58:13,781 WARN  [org.jboss.jms.wireformat.Dispatcher] (WorkerThread#0[192.168.99.37:1313]) Cannot find object with id wp1-ywlrormg-1-c9tf9rmg-cqudfb-o6r2o4c5 to register
+2011-04-21 19:58:13,781 ERROR [org.jboss.messaging.util.ExceptionUtil] (WorkerThread#0[192.168.99.37:1313]) ConnectionEndpoint[up1-lslrormg-1-c9tf9rmg-cqudfb-o6r2o4c5] close [ss1-htz5prmg-1-c9tf9rmg-cqudfb-o6r2o4c5]
+java.lang.NullPointerException
+	at org.jboss.jms.server.endpoint.ServerConsumerEndpoint.localClose(ServerConsumerEndpoint.java:542)
+	at org.jboss.jms.server.endpoint.ServerSessionEndpoint.localClose(ServerSessionEndpoint.java:1153)
+	at org.jboss.jms.server.endpoint.ServerConnectionEndpoint.close(ServerConnectionEndpoint.java:388)
+	at org.jboss.jms.server.endpoint.advised.ConnectionAdvised.org$jboss$jms$server$endpoint$advised$ConnectionAdvised$close$aop(ConnectionAdvised.java:63)
+	at org.jboss.jms.server.endpoint.advised.ConnectionAdvised$close_N4742752445160157748.invokeTarget(ConnectionAdvised$close_N4742752445160157748.java)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:111)
+	at org.jboss.jms.server.container.ServerLogInterceptor.invoke(ServerLogInterceptor.java:105)
+	at org.jboss.aop.joinpoint.MethodInvocation.invokeNext(MethodInvocation.java:102)
+	at org.jboss.jms.server.endpoint.advised.ConnectionAdvised.close(ConnectionAdvised.java)
+	at org.jboss.jms.wireformat.CloseRequest.serverInvoke(CloseRequest.java:66)
+	at org.jboss.jms.server.remoting.JMSServerInvocationHandler.invoke(JMSServerInvocationHandler.java:143)
+	at org.jboss.remoting.ServerInvoker.invoke(ServerInvoker.java:891)
+	at org.jboss.remoting.transport.socket.ServerThread.completeInvocation(ServerThread.java:744)
+	at org.jboss.remoting.transport.socket.ServerThread.processInvocation(ServerThread.java:697)
+	at org.jboss.remoting.transport.socket.ServerThread.dorun(ServerThread.java:551)
+	at org.jboss.remoting.transport.socket.ServerThread.run(ServerThread.java:232)
+2011-04-21 19:59:34,484 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(771)-192.168.99.37) Check login
+2011-04-21 20:01:42,093 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(776)-192.168.99.37) Check login
+2011-04-21 20:06:21,218 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(785)-192.168.99.37) Check login
+2011-04-21 20:22:59,250 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r6o-t5mprj-gmrq0yve-1-gmrq0z4y-4, jmsClientID=b-k7z0qrmg-1-evy0qrmg-jrpm5t-o6r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 20:37:52,937 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(829)-192.168.99.37) Check login
+2011-04-21 20:38:35,921 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(833)-192.168.99.240) Check login
+2011-04-21 20:38:47,750 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(837)-192.168.99.240) Check login
+2011-04-21 20:38:48,531 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(840)-192.168.99.37) Check login
+2011-04-21 20:39:04,093 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(843)-192.168.99.37) Check login
+2011-04-21 20:39:07,484 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(846)-192.168.99.240) Check login
+2011-04-21 20:58:36,828 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(860)-192.168.99.240) Check login
+2011-04-21 20:58:44,031 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(864)-192.168.99.240) Check login
+2011-04-21 21:02:45,640 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(869)-192.168.99.37) Check login
+2011-04-21 21:04:28,968 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(882)-192.168.99.37) Check login
+2011-04-21 21:09:28,718 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(897)-192.168.99.37) Check login
+2011-04-21 21:14:41,484 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(908)-192.168.99.37) Check login
+2011-04-21 21:20:58,125 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(913)-192.168.99.37) Check login
+2011-04-21 21:21:06,671 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(916)-192.168.99.37) Check login
+2011-04-21 21:22:12,406 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(919)-192.168.99.37) Check login
+2011-04-21 21:22:57,625 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(922)-192.168.99.37) Check login
+2011-04-21 21:39:30,453 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(930)-192.168.99.37) Check login
+2011-04-21 21:39:35,421 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(930)-192.168.99.37) Check login
+2011-04-21 21:39:40,578 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(930)-192.168.99.37) Check login
+2011-04-21 21:39:43,906 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(930)-192.168.99.37) Check login
+2011-04-21 21:40:01,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(930)-192.168.99.37) Check login
+2011-04-21 21:40:30,859 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrszhwl-1h, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsz48u-12, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsz4eh-17, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsyxq1-i, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsyu2y-4, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsyxvo-n, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsz1rf-s, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsyugf-d, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:40:30,875 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-ppl89e-gmrsytwg-1-gmrsz1x3-x, jmsClientID=b-7buysrmg-1-gwtysrmg-e98lpp-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:41:08,312 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (JBoss Shutdown Hook) Runtime shutdown hook called, forceHalt: true
+2011-04-21 21:41:08,312 INFO  [org.apache.coyote.http11.Http11Protocol] (JBoss Shutdown Hook) Pausing Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 21:41:08,328 INFO  [org.apache.coyote.http11.Http11Protocol] (JBoss Shutdown Hook) Stopping Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 21:41:08,328 INFO  [org.apache.coyote.ajp.AjpProtocol] (JBoss Shutdown Hook) Pausing Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 21:41:08,328 INFO  [org.apache.coyote.ajp.AjpProtocol] (JBoss Shutdown Hook) Stopping Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 21:41:08,343 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@480241 undeployed
+2011-04-21 21:41:08,343 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@10abe66 undeployed
+2011-04-21 21:41:08,343 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@be0018 undeployed
+2011-04-21 21:41:08,343 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@15f02ff undeployed
+2011-04-21 21:41:08,343 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/web-console
+2011-04-21 21:41:08,375 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/testDurableTopic] stopped
+2011-04-21 21:41:08,375 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/testTopic] stopped
+2011-04-21 21:41:08,375 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/queueA] stopped
+2011-04-21 21:41:08,375 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/B] stopped
+2011-04-21 21:41:08,375 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/A] stopped
+2011-04-21 21:41:08,375 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/ChatMsg] stopped
+2011-04-21 21:41:08,390 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/notiChat] stopped
+2011-04-21 21:41:08,390 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/room1] stopped
+2011-04-21 21:41:08,390 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/ExpiryQueue] stopped
+2011-04-21 21:41:08,390 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/DLQ] stopped
+2011-04-21 21:41:08,406 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 21:41:08,421 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureProfileServiceBean ejbName: SecureProfileService
+2011-04-21 21:41:08,453 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 21:41:08,531 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureDeploymentManager ejbName: SecureDeploymentManager
+2011-04-21 21:41:08,609 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 21:41:08,625 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureManagementView ejbName: SecureManagementView
+2011-04-21 21:41:08,656 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=ConnectionFactoryBinding,name=JmsXA' from JNDI name 'java:JmsXA'
+2011-04-21 21:41:08,718 INFO  [org.jboss.jms.server.ServerPeer] (JBoss Shutdown Hook) JMS ServerPeer[0] stopped
+2011-04-21 21:41:08,718 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/invoker
+2011-04-21 21:41:08,765 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/jbossws
+2011-04-21 21:41:08,765 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/admin-console
+2011-04-21 21:41:08,781 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/
+2011-04-21 21:41:08,781 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/jmx-console
+2011-04-21 21:41:08,796 INFO  [org.apache.catalina.core.StandardService] (JBoss Shutdown Hook) Stopping service jboss.web
+2011-04-21 21:41:08,859 INFO  [org.jboss.mail.MailService] (JBoss Shutdown Hook) Mail service 'java:/Mail' removed from JNDI
+2011-04-21 21:41:08,984 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=DefaultDS' from JNDI name 'java:DefaultDS'
+2011-04-21 21:41:08,984 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' from JNDI name 'java:MySqlDS'
+2011-04-21 21:41:09,062 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2011-04-21 21:41:09,062 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2011-04-21 21:41:09,078 INFO  [org.quartz.simpl.SimpleThreadPool] (JBoss Shutdown Hook) There are still 36 worker threads active. See javadoc runInThread(Runnable) for a possible explanation
+2011-04-21 21:41:09,078 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2011-04-21 21:41:09,328 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (JBoss Shutdown Hook) Stopping transaction recovery manager
+2011-04-21 21:41:09,328 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (JBoss Shutdown Hook) Destroying TransactionManagerService
+2011-04-21 21:41:09,765 INFO  [org.jboss.jdbc.HypersonicDatabase] (JBoss Shutdown Hook) Database standalone closed clean
+2011-04-21 21:41:09,765 INFO  [org.springframework.context.support.ClassPathXmlApplicationContext] (JBoss Shutdown Hook) Closing org.springframework.context.support.ClassPathXmlApplicationContext@1363a43: startup date [Thu Apr 21 12:38:42 GMT+07:00 2011]; root of context hierarchy
+2011-04-21 21:41:09,781 INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] (JBoss Shutdown Hook) Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@1e47e65: defining beans [jndiTemplate,jmsTopicConnectionFactory,sendDestination,jmsTemplate,jmsSender,userSessionFactory,userDAO,userManagement,mbeanServer,exporter]; root of factory hierarchy
+2011-04-21 21:41:09,781 INFO  [org.springframework.jmx.export.MBeanExporter] (JBoss Shutdown Hook) Unregistering JMX-exposed beans on shutdown
+2011-04-21 21:41:09,781 INFO  [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] (JBoss Shutdown Hook) Closing Hibernate SessionFactory
+2011-04-21 21:41:09,781 INFO  [org.hibernate.impl.SessionFactoryImpl] (JBoss Shutdown Hook) closing
+2011-04-21 21:41:13,531 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (JBoss Shutdown Hook) Shutdown complete
+2011-04-21 21:41:26,125 INFO  [org.jboss.web.WebService] (main) Using RMI server codebase: http://192.168.99.240:8083/
+2011-04-21 21:41:32,281 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) JBoss Web Services - Stack Native Core
+2011-04-21 21:41:32,296 INFO  [org.jboss.wsf.stack.jbws.NativeServerConfig] (main) 3.1.2.GA
+2011-04-21 21:41:32,750 INFO  [org.jboss.dependency.plugins.AttributeCallbackItem] (main) Owner callback not implemented.
+2011-04-21 21:41:33,859 INFO  [org.jboss.logbridge.LogNotificationListener] (main) Adding notification listener for logging mbean "jboss.system:service=Logging,type=Log4jService" to server org.jboss.mx.server.MBeanServerImpl@c5186e[ defaultDomain='null' ]
+2011-04-21 21:41:48,125 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@10532986{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 21:41:48,125 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@10532986{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 21:41:48,125 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@10532986{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 21:41:48,125 INFO  [org.jboss.ejb3.deployers.Ejb3DependenciesDeployer] (main) Encountered deployment AbstractVFSDeploymentContext@10532986{vfsfile:/D:/jboss-5.1.0.GA/server/default/deploy/profileservice-secured.jar/}
+2011-04-21 21:41:51,546 INFO  [org.jboss.mx.remoting.service.JMXConnectorServerService] (main) JMX Connector server: service:jmx:rmi://192.168.99.240/jndi/rmi://192.168.99.240:1090/jmxconnector
+2011-04-21 21:41:51,718 INFO  [org.jboss.mail.MailService] (main) Mail Service bound to java:/Mail
+2011-04-21 21:41:53,875 WARN  [org.jboss.jms.server.jbosssx.JBossASSecurityMetadataStore] (main) WARNING! POTENTIAL SECURITY RISK. It has been detected that the MessageSucker component which sucks messages from one node to another has not had its password changed from the installation default. Please see the JBoss Messaging user guide for instructions on how to do this.
+2011-04-21 21:41:53,890 WARN  [org.jboss.annotation.factory.AnnotationCreator] (main) No ClassLoader provided, using TCCL: org.jboss.managed.api.annotation.ManagementComponent
+2011-04-21 21:41:53,984 WARN  [org.jboss.annotation.factory.AnnotationCreator] (main) No ClassLoader provided, using TCCL: org.jboss.managed.api.annotation.ManagementComponent
+2011-04-21 21:41:54,078 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) JBossTS Transaction Service (JTA version - tag:JBOSSTS_4_6_1_GA) - JBoss Inc.
+2011-04-21 21:41:54,078 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Setting up property manager MBean and JMX layer
+2011-04-21 21:41:54,375 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Initializing recovery manager
+2011-04-21 21:41:54,500 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Recovery manager configured
+2011-04-21 21:41:54,500 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Binding TransactionManager JNDI Reference
+2011-04-21 21:41:54,562 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (main) Starting transaction recovery manager
+2011-04-21 21:41:55,046 INFO  [org.apache.catalina.core.AprLifecycleListener] (main) The Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: C:\Program Files\Java\jdk1.6.0_21\bin;.;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\Program Files\Java\jdk1.6.0_21\bin;D:\apache-ant-1.8.1\bin;C:\Program Files\MySQL\MySQL Server 5.1\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\ESTsoft\ALZip;C:\Program Files\ESTsoft\ALZip
+2011-04-21 21:41:55,171 INFO  [org.apache.coyote.http11.Http11Protocol] (main) Initializing Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 21:41:55,171 INFO  [org.apache.coyote.ajp.AjpProtocol] (main) Initializing Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 21:41:55,187 INFO  [org.apache.catalina.core.StandardService] (main) Starting service jboss.web
+2011-04-21 21:41:55,203 INFO  [org.apache.catalina.core.StandardEngine] (main) Starting Servlet Engine: JBoss Web/2.1.3.GA
+2011-04-21 21:41:55,234 INFO  [org.apache.catalina.startup.Catalina] (main) Server startup in 68 ms
+2011-04-21 21:41:55,265 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/web-console
+2011-04-21 21:41:56,500 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/jbossws
+2011-04-21 21:41:56,546 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/invoker
+2011-04-21 21:41:56,671 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jboss-local-jdbc.rar/META-INF/ra.xml
+2011-04-21 21:41:56,703 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jboss-xa-jdbc.rar/META-INF/ra.xml
+2011-04-21 21:41:56,734 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/jms-ra.rar/META-INF/ra.xml
+2011-04-21 21:41:56,750 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/mail-ra.rar/META-INF/ra.xml
+2011-04-21 21:41:56,781 INFO  [org.jboss.resource.deployers.RARDeployment] (main) Required license terms exist, view vfszip:/D:/jboss-5.1.0.GA/server/default/deploy/quartz-ra.rar/META-INF/ra.xml
+2011-04-21 21:41:56,890 INFO  [org.quartz.simpl.SimpleThreadPool] (main) Job execution threads will use class loader of thread: main
+2011-04-21 21:41:56,921 INFO  [org.quartz.core.QuartzScheduler] (main) Quartz Scheduler v.1.5.2 created.
+2011-04-21 21:41:56,921 INFO  [org.quartz.simpl.RAMJobStore] (main) RAMJobStore initialized.
+2011-04-21 21:41:56,921 INFO  [org.quartz.impl.StdSchedulerFactory] (main) Quartz scheduler 'DefaultQuartzScheduler' initialized from default resource file in Quartz package: 'quartz.properties'
+2011-04-21 21:41:56,921 INFO  [org.quartz.impl.StdSchedulerFactory] (main) Quartz scheduler version: 1.5.2
+2011-04-21 21:41:56,921 INFO  [org.quartz.core.QuartzScheduler] (main) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED started.
+2011-04-21 21:41:57,531 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=DefaultDS' to JNDI name 'java:DefaultDS'
+2011-04-21 21:41:58,203 INFO  [org.jboss.jms.server.ServerPeer] (main) JBoss Messaging 1.4.3.GA server [0] started
+2011-04-21 21:41:58,281 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactoryJNDIMapper] (main) supportsFailover attribute is true on connection factory: jboss.messaging.connectionfactory:service=ClusteredConnectionFactory but post office is non clustered. So connection factory will *not* support failover
+2011-04-21 21:41:58,281 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactoryJNDIMapper] (main) supportsLoadBalancing attribute is true on connection factory: jboss.messaging.connectionfactory:service=ClusteredConnectionFactory but post office is non clustered. So connection factory will *not* support load balancing
+2011-04-21 21:41:58,343 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 21:41:58,343 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@173ed02 started
+2011-04-21 21:41:58,343 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/notiChat] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,359 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/B] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,359 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/ExpiryQueue] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,359 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 21:41:58,375 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@1d06a34 started
+2011-04-21 21:41:58,375 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/testTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,375 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 21:41:58,375 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@143355c started
+2011-04-21 21:41:58,375 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/A] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,390 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/DLQ] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,390 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/room1] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,390 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/testDurableTopic] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,390 INFO  [org.jboss.jms.server.destination.QueueService] (main) Queue[/queue/queueA] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,390 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) Connector bisocket://192.168.99.240:4457 has leasing enabled, lease period 10000 milliseconds
+2011-04-21 21:41:58,390 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (main) org.jboss.jms.server.connectionfactory.ConnectionFactory@1557cef started
+2011-04-21 21:41:58,406 INFO  [org.jboss.jms.server.destination.TopicService] (main) Topic[/topic/ChatMsg] started, fullSize=200000, pageSize=2000, downCacheSize=2000
+2011-04-21 21:41:58,500 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=ConnectionFactoryBinding,name=JmsXA' to JNDI name 'java:JmsXA'
+2011-04-21 21:41:58,546 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (main) Bound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' to JNDI name 'java:MySqlDS'
+2011-04-21 21:41:58,703 INFO  [org.springframework.context.support.ClassPathXmlApplicationContext] (main) Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@2d849b: startup date [Thu Apr 21 21:41:58 GMT+07:00 2011]; root of context hierarchy
+2011-04-21 21:41:58,953 INFO  [org.springframework.beans.factory.xml.XmlBeanDefinitionReader] (main) Loading XML bean definitions from class path resource [META-INF/spring-jms.xml]
+2011-04-21 21:41:59,156 INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] (main) Pre-instantiating singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f5e681: defining beans [jndiTemplate,jmsTopicConnectionFactory,sendDestination,jmsTemplate,jmsSender,userSessionFactory,userDAO,userManagement,mbeanServer,exporter]; root of factory hierarchy
+2011-04-21 21:41:59,453 INFO  [org.hibernate.cfg.annotations.Version] (main) Hibernate Annotations 3.4.0.GA
+2011-04-21 21:41:59,468 INFO  [org.hibernate.cfg.Environment] (main) Hibernate 3.3.1.GA
+2011-04-21 21:41:59,484 INFO  [org.hibernate.cfg.Environment] (main) hibernate.properties not found
+2011-04-21 21:41:59,484 INFO  [org.hibernate.cfg.Environment] (main) Bytecode provider name : javassist
+2011-04-21 21:41:59,484 INFO  [org.hibernate.cfg.Environment] (main) using JDK 1.4 java.sql.Timestamp handling
+2011-04-21 21:41:59,593 INFO  [org.hibernate.annotations.common.Version] (main) Hibernate Commons Annotations 3.1.0.GA
+2011-04-21 21:41:59,687 INFO  [org.hibernate.cfg.AnnotationBinder] (main) Binding entity from annotated class: tma.com.vn.chat.server.app.User
+2011-04-21 21:41:59,734 INFO  [org.hibernate.cfg.annotations.EntityBinder] (main) Bind entity tma.com.vn.chat.server.app.User on table UserChat
+2011-04-21 21:41:59,843 INFO  [org.hibernate.validator.Version] (main) Hibernate Validator 3.1.0.GA
+2011-04-21 21:41:59,875 INFO  [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] (main) Building new Hibernate SessionFactory
+2011-04-21 21:41:59,890 INFO  [org.hibernate.cfg.search.HibernateSearchEventListenerRegister] (main) Unable to find org.hibernate.search.event.FullTextIndexEventListener on the classpath. Hibernate Search is not enabled.
+2011-04-21 21:42:00,000 INFO  [org.hibernate.util.NamingHelper] (main) JNDI InitialContext properties:{}
+2011-04-21 21:42:00,000 INFO  [org.hibernate.connection.DatasourceConnectionProvider] (main) Using datasource: java:MySqlDS
+2011-04-21 21:42:00,312 INFO  [org.hibernate.cfg.SettingsFactory] (main) RDBMS: MySQL, version: 5.1.47-community
+2011-04-21 21:42:00,312 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC driver: MySQL-AB JDBC Driver, version: mysql-connector-java-5.1.13 ( Revision: ${bzr.revision-id} )
+2011-04-21 21:42:00,343 INFO  [org.hibernate.dialect.Dialect] (main) Using dialect: org.hibernate.dialect.MySQLDialect
+2011-04-21 21:42:00,359 INFO  [org.hibernate.transaction.TransactionFactoryFactory] (main) Transaction strategy: org.springframework.orm.hibernate3.SpringTransactionFactory
+2011-04-21 21:42:00,359 INFO  [org.hibernate.transaction.TransactionManagerLookupFactory] (main) No TransactionManagerLookup configured (in JTA environment, use of read-write or transactional second-level cache is not recommended)
+2011-04-21 21:42:00,359 INFO  [org.hibernate.cfg.SettingsFactory] (main) Automatic flush during beforeCompletion(): disabled
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) Automatic session close at end of transaction: disabled
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC batch size: 15
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC batch updates for versioned data: disabled
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) Scrollable result sets: enabled
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) JDBC3 getGeneratedKeys(): enabled
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) Connection release mode: auto
+2011-04-21 21:42:00,375 INFO  [org.hibernate.cfg.SettingsFactory] (main) Maximum outer join fetch depth: 2
+2011-04-21 21:42:00,390 INFO  [org.hibernate.cfg.SettingsFactory] (main) Default batch fetch size: 1
+2011-04-21 21:42:00,390 INFO  [org.hibernate.cfg.SettingsFactory] (main) Generate SQL with comments: disabled
+2011-04-21 21:42:00,390 INFO  [org.hibernate.cfg.SettingsFactory] (main) Order SQL updates by primary key: enabled
+2011-04-21 21:42:00,390 INFO  [org.hibernate.cfg.SettingsFactory] (main) Order SQL inserts for batching: disabled
+2011-04-21 21:42:00,390 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query translator: org.hibernate.hql.ast.ASTQueryTranslatorFactory
+2011-04-21 21:42:00,390 INFO  [org.hibernate.hql.ast.ASTQueryTranslatorFactory] (main) Using ASTQueryTranslatorFactory
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query language substitutions: {}
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) JPA-QL strict compliance: disabled
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) Second-level cache: enabled
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) Query cache: disabled
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) Cache region factory : org.hibernate.cache.impl.NoCachingRegionFactory
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) Optimize cache for minimal puts: disabled
+2011-04-21 21:42:00,406 INFO  [org.hibernate.cfg.SettingsFactory] (main) Structured second-level cache entries: disabled
+2011-04-21 21:42:00,421 INFO  [org.hibernate.cfg.SettingsFactory] (main) Statistics: disabled
+2011-04-21 21:42:00,421 INFO  [org.hibernate.cfg.SettingsFactory] (main) Deleted entity synthetic identifier rollback: disabled
+2011-04-21 21:42:00,421 INFO  [org.hibernate.cfg.SettingsFactory] (main) Default entity-mode: pojo
+2011-04-21 21:42:00,421 INFO  [org.hibernate.cfg.SettingsFactory] (main) Named query checking : enabled
+2011-04-21 21:42:00,515 INFO  [org.hibernate.impl.SessionFactoryImpl] (main) building session factory
+2011-04-21 21:42:00,812 INFO  [org.hibernate.impl.SessionFactoryObjectFactory] (main) Not binding factory to JNDI, no JNDI name configured
+2011-04-21 21:42:00,828 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) Running hbm2ddl schema update
+2011-04-21 21:42:00,828 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) fetching database metadata
+2011-04-21 21:42:00,828 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) updating schema
+2011-04-21 21:42:00,890 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) table found: userchats.userchat
+2011-04-21 21:42:00,890 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) columns: [passwd, username]
+2011-04-21 21:42:00,890 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) foreign keys: []
+2011-04-21 21:42:00,890 INFO  [org.hibernate.tool.hbm2ddl.TableMetadata] (main) indexes: [username, primary]
+2011-04-21 21:42:00,890 INFO  [org.hibernate.tool.hbm2ddl.SchemaUpdate] (main) schema update complete
+2011-04-21 21:42:01,078 INFO  [org.springframework.jmx.export.MBeanExporter] (main) Registering beans for JMX exposure on startup
+2011-04-21 21:42:01,093 INFO  [org.springframework.jmx.export.MBeanExporter] (main) Located managed bean 'ServerChat:service=UserManagement': registering with JMX server as MBean [ServerChat:service=UserManagement]
+2011-04-21 21:42:01,609 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Created KernelDeployment for: profileservice-secured.jar
+2011-04-21 21:42:01,687 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.profileservice.spi.ProfileService
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureProfileService/remote
+2011-04-21 21:42:01,703 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureProfileService/remote-org.jboss.profileservice.spi.ProfileService
+2011-04-21 21:42:01,718 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 21:42:01,718 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 21:42:01,718 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 21:42:01,718 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 21:42:01,718 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 21:42:01,718 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 21:42:01,734 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureDeploymentManager/remote-org.jboss.deployers.spi.management.deploy.DeploymentManager
+2011-04-21 21:42:01,734 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.deployers.spi.management.deploy.DeploymentManager
+2011-04-21 21:42:01,734 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureDeploymentManager/remote
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) installing bean: jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   with dependencies:
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and demands:
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jboss.ejb:service=EJBTimerService
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main)   and supplies:
+2011-04-21 21:42:01,765 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView
+2011-04-21 21:42:01,781 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	Class:org.jboss.deployers.spi.management.ManagementView
+2011-04-21 21:42:01,781 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) 	jndi:SecureManagementView/remote
+2011-04-21 21:42:01,781 INFO  [org.jboss.ejb3.deployers.JBossASKernel] (main) Added bean(jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3) to KernelDeployment of: profileservice-secured.jar
+2011-04-21 21:42:01,781 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@3f2bba{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 21:42:01,796 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@fe97a8{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 21:42:01,796 INFO  [org.jboss.ejb3.endpoint.deployers.EJB3EndpointDeployer] (main) Deploy AbstractBeanMetaData@13afe6c{name=jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3_endpoint bean=org.jboss.ejb3.endpoint.deployers.impl.EndpointImpl properties=[container] constructor=null autowireCandidate=true}
+2011-04-21 21:42:02,281 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 21:42:02,296 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureDeploymentManager ejbName: SecureDeploymentManager
+2011-04-21 21:42:02,343 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureDeploymentManager/remote - EJB3.x Default Remote Business Interface
+	SecureDeploymentManager/remote-org.jboss.deployers.spi.management.deploy.DeploymentManager - EJB3.x Remote Business Interface
+
+2011-04-21 21:42:02,453 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 21:42:02,453 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureManagementView ejbName: SecureManagementView
+2011-04-21 21:42:02,562 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureManagementView/remote - EJB3.x Default Remote Business Interface
+	SecureManagementView/remote-org.jboss.deployers.spi.management.ManagementView - EJB3.x Remote Business Interface
+
+2011-04-21 21:42:02,609 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (main) Starting jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 21:42:02,609 INFO  [org.jboss.ejb3.EJBContainer] (main) STARTED EJB: org.jboss.profileservice.ejb.SecureProfileServiceBean ejbName: SecureProfileService
+2011-04-21 21:42:02,625 INFO  [org.jboss.ejb3.proxy.impl.jndiregistrar.JndiSessionRegistrarBase] (main) Binding the following Entries in Global JNDI:
+
+	SecureProfileService/remote - EJB3.x Default Remote Business Interface
+	SecureProfileService/remote-org.jboss.profileservice.spi.ProfileService - EJB3.x Remote Business Interface
+
+2011-04-21 21:42:03,015 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/admin-console
+2011-04-21 21:42:03,171 INFO  [javax.enterprise.resource.webcontainer.jsf.config] (main) Initializing Mojarra (1.2_12-b01-FCS) for context '/admin-console'
+2011-04-21 21:42:05,875 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/
+2011-04-21 21:42:06,031 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (main) deploy, ctxPath=/jmx-console
+2011-04-21 21:42:07,000 INFO  [org.apache.coyote.http11.Http11Protocol] (main) Starting Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 21:42:07,015 INFO  [org.apache.coyote.ajp.AjpProtocol] (main) Starting Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 21:42:07,015 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (main) JBoss (Microcontainer) [5.1.0.GA (build: SVNTag=JBoss_5_1_0_GA date=200905221634)] Started in 47s:687ms
+2011-04-21 21:42:34,390 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(7)-192.168.99.37) Check login
+2011-04-21 21:42:42,578 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(7)-192.168.99.37) Check login
+2011-04-21 21:42:59,421 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(10)-192.168.99.37) Check login
+2011-04-21 21:43:18,281 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-y628e0-gmrt2ug0-1-gmrt2v5m-d, jmsClientID=b-iwu2trmg-1-0gu2trmg-0e826y-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:43:18,296 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-y628e0-gmrt2ug0-1-gmrt2uop-4, jmsClientID=b-iwu2trmg-1-0gu2trmg-0e826y-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:43:18,296 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-y628e0-gmrt2ug0-1-gmrt2ybc-n, jmsClientID=b-iwu2trmg-1-0gu2trmg-0e826y-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:43:39,812 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-jmpbq6-gmrt3b4p-1-gmrt3bnt-d, jmsClientID=b-5ib3trmg-1-p4b3trmg-6qbpmj-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:44:10,656 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(13)-192.168.99.37) Check login
+2011-04-21 21:44:15,578 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(13)-192.168.99.37) Check login
+2011-04-21 21:44:51,062 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-6466ye-gmrt4u3v-1-gmrt4uo9-d, jmsClientID=b-2ju4trmg-1-v3u4trmg-ey6646-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:44:51,062 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-6466ye-gmrt4u3v-1-gmrt4uad-4, jmsClientID=b-2ju4trmg-1-v3u4trmg-ey6646-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:44:51,062 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-6466ye-gmrt4u3v-1-gmrt4y3z-n, jmsClientID=b-2ju4trmg-1-v3u4trmg-ey6646-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:45:11,859 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(16)-192.168.99.37) Check login
+2011-04-21 21:50:52,328 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-vx4ydf-gmrt65bj-1-gmrt65wd-d, jmsClientID=b-up56trmg-1-jb56trmg-fdy4xv-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:50:52,328 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r11-vx4ydf-gmrt65bj-1-gmrt65k7-4, jmsClientID=b-up56trmg-1-jb56trmg-fdy4xv-11r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 21:50:53,625 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(26)-192.168.99.37) Check login
+2011-04-21 21:50:58,859 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(26)-192.168.99.37) Check login
+2011-04-21 21:51:06,203 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(29)-192.168.99.240) Check login
+2011-04-21 21:52:56,562 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(33)-192.168.99.37) Check login
+2011-04-21 22:01:30,765 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(37)-192.168.99.37) Check login
+2011-04-21 22:02:27,828 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(42)-192.168.99.37) Check login
+2011-04-21 22:07:39,578 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(56)-192.168.99.205) Check login
+2011-04-21 22:27:11,156 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(64)-192.168.99.205) Check login
+2011-04-21 22:28:11,562 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-v82sh2-gmrumk0j-1-gmrumkjm-d, jmsClientID=b-4dkmurmg-1-j0kmurmg-2hs28v-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 22:28:11,562 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-v82sh2-gmrumk0j-1-gmrumk66-4, jmsClientID=b-4dkmurmg-1-j0kmurmg-2hs28v-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 22:29:34,562 INFO  [tma.com.vn.chat.server.dao.UserDAOImpl] (RMI TCP Connection(67)-192.168.99.205) Check login
+2011-04-21 22:30:34,906 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-9bfii7-gmrupmmb-1-gmrupmry-4, jmsClientID=b-wympurmg-1-bmmpurmg-7iifb9-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 22:30:34,921 WARN  [org.jboss.jms.server.connectionmanager.SimpleConnectionManager] (Timer-2) A problem has been detected with the connection to remote client 5c4o2r5p-9bfii7-gmrupmmb-1-gmrupn4y-d, jmsClientID=b-wympurmg-1-bmmpurmg-7iifb9-p5r2o4c5. It is possible the client has exited without closing its connection(s) or the network has failed. All associated connection resources will be cleaned up.
+2011-04-21 22:35:55,578 INFO  [org.jboss.bootstrap.microcontainer.ServerImpl] (JBoss Shutdown Hook) Runtime shutdown hook called, forceHalt: true
+2011-04-21 22:35:55,578 INFO  [org.apache.coyote.http11.Http11Protocol] (JBoss Shutdown Hook) Pausing Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 22:35:55,578 INFO  [org.apache.coyote.http11.Http11Protocol] (JBoss Shutdown Hook) Stopping Coyote HTTP/1.1 on http-192.168.99.240-8080
+2011-04-21 22:35:55,593 INFO  [org.apache.coyote.ajp.AjpProtocol] (JBoss Shutdown Hook) Pausing Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 22:35:55,593 INFO  [org.apache.coyote.ajp.AjpProtocol] (JBoss Shutdown Hook) Stopping Coyote AJP/1.3 on ajp-192.168.99.240-8009
+2011-04-21 22:35:55,656 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@143355c undeployed
+2011-04-21 22:35:55,656 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@1557cef undeployed
+2011-04-21 22:35:55,656 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@173ed02 undeployed
+2011-04-21 22:35:55,656 INFO  [org.jboss.jms.server.connectionfactory.ConnectionFactory] (JBoss Shutdown Hook) org.jboss.jms.server.connectionfactory.ConnectionFactory@1d06a34 undeployed
+2011-04-21 22:35:55,671 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/web-console
+2011-04-21 22:35:55,703 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/testDurableTopic] stopped
+2011-04-21 22:35:55,703 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/testTopic] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/queueA] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/B] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/A] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/ChatMsg] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/notiChat] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.TopicService] (JBoss Shutdown Hook) Topic[/topic/room1] stopped
+2011-04-21 22:35:55,718 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/ExpiryQueue] stopped
+2011-04-21 22:35:55,734 INFO  [org.jboss.jms.server.destination.QueueService] (JBoss Shutdown Hook) Queue[/queue/DLQ] stopped
+2011-04-21 22:35:55,750 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureProfileService,service=EJB3
+2011-04-21 22:35:55,750 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureProfileServiceBean ejbName: SecureProfileService
+2011-04-21 22:35:55,781 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureDeploymentManager,service=EJB3
+2011-04-21 22:35:55,828 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureDeploymentManager ejbName: SecureDeploymentManager
+2011-04-21 22:35:55,890 INFO  [org.jboss.ejb3.session.SessionSpecContainer] (JBoss Shutdown Hook) Stopping jboss.j2ee:jar=profileservice-secured.jar,name=SecureManagementView,service=EJB3
+2011-04-21 22:35:55,890 INFO  [org.jboss.ejb3.EJBContainer] (JBoss Shutdown Hook) STOPPED EJB: org.jboss.profileservice.ejb.SecureManagementView ejbName: SecureManagementView
+2011-04-21 22:35:55,937 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=ConnectionFactoryBinding,name=JmsXA' from JNDI name 'java:JmsXA'
+2011-04-21 22:35:55,953 INFO  [org.jboss.jms.server.ServerPeer] (JBoss Shutdown Hook) JMS ServerPeer[0] stopped
+2011-04-21 22:35:55,968 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/invoker
+2011-04-21 22:35:56,015 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/jbossws
+2011-04-21 22:35:56,015 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/admin-console
+2011-04-21 22:35:56,015 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/
+2011-04-21 22:35:56,031 INFO  [org.jboss.web.tomcat.service.deployers.TomcatDeployment] (JBoss Shutdown Hook) undeploy, ctxPath=/jmx-console
+2011-04-21 22:35:56,031 INFO  [org.apache.catalina.core.StandardService] (JBoss Shutdown Hook) Stopping service jboss.web
+2011-04-21 22:35:56,078 INFO  [org.jboss.mail.MailService] (JBoss Shutdown Hook) Mail service 'java:/Mail' removed from JNDI
+2011-04-21 22:35:56,281 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=DefaultDS' from JNDI name 'java:DefaultDS'
+2011-04-21 22:35:56,281 INFO  [org.jboss.resource.connectionmanager.ConnectionFactoryBindingService] (JBoss Shutdown Hook) Unbound ConnectionManager 'jboss.jca:service=DataSourceBinding,name=MySqlDS' from JNDI name 'java:MySqlDS'
+2011-04-21 22:35:56,312 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutting down.
+2011-04-21 22:35:56,328 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED paused.
+2011-04-21 22:35:56,328 INFO  [org.quartz.simpl.SimpleThreadPool] (JBoss Shutdown Hook) There are still 33 worker threads active. See javadoc runInThread(Runnable) for a possible explanation
+2011-04-21 22:35:56,343 INFO  [org.quartz.core.QuartzScheduler] (JBoss Shutdown Hook) Scheduler DefaultQuartzScheduler_$_NON_CLUSTERED shutdown complete.
+2011-04-21 22:35:56,578 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (JBoss Shutdown Hook) Stopping transaction recovery manager
+2011-04-21 22:35:56,578 INFO  [com.arjuna.ats.jbossatx.jta.TransactionManagerService] (JBoss Shutdown Hook) Destroying TransactionManagerService
+2011-04-21 22:35:56,984 INFO  [org.jboss.jdbc.HypersonicDatabase] (JBoss Shutdown Hook) Database standalone closed clean
+2011-04-21 22:35:57,000 INFO  [org.springframework.context.support.ClassPathXmlApplicationContext] (JBoss Shutdown Hook) Closing org.springframework.context.support.ClassPathXmlApplicationContext@2d849b: startup date [Thu Apr 21 21:41:58 GMT+07:00 2011]; root of context hierarchy
+2011-04-21 22:35:57,015 INFO  [org.springframework.beans.factory.support.DefaultListableBeanFactory] (JBoss Shutdown Hook) Destroying singletons in org.springframework.beans.factory.support.DefaultListableBeanFactory@f5e681: defining beans [jndiTemplate,jmsTopicConnectionFactory,sendDestination,jmsTemplate,jmsSender,userSessionFactory,userDAO,userManagement,mbeanServer,exporter]; root of factory hierarchy
+2011-04-21 22:35:57,031 INFO  [org.springframework.jmx.export.MBeanExporter] (JBoss Shutdown Hook) Unregistering JMX-exposed beans on shutdown
+2011-04-21 22:35:57,031 INFO  [org.springframework.orm.hibernate3.annotation.AnnotationSessionFactoryBean] (JBoss Shutdown Hook) Closing Hibernate SessionFactory
+2011-04-21 22:35:57,046 INFO  [org.hibernate.impl.SessionFactoryImpl] (JBoss Shutdown Hook) closing
