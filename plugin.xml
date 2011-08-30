@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.2"?>
+<plugin>
+
+   <extension
+         id="application"
+         point="org.eclipse.core.runtime.applications">
+      <application>
+         <run
+               class="tma.com.vn.chat.client.clientchat.Application">
+         </run>
+      </application>
+   </extension>
+   <extension
+         point="org.eclipse.ui.perspectives">
+      <perspective
+            name="RCP Perspective"
+            class="tma.com.vn.chat.client.clientchat.Perspective"
+            id="ClientChat.perspective">
+      </perspective>
+   </extension>
+   <extension
+         id="product"
+         point="org.eclipse.core.runtime.products">
+      <product
+            application="ClientChat.application"
+            name="Hello RCP">
+         <property
+               name="windowImages"
+               value="icons/alt_window_16.gif,icons/alt_window_32.gif">
+         </property>
+      </product>
+   </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            class="tma.com.vn.chat.client.view.LoginView"
+            id="ClientChat.loginView"
+            name="Login"
+            restorable="true">
+      </view>
+      <view
+            class="tma.com.vn.chat.client.view.MainView"
+            id="ClientChat.mainView"
+            name=""
+            restorable="true">
+      </view>
+
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+   </extension>
+
+</plugin>

@@ -1,0 +1,29 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ClientChat Plug-in
+Bundle-SymbolicName: ClientChat; singleton:=true
+Bundle-Version: 1.0.0
+Bundle-Activator: clientchat.Activator
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.ui.forms
+Bundle-ActivationPolicy: lazy
+Bundle-RequiredExecutionEnvironment: JavaSE-1.6
+Import-Package: org.eclipse.ui.forms.widgets
+Bundle-ClassPath: lib/concurrent.jar,
+ lib/javassist.jar,
+ lib/jboss-aop-client.jar,
+ lib/jboss-common-core.jar,
+ lib/jboss-logging-spi.jar,
+ lib/jboss-mdr.jar,
+ lib/jboss-messaging-client.jar,
+ lib/jboss-remoting.jar,
+ lib/jboss-serialization.jar,
+ lib/jms-1.1.jar,
+ lib/jnp-client.jar,
+ lib/log4j.jar,
+ lib/trove.jar,
+ .,
+ lib/spring.jar,
+ lib/ChatCommon.jar,
+ lib/AdapterChat.jar
