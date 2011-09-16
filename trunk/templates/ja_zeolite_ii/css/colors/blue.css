@@ -1,0 +1,240 @@
+a {
+	color: #006699;
+}
+
+a:hover, a:active, a:focus {
+	color: #CC0000;
+}
+
+#ja-subnav a:hover,
+#ja-subnav a:active,
+#ja-subnav a:focus {
+	background: url(../../images/blue/arrow-on.png) no-repeat 98% center;
+	color: #CC0000;
+}
+
+#ja-subnav li.active a {
+	background: url(../../images/blue/arrow-active.png) no-repeat 98% center;
+	color: #006699;
+}
+
+ul.menu li a:hover,
+ul.menu li a:active,
+ul.menu li a:focus {
+	color: #CC0000;
+	background: url(../../images/blue/arrow-on.png) no-repeat 98% center;
+}
+
+ul.menu li.active a {
+	background: url(../../images/blue/arrow-active.png) no-repeat 98% center;
+	color: #006699;
+}
+
+#ja-botsl div.moduletable h3 {
+	color: #006699;
+}
+
+ul.pagination a:hover, ul.pagination a:active, ul.pagination a:focus {
+	color: #CC0000;
+}
+
+#ja-cpanel .main {
+	border-bottom: 1px solid #0082C3;
+}
+
+#ja-header .main {
+	background-color: #005A87;
+}
+
+#ja-footer .main {
+	border-top: 3px solid #006699;
+}
+
+div.moduletable_hilite h3 {
+	background-image: url(../../images/blue/h3-r-hilite.gif);
+}
+
+div.moduletable_hilite h3 span {
+	background-image: url(../../images/blue/h3-l-hilite.gif);
+}
+
+/*Splimenu*/
+#ja-splitmenu a:hover,
+#ja-splitmenu a:active,
+#ja-splitmenu a:focus {
+	color: #CC0000;
+}
+
+#ja-splitmenu li.active a,
+#ja-splitmenu li.active a:hover,
+#ja-splitmenu li.active a:active,
+#ja-splitmenu li.active a:focus {
+	color: #CC0000;
+}
+
+/*css+moo menu*/
+#ja-cssmenu li a:hover,
+#ja-cssmenu li a:active,
+#ja-cssmenu li a:focus {
+	color: #006699;
+	background: url(../../images/blue/arrow-3.gif) no-repeat center top;
+}
+
+#ja-cssmenu li:hover a,
+#ja-cssmenu li.sfhover a,
+#ja-cssmenu li.havechildsfhover a,
+#ja-cssmenu li.havechild-activesfhover a {
+	color: #006699;
+}
+
+#ja-cssmenu li.havechild:hover a,
+#ja-cssmenu li.havechild:focus a,
+#ja-cssmenu li.havechild:active a {
+	background: url(../../images/blue/arrow-3.gif) no-repeat center top;	
+}
+
+#ja-cssmenu li a.active,
+#ja-cssmenu li a.active:hover,
+#ja-cssmenu li a.active:active,
+#ja-cssmenu li a.active:focus {
+	color: #006699;
+	background: url(../../images/blue/arrow-3.gif) no-repeat center top;
+}
+
+#ja-cssmenu li ul a:hover,
+#ja-cssmenu li ul a:active,
+#ja-cssmenu li ul a:focus,
+#ja-cssmenu ul li:hover,
+#ja-cssmenu ul li.sfhover,
+#ja-cssmenu ul li.havesubchildsfhover,
+#ja-cssmenu ul li.havesubchild-activesfhover,
+#ja-cssmenu ul ul li:hover,
+#ja-cssmenu ul ul li.sfhover,
+#ja-cssmenu ul ul li.havesubchildsfhover,
+#ja-cssmenu ul ul li.havesubchild-activesfhover {
+	color: #006699 !important;
+}
+
+#ja-cssmenu ul li a.active {
+	color: #006699 !important;
+}
+
+#ja-cssmenu ul li a.active:hover,
+#ja-cssmenu ul li a.active:active,
+#ja-cssmenu ul li a.active:focus {
+	color: #006699 !important;
+}
+
+/*mega menu*/
+#ja-mainnav .ja-megamenu ul.level0  li a:hover,
+#ja-mainnav .ja-megamenu ul.level0  li a:active,
+#ja-mainnav .ja-megamenu ul.level0  li a:focus {
+	color: #006699;
+	background: url(../../images/blue/arrow-3.gif) no-repeat center top;
+}
+
+#ja-mainnav .ja-megamenu ul.level0  li:hover a,
+#ja-mainnav .ja-megamenu ul.level0  li.over a,
+#ja-mainnav .ja-megamenu ul.level0  li.havechildsfhover a,
+#ja-mainnav .ja-megamenu ul.level0  li.havechild-activesfhover a {
+	color: #006699;
+}
+
+#ja-mainnav .ja-megamenu ul.level0  li.havechild:hover a,
+#ja-mainnav .ja-megamenu ul.level0  li.havechild:focus a,
+#ja-mainnav .ja-megamenu ul.level0  li.havechild:active a {
+	background: url(../../images/blue/arrow-3.gif) no-repeat center top;	
+}
+
+#ja-mainnav .ja-megamenu ul.level0  li a.active,
+#ja-mainnav .ja-megamenu ul.level0  li a.active:hover,
+#ja-mainnav .ja-megamenu ul.level0  li a.active:active,
+#ja-mainnav .ja-megamenu ul.level0  li a.active:focus {
+	color: #006699;
+	background: url(../../images/blue/arrow-3.gif) no-repeat center top;
+}
+
+#ja-mainnav .ja-megamenu ul.level0  li ul a:hover,
+#ja-mainnav .ja-megamenu ul.level0  li ul a:active,
+#ja-mainnav .ja-megamenu ul.level0  li ul a:focus,
+#ja-mainnav .ja-megamenu ul.level0 li:hover,
+#ja-mainnav .ja-megamenu ul.level0 li.sfhover,
+#ja-mainnav .ja-megamenu ul.level0 li.havesubchildsfhover,
+#ja-mainnav .ja-megamenu ul.level0 li.havesubchild-activesfhover,
+#ja-mainnav .ja-megamenu ul.level0 ul li:hover,
+#ja-mainnav .ja-megamenu ul.level0 ul li.sfhover,
+#ja-mainnav .ja-megamenu ul.level0 ul li.havesubchildsfhover,
+#ja-mainnav .ja-megamenu ul.level0 ul li.havesubchild-activesfhover {
+	color: #006699 !important;
+}
+
+#ja-mainnav .ja-megamenu ul.level0 li a.active {
+	color: #006699 !important;
+}
+
+#ja-mainnav .ja-megamenu ul.level0 li a.active:hover,
+#ja-mainnav .ja-megamenu ul.level0 li a.active:active,
+#ja-mainnav .ja-megamenu ul.level0 li a.active:focus {
+	color: #006699 !important;
+}
+
+/*typo*/
+.dropcap {
+	color: #006699;
+}
+
+.legend-hilite .legend-title {
+	color: #CC0000;
+}
+
+ul.checklist li {
+	background: url(../../images/blue/icon-checklist.gif) no-repeat 0 4px;
+}
+
+ul.stars li {
+	background: url(../../images/blue/icon-star.gif) no-repeat 0 1px;
+}
+
+ul.arrow li {
+	background: url(../../images/blue/icon-arrow.gif) no-repeat 3px 4px;
+}
+
+.bignumber {
+	background: url(../../images/blue/ol-bg.gif) no-repeat top left;
+}
+
+/*VirtueMart*/
+div.vm-showcart a {
+	background: url(../../images/blue/bt-viewcart.gif) no-repeat #FFFFFF;
+}
+
+#vmMainPage a.category:hover,
+#vmMainPage a.category:focus,
+#vmMainPage a.category:active {
+	color: #006699;
+}
+
+#vmMainPage a.readon {
+	color: #006699;
+}
+
+#vmMainPage a.readon:hover,
+#vmMainPage a.readon:active,
+#vmMainPage a.readon:focus {
+	color: #CC0000;
+	background: url(../../images/blue/arrow-on.png) no-repeat left center;
+}
+
+a.mainlevel:hover, a.mainlevel:active, a.mainlevel:focus {
+	background: url(../../images/blue/mainlevel-hover.gif) repeat-x right bottom;
+	color: #CC0000;
+}
+
+a#active_menu {
+	background: url(../../images/blue/mainlevel-active.gif) repeat-x right bottom;
+	color: #006699;
+}
+
+#ja-mainnav ul.level0 li ul .group-content .ja-box-ct a {
+	color: #006699 !important;
+}

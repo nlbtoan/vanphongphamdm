@@ -1,0 +1,82 @@
+/*
+# ------------------------------------------------------------------------
+# JA Zeolite II Template for Joomla 1.5
+# ------------------------------------------------------------------------
+# Copyright (C) 2004-2010 JoomlArt.com. All Rights Reserved.
+# @license - PHP files are GNU/GPL V2. CSS / JS are Copyrighted Commercial,
+# bound by Proprietary License of JoomlArt. For details on licensing, 
+# Please Read Terms of Use at http://www.joomlart.com/terms_of_use.html.
+# Author: JoomlArt.com
+# Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+# Redistribution, Modification or Re-licensing of this file in part of full, 
+# is bound by the License applied. 
+# ------------------------------------------------------------------------
+*/
+
+a.ip-button {
+	float:  right;
+}
+
+/* NAVIGATION + TOOLBAR
+--------------------------------------------------------- */
+#ja-toolbar-top a.button-search, #ja-toolbar-top a.button-login, #ja-toolbar-top a.button-switchlayout {
+	float: left;
+	margin-right: 15px;
+	margin-left: 0;
+}
+
+a.button-back {float: right;}
+a.button-close { float: left; }
+
+/* Menu */
+#ja-toolbar-main ul li a {
+	text-align: right
+}
+
+#ja-toolbar-main ul li a.ja-folder {
+	background: url(../../images/rtl/arrow-iphonenav.png) no-repeat center;
+	top: 0;
+	right: 0;
+	left: auto;
+}
+
+#ja-mainnav li .has-image {
+	padding-right: 0 !important;
+}
+
+/* Search */
+#ja-search {
+	float: none;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 5px 0;
+	position: absolute;
+	bottom: auto;
+	left: auto;
+}
+
+#ja-search .inputbox, #ja-search .inputbox:focus { 
+	float: none;
+	padding-left: .5em;
+	width: 90%;
+	font-size: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin: 0 .5em; 
+}
+
+/* Login */
+#ja-login { text-align: right; }
+
+#ja-login .button { float: right; }
+
+#ja-login ul li a {
+	padding: 0 5px 0 0 !important;
+}
+
+#ja-login p#form-login-remember {
+	float: right;
+	padding-right: auto;
+	padding-left: 10px;
+}
