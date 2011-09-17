@@ -56,7 +56,9 @@
 		<position>user11</position>
 		<position>footer</position>
 		<position>syndicate</position>
-		<position>debug</position>
+		<position>ja-slideshow</position>
+        <position>vm-fp</position>
+        <position>ja-slider</position>
 	</positions>
 
 	<params addpath="/templates/ja_zeolite_ii/element">
