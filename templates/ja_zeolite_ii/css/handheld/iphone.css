@@ -1,0 +1,205 @@
+/*
+# ------------------------------------------------------------------------
+# JA Zeolite II Template for Joomla 1.5
+# ------------------------------------------------------------------------
+# Copyright (C) 2004-2010 JoomlArt.com. All Rights Reserved.
+# @license - PHP files are GNU/GPL V2. CSS / JS are Copyrighted Commercial,
+# bound by Proprietary License of JoomlArt. For details on licensing, 
+# Please Read Terms of Use at http://www.joomlart.com/terms_of_use.html.
+# Author: JoomlArt.com
+# Websites:  http://www.joomlart.com -  http://www.joomlancers.com
+# Redistribution, Modification or Re-licensing of this file in part of full, 
+# is bound by the License applied. 
+# ------------------------------------------------------------------------
+*/
+
+body#bd { font-size: 14px; }
+
+body[orient="portrait"] > #ja-wrapper { min-height: 424px; }
+body[orient="landscape"] > #ja-wrapper { min-height: 320px; }
+
+a.ip-button {
+	color: #fff !important;
+	border: 1px solid #333;
+	background: url(../../images/grad-d2.gif) repeat-x bottom #5d5d5d;
+	display: block;
+	float: left;
+	padding: 3px 10px;
+	font-size: 14px;
+	-webkit-border-radius: 5px;
+	text-shadow: #333 0 -1px 1px;
+	max-width: 50px;
+	text-decoration: none;
+}
+
+a.ip-button:hover, a.ip-button:focus, a.ip-button:active {
+	text-decoration: none;
+}
+
+.column {
+	width: auto !important;
+}
+
+/* NAVIGATION + TOOLBAR
+--------------------------------------------------------- */
+#ja-mainnav { padding: 0; text-align: left; z-index: 100; }
+#ja-mainnav .inner { background: none; }
+
+#ja-toolbar-top, #ja-toolbar-title {
+	background: url(../../images/grad-d1.gif) repeat-x bottom #666;
+	color: #fff;
+	text-align: center;
+	font-weight: bold;
+	font-size: 18px;
+	height: 40px;
+	text-shadow: #000 0 -1px 1px;
+}
+
+#ja-toolbar-title span, #ja-toolbar-top span { line-height: 40px; max-width: 200px; }
+
+#ja-toolbar-title a, #ja-toolbar-top a { margin-top: 6px; }
+
+/* Toolbar Top ---*/
+#ja-toolbar-top { padding: 0 0.5em; }
+
+#ja-toolbar-top a.button-search, #ja-toolbar-top a.button-login, #ja-toolbar-top a.button-switchlayout {
+	float: right;
+	margin-left: 15px;
+	background-repeat: no-repeat;
+	background-position: center;
+	text-indent: -999%;
+	padding: 0;
+	width: 24px;
+	height: 24px;
+}
+
+#ja-toolbar-top a.button-search { background-image: url(../../images/iphone-search.png); }
+#ja-toolbar-top a.button-login { background-image: url(../../images/iphone-login.png); }
+#ja-toolbar-top a.button-switchlayout { background-image: url(../../images/iphone-switchlayout.png); }
+
+a.button-back {float: left;}
+a.button-close { float: right; }
+
+/* Toolbar Main---*/
+#ja-toolbar-main { position: absolute; top: 0; left: 0px; overflow: hidden; height: 0; width: 100%; background: #fff; }
+#ja-toolbar-wrap { position: relative;}
+
+/* Toolbar Title ---*/
+#ja-toolbar-title { width: 100%; display: block; }
+
+/* Toolbox */
+.toolbox { position: absolute; top: 40px; left: 0px; display: block; width: 100%; border-bottom: 5px solid #333; margin: 0px; }
+
+/* Overlay */
+#ja-overlay { position: absolute; top: 0; left: 0; width: 100%; display: none; z-index: 99; background: #000; opacity: 0.6;}
+
+/* Menu */
+#ja-toolbar-main ul li {
+	border-top: 1px solid #ddd;
+	position: relative;
+	background-image: none;
+	width: 100% !important;
+}
+
+#ja-toolbar-main ul li a {
+	padding: 0.5em 0 !important;
+	font-weight: bold;
+	font-size: 18px;
+	display: block;
+	text-decoration: none;
+	color: #333;
+}
+
+#ja-toolbar-main ul li a span.menu-desc {
+	font-size: 13px;
+	color: #999;
+}
+
+#ja-toolbar-main ul li a:hover, #ja-toolbar-main ul li a:active, #ja-toolbar-main ul li a:focus {
+	text-decoration: none;
+	color: #C01122;
+}
+
+#ja-toolbar-main .has-image {
+	background: none !important;
+}
+
+#ja-toolbar-main ul li.active a {
+	color: #C01122;
+}
+
+#ja-toolbar-main ul li a.ja-folder {
+	background: url(../../images/arrow-iphonenav.png) no-repeat 15px center;
+	width: 42px;
+	height: 42px;
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-indent: -999%;
+	padding: 0 !important;
+}
+
+/* Search */
+#ja-search {
+	float: none;
+	width: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 5px 0;
+	position: absolute;
+	bottom: auto;
+	height: auto;
+	padding-bottom: 10px !important;
+	background-image: none;
+	background-color: #fff;
+}
+
+#ja-search .inputbox, #ja-search .inputbox:focus { 
+	float: none;
+	padding-left: .5em;
+	width: 62%;
+	font-size: 12pt;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	margin: 0 .5em; 
+}
+
+/* Login */
+#ja-login { float: none; width: 100%; margin: 0; padding: 5px 0; }
+
+#ja-login form { padding: 0 .5em; }
+
+#ja-login p { font-size: 12pt; line-height: 2em; margin-bottom: 5px; }
+
+#ja-login .inputbox { font-size: 12pt; width: 90%; padding-top: 4px; padding-bottom: 4px; }
+#ja-login .button { padding: 4px 10px; margin-top: 5px; float: left; }
+
+#ja-login ul li { border: 0; background-position: 5px 5px !important; padding: 0px;}
+
+#ja-login ul li a {
+	padding: 0 0 0 5px !important;
+	font-weight: bold;
+	font-size: 14px;
+	width: auto;
+	display: inline;
+	font-weight: normal;
+	line-height: 2em;
+}
+
+#ja-login p#form-login-remember {
+	float: left;
+	padding-right: 10px;
+	margin-top: 3px;
+}
+
+#ja-login ul li a:hover, #ja-login ul li a:active, #ja-login ul li a:focus {
+	background: none;
+	text-decoration: underline;
+}
+
+/* Clean style from outside addons ---*/
+#ja-zinwrap .ja-zinsec h2 a { text-shadow: #333 0 -1px 1px; font-weight: bold; }
+
+/* Max width for main: force to view in desktop browser look like on mobile */
+.main {max-width: 1200px;}
