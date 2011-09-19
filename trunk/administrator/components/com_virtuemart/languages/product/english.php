@@ -2,9 +2,10 @@
 if( !defined( '_VALID_MOS' ) && !defined( '_JEXEC' ) ) die( 'Direct Access to '.basename(__FILE__).' is not allowed.' ); 
 /**
 *
+* @version $Id: english.php 1071 2007-12-03 08:42:28Z thepisu $
 * @package VirtueMart
 * @subpackage languages
-* @copyright Copyright (C) 2004-2008 soeren - All rights reserved.
+* @copyright Copyright (C) 2004-2007 soeren - All rights reserved.
 * @translator soeren
 * @license http://www.gnu.org/copyleft/gpl.html GNU/GPL, see LICENSE.php
 * VirtueMart is free software. This version may have been modified pursuant
@@ -44,7 +45,7 @@ $langvars = array (
 	'PHPSHOP_PRODUCT_FORM_IMAGE_DELETE_LBL' => 'Delete current image.',
 	'PHPSHOP_PRODUCT_FORM_PRODUCT_ITEMS_LBL' => 'Product Items',
 	'PHPSHOP_PRODUCT_FORM_ITEM_ATTRIBUTES_LBL' => 'Item Attributes',
-	'PHPSHOP_PRODUCT_FORM_DELETE_PRODUCT_MSG' => 'Are you sure you want to delete this Product\nand the Items related to it?',
+	'PHPSHOP_PRODUCT_FORM_DELETE_PRODUCT_MSG' => 'Are you sure you want to delete this Product\\\\nand the Items related to it?',
 	'PHPSHOP_PRODUCT_FORM_DELETE_ITEM_MSG' => 'Are you sure you want to delete this Item?',
 	'PHPSHOP_PRODUCT_FORM_MANUFACTURER' => 'Manufacturer',
 	'PHPSHOP_PRODUCT_FORM_SKU' => 'SKU',
@@ -62,10 +63,10 @@ $langvars = array (
 	'PHPSHOP_PRODUCT_FORM_FULL_IMAGE' => 'Full Image',
 	'PHPSHOP_PRODUCT_FORM_WEIGHT_UOM_DEFAULT' => 'pounds',
 	'PHPSHOP_PRODUCT_FORM_DIMENSION_UOM_DEFAULT' => 'inches',
-	'PHPSHOP_PRODUCT_FORM_PACKAGING' => 'Units in a Package',
-	'PHPSHOP_PRODUCT_FORM_PACKAGING_DESCRIPTION' => 'Here you can fill in the number of units in a package. (max. 65535)',
+	'PHPSHOP_PRODUCT_FORM_PACKAGING' => 'Units in Packaging',
+	'PHPSHOP_PRODUCT_FORM_PACKAGING_DESCRIPTION' => 'Here you can fill in a number unit in packaging. (max. 65535)',
 	'PHPSHOP_PRODUCT_FORM_BOX' => 'Units in Box',
-	'PHPSHOP_PRODUCT_FORM_BOX_DESCRIPTION' => 'Here you can fill in the number of units in a box. (max. 65535)',
+	'PHPSHOP_PRODUCT_FORM_BOX_DESCRIPTION' => 'Here you can fill in a number unit in box. (max. 65535)',
 	'PHPSHOP_PRODUCT_DISPLAY_ADD_PRODUCT_LBL' => 'Product Add Results',
 	'PHPSHOP_PRODUCT_DISPLAY_UPDATE_PRODUCT_LBL' => 'Product Update Results',
 	'PHPSHOP_PRODUCT_DISPLAY_ADD_ITEM_LBL' => 'Item Add Results',
@@ -88,14 +89,14 @@ $langvars = array (
 	'PHPSHOP_ATTRIBUTE_FORM_ORDER' => 'List Order',
 	'PHPSHOP_PRICE_LIST_FOR_LBL' => 'Price for',
 	'PHPSHOP_PRICE_LIST_GROUP_NAME' => 'Group Name',
-	'PHPSHOP_PRICE_LIST_PRICE' => 'Price',
+	'PHPSHOP_PRICE_LIST_PRICE' => 'Gi&aacute;',
 	'PHPSHOP_PRODUCT_LIST_CURRENCY' => 'Currency',
 	'PHPSHOP_PRICE_FORM_LBL' => 'Price Information',
 	'PHPSHOP_PRICE_FORM_NEW_FOR_PRODUCT' => 'New Price for Product',
 	'PHPSHOP_PRICE_FORM_UPDATE_FOR_PRODUCT' => 'Update Price for Product',
 	'PHPSHOP_PRICE_FORM_NEW_FOR_ITEM' => 'New Price for Item',
 	'PHPSHOP_PRICE_FORM_UPDATE_FOR_ITEM' => 'Update Price for Item',
-	'PHPSHOP_PRICE_FORM_PRICE' => 'Price',
+	'PHPSHOP_PRICE_FORM_PRICE' => 'Gi&aacute;',
 	'PHPSHOP_PRICE_FORM_CURRENCY' => 'Currency',
 	'PHPSHOP_PRICE_FORM_GROUP' => 'Shopper Group',
 	'PHPSHOP_LEAVE_BLANK' => '(leave BLANK if you have <br />no individual php-file for it!)',
@@ -125,6 +126,14 @@ $langvars = array (
 	'PHPSHOP_FILES_FORM_FILE_URL' => 'File URL (optional)',
 	'PHPSHOP_PRODUCT_FORM_AVAILABILITY_TOOLTIP1' => 'Fill in any text here that will be displayed to the customer on the product flypage.<br />e.g.: 24h, 48 hours, 3 - 5 days, On Order.....',
 	'PHPSHOP_PRODUCT_FORM_AVAILABILITY_TOOLTIP2' => 'OR select an Image to be displayed on the Details Page (flypage).<br />The images reside in the directory <i>%s</i><br />',
+	'PHPSHOP_PRODUCT_FORM_ATTRIBUTE_LIST_EXAMPLES' => '<h4>Examples for the Attribute List Format:</h4>
+        <pre>Size,XL[+1.99],M,S[-2.99];Colour,Red,Green,Yellow,ExpensiveColor[=24.00];AndSoOn,..,..</pre>
+        <h4>Inline price adjustments for using the Advanced Attributes modification:</h4>
+        <pre>
+        + == Add this amount to the configured price.<br />
+        - == Subtract this amount from the configured price.<br />
+        = == Set the product\'s price to this amount.
+      </pre>',
 	'PHPSHOP_PRODUCT_FORM_CUSTOM_ATTRIBUTE_LIST_EXAMPLES' => '<h4>Examples for the Custom attribute List Format:</h4>
         <pre>Name;Extras;</strong>...</pre>',
 	'PHPSHOP_IMAGE_ACTION' => 'Image Action',
@@ -133,7 +142,6 @@ $langvars = array (
 	'PHPSHOP_PRODUCT_PRODUCT_TYPE_LIST_LBL' => 'Product Type List for',
 	'PHPSHOP_PRODUCT_PRODUCT_TYPE_FORM_LBL' => 'Add Product Type for',
 	'PHPSHOP_PRODUCT_PRODUCT_TYPE_FORM_PRODUCT_TYPE' => 'Product Type',
-	'VM_PRODUCT_PRODUCT_TYPE_ADD_MULTIPLE_PRODUCTS' => ' Multiple Products',
 	'PHPSHOP_PRODUCT_TYPE_FORM_NAME' => 'Product Type Name',
 	'PHPSHOP_PRODUCT_TYPE_FORM_DESCRIPTION' => 'Product Type Description',
 	'PHPSHOP_PRODUCT_TYPE_FORM_PARAMETERS' => 'Parameters',
@@ -145,7 +153,7 @@ $langvars = array (
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_LBL' => 'Parameter Information',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_NOT_FOUND' => 'Product Type not found!',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_NAME' => 'Parameter Name',
-	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_NAME_DESCRIPTION' => 'This name will be column name of table. Must be unique and without space.<br/>For example: main_material',
+	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_NAME_DESCRIPTION' => 'This name will be column name of table. Must be unicate and without space.<br/>For example: main_material',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_LABEL' => 'Parameter Label',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_TYPE_INTEGER' => 'Integer',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_TYPE_TEXT' => 'Text',
@@ -159,7 +167,7 @@ $langvars = array (
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_TYPE_MULTIVALUE' => 'Multiple Values',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_VALUES' => 'Possible Values',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_MULTISELECT' => 'Show Possible Values as Multiple select?',
-	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_VALUES_DESCRIPTION' => '<strong>If Possible Values are set, Parameter can have only these values. Example for Possible Values:</strong><br/><span class="sectionname">Steel;Wood;Plastic;...</span>',
+	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_VALUES_DESCRIPTION' => '<strong>If Possible Values are set, Parameter can have only this values. Example for Possible Values:</strong><br/><span class="sectionname">Steel;Wood;Plastic;...</span>',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_DEFAULT' => 'Default Value',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_DEFAULT_HELP_TEXT' => 'For Parameter Default Value use this format:<ul><li>Date: YYYY-MM-DD</li><li>Time: HH:MM:SS</li><li>Date & Time: YYYY-MM-DD HH:MM:SS</li></ul>',
 	'PHPSHOP_PRODUCT_TYPE_PARAMETER_FORM_UNIT' => 'Unit',
@@ -191,7 +199,7 @@ $langvars = array (
 	'VM_DISPLAY_LIST_STYLE' => 'List Style',
 	'VM_DISPLAY_USE_PARENT_LABEL' => 'Use Parent Settings:',
 	'VM_DISPLAY_LIST_TYPE' => 'List:',
-	'VM_DISPLAY_QUANTITY_LABEL' => 'Quantity:',
+	'VM_DISPLAY_QUANTITY_LABEL' => 'S&#7889; l&#432;&#7907;ng:',
 	'VM_DISPLAY_QUANTITY_DROPDOWN_LABEL' => 'Drop Down Box Values',
 	'VM_DISPLAY_CHILD_DESCRIPTION' => 'Display Child Description',
 	'VM_DISPLAY_DESC_WIDTH' => 'Child Description Width',
@@ -222,18 +230,11 @@ $langvars = array (
 	'VM_FILES_LIST_GO_UP' => 'Go Up',
 	'VM_CATEGORY_FORM_PRODUCTS_PER_ROW' => 'Show x products per row',
 	'VM_CATEGORY_FORM_BROWSE_PAGE' => 'Category Browse Page',
-	'VM_PRODUCT_CLONE_OPTIONS_TAB' => 'Clone Product Options',
+	'VM_PRODUCT_CLONE_OPTIONS_TAB' => 'Clone Product Otions',
 	'VM_PRODUCT_CLONE_OPTIONS_LBL' => 'Also clone these Child Items',
 	'VM_PRODUCT_LIST_MEDIA' => 'Media',
 	'VM_REVIEW_LIST_NAMEDATE' => 'Name/Date',
 	'VM_PRODUCT_SELECT_ONE_OR_MORE' => 'Select one or more Products',
-	'VM_PRODUCT_SEARCHING' => 'Searching...',
-	'PHPSHOP_PRODUCT_FORM_ATTRIBUTE_LIST_EXAMPLES' => '<h4>Examples for the Attribute List Format:</h4>
-Title = Color, Property = Red ; Click on New Property to add a new color: Green ; Then click on New attribute to add a new attribute, and so on.
-<h4>Inline price adjustments for using the Advanced Attributes modification:</h4>
-Price = +10 to add this amount to the configured price.<br />  Price = -10 to subtract this amount from the configured price.<br />  Price = 10 to set the product\'s price to this amount.',
-	'VM_FILES_FORM_PRODUCT_IMAGE' => 'Product Image (full and thumb)',
-	'VM_FILES_FORM_DOWNLOADABLE' => 'Downloadable Product File (to be sold!)',
-	'VM_FILES_FORM_RESIZE_IMAGE' => 'Resize Full Image File?'
+	'VM_PRODUCT_SEARCHING' => 'Searching...'
 ); $VM_LANG->initModule( 'product', $langvars );
 ?>
