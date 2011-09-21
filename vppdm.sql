@@ -4,7 +4,7 @@ Source Host: localhost
 Source Database: vppdm
 Target Host: localhost
 Target Database: vppdm
-Date: 9/21/2011 10:32:17 PM
+Date: 9/21/2011 8:46:51 PM
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -13,31 +13,31 @@ SET FOREIGN_KEY_CHECKS=0;
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_banner`;
 CREATE TABLE `jos_banner` (
-  `bid` int(11) NOT NULL AUTO_INCREMENT,
-  `cid` int(11) NOT NULL DEFAULT '0',
-  `type` varchar(30) NOT NULL DEFAULT 'banner',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
-  `imptotal` int(11) NOT NULL DEFAULT '0',
-  `impmade` int(11) NOT NULL DEFAULT '0',
-  `clicks` int(11) NOT NULL DEFAULT '0',
-  `imageurl` varchar(100) NOT NULL DEFAULT '',
-  `clickurl` varchar(200) NOT NULL DEFAULT '',
-  `date` datetime DEFAULT NULL,
-  `showBanner` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `editor` varchar(50) DEFAULT NULL,
+  `bid` int(11) NOT NULL auto_increment,
+  `cid` int(11) NOT NULL default '0',
+  `type` varchar(30) NOT NULL default 'banner',
+  `name` varchar(255) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `imptotal` int(11) NOT NULL default '0',
+  `impmade` int(11) NOT NULL default '0',
+  `clicks` int(11) NOT NULL default '0',
+  `imageurl` varchar(100) NOT NULL default '',
+  `clickurl` varchar(200) NOT NULL default '',
+  `date` datetime default NULL,
+  `showBanner` tinyint(1) NOT NULL default '0',
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `editor` varchar(50) default NULL,
   `custombannercode` text,
-  `catid` int(10) unsigned NOT NULL DEFAULT '0',
+  `catid` int(10) unsigned NOT NULL default '0',
   `description` text NOT NULL,
-  `sticky` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `sticky` tinyint(1) unsigned NOT NULL default '0',
+  `ordering` int(11) NOT NULL default '0',
+  `publish_up` datetime NOT NULL default '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL default '0000-00-00 00:00:00',
   `tags` text NOT NULL,
   `params` text NOT NULL,
-  PRIMARY KEY (`bid`),
+  PRIMARY KEY  (`bid`),
   KEY `viewbanner` (`showBanner`),
   KEY `idx_banner_catid` (`catid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
@@ -47,15 +47,15 @@ CREATE TABLE `jos_banner` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_bannerclient`;
 CREATE TABLE `jos_bannerclient` (
-  `cid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `contact` varchar(255) NOT NULL DEFAULT '',
-  `email` varchar(255) NOT NULL DEFAULT '',
+  `cid` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `contact` varchar(255) NOT NULL default '',
+  `email` varchar(255) NOT NULL default '',
   `extrainfo` text NOT NULL,
-  `checked_out` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out_time` time DEFAULT NULL,
-  `editor` varchar(50) DEFAULT NULL,
-  PRIMARY KEY (`cid`)
+  `checked_out` tinyint(1) NOT NULL default '0',
+  `checked_out_time` time default NULL,
+  `editor` varchar(50) default NULL,
+  PRIMARY KEY  (`cid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -73,48 +73,48 @@ CREATE TABLE `jos_bannertrack` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_categories`;
 CREATE TABLE `jos_categories` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) NOT NULL DEFAULT '0',
-  `title` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
-  `image` varchar(255) NOT NULL DEFAULT '',
-  `section` varchar(50) NOT NULL DEFAULT '',
-  `image_position` varchar(30) NOT NULL DEFAULT '',
+  `id` int(11) NOT NULL auto_increment,
+  `parent_id` int(11) NOT NULL default '0',
+  `title` varchar(255) NOT NULL default '',
+  `name` varchar(255) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `image` varchar(255) NOT NULL default '',
+  `section` varchar(50) NOT NULL default '',
+  `image_position` varchar(30) NOT NULL default '',
   `description` text NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `editor` varchar(50) DEFAULT NULL,
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `count` int(11) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL default '0',
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `editor` varchar(50) default NULL,
+  `ordering` int(11) NOT NULL default '0',
+  `access` tinyint(3) unsigned NOT NULL default '0',
+  `count` int(11) NOT NULL default '0',
   `params` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `cat_idx` (`section`,`published`,`access`),
   KEY `idx_access` (`access`),
   KEY `idx_checkout` (`checked_out`)
-) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for jos_components
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_components`;
 CREATE TABLE `jos_components` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL DEFAULT '',
-  `link` varchar(255) NOT NULL DEFAULT '',
-  `menuid` int(11) unsigned NOT NULL DEFAULT '0',
-  `parent` int(11) unsigned NOT NULL DEFAULT '0',
-  `admin_menu_link` varchar(255) NOT NULL DEFAULT '',
-  `admin_menu_alt` varchar(255) NOT NULL DEFAULT '',
-  `option` varchar(50) NOT NULL DEFAULT '',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `admin_menu_img` varchar(255) NOT NULL DEFAULT '',
-  `iscore` tinyint(4) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(50) NOT NULL default '',
+  `link` varchar(255) NOT NULL default '',
+  `menuid` int(11) unsigned NOT NULL default '0',
+  `parent` int(11) unsigned NOT NULL default '0',
+  `admin_menu_link` varchar(255) NOT NULL default '',
+  `admin_menu_alt` varchar(255) NOT NULL default '',
+  `option` varchar(50) NOT NULL default '',
+  `ordering` int(11) NOT NULL default '0',
+  `admin_menu_img` varchar(255) NOT NULL default '',
+  `iscore` tinyint(4) NOT NULL default '0',
   `params` text NOT NULL,
-  `enabled` tinyint(4) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`),
+  `enabled` tinyint(4) NOT NULL default '1',
+  PRIMARY KEY  (`id`),
   KEY `parent_option` (`parent`,`option`(32))
 ) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 
@@ -123,33 +123,33 @@ CREATE TABLE `jos_components` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_contact_details`;
 CREATE TABLE `jos_contact_details` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
-  `con_position` varchar(255) DEFAULT NULL,
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `con_position` varchar(255) default NULL,
   `address` text,
-  `suburb` varchar(100) DEFAULT NULL,
-  `state` varchar(100) DEFAULT NULL,
-  `country` varchar(100) DEFAULT NULL,
-  `postcode` varchar(100) DEFAULT NULL,
-  `telephone` varchar(255) DEFAULT NULL,
-  `fax` varchar(255) DEFAULT NULL,
+  `suburb` varchar(100) default NULL,
+  `state` varchar(100) default NULL,
+  `country` varchar(100) default NULL,
+  `postcode` varchar(100) default NULL,
+  `telephone` varchar(255) default NULL,
+  `fax` varchar(255) default NULL,
   `misc` mediumtext,
-  `image` varchar(255) DEFAULT NULL,
-  `imagepos` varchar(20) DEFAULT NULL,
-  `email_to` varchar(255) DEFAULT NULL,
-  `default_con` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `published` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `image` varchar(255) default NULL,
+  `imagepos` varchar(20) default NULL,
+  `email_to` varchar(255) default NULL,
+  `default_con` tinyint(1) unsigned NOT NULL default '0',
+  `published` tinyint(1) unsigned NOT NULL default '0',
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `ordering` int(11) NOT NULL default '0',
   `params` text NOT NULL,
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `catid` int(11) NOT NULL DEFAULT '0',
-  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `mobile` varchar(255) NOT NULL DEFAULT '',
-  `webpage` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `user_id` int(11) NOT NULL default '0',
+  `catid` int(11) NOT NULL default '0',
+  `access` tinyint(3) unsigned NOT NULL default '0',
+  `mobile` varchar(255) NOT NULL default '',
+  `webpage` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `catid` (`catid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
@@ -158,53 +158,53 @@ CREATE TABLE `jos_contact_details` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_content`;
 CREATE TABLE `jos_content` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
-  `title_alias` varchar(255) NOT NULL DEFAULT '',
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `title` varchar(255) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `title_alias` varchar(255) NOT NULL default '',
   `introtext` mediumtext NOT NULL,
   `fulltext` mediumtext NOT NULL,
-  `state` tinyint(3) NOT NULL DEFAULT '0',
-  `sectionid` int(11) unsigned NOT NULL DEFAULT '0',
-  `mask` int(11) unsigned NOT NULL DEFAULT '0',
-  `catid` int(11) unsigned NOT NULL DEFAULT '0',
-  `created` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `created_by` int(11) unsigned NOT NULL DEFAULT '0',
-  `created_by_alias` varchar(255) NOT NULL DEFAULT '',
-  `modified` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `modified_by` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `publish_up` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `publish_down` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `state` tinyint(3) NOT NULL default '0',
+  `sectionid` int(11) unsigned NOT NULL default '0',
+  `mask` int(11) unsigned NOT NULL default '0',
+  `catid` int(11) unsigned NOT NULL default '0',
+  `created` datetime NOT NULL default '0000-00-00 00:00:00',
+  `created_by` int(11) unsigned NOT NULL default '0',
+  `created_by_alias` varchar(255) NOT NULL default '',
+  `modified` datetime NOT NULL default '0000-00-00 00:00:00',
+  `modified_by` int(11) unsigned NOT NULL default '0',
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `publish_up` datetime NOT NULL default '0000-00-00 00:00:00',
+  `publish_down` datetime NOT NULL default '0000-00-00 00:00:00',
   `images` text NOT NULL,
   `urls` text NOT NULL,
   `attribs` text NOT NULL,
-  `version` int(11) unsigned NOT NULL DEFAULT '1',
-  `parentid` int(11) unsigned NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0',
+  `version` int(11) unsigned NOT NULL default '1',
+  `parentid` int(11) unsigned NOT NULL default '0',
+  `ordering` int(11) NOT NULL default '0',
   `metakey` text NOT NULL,
   `metadesc` text NOT NULL,
-  `access` int(11) unsigned NOT NULL DEFAULT '0',
-  `hits` int(11) unsigned NOT NULL DEFAULT '0',
+  `access` int(11) unsigned NOT NULL default '0',
+  `hits` int(11) unsigned NOT NULL default '0',
   `metadata` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `idx_section` (`sectionid`),
   KEY `idx_access` (`access`),
   KEY `idx_checkout` (`checked_out`),
   KEY `idx_state` (`state`),
   KEY `idx_catid` (`catid`),
   KEY `idx_createdby` (`created_by`)
-) ENGINE=MyISAM AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=49 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for jos_content_frontpage
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_content_frontpage`;
 CREATE TABLE `jos_content_frontpage` (
-  `content_id` int(11) NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`content_id`)
+  `content_id` int(11) NOT NULL default '0',
+  `ordering` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`content_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -212,11 +212,11 @@ CREATE TABLE `jos_content_frontpage` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_content_rating`;
 CREATE TABLE `jos_content_rating` (
-  `content_id` int(11) NOT NULL DEFAULT '0',
-  `rating_sum` int(11) unsigned NOT NULL DEFAULT '0',
-  `rating_count` int(11) unsigned NOT NULL DEFAULT '0',
-  `lastip` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`content_id`)
+  `content_id` int(11) NOT NULL default '0',
+  `rating_sum` int(11) unsigned NOT NULL default '0',
+  `rating_count` int(11) unsigned NOT NULL default '0',
+  `lastip` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`content_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -224,13 +224,13 @@ CREATE TABLE `jos_content_rating` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_acl_aro`;
 CREATE TABLE `jos_core_acl_aro` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `section_value` varchar(240) NOT NULL DEFAULT '0',
-  `value` varchar(240) NOT NULL DEFAULT '',
-  `order_value` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `hidden` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(11) NOT NULL auto_increment,
+  `section_value` varchar(240) NOT NULL default '0',
+  `value` varchar(240) NOT NULL default '',
+  `order_value` int(11) NOT NULL default '0',
+  `name` varchar(255) NOT NULL default '',
+  `hidden` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `jos_section_value_value_aro` (`section_value`(100),`value`(100)),
   KEY `jos_gacl_hidden_aro` (`hidden`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
@@ -240,13 +240,13 @@ CREATE TABLE `jos_core_acl_aro` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_acl_aro_groups`;
 CREATE TABLE `jos_core_acl_aro_groups` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `parent_id` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `lft` int(11) NOT NULL DEFAULT '0',
-  `rgt` int(11) NOT NULL DEFAULT '0',
-  `value` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(11) NOT NULL auto_increment,
+  `parent_id` int(11) NOT NULL default '0',
+  `name` varchar(255) NOT NULL default '',
+  `lft` int(11) NOT NULL default '0',
+  `rgt` int(11) NOT NULL default '0',
+  `value` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   KEY `jos_gacl_parent_id_aro_groups` (`parent_id`),
   KEY `jos_gacl_lft_rgt_aro_groups` (`lft`,`rgt`)
 ) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=utf8;
@@ -256,10 +256,10 @@ CREATE TABLE `jos_core_acl_aro_groups` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_acl_aro_map`;
 CREATE TABLE `jos_core_acl_aro_map` (
-  `acl_id` int(11) NOT NULL DEFAULT '0',
-  `section_value` varchar(230) NOT NULL DEFAULT '0',
+  `acl_id` int(11) NOT NULL default '0',
+  `section_value` varchar(230) NOT NULL default '0',
   `value` varchar(100) NOT NULL,
-  PRIMARY KEY (`acl_id`,`section_value`,`value`)
+  PRIMARY KEY  (`acl_id`,`section_value`,`value`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -267,12 +267,12 @@ CREATE TABLE `jos_core_acl_aro_map` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_acl_aro_sections`;
 CREATE TABLE `jos_core_acl_aro_sections` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `value` varchar(230) NOT NULL DEFAULT '',
-  `order_value` int(11) NOT NULL DEFAULT '0',
-  `name` varchar(230) NOT NULL DEFAULT '',
-  `hidden` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` int(11) NOT NULL auto_increment,
+  `value` varchar(230) NOT NULL default '',
+  `order_value` int(11) NOT NULL default '0',
+  `name` varchar(230) NOT NULL default '',
+  `hidden` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `jos_gacl_value_aro_sections` (`value`),
   KEY `jos_gacl_hidden_aro_sections` (`hidden`)
 ) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
@@ -282,9 +282,9 @@ CREATE TABLE `jos_core_acl_aro_sections` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_acl_groups_aro_map`;
 CREATE TABLE `jos_core_acl_groups_aro_map` (
-  `group_id` int(11) NOT NULL DEFAULT '0',
-  `section_value` varchar(240) NOT NULL DEFAULT '',
-  `aro_id` int(11) NOT NULL DEFAULT '0',
+  `group_id` int(11) NOT NULL default '0',
+  `section_value` varchar(240) NOT NULL default '',
+  `aro_id` int(11) NOT NULL default '0',
   UNIQUE KEY `group_id_aro_id_groups_aro_map` (`group_id`,`section_value`,`aro_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -293,10 +293,10 @@ CREATE TABLE `jos_core_acl_groups_aro_map` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_log_items`;
 CREATE TABLE `jos_core_log_items` (
-  `time_stamp` date NOT NULL DEFAULT '0000-00-00',
-  `item_table` varchar(50) NOT NULL DEFAULT '',
-  `item_id` int(11) unsigned NOT NULL DEFAULT '0',
-  `hits` int(11) unsigned NOT NULL DEFAULT '0'
+  `time_stamp` date NOT NULL default '0000-00-00',
+  `item_table` varchar(50) NOT NULL default '',
+  `item_id` int(11) unsigned NOT NULL default '0',
+  `hits` int(11) unsigned NOT NULL default '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -304,8 +304,8 @@ CREATE TABLE `jos_core_log_items` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_core_log_searches`;
 CREATE TABLE `jos_core_log_searches` (
-  `search_term` varchar(128) NOT NULL DEFAULT '',
-  `hits` int(11) unsigned NOT NULL DEFAULT '0'
+  `search_term` varchar(128) NOT NULL default '',
+  `hits` int(11) unsigned NOT NULL default '0'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -313,9 +313,9 @@ CREATE TABLE `jos_core_log_searches` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_groups`;
 CREATE TABLE `jos_groups` (
-  `id` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `name` varchar(50) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
+  `id` tinyint(3) unsigned NOT NULL default '0',
+  `name` varchar(50) NOT NULL default '',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -323,42 +323,42 @@ CREATE TABLE `jos_groups` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_menu`;
 CREATE TABLE `jos_menu` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `menutype` varchar(75) DEFAULT NULL,
-  `name` varchar(255) DEFAULT NULL,
-  `alias` varchar(255) NOT NULL DEFAULT '',
+  `id` int(11) NOT NULL auto_increment,
+  `menutype` varchar(75) default NULL,
+  `name` varchar(255) default NULL,
+  `alias` varchar(255) NOT NULL default '',
   `link` text,
-  `type` varchar(50) NOT NULL DEFAULT '',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `parent` int(11) unsigned NOT NULL DEFAULT '0',
-  `componentid` int(11) unsigned NOT NULL DEFAULT '0',
-  `sublevel` int(11) DEFAULT '0',
-  `ordering` int(11) DEFAULT '0',
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `pollid` int(11) NOT NULL DEFAULT '0',
-  `browserNav` tinyint(4) DEFAULT '0',
-  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `utaccess` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `type` varchar(50) NOT NULL default '',
+  `published` tinyint(1) NOT NULL default '0',
+  `parent` int(11) unsigned NOT NULL default '0',
+  `componentid` int(11) unsigned NOT NULL default '0',
+  `sublevel` int(11) default '0',
+  `ordering` int(11) default '0',
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `pollid` int(11) NOT NULL default '0',
+  `browserNav` tinyint(4) default '0',
+  `access` tinyint(3) unsigned NOT NULL default '0',
+  `utaccess` tinyint(3) unsigned NOT NULL default '0',
   `params` text NOT NULL,
-  `lft` int(11) unsigned NOT NULL DEFAULT '0',
-  `rgt` int(11) unsigned NOT NULL DEFAULT '0',
-  `home` int(1) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `lft` int(11) unsigned NOT NULL default '0',
+  `rgt` int(11) unsigned NOT NULL default '0',
+  `home` int(1) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `componentid` (`componentid`,`menutype`,`published`,`access`),
   KEY `menutype` (`menutype`)
-) ENGINE=MyISAM AUTO_INCREMENT=55 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for jos_menu_types
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_menu_types`;
 CREATE TABLE `jos_menu_types` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `menutype` varchar(75) NOT NULL DEFAULT '',
-  `title` varchar(255) NOT NULL DEFAULT '',
-  `description` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`),
+  `id` int(10) unsigned NOT NULL auto_increment,
+  `menutype` varchar(75) NOT NULL default '',
+  `title` varchar(255) NOT NULL default '',
+  `description` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`id`),
   UNIQUE KEY `menutype` (`menutype`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
@@ -367,16 +367,16 @@ CREATE TABLE `jos_menu_types` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_messages`;
 CREATE TABLE `jos_messages` (
-  `message_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `user_id_from` int(10) unsigned NOT NULL DEFAULT '0',
-  `user_id_to` int(10) unsigned NOT NULL DEFAULT '0',
-  `folder_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `date_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `state` int(11) NOT NULL DEFAULT '0',
-  `priority` int(1) unsigned NOT NULL DEFAULT '0',
+  `message_id` int(10) unsigned NOT NULL auto_increment,
+  `user_id_from` int(10) unsigned NOT NULL default '0',
+  `user_id_to` int(10) unsigned NOT NULL default '0',
+  `folder_id` int(10) unsigned NOT NULL default '0',
+  `date_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `state` int(11) NOT NULL default '0',
+  `priority` int(1) unsigned NOT NULL default '0',
   `subject` text NOT NULL,
   `message` text NOT NULL,
-  PRIMARY KEY (`message_id`),
+  PRIMARY KEY  (`message_id`),
   KEY `useridto_state` (`user_id_to`,`state`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -385,9 +385,9 @@ CREATE TABLE `jos_messages` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_messages_cfg`;
 CREATE TABLE `jos_messages_cfg` (
-  `user_id` int(10) unsigned NOT NULL DEFAULT '0',
-  `cfg_name` varchar(100) NOT NULL DEFAULT '',
-  `cfg_value` varchar(255) NOT NULL DEFAULT '',
+  `user_id` int(10) unsigned NOT NULL default '0',
+  `cfg_name` varchar(100) NOT NULL default '',
+  `cfg_value` varchar(255) NOT NULL default '',
   UNIQUE KEY `idx_user_var_name` (`user_id`,`cfg_name`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -401,7 +401,7 @@ CREATE TABLE `jos_migration_backlinks` (
   `url` text NOT NULL,
   `sefurl` text NOT NULL,
   `newurl` text NOT NULL,
-  PRIMARY KEY (`itemid`)
+  PRIMARY KEY  (`itemid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -409,23 +409,23 @@ CREATE TABLE `jos_migration_backlinks` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_modules`;
 CREATE TABLE `jos_modules` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL auto_increment,
   `title` text NOT NULL,
   `content` text NOT NULL,
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `position` varchar(50) DEFAULT NULL,
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `module` varchar(50) DEFAULT NULL,
-  `numnews` int(11) NOT NULL DEFAULT '0',
-  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `showtitle` tinyint(3) unsigned NOT NULL DEFAULT '1',
+  `ordering` int(11) NOT NULL default '0',
+  `position` varchar(50) default NULL,
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `published` tinyint(1) NOT NULL default '0',
+  `module` varchar(50) default NULL,
+  `numnews` int(11) NOT NULL default '0',
+  `access` tinyint(3) unsigned NOT NULL default '0',
+  `showtitle` tinyint(3) unsigned NOT NULL default '1',
   `params` text NOT NULL,
-  `iscore` tinyint(4) NOT NULL DEFAULT '0',
-  `client_id` tinyint(4) NOT NULL DEFAULT '0',
+  `iscore` tinyint(4) NOT NULL default '0',
+  `client_id` tinyint(4) NOT NULL default '0',
   `control` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `published` (`published`,`access`),
   KEY `newsfeeds` (`module`,`published`)
 ) ENGINE=MyISAM AUTO_INCREMENT=48 DEFAULT CHARSET=utf8;
@@ -435,9 +435,9 @@ CREATE TABLE `jos_modules` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_modules_menu`;
 CREATE TABLE `jos_modules_menu` (
-  `moduleid` int(11) NOT NULL DEFAULT '0',
-  `menuid` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`moduleid`,`menuid`)
+  `moduleid` int(11) NOT NULL default '0',
+  `menuid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`moduleid`,`menuid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -445,20 +445,20 @@ CREATE TABLE `jos_modules_menu` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_newsfeeds`;
 CREATE TABLE `jos_newsfeeds` (
-  `catid` int(11) NOT NULL DEFAULT '0',
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `catid` int(11) NOT NULL default '0',
+  `id` int(11) NOT NULL auto_increment,
   `name` text NOT NULL,
-  `alias` varchar(255) NOT NULL DEFAULT '',
+  `alias` varchar(255) NOT NULL default '',
   `link` text NOT NULL,
-  `filename` varchar(200) DEFAULT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `numarticles` int(11) unsigned NOT NULL DEFAULT '1',
-  `cache_time` int(11) unsigned NOT NULL DEFAULT '3600',
-  `checked_out` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `rtl` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `filename` varchar(200) default NULL,
+  `published` tinyint(1) NOT NULL default '0',
+  `numarticles` int(11) unsigned NOT NULL default '1',
+  `cache_time` int(11) unsigned NOT NULL default '3600',
+  `checked_out` tinyint(3) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `ordering` int(11) NOT NULL default '0',
+  `rtl` tinyint(4) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `published` (`published`),
   KEY `catid` (`catid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
@@ -468,19 +468,19 @@ CREATE TABLE `jos_newsfeeds` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_plugins`;
 CREATE TABLE `jos_plugins` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL DEFAULT '',
-  `element` varchar(100) NOT NULL DEFAULT '',
-  `folder` varchar(100) NOT NULL DEFAULT '',
-  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `published` tinyint(3) NOT NULL DEFAULT '0',
-  `iscore` tinyint(3) NOT NULL DEFAULT '0',
-  `client_id` tinyint(3) NOT NULL DEFAULT '0',
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(100) NOT NULL default '',
+  `element` varchar(100) NOT NULL default '',
+  `folder` varchar(100) NOT NULL default '',
+  `access` tinyint(3) unsigned NOT NULL default '0',
+  `ordering` int(11) NOT NULL default '0',
+  `published` tinyint(3) NOT NULL default '0',
+  `iscore` tinyint(3) NOT NULL default '0',
+  `client_id` tinyint(3) NOT NULL default '0',
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
   `params` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `idx_folder` (`published`,`client_id`,`access`,`folder`)
 ) ENGINE=MyISAM AUTO_INCREMENT=35 DEFAULT CHARSET=utf8;
 
@@ -489,11 +489,11 @@ CREATE TABLE `jos_plugins` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_poll_data`;
 CREATE TABLE `jos_poll_data` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `pollid` int(11) NOT NULL DEFAULT '0',
+  `id` int(11) NOT NULL auto_increment,
+  `pollid` int(11) NOT NULL default '0',
   `text` text NOT NULL,
-  `hits` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `hits` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `pollid` (`pollid`,`text`(1))
 ) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
@@ -502,11 +502,11 @@ CREATE TABLE `jos_poll_data` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_poll_date`;
 CREATE TABLE `jos_poll_date` (
-  `id` bigint(20) NOT NULL AUTO_INCREMENT,
-  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `vote_id` int(11) NOT NULL DEFAULT '0',
-  `poll_id` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
+  `id` bigint(20) NOT NULL auto_increment,
+  `date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `vote_id` int(11) NOT NULL default '0',
+  `poll_id` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`),
   KEY `poll_id` (`poll_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
@@ -515,9 +515,9 @@ CREATE TABLE `jos_poll_date` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_poll_menu`;
 CREATE TABLE `jos_poll_menu` (
-  `pollid` int(11) NOT NULL DEFAULT '0',
-  `menuid` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`pollid`,`menuid`)
+  `pollid` int(11) NOT NULL default '0',
+  `menuid` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`pollid`,`menuid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -525,16 +525,16 @@ CREATE TABLE `jos_poll_menu` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_polls`;
 CREATE TABLE `jos_polls` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
-  `voters` int(9) NOT NULL DEFAULT '0',
-  `checked_out` int(11) NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `access` int(11) NOT NULL DEFAULT '0',
-  `lag` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `title` varchar(255) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `voters` int(9) NOT NULL default '0',
+  `checked_out` int(11) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `published` tinyint(1) NOT NULL default '0',
+  `access` int(11) NOT NULL default '0',
+  `lag` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=15 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -542,40 +542,40 @@ CREATE TABLE `jos_polls` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_sections`;
 CREATE TABLE `jos_sections` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `title` varchar(255) NOT NULL DEFAULT '',
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
+  `id` int(11) NOT NULL auto_increment,
+  `title` varchar(255) NOT NULL default '',
+  `name` varchar(255) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
   `image` text NOT NULL,
-  `scope` varchar(50) NOT NULL DEFAULT '',
-  `image_position` varchar(30) NOT NULL DEFAULT '',
+  `scope` varchar(50) NOT NULL default '',
+  `image_position` varchar(30) NOT NULL default '',
   `description` text NOT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) unsigned NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `access` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `count` int(11) NOT NULL DEFAULT '0',
+  `published` tinyint(1) NOT NULL default '0',
+  `checked_out` int(11) unsigned NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `ordering` int(11) NOT NULL default '0',
+  `access` tinyint(3) unsigned NOT NULL default '0',
+  `count` int(11) NOT NULL default '0',
   `params` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `idx_scope` (`scope`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Table structure for jos_session
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_session`;
 CREATE TABLE `jos_session` (
-  `username` varchar(150) DEFAULT '',
-  `time` varchar(14) DEFAULT '',
-  `session_id` varchar(200) NOT NULL DEFAULT '0',
-  `guest` tinyint(4) DEFAULT '1',
-  `userid` int(11) DEFAULT '0',
-  `usertype` varchar(50) DEFAULT '',
-  `gid` tinyint(3) unsigned NOT NULL DEFAULT '0',
-  `client_id` tinyint(3) unsigned NOT NULL DEFAULT '0',
+  `username` varchar(150) default '',
+  `time` varchar(14) default '',
+  `session_id` varchar(200) NOT NULL default '0',
+  `guest` tinyint(4) default '1',
+  `userid` int(11) default '0',
+  `usertype` varchar(50) default '',
+  `gid` tinyint(3) unsigned NOT NULL default '0',
+  `client_id` tinyint(3) unsigned NOT NULL default '0',
   `data` longtext,
-  PRIMARY KEY (`session_id`(64)),
+  PRIMARY KEY  (`session_id`(64)),
   KEY `whosonline` (`guest`,`usertype`),
   KEY `userid` (`userid`),
   KEY `time` (`time`)
@@ -586,9 +586,9 @@ CREATE TABLE `jos_session` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_stats_agents`;
 CREATE TABLE `jos_stats_agents` (
-  `agent` varchar(255) NOT NULL DEFAULT '',
-  `type` tinyint(1) unsigned NOT NULL DEFAULT '0',
-  `hits` int(11) unsigned NOT NULL DEFAULT '1'
+  `agent` varchar(255) NOT NULL default '',
+  `type` tinyint(1) unsigned NOT NULL default '0',
+  `hits` int(11) unsigned NOT NULL default '1'
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -596,10 +596,10 @@ CREATE TABLE `jos_stats_agents` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_templates_menu`;
 CREATE TABLE `jos_templates_menu` (
-  `template` varchar(255) NOT NULL DEFAULT '',
-  `menuid` int(11) NOT NULL DEFAULT '0',
-  `client_id` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`menuid`,`client_id`,`template`)
+  `template` varchar(255) NOT NULL default '',
+  `menuid` int(11) NOT NULL default '0',
+  `client_id` tinyint(4) NOT NULL default '0',
+  PRIMARY KEY  (`menuid`,`client_id`,`template`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -607,20 +607,20 @@ CREATE TABLE `jos_templates_menu` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_users`;
 CREATE TABLE `jos_users` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) NOT NULL DEFAULT '',
-  `username` varchar(150) NOT NULL DEFAULT '',
-  `email` varchar(100) NOT NULL DEFAULT '',
-  `password` varchar(100) NOT NULL DEFAULT '',
-  `usertype` varchar(25) NOT NULL DEFAULT '',
-  `block` tinyint(4) NOT NULL DEFAULT '0',
-  `sendEmail` tinyint(4) DEFAULT '0',
-  `gid` tinyint(3) unsigned NOT NULL DEFAULT '1',
-  `registerDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `lastvisitDate` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `activation` varchar(100) NOT NULL DEFAULT '',
+  `id` int(11) NOT NULL auto_increment,
+  `name` varchar(255) NOT NULL default '',
+  `username` varchar(150) NOT NULL default '',
+  `email` varchar(100) NOT NULL default '',
+  `password` varchar(100) NOT NULL default '',
+  `usertype` varchar(25) NOT NULL default '',
+  `block` tinyint(4) NOT NULL default '0',
+  `sendEmail` tinyint(4) default '0',
+  `gid` tinyint(3) unsigned NOT NULL default '1',
+  `registerDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `lastvisitDate` datetime NOT NULL default '0000-00-00 00:00:00',
+  `activation` varchar(100) NOT NULL default '',
   `params` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `usertype` (`usertype`),
   KEY `idx_name` (`name`),
   KEY `gid_block` (`gid`,`block`),
@@ -633,10 +633,10 @@ CREATE TABLE `jos_users` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_auth_group`;
 CREATE TABLE `jos_vm_auth_group` (
-  `group_id` int(11) NOT NULL AUTO_INCREMENT,
-  `group_name` varchar(128) DEFAULT NULL,
-  `group_level` int(11) DEFAULT NULL,
-  PRIMARY KEY (`group_id`)
+  `group_id` int(11) NOT NULL auto_increment,
+  `group_name` varchar(128) default NULL,
+  `group_level` int(11) default NULL,
+  PRIMARY KEY  (`group_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Holds all the user groups';
 
 -- ----------------------------
@@ -644,9 +644,9 @@ CREATE TABLE `jos_vm_auth_group` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_auth_user_group`;
 CREATE TABLE `jos_vm_auth_user_group` (
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `group_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
+  `user_id` int(11) NOT NULL default '0',
+  `group_id` int(11) default NULL,
+  PRIMARY KEY  (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Maps the user to user groups';
 
 -- ----------------------------
@@ -654,8 +654,8 @@ CREATE TABLE `jos_vm_auth_user_group` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_auth_user_vendor`;
 CREATE TABLE `jos_vm_auth_user_vendor` (
-  `user_id` int(11) DEFAULT NULL,
-  `vendor_id` int(11) DEFAULT NULL,
+  `user_id` int(11) default NULL,
+  `vendor_id` int(11) default NULL,
   KEY `idx_auth_user_vendor_user_id` (`user_id`),
   KEY `idx_auth_user_vendor_vendor_id` (`vendor_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Maps a user to a vendor';
@@ -667,8 +667,8 @@ DROP TABLE IF EXISTS `jos_vm_cart`;
 CREATE TABLE `jos_vm_cart` (
   `user_id` int(11) NOT NULL,
   `cart_content` text NOT NULL,
-  `last_updated` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  PRIMARY KEY (`user_id`)
+  `last_updated` timestamp NOT NULL default CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Stores the cart contents of a user';
 
 -- ----------------------------
@@ -676,33 +676,33 @@ CREATE TABLE `jos_vm_cart` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_category`;
 CREATE TABLE `jos_vm_category` (
-  `category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) NOT NULL DEFAULT '0',
-  `category_name` varchar(128) NOT NULL DEFAULT '',
+  `category_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) NOT NULL default '0',
+  `category_name` varchar(128) NOT NULL default '',
   `category_description` text,
-  `category_thumb_image` varchar(255) DEFAULT NULL,
-  `category_full_image` varchar(255) DEFAULT NULL,
-  `category_publish` char(1) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `category_browsepage` varchar(255) NOT NULL DEFAULT 'browse_1',
-  `products_per_row` tinyint(2) NOT NULL DEFAULT '1',
-  `category_flypage` varchar(255) DEFAULT NULL,
-  `list_order` int(11) DEFAULT NULL,
-  PRIMARY KEY (`category_id`),
+  `category_thumb_image` varchar(255) default NULL,
+  `category_full_image` varchar(255) default NULL,
+  `category_publish` char(1) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
+  `category_browsepage` varchar(255) NOT NULL default 'browse_1',
+  `products_per_row` tinyint(2) NOT NULL default '1',
+  `category_flypage` varchar(255) default NULL,
+  `list_order` int(11) default NULL,
+  PRIMARY KEY  (`category_id`),
   KEY `idx_category_vendor_id` (`vendor_id`),
   KEY `idx_category_name` (`category_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8 COMMENT='Product Categories are stored here';
+) ENGINE=MyISAM AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='Product Categories are stored here';
 
 -- ----------------------------
 -- Table structure for jos_vm_category_xref
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_category_xref`;
 CREATE TABLE `jos_vm_category_xref` (
-  `category_parent_id` int(11) NOT NULL DEFAULT '0',
-  `category_child_id` int(11) NOT NULL DEFAULT '0',
-  `category_list` int(11) DEFAULT NULL,
-  PRIMARY KEY (`category_child_id`),
+  `category_parent_id` int(11) NOT NULL default '0',
+  `category_child_id` int(11) NOT NULL default '0',
+  `category_list` int(11) default NULL,
+  PRIMARY KEY  (`category_child_id`),
   KEY `category_xref_category_parent_id` (`category_parent_id`),
   KEY `idx_category_xref_category_list` (`category_list`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Category child-parent relation list';
@@ -712,12 +712,12 @@ CREATE TABLE `jos_vm_category_xref` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_country`;
 CREATE TABLE `jos_vm_country` (
-  `country_id` int(11) NOT NULL AUTO_INCREMENT,
-  `zone_id` int(11) NOT NULL DEFAULT '1',
-  `country_name` varchar(64) DEFAULT NULL,
-  `country_3_code` char(3) DEFAULT NULL,
-  `country_2_code` char(2) DEFAULT NULL,
-  PRIMARY KEY (`country_id`),
+  `country_id` int(11) NOT NULL auto_increment,
+  `zone_id` int(11) NOT NULL default '1',
+  `country_name` varchar(64) default NULL,
+  `country_3_code` char(3) default NULL,
+  `country_2_code` char(2) default NULL,
+  PRIMARY KEY  (`country_id`),
   KEY `idx_country_name` (`country_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=246 DEFAULT CHARSET=utf8 COMMENT='Country records';
 
@@ -726,12 +726,12 @@ CREATE TABLE `jos_vm_country` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_coupons`;
 CREATE TABLE `jos_vm_coupons` (
-  `coupon_id` int(16) NOT NULL AUTO_INCREMENT,
-  `coupon_code` varchar(32) NOT NULL DEFAULT '',
-  `percent_or_total` enum('percent','total') NOT NULL DEFAULT 'percent',
-  `coupon_type` enum('gift','permanent') NOT NULL DEFAULT 'gift',
-  `coupon_value` decimal(12,2) NOT NULL DEFAULT '0.00',
-  PRIMARY KEY (`coupon_id`)
+  `coupon_id` int(16) NOT NULL auto_increment,
+  `coupon_code` varchar(32) NOT NULL default '',
+  `percent_or_total` enum('percent','total') NOT NULL default 'percent',
+  `coupon_type` enum('gift','permanent') NOT NULL default 'gift',
+  `coupon_value` decimal(12,2) NOT NULL default '0.00',
+  PRIMARY KEY  (`coupon_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='Used to store coupon codes';
 
 -- ----------------------------
@@ -739,11 +739,11 @@ CREATE TABLE `jos_vm_coupons` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_creditcard`;
 CREATE TABLE `jos_vm_creditcard` (
-  `creditcard_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) NOT NULL DEFAULT '0',
-  `creditcard_name` varchar(70) NOT NULL DEFAULT '',
-  `creditcard_code` varchar(30) NOT NULL DEFAULT '',
-  PRIMARY KEY (`creditcard_id`)
+  `creditcard_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) NOT NULL default '0',
+  `creditcard_name` varchar(70) NOT NULL default '',
+  `creditcard_code` varchar(30) NOT NULL default '',
+  PRIMARY KEY  (`creditcard_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Used to store credit card types';
 
 -- ----------------------------
@@ -751,12 +751,12 @@ CREATE TABLE `jos_vm_creditcard` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_csv`;
 CREATE TABLE `jos_vm_csv` (
-  `field_id` int(11) NOT NULL AUTO_INCREMENT,
-  `field_name` varchar(128) NOT NULL DEFAULT '',
+  `field_id` int(11) NOT NULL auto_increment,
+  `field_name` varchar(128) NOT NULL default '',
   `field_default_value` text,
-  `field_ordering` int(3) NOT NULL DEFAULT '0',
-  `field_required` char(1) DEFAULT 'N',
-  PRIMARY KEY (`field_id`)
+  `field_ordering` int(3) NOT NULL default '0',
+  `field_required` char(1) default 'N',
+  PRIMARY KEY  (`field_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=26 DEFAULT CHARSET=utf8 COMMENT='Holds all fields which are used on CVS Ex-/Import';
 
 -- ----------------------------
@@ -764,10 +764,10 @@ CREATE TABLE `jos_vm_csv` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_currency`;
 CREATE TABLE `jos_vm_currency` (
-  `currency_id` int(11) NOT NULL AUTO_INCREMENT,
-  `currency_name` varchar(64) DEFAULT NULL,
-  `currency_code` char(3) DEFAULT NULL,
-  PRIMARY KEY (`currency_id`),
+  `currency_id` int(11) NOT NULL auto_increment,
+  `currency_name` varchar(64) default NULL,
+  `currency_code` char(3) default NULL,
+  PRIMARY KEY  (`currency_id`),
   KEY `idx_currency_name` (`currency_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=159 DEFAULT CHARSET=utf8 COMMENT='Used to store currencies';
 
@@ -776,15 +776,15 @@ CREATE TABLE `jos_vm_currency` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_export`;
 CREATE TABLE `jos_vm_export` (
-  `export_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) DEFAULT NULL,
-  `export_name` varchar(255) DEFAULT NULL,
+  `export_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) default NULL,
+  `export_name` varchar(255) default NULL,
   `export_desc` text NOT NULL,
   `export_class` varchar(50) NOT NULL,
-  `export_enabled` char(1) NOT NULL DEFAULT 'N',
+  `export_enabled` char(1) NOT NULL default 'N',
   `export_config` text NOT NULL,
-  `iscore` tinyint(3) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`export_id`)
+  `iscore` tinyint(3) NOT NULL default '0',
+  PRIMARY KEY  (`export_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Export Modules';
 
 -- ----------------------------
@@ -792,14 +792,14 @@ CREATE TABLE `jos_vm_export` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_function`;
 CREATE TABLE `jos_vm_function` (
-  `function_id` int(11) NOT NULL AUTO_INCREMENT,
-  `module_id` int(11) DEFAULT NULL,
-  `function_name` varchar(32) DEFAULT NULL,
-  `function_class` varchar(32) DEFAULT NULL,
-  `function_method` varchar(32) DEFAULT NULL,
+  `function_id` int(11) NOT NULL auto_increment,
+  `module_id` int(11) default NULL,
+  `function_name` varchar(32) default NULL,
+  `function_class` varchar(32) default NULL,
+  `function_method` varchar(32) default NULL,
   `function_description` text,
-  `function_perms` varchar(255) DEFAULT NULL,
-  PRIMARY KEY (`function_id`),
+  `function_perms` varchar(255) default NULL,
+  PRIMARY KEY  (`function_id`),
   KEY `idx_function_module_id` (`module_id`),
   KEY `idx_function_name` (`function_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=195 DEFAULT CHARSET=utf8 COMMENT='Used to map a function alias to a ''real'' class::function';
@@ -809,13 +809,13 @@ CREATE TABLE `jos_vm_function` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_manufacturer`;
 CREATE TABLE `jos_vm_manufacturer` (
-  `manufacturer_id` int(11) NOT NULL AUTO_INCREMENT,
-  `mf_name` varchar(64) DEFAULT NULL,
-  `mf_email` varchar(255) DEFAULT NULL,
+  `manufacturer_id` int(11) NOT NULL auto_increment,
+  `mf_name` varchar(64) default NULL,
+  `mf_email` varchar(255) default NULL,
   `mf_desc` text,
-  `mf_category_id` int(11) DEFAULT NULL,
-  `mf_url` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`manufacturer_id`)
+  `mf_category_id` int(11) default NULL,
+  `mf_url` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`manufacturer_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Manufacturers are those who create products';
 
 -- ----------------------------
@@ -823,10 +823,10 @@ CREATE TABLE `jos_vm_manufacturer` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_manufacturer_category`;
 CREATE TABLE `jos_vm_manufacturer_category` (
-  `mf_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `mf_category_name` varchar(64) DEFAULT NULL,
+  `mf_category_id` int(11) NOT NULL auto_increment,
+  `mf_category_name` varchar(64) default NULL,
   `mf_category_desc` text,
-  PRIMARY KEY (`mf_category_id`),
+  PRIMARY KEY  (`mf_category_id`),
   KEY `idx_manufacturer_category_category_name` (`mf_category_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Manufacturers are assigned to these categories';
 
@@ -835,13 +835,13 @@ CREATE TABLE `jos_vm_manufacturer_category` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_module`;
 CREATE TABLE `jos_vm_module` (
-  `module_id` int(11) NOT NULL AUTO_INCREMENT,
-  `module_name` varchar(255) DEFAULT NULL,
+  `module_id` int(11) NOT NULL auto_increment,
+  `module_name` varchar(255) default NULL,
   `module_description` text,
-  `module_perms` varchar(255) DEFAULT NULL,
-  `module_publish` char(1) DEFAULT NULL,
-  `list_order` int(11) DEFAULT NULL,
-  PRIMARY KEY (`module_id`),
+  `module_perms` varchar(255) default NULL,
+  `module_publish` char(1) default NULL,
+  `list_order` int(11) default NULL,
+  PRIMARY KEY  (`module_id`),
   KEY `idx_module_name` (`module_name`),
   KEY `idx_module_list_order` (`list_order`)
 ) ENGINE=MyISAM AUTO_INCREMENT=12844 DEFAULT CHARSET=utf8 COMMENT='VirtueMart Core Modules, not: Joomla modules';
@@ -851,13 +851,13 @@ CREATE TABLE `jos_vm_module` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_order_history`;
 CREATE TABLE `jos_vm_order_history` (
-  `order_status_history_id` int(11) NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) NOT NULL DEFAULT '0',
-  `order_status_code` char(1) NOT NULL DEFAULT '0',
-  `date_added` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `customer_notified` int(1) DEFAULT '0',
+  `order_status_history_id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) NOT NULL default '0',
+  `order_status_code` char(1) NOT NULL default '0',
+  `date_added` datetime NOT NULL default '0000-00-00 00:00:00',
+  `customer_notified` int(1) default '0',
   `comments` text,
-  PRIMARY KEY (`order_status_history_id`)
+  PRIMARY KEY  (`order_status_history_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Stores all actions and changes that occur to an order';
 
 -- ----------------------------
@@ -865,22 +865,22 @@ CREATE TABLE `jos_vm_order_history` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_order_item`;
 CREATE TABLE `jos_vm_order_item` (
-  `order_item_id` int(11) NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) DEFAULT NULL,
-  `user_info_id` varchar(32) DEFAULT NULL,
-  `vendor_id` int(11) DEFAULT NULL,
-  `product_id` int(11) DEFAULT NULL,
-  `order_item_sku` varchar(64) NOT NULL DEFAULT '',
-  `order_item_name` varchar(64) NOT NULL DEFAULT '',
-  `product_quantity` int(11) DEFAULT NULL,
-  `product_item_price` decimal(15,5) DEFAULT NULL,
-  `product_final_price` decimal(12,2) NOT NULL DEFAULT '0.00',
-  `order_item_currency` varchar(16) DEFAULT NULL,
-  `order_status` char(1) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
+  `order_item_id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) default NULL,
+  `user_info_id` varchar(32) default NULL,
+  `vendor_id` int(11) default NULL,
+  `product_id` int(11) default NULL,
+  `order_item_sku` varchar(64) NOT NULL default '',
+  `order_item_name` varchar(64) NOT NULL default '',
+  `product_quantity` int(11) default NULL,
+  `product_item_price` decimal(15,5) default NULL,
+  `product_final_price` decimal(12,2) NOT NULL default '0.00',
+  `order_item_currency` varchar(16) default NULL,
+  `order_status` char(1) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
   `product_attribute` text,
-  PRIMARY KEY (`order_item_id`),
+  PRIMARY KEY  (`order_item_id`),
   KEY `idx_order_item_order_id` (`order_id`),
   KEY `idx_order_item_user_info_id` (`user_info_id`),
   KEY `idx_order_item_vendor_id` (`vendor_id`)
@@ -891,12 +891,12 @@ CREATE TABLE `jos_vm_order_item` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_order_payment`;
 CREATE TABLE `jos_vm_order_payment` (
-  `order_id` int(11) NOT NULL DEFAULT '0',
-  `payment_method_id` int(11) DEFAULT NULL,
-  `order_payment_code` varchar(30) NOT NULL DEFAULT '',
+  `order_id` int(11) NOT NULL default '0',
+  `payment_method_id` int(11) default NULL,
+  `order_payment_code` varchar(30) NOT NULL default '',
   `order_payment_number` blob,
-  `order_payment_expire` int(11) DEFAULT NULL,
-  `order_payment_name` varchar(255) DEFAULT NULL,
+  `order_payment_expire` int(11) default NULL,
+  `order_payment_name` varchar(255) default NULL,
   `order_payment_log` text,
   `order_payment_trans_id` text NOT NULL,
   KEY `idx_order_payment_order_id` (`order_id`),
@@ -908,13 +908,13 @@ CREATE TABLE `jos_vm_order_payment` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_order_status`;
 CREATE TABLE `jos_vm_order_status` (
-  `order_status_id` int(11) NOT NULL AUTO_INCREMENT,
-  `order_status_code` char(1) NOT NULL DEFAULT '',
-  `order_status_name` varchar(64) DEFAULT NULL,
+  `order_status_id` int(11) NOT NULL auto_increment,
+  `order_status_code` char(1) NOT NULL default '',
+  `order_status_name` varchar(64) default NULL,
   `order_status_description` text NOT NULL,
-  `list_order` int(11) DEFAULT NULL,
-  `vendor_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`order_status_id`),
+  `list_order` int(11) default NULL,
+  `vendor_id` int(11) default NULL,
+  PRIMARY KEY  (`order_status_id`),
   KEY `idx_order_status_list_order` (`list_order`),
   KEY `idx_order_status_vendor_id` (`vendor_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COMMENT='All available order statuses';
@@ -924,38 +924,38 @@ CREATE TABLE `jos_vm_order_status` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_order_user_info`;
 CREATE TABLE `jos_vm_order_user_info` (
-  `order_info_id` int(11) NOT NULL AUTO_INCREMENT,
-  `order_id` int(11) NOT NULL DEFAULT '0',
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `address_type` char(2) DEFAULT NULL,
-  `address_type_name` varchar(32) DEFAULT NULL,
-  `company` varchar(64) DEFAULT NULL,
-  `title` varchar(32) DEFAULT NULL,
-  `last_name` varchar(32) DEFAULT NULL,
-  `first_name` varchar(32) DEFAULT NULL,
-  `middle_name` varchar(32) DEFAULT NULL,
-  `phone_1` varchar(32) DEFAULT NULL,
-  `phone_2` varchar(32) DEFAULT NULL,
-  `fax` varchar(32) DEFAULT NULL,
-  `address_1` varchar(64) NOT NULL DEFAULT '',
-  `address_2` varchar(64) DEFAULT NULL,
-  `city` varchar(32) NOT NULL DEFAULT '',
-  `state` varchar(32) NOT NULL DEFAULT '',
-  `country` varchar(32) NOT NULL DEFAULT 'US',
-  `zip` varchar(32) NOT NULL DEFAULT '',
-  `user_email` varchar(255) DEFAULT NULL,
-  `extra_field_1` varchar(255) DEFAULT NULL,
-  `extra_field_2` varchar(255) DEFAULT NULL,
-  `extra_field_3` varchar(255) DEFAULT NULL,
-  `extra_field_4` char(1) DEFAULT NULL,
-  `extra_field_5` char(1) DEFAULT NULL,
-  `bank_account_nr` varchar(32) NOT NULL DEFAULT '',
-  `bank_name` varchar(32) NOT NULL DEFAULT '',
-  `bank_sort_code` varchar(16) NOT NULL DEFAULT '',
-  `bank_iban` varchar(64) NOT NULL DEFAULT '',
-  `bank_account_holder` varchar(48) NOT NULL DEFAULT '',
-  `bank_account_type` enum('Checking','Business Checking','Savings') NOT NULL DEFAULT 'Checking',
-  PRIMARY KEY (`order_info_id`),
+  `order_info_id` int(11) NOT NULL auto_increment,
+  `order_id` int(11) NOT NULL default '0',
+  `user_id` int(11) NOT NULL default '0',
+  `address_type` char(2) default NULL,
+  `address_type_name` varchar(32) default NULL,
+  `company` varchar(64) default NULL,
+  `title` varchar(32) default NULL,
+  `last_name` varchar(32) default NULL,
+  `first_name` varchar(32) default NULL,
+  `middle_name` varchar(32) default NULL,
+  `phone_1` varchar(32) default NULL,
+  `phone_2` varchar(32) default NULL,
+  `fax` varchar(32) default NULL,
+  `address_1` varchar(64) NOT NULL default '',
+  `address_2` varchar(64) default NULL,
+  `city` varchar(32) NOT NULL default '',
+  `state` varchar(32) NOT NULL default '',
+  `country` varchar(32) NOT NULL default 'US',
+  `zip` varchar(32) NOT NULL default '',
+  `user_email` varchar(255) default NULL,
+  `extra_field_1` varchar(255) default NULL,
+  `extra_field_2` varchar(255) default NULL,
+  `extra_field_3` varchar(255) default NULL,
+  `extra_field_4` char(1) default NULL,
+  `extra_field_5` char(1) default NULL,
+  `bank_account_nr` varchar(32) NOT NULL default '',
+  `bank_name` varchar(32) NOT NULL default '',
+  `bank_sort_code` varchar(16) NOT NULL default '',
+  `bank_iban` varchar(64) NOT NULL default '',
+  `bank_account_holder` varchar(48) NOT NULL default '',
+  `bank_account_type` enum('Checking','Business Checking','Savings') NOT NULL default 'Checking',
+  PRIMARY KEY  (`order_info_id`),
   KEY `idx_order_info_order_id` (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Stores the BillTo and ShipTo Information at order time';
 
@@ -964,28 +964,28 @@ CREATE TABLE `jos_vm_order_user_info` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_orders`;
 CREATE TABLE `jos_vm_orders` (
-  `order_id` int(11) NOT NULL AUTO_INCREMENT,
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `vendor_id` int(11) NOT NULL DEFAULT '0',
-  `order_number` varchar(32) DEFAULT NULL,
-  `user_info_id` varchar(32) DEFAULT NULL,
-  `order_total` decimal(15,5) NOT NULL DEFAULT '0.00000',
-  `order_subtotal` decimal(15,5) DEFAULT NULL,
-  `order_tax` decimal(10,2) DEFAULT NULL,
+  `order_id` int(11) NOT NULL auto_increment,
+  `user_id` int(11) NOT NULL default '0',
+  `vendor_id` int(11) NOT NULL default '0',
+  `order_number` varchar(32) default NULL,
+  `user_info_id` varchar(32) default NULL,
+  `order_total` decimal(15,5) NOT NULL default '0.00000',
+  `order_subtotal` decimal(15,5) default NULL,
+  `order_tax` decimal(10,2) default NULL,
   `order_tax_details` text NOT NULL,
-  `order_shipping` decimal(10,2) DEFAULT NULL,
-  `order_shipping_tax` decimal(10,2) DEFAULT NULL,
-  `coupon_discount` decimal(12,2) NOT NULL DEFAULT '0.00',
-  `coupon_code` varchar(32) DEFAULT NULL,
-  `order_discount` decimal(12,2) NOT NULL DEFAULT '0.00',
-  `order_currency` varchar(16) DEFAULT NULL,
-  `order_status` char(1) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `ship_method_id` varchar(255) DEFAULT NULL,
+  `order_shipping` decimal(10,2) default NULL,
+  `order_shipping_tax` decimal(10,2) default NULL,
+  `coupon_discount` decimal(12,2) NOT NULL default '0.00',
+  `coupon_code` varchar(32) default NULL,
+  `order_discount` decimal(12,2) NOT NULL default '0.00',
+  `order_currency` varchar(16) default NULL,
+  `order_status` char(1) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
+  `ship_method_id` varchar(255) default NULL,
   `customer_note` text NOT NULL,
-  `ip_address` varchar(15) NOT NULL DEFAULT '',
-  PRIMARY KEY (`order_id`),
+  `ip_address` varchar(15) NOT NULL default '',
+  PRIMARY KEY  (`order_id`),
   KEY `idx_orders_user_id` (`user_id`),
   KEY `idx_orders_vendor_id` (`vendor_id`),
   KEY `idx_orders_order_number` (`order_number`),
@@ -998,24 +998,24 @@ CREATE TABLE `jos_vm_orders` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_payment_method`;
 CREATE TABLE `jos_vm_payment_method` (
-  `payment_method_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) DEFAULT NULL,
-  `payment_method_name` varchar(255) DEFAULT NULL,
-  `payment_class` varchar(50) NOT NULL DEFAULT '',
-  `shopper_group_id` int(11) DEFAULT NULL,
-  `payment_method_discount` decimal(12,2) DEFAULT NULL,
+  `payment_method_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) default NULL,
+  `payment_method_name` varchar(255) default NULL,
+  `payment_class` varchar(50) NOT NULL default '',
+  `shopper_group_id` int(11) default NULL,
+  `payment_method_discount` decimal(12,2) default NULL,
   `payment_method_discount_is_percent` tinyint(1) NOT NULL,
   `payment_method_discount_max_amount` decimal(10,2) NOT NULL,
   `payment_method_discount_min_amount` decimal(10,2) NOT NULL,
-  `list_order` int(11) DEFAULT NULL,
-  `payment_method_code` varchar(8) DEFAULT NULL,
-  `enable_processor` char(1) DEFAULT NULL,
-  `is_creditcard` tinyint(1) NOT NULL DEFAULT '0',
-  `payment_enabled` char(1) NOT NULL DEFAULT 'N',
-  `accepted_creditcards` varchar(128) NOT NULL DEFAULT '',
+  `list_order` int(11) default NULL,
+  `payment_method_code` varchar(8) default NULL,
+  `enable_processor` char(1) default NULL,
+  `is_creditcard` tinyint(1) NOT NULL default '0',
+  `payment_enabled` char(1) NOT NULL default 'N',
+  `accepted_creditcards` varchar(128) NOT NULL default '',
   `payment_extrainfo` text NOT NULL,
   `payment_passkey` blob NOT NULL,
-  PRIMARY KEY (`payment_method_id`),
+  PRIMARY KEY  (`payment_method_id`),
   KEY `idx_payment_method_vendor_id` (`vendor_id`),
   KEY `idx_payment_method_name` (`payment_method_name`),
   KEY `idx_payment_method_list_order` (`list_order`),
@@ -1027,59 +1027,59 @@ CREATE TABLE `jos_vm_payment_method` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product`;
 CREATE TABLE `jos_vm_product` (
-  `product_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) NOT NULL DEFAULT '0',
-  `product_parent_id` int(11) NOT NULL DEFAULT '0',
-  `product_sku` varchar(64) NOT NULL DEFAULT '',
-  `product_s_desc` varchar(255) DEFAULT NULL,
+  `product_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) NOT NULL default '0',
+  `product_parent_id` int(11) NOT NULL default '0',
+  `product_sku` varchar(64) NOT NULL default '',
+  `product_s_desc` varchar(255) default NULL,
   `product_desc` text,
-  `product_thumb_image` varchar(255) DEFAULT NULL,
-  `product_full_image` varchar(255) DEFAULT NULL,
-  `product_publish` char(1) DEFAULT NULL,
-  `product_weight` decimal(10,4) DEFAULT NULL,
-  `product_weight_uom` varchar(32) DEFAULT 'pounds.',
-  `product_length` decimal(10,4) DEFAULT NULL,
-  `product_width` decimal(10,4) DEFAULT NULL,
-  `product_height` decimal(10,4) DEFAULT NULL,
-  `product_lwh_uom` varchar(32) DEFAULT 'inches',
-  `product_url` varchar(255) DEFAULT NULL,
-  `product_in_stock` int(11) NOT NULL DEFAULT '0',
-  `product_available_date` int(11) DEFAULT NULL,
-  `product_availability` varchar(56) NOT NULL DEFAULT '',
-  `product_special` char(1) DEFAULT NULL,
-  `product_discount_id` int(11) DEFAULT NULL,
-  `ship_code_id` int(11) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `product_name` varchar(64) DEFAULT NULL,
-  `product_sales` int(11) NOT NULL DEFAULT '0',
+  `product_thumb_image` varchar(255) default NULL,
+  `product_full_image` varchar(255) default NULL,
+  `product_publish` char(1) default NULL,
+  `product_weight` decimal(10,4) default NULL,
+  `product_weight_uom` varchar(32) default 'pounds.',
+  `product_length` decimal(10,4) default NULL,
+  `product_width` decimal(10,4) default NULL,
+  `product_height` decimal(10,4) default NULL,
+  `product_lwh_uom` varchar(32) default 'inches',
+  `product_url` varchar(255) default NULL,
+  `product_in_stock` int(11) NOT NULL default '0',
+  `product_available_date` int(11) default NULL,
+  `product_availability` varchar(56) NOT NULL default '',
+  `product_special` char(1) default NULL,
+  `product_discount_id` int(11) default NULL,
+  `ship_code_id` int(11) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
+  `product_name` varchar(64) default NULL,
+  `product_sales` int(11) NOT NULL default '0',
   `attribute` text,
   `custom_attribute` text NOT NULL,
-  `product_tax_id` int(11) DEFAULT NULL,
-  `product_unit` varchar(32) DEFAULT NULL,
-  `product_packaging` int(11) DEFAULT NULL,
-  `child_options` varchar(45) DEFAULT NULL,
-  `quantity_options` varchar(45) DEFAULT NULL,
-  `child_option_ids` varchar(45) DEFAULT NULL,
-  `product_order_levels` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`product_id`),
+  `product_tax_id` int(11) default NULL,
+  `product_unit` varchar(32) default NULL,
+  `product_packaging` int(11) default NULL,
+  `child_options` varchar(45) default NULL,
+  `quantity_options` varchar(45) default NULL,
+  `child_option_ids` varchar(45) default NULL,
+  `product_order_levels` varchar(45) default NULL,
+  PRIMARY KEY  (`product_id`),
   KEY `idx_product_vendor_id` (`vendor_id`),
   KEY `idx_product_product_parent_id` (`product_parent_id`),
   KEY `idx_product_sku` (`product_sku`),
   KEY `idx_product_ship_code_id` (`ship_code_id`),
   KEY `idx_product_name` (`product_name`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='All products are stored here.';
+) ENGINE=MyISAM AUTO_INCREMENT=59 DEFAULT CHARSET=utf8 COMMENT='All products are stored here.';
 
 -- ----------------------------
 -- Table structure for jos_vm_product_attribute
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_attribute`;
 CREATE TABLE `jos_vm_product_attribute` (
-  `attribute_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `attribute_name` char(255) NOT NULL DEFAULT '',
-  `attribute_value` char(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`attribute_id`),
+  `attribute_id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL default '0',
+  `attribute_name` char(255) NOT NULL default '',
+  `attribute_value` char(255) NOT NULL default '',
+  PRIMARY KEY  (`attribute_id`),
   KEY `idx_product_attribute_product_id` (`product_id`),
   KEY `idx_product_attribute_name` (`attribute_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COMMENT='Stores attributes + their specific values for Child Products';
@@ -1089,9 +1089,9 @@ CREATE TABLE `jos_vm_product_attribute` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_attribute_sku`;
 CREATE TABLE `jos_vm_product_attribute_sku` (
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `attribute_name` char(255) NOT NULL DEFAULT '',
-  `attribute_list` int(11) NOT NULL DEFAULT '0',
+  `product_id` int(11) NOT NULL default '0',
+  `attribute_name` char(255) NOT NULL default '',
+  `attribute_list` int(11) NOT NULL default '0',
   KEY `idx_product_attribute_sku_product_id` (`product_id`),
   KEY `idx_product_attribute_sku_attribute_name` (`attribute_name`),
   KEY `idx_product_attribute_list` (`attribute_list`)
@@ -1102,9 +1102,9 @@ CREATE TABLE `jos_vm_product_attribute_sku` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_category_xref`;
 CREATE TABLE `jos_vm_product_category_xref` (
-  `category_id` int(11) NOT NULL DEFAULT '0',
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `product_list` int(11) DEFAULT NULL,
+  `category_id` int(11) NOT NULL default '0',
+  `product_id` int(11) NOT NULL default '0',
+  `product_list` int(11) default NULL,
   KEY `idx_product_category_xref_category_id` (`category_id`),
   KEY `idx_product_category_xref_product_id` (`product_id`),
   KEY `idx_product_category_xref_product_list` (`product_list`)
@@ -1115,12 +1115,12 @@ CREATE TABLE `jos_vm_product_category_xref` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_discount`;
 CREATE TABLE `jos_vm_product_discount` (
-  `discount_id` int(11) NOT NULL AUTO_INCREMENT,
-  `amount` decimal(12,2) NOT NULL DEFAULT '0.00',
-  `is_percent` tinyint(1) NOT NULL DEFAULT '0',
-  `start_date` int(11) NOT NULL DEFAULT '0',
-  `end_date` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`discount_id`)
+  `discount_id` int(11) NOT NULL auto_increment,
+  `amount` decimal(12,2) NOT NULL default '0.00',
+  `is_percent` tinyint(1) NOT NULL default '0',
+  `start_date` int(11) NOT NULL default '0',
+  `end_date` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`discount_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Discounts that can be assigned to products';
 
 -- ----------------------------
@@ -1128,14 +1128,14 @@ CREATE TABLE `jos_vm_product_discount` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_download`;
 CREATE TABLE `jos_vm_product_download` (
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `order_id` int(11) NOT NULL DEFAULT '0',
-  `end_date` int(11) NOT NULL DEFAULT '0',
-  `download_max` int(11) NOT NULL DEFAULT '0',
-  `download_id` varchar(32) NOT NULL DEFAULT '',
-  `file_name` varchar(255) NOT NULL DEFAULT '',
-  PRIMARY KEY (`download_id`)
+  `product_id` int(11) NOT NULL default '0',
+  `user_id` int(11) NOT NULL default '0',
+  `order_id` int(11) NOT NULL default '0',
+  `end_date` int(11) NOT NULL default '0',
+  `download_max` int(11) NOT NULL default '0',
+  `download_id` varchar(32) NOT NULL default '',
+  `file_name` varchar(255) NOT NULL default '',
+  PRIMARY KEY  (`download_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Active downloads for selling downloadable goods';
 
 -- ----------------------------
@@ -1143,21 +1143,21 @@ CREATE TABLE `jos_vm_product_download` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_files`;
 CREATE TABLE `jos_vm_product_files` (
-  `file_id` int(19) NOT NULL AUTO_INCREMENT,
-  `file_product_id` int(11) NOT NULL DEFAULT '0',
-  `file_name` varchar(128) NOT NULL DEFAULT '',
-  `file_title` varchar(128) NOT NULL DEFAULT '',
+  `file_id` int(19) NOT NULL auto_increment,
+  `file_product_id` int(11) NOT NULL default '0',
+  `file_name` varchar(128) NOT NULL default '',
+  `file_title` varchar(128) NOT NULL default '',
   `file_description` mediumtext NOT NULL,
-  `file_extension` varchar(128) NOT NULL DEFAULT '',
-  `file_mimetype` varchar(64) NOT NULL DEFAULT '',
-  `file_url` varchar(254) NOT NULL DEFAULT '',
-  `file_published` tinyint(1) NOT NULL DEFAULT '0',
-  `file_is_image` tinyint(1) NOT NULL DEFAULT '0',
-  `file_image_height` int(11) NOT NULL DEFAULT '0',
-  `file_image_width` int(11) NOT NULL DEFAULT '0',
-  `file_image_thumb_height` int(11) NOT NULL DEFAULT '50',
-  `file_image_thumb_width` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`file_id`)
+  `file_extension` varchar(128) NOT NULL default '',
+  `file_mimetype` varchar(64) NOT NULL default '',
+  `file_url` varchar(254) NOT NULL default '',
+  `file_published` tinyint(1) NOT NULL default '0',
+  `file_is_image` tinyint(1) NOT NULL default '0',
+  `file_image_height` int(11) NOT NULL default '0',
+  `file_image_width` int(11) NOT NULL default '0',
+  `file_image_thumb_height` int(11) NOT NULL default '50',
+  `file_image_thumb_width` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`file_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Additional Images and Files which are assigned to products';
 
 -- ----------------------------
@@ -1165,8 +1165,8 @@ CREATE TABLE `jos_vm_product_files` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_mf_xref`;
 CREATE TABLE `jos_vm_product_mf_xref` (
-  `product_id` int(11) DEFAULT NULL,
-  `manufacturer_id` int(11) DEFAULT NULL,
+  `product_id` int(11) default NULL,
+  `manufacturer_id` int(11) default NULL,
   KEY `idx_product_mf_xref_product_id` (`product_id`),
   KEY `idx_product_mf_xref_manufacturer_id` (`manufacturer_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Maps a product to a manufacturer';
@@ -1176,29 +1176,29 @@ CREATE TABLE `jos_vm_product_mf_xref` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_price`;
 CREATE TABLE `jos_vm_product_price` (
-  `product_price_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `product_price` decimal(12,5) DEFAULT NULL,
-  `product_currency` char(16) DEFAULT NULL,
-  `product_price_vdate` int(11) DEFAULT NULL,
-  `product_price_edate` int(11) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `shopper_group_id` int(11) DEFAULT NULL,
-  `price_quantity_start` int(11) unsigned NOT NULL DEFAULT '0',
-  `price_quantity_end` int(11) unsigned NOT NULL DEFAULT '0',
-  PRIMARY KEY (`product_price_id`),
+  `product_price_id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL default '0',
+  `product_price` decimal(12,5) default NULL,
+  `product_currency` char(16) default NULL,
+  `product_price_vdate` int(11) default NULL,
+  `product_price_edate` int(11) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
+  `shopper_group_id` int(11) default NULL,
+  `price_quantity_start` int(11) unsigned NOT NULL default '0',
+  `price_quantity_end` int(11) unsigned NOT NULL default '0',
+  PRIMARY KEY  (`product_price_id`),
   KEY `idx_product_price_product_id` (`product_id`),
   KEY `idx_product_price_shopper_group_id` (`shopper_group_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COMMENT='Holds price records for a product';
+) ENGINE=MyISAM AUTO_INCREMENT=58 DEFAULT CHARSET=utf8 COMMENT='Holds price records for a product';
 
 -- ----------------------------
 -- Table structure for jos_vm_product_product_type_xref
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_product_type_xref`;
 CREATE TABLE `jos_vm_product_product_type_xref` (
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `product_type_id` int(11) NOT NULL DEFAULT '0',
+  `product_id` int(11) NOT NULL default '0',
+  `product_type_id` int(11) NOT NULL default '0',
   KEY `idx_product_product_type_xref_product_id` (`product_id`),
   KEY `idx_product_product_type_xref_product_type_id` (`product_type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Maps products to a product type';
@@ -1208,9 +1208,9 @@ CREATE TABLE `jos_vm_product_product_type_xref` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_relations`;
 CREATE TABLE `jos_vm_product_relations` (
-  `product_id` int(11) NOT NULL DEFAULT '0',
+  `product_id` int(11) NOT NULL default '0',
   `related_products` text,
-  PRIMARY KEY (`product_id`)
+  PRIMARY KEY  (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -1218,16 +1218,16 @@ CREATE TABLE `jos_vm_product_relations` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_reviews`;
 CREATE TABLE `jos_vm_product_reviews` (
-  `review_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL DEFAULT '0',
+  `review_id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL default '0',
   `comment` text NOT NULL,
-  `userid` int(11) NOT NULL DEFAULT '0',
-  `time` int(11) NOT NULL DEFAULT '0',
-  `user_rating` tinyint(1) NOT NULL DEFAULT '0',
-  `review_ok` int(11) NOT NULL DEFAULT '0',
-  `review_votes` int(11) NOT NULL DEFAULT '0',
-  `published` char(1) NOT NULL DEFAULT 'Y',
-  PRIMARY KEY (`review_id`),
+  `userid` int(11) NOT NULL default '0',
+  `time` int(11) NOT NULL default '0',
+  `user_rating` tinyint(1) NOT NULL default '0',
+  `review_ok` int(11) NOT NULL default '0',
+  `review_votes` int(11) NOT NULL default '0',
+  `published` char(1) NOT NULL default 'Y',
+  PRIMARY KEY  (`review_id`),
   UNIQUE KEY `product_id` (`product_id`,`userid`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
@@ -1236,14 +1236,14 @@ CREATE TABLE `jos_vm_product_reviews` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_type`;
 CREATE TABLE `jos_vm_product_type` (
-  `product_type_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_type_name` varchar(255) NOT NULL DEFAULT '',
+  `product_type_id` int(11) NOT NULL auto_increment,
+  `product_type_name` varchar(255) NOT NULL default '',
   `product_type_description` text,
-  `product_type_publish` char(1) DEFAULT NULL,
-  `product_type_browsepage` varchar(255) DEFAULT NULL,
-  `product_type_flypage` varchar(255) DEFAULT NULL,
-  `product_type_list_order` int(11) DEFAULT NULL,
-  PRIMARY KEY (`product_type_id`)
+  `product_type_publish` char(1) default NULL,
+  `product_type_browsepage` varchar(255) default NULL,
+  `product_type_flypage` varchar(255) default NULL,
+  `product_type_list_order` int(11) default NULL,
+  PRIMARY KEY  (`product_type_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 -- ----------------------------
@@ -1251,17 +1251,17 @@ CREATE TABLE `jos_vm_product_type` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_type_parameter`;
 CREATE TABLE `jos_vm_product_type_parameter` (
-  `product_type_id` int(11) NOT NULL DEFAULT '0',
-  `parameter_name` varchar(255) NOT NULL DEFAULT '',
-  `parameter_label` varchar(255) NOT NULL DEFAULT '',
+  `product_type_id` int(11) NOT NULL default '0',
+  `parameter_name` varchar(255) NOT NULL default '',
+  `parameter_label` varchar(255) NOT NULL default '',
   `parameter_description` text,
-  `parameter_list_order` int(11) NOT NULL DEFAULT '0',
-  `parameter_type` char(1) NOT NULL DEFAULT 'T',
-  `parameter_values` varchar(255) DEFAULT NULL,
-  `parameter_multiselect` char(1) DEFAULT NULL,
-  `parameter_default` varchar(255) DEFAULT NULL,
-  `parameter_unit` varchar(32) DEFAULT NULL,
-  PRIMARY KEY (`product_type_id`,`parameter_name`),
+  `parameter_list_order` int(11) NOT NULL default '0',
+  `parameter_type` char(1) NOT NULL default 'T',
+  `parameter_values` varchar(255) default NULL,
+  `parameter_multiselect` char(1) default NULL,
+  `parameter_default` varchar(255) default NULL,
+  `parameter_unit` varchar(32) default NULL,
+  PRIMARY KEY  (`product_type_id`,`parameter_name`),
   KEY `idx_product_type_parameter_product_type_id` (`product_type_id`),
   KEY `idx_product_type_parameter_parameter_order` (`parameter_list_order`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Parameters which are part of a product type';
@@ -1271,12 +1271,12 @@ CREATE TABLE `jos_vm_product_type_parameter` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_product_votes`;
 CREATE TABLE `jos_vm_product_votes` (
-  `product_id` int(255) NOT NULL DEFAULT '0',
+  `product_id` int(255) NOT NULL default '0',
   `votes` text NOT NULL,
-  `allvotes` int(11) NOT NULL DEFAULT '0',
-  `rating` tinyint(1) NOT NULL DEFAULT '0',
-  `lastip` varchar(50) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`product_id`)
+  `allvotes` int(11) NOT NULL default '0',
+  `rating` tinyint(1) NOT NULL default '0',
+  `lastip` varchar(50) NOT NULL default '0',
+  PRIMARY KEY  (`product_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Stores all votes for a product';
 
 -- ----------------------------
@@ -1284,10 +1284,10 @@ CREATE TABLE `jos_vm_product_votes` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_shipping_carrier`;
 CREATE TABLE `jos_vm_shipping_carrier` (
-  `shipping_carrier_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shipping_carrier_name` char(80) NOT NULL DEFAULT '',
-  `shipping_carrier_list_order` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`shipping_carrier_id`)
+  `shipping_carrier_id` int(11) NOT NULL auto_increment,
+  `shipping_carrier_name` char(80) NOT NULL default '',
+  `shipping_carrier_list_order` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`shipping_carrier_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='Shipping Carriers as used by the Standard Shipping Module';
 
 -- ----------------------------
@@ -1295,24 +1295,24 @@ CREATE TABLE `jos_vm_shipping_carrier` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_shipping_label`;
 CREATE TABLE `jos_vm_shipping_label` (
-  `order_id` int(11) NOT NULL DEFAULT '0',
-  `shipper_class` varchar(32) DEFAULT NULL,
-  `ship_date` varchar(32) DEFAULT NULL,
-  `service_code` varchar(32) DEFAULT NULL,
-  `special_service` varchar(32) DEFAULT NULL,
-  `package_type` varchar(16) DEFAULT NULL,
-  `order_weight` decimal(10,2) DEFAULT NULL,
-  `is_international` tinyint(1) DEFAULT NULL,
-  `additional_protection_type` varchar(16) DEFAULT NULL,
-  `additional_protection_value` decimal(10,2) DEFAULT NULL,
-  `duty_value` decimal(10,2) DEFAULT NULL,
-  `content_desc` varchar(255) DEFAULT NULL,
-  `label_is_generated` tinyint(1) NOT NULL DEFAULT '0',
-  `tracking_number` varchar(32) DEFAULT NULL,
+  `order_id` int(11) NOT NULL default '0',
+  `shipper_class` varchar(32) default NULL,
+  `ship_date` varchar(32) default NULL,
+  `service_code` varchar(32) default NULL,
+  `special_service` varchar(32) default NULL,
+  `package_type` varchar(16) default NULL,
+  `order_weight` decimal(10,2) default NULL,
+  `is_international` tinyint(1) default NULL,
+  `additional_protection_type` varchar(16) default NULL,
+  `additional_protection_value` decimal(10,2) default NULL,
+  `duty_value` decimal(10,2) default NULL,
+  `content_desc` varchar(255) default NULL,
+  `label_is_generated` tinyint(1) NOT NULL default '0',
+  `tracking_number` varchar(32) default NULL,
   `label_image` blob,
-  `have_signature` tinyint(1) NOT NULL DEFAULT '0',
+  `have_signature` tinyint(1) NOT NULL default '0',
   `signature_image` blob,
-  PRIMARY KEY (`order_id`)
+  PRIMARY KEY  (`order_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Stores information used in generating shipping labels';
 
 -- ----------------------------
@@ -1320,20 +1320,20 @@ CREATE TABLE `jos_vm_shipping_label` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_shipping_rate`;
 CREATE TABLE `jos_vm_shipping_rate` (
-  `shipping_rate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `shipping_rate_name` varchar(255) NOT NULL DEFAULT '',
-  `shipping_rate_carrier_id` int(11) NOT NULL DEFAULT '0',
+  `shipping_rate_id` int(11) NOT NULL auto_increment,
+  `shipping_rate_name` varchar(255) NOT NULL default '',
+  `shipping_rate_carrier_id` int(11) NOT NULL default '0',
   `shipping_rate_country` text NOT NULL,
-  `shipping_rate_zip_start` varchar(32) NOT NULL DEFAULT '',
-  `shipping_rate_zip_end` varchar(32) NOT NULL DEFAULT '',
-  `shipping_rate_weight_start` decimal(10,3) NOT NULL DEFAULT '0.000',
-  `shipping_rate_weight_end` decimal(10,3) NOT NULL DEFAULT '0.000',
-  `shipping_rate_value` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `shipping_rate_package_fee` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `shipping_rate_currency_id` int(11) NOT NULL DEFAULT '0',
-  `shipping_rate_vat_id` int(11) NOT NULL DEFAULT '0',
-  `shipping_rate_list_order` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`shipping_rate_id`)
+  `shipping_rate_zip_start` varchar(32) NOT NULL default '',
+  `shipping_rate_zip_end` varchar(32) NOT NULL default '',
+  `shipping_rate_weight_start` decimal(10,3) NOT NULL default '0.000',
+  `shipping_rate_weight_end` decimal(10,3) NOT NULL default '0.000',
+  `shipping_rate_value` decimal(10,2) NOT NULL default '0.00',
+  `shipping_rate_package_fee` decimal(10,2) NOT NULL default '0.00',
+  `shipping_rate_currency_id` int(11) NOT NULL default '0',
+  `shipping_rate_vat_id` int(11) NOT NULL default '0',
+  `shipping_rate_list_order` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`shipping_rate_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=utf8 COMMENT='Shipping Rates, used by the Standard Shipping Module';
 
 -- ----------------------------
@@ -1341,14 +1341,14 @@ CREATE TABLE `jos_vm_shipping_rate` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_shopper_group`;
 CREATE TABLE `jos_vm_shopper_group` (
-  `shopper_group_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) DEFAULT NULL,
-  `shopper_group_name` varchar(32) DEFAULT NULL,
+  `shopper_group_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) default NULL,
+  `shopper_group_name` varchar(32) default NULL,
   `shopper_group_desc` text,
-  `shopper_group_discount` decimal(5,2) NOT NULL DEFAULT '0.00',
-  `show_price_including_tax` tinyint(1) NOT NULL DEFAULT '1',
-  `default` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`shopper_group_id`),
+  `shopper_group_discount` decimal(5,2) NOT NULL default '0.00',
+  `show_price_including_tax` tinyint(1) NOT NULL default '1',
+  `default` tinyint(1) NOT NULL default '0',
+  PRIMARY KEY  (`shopper_group_id`),
   KEY `idx_shopper_group_vendor_id` (`vendor_id`),
   KEY `idx_shopper_group_name` (`shopper_group_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8 COMMENT='Shopper Groups that users can be assigned to';
@@ -1358,10 +1358,10 @@ CREATE TABLE `jos_vm_shopper_group` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_shopper_vendor_xref`;
 CREATE TABLE `jos_vm_shopper_vendor_xref` (
-  `user_id` int(11) DEFAULT NULL,
-  `vendor_id` int(11) DEFAULT NULL,
-  `shopper_group_id` int(11) DEFAULT NULL,
-  `customer_number` varchar(32) DEFAULT NULL,
+  `user_id` int(11) default NULL,
+  `vendor_id` int(11) default NULL,
+  `shopper_group_id` int(11) default NULL,
+  `customer_number` varchar(32) default NULL,
   KEY `idx_shopper_vendor_xref_user_id` (`user_id`),
   KEY `idx_shopper_vendor_xref_vendor_id` (`vendor_id`),
   KEY `idx_shopper_vendor_xref_shopper_group_id` (`shopper_group_id`)
@@ -1372,12 +1372,12 @@ CREATE TABLE `jos_vm_shopper_vendor_xref` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_state`;
 CREATE TABLE `jos_vm_state` (
-  `state_id` int(11) NOT NULL AUTO_INCREMENT,
-  `country_id` int(11) NOT NULL DEFAULT '1',
-  `state_name` varchar(64) DEFAULT NULL,
-  `state_3_code` char(3) DEFAULT NULL,
-  `state_2_code` char(2) DEFAULT NULL,
-  PRIMARY KEY (`state_id`),
+  `state_id` int(11) NOT NULL auto_increment,
+  `country_id` int(11) NOT NULL default '1',
+  `state_name` varchar(64) default NULL,
+  `state_3_code` char(3) default NULL,
+  `state_2_code` char(2) default NULL,
+  PRIMARY KEY  (`state_id`),
   UNIQUE KEY `state_3_code` (`country_id`,`state_3_code`),
   UNIQUE KEY `state_2_code` (`country_id`,`state_2_code`),
   KEY `idx_country_id` (`country_id`)
@@ -1388,13 +1388,13 @@ CREATE TABLE `jos_vm_state` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_tax_rate`;
 CREATE TABLE `jos_vm_tax_rate` (
-  `tax_rate_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_id` int(11) DEFAULT NULL,
-  `tax_state` varchar(64) DEFAULT NULL,
-  `tax_country` varchar(64) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `tax_rate` decimal(10,5) DEFAULT NULL,
-  PRIMARY KEY (`tax_rate_id`),
+  `tax_rate_id` int(11) NOT NULL auto_increment,
+  `vendor_id` int(11) default NULL,
+  `tax_state` varchar(64) default NULL,
+  `tax_country` varchar(64) default NULL,
+  `mdate` int(11) default NULL,
+  `tax_rate` decimal(10,5) default NULL,
+  PRIMARY KEY  (`tax_rate_id`),
   KEY `idx_tax_rate_vendor_id` (`vendor_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COMMENT='The tax rates for your store';
 
@@ -1403,40 +1403,40 @@ CREATE TABLE `jos_vm_tax_rate` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_user_info`;
 CREATE TABLE `jos_vm_user_info` (
-  `user_info_id` varchar(32) NOT NULL DEFAULT '',
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `address_type` char(2) DEFAULT NULL,
-  `address_type_name` varchar(32) DEFAULT NULL,
-  `company` varchar(64) DEFAULT NULL,
-  `title` varchar(32) DEFAULT NULL,
-  `last_name` varchar(32) DEFAULT NULL,
-  `first_name` varchar(32) DEFAULT NULL,
-  `middle_name` varchar(32) DEFAULT NULL,
-  `phone_1` varchar(32) DEFAULT NULL,
-  `phone_2` varchar(32) DEFAULT NULL,
-  `fax` varchar(32) DEFAULT NULL,
-  `address_1` varchar(64) NOT NULL DEFAULT '',
-  `address_2` varchar(64) DEFAULT NULL,
-  `city` varchar(32) NOT NULL DEFAULT '',
-  `state` varchar(32) NOT NULL DEFAULT '',
-  `country` varchar(32) NOT NULL DEFAULT 'US',
-  `zip` varchar(32) NOT NULL DEFAULT '',
-  `user_email` varchar(255) DEFAULT NULL,
-  `extra_field_1` varchar(255) DEFAULT NULL,
-  `extra_field_2` varchar(255) DEFAULT NULL,
-  `extra_field_3` varchar(255) DEFAULT NULL,
-  `extra_field_4` char(1) DEFAULT NULL,
-  `extra_field_5` char(1) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `perms` varchar(40) NOT NULL DEFAULT 'shopper',
-  `bank_account_nr` varchar(32) NOT NULL DEFAULT '',
-  `bank_name` varchar(32) NOT NULL DEFAULT '',
-  `bank_sort_code` varchar(16) NOT NULL DEFAULT '',
-  `bank_iban` varchar(64) NOT NULL DEFAULT '',
-  `bank_account_holder` varchar(48) NOT NULL DEFAULT '',
-  `bank_account_type` enum('Checking','Business Checking','Savings') NOT NULL DEFAULT 'Checking',
-  PRIMARY KEY (`user_info_id`),
+  `user_info_id` varchar(32) NOT NULL default '',
+  `user_id` int(11) NOT NULL default '0',
+  `address_type` char(2) default NULL,
+  `address_type_name` varchar(32) default NULL,
+  `company` varchar(64) default NULL,
+  `title` varchar(32) default NULL,
+  `last_name` varchar(32) default NULL,
+  `first_name` varchar(32) default NULL,
+  `middle_name` varchar(32) default NULL,
+  `phone_1` varchar(32) default NULL,
+  `phone_2` varchar(32) default NULL,
+  `fax` varchar(32) default NULL,
+  `address_1` varchar(64) NOT NULL default '',
+  `address_2` varchar(64) default NULL,
+  `city` varchar(32) NOT NULL default '',
+  `state` varchar(32) NOT NULL default '',
+  `country` varchar(32) NOT NULL default 'US',
+  `zip` varchar(32) NOT NULL default '',
+  `user_email` varchar(255) default NULL,
+  `extra_field_1` varchar(255) default NULL,
+  `extra_field_2` varchar(255) default NULL,
+  `extra_field_3` varchar(255) default NULL,
+  `extra_field_4` char(1) default NULL,
+  `extra_field_5` char(1) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
+  `perms` varchar(40) NOT NULL default 'shopper',
+  `bank_account_nr` varchar(32) NOT NULL default '',
+  `bank_name` varchar(32) NOT NULL default '',
+  `bank_sort_code` varchar(16) NOT NULL default '',
+  `bank_iban` varchar(64) NOT NULL default '',
+  `bank_account_holder` varchar(48) NOT NULL default '',
+  `bank_account_type` enum('Checking','Business Checking','Savings') NOT NULL default 'Checking',
+  PRIMARY KEY  (`user_info_id`),
   KEY `idx_user_info_user_id` (`user_id`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Customer Information, BT = BillTo and ST = ShipTo';
 
@@ -1445,29 +1445,29 @@ CREATE TABLE `jos_vm_user_info` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_userfield`;
 CREATE TABLE `jos_vm_userfield` (
-  `fieldid` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(50) NOT NULL DEFAULT '',
+  `fieldid` int(11) NOT NULL auto_increment,
+  `name` varchar(50) NOT NULL default '',
   `title` varchar(255) NOT NULL,
   `description` mediumtext NOT NULL,
-  `type` varchar(50) NOT NULL DEFAULT '',
-  `maxlength` int(11) DEFAULT NULL,
-  `size` int(11) DEFAULT NULL,
-  `required` tinyint(4) DEFAULT '0',
-  `ordering` int(11) DEFAULT NULL,
-  `cols` int(11) DEFAULT NULL,
-  `rows` int(11) DEFAULT NULL,
-  `value` varchar(50) DEFAULT NULL,
-  `default` int(11) DEFAULT NULL,
-  `published` tinyint(1) NOT NULL DEFAULT '1',
-  `registration` tinyint(1) NOT NULL DEFAULT '0',
-  `shipping` tinyint(1) NOT NULL DEFAULT '0',
-  `account` tinyint(1) NOT NULL DEFAULT '1',
-  `readonly` tinyint(1) NOT NULL DEFAULT '0',
-  `calculated` tinyint(1) NOT NULL DEFAULT '0',
-  `sys` tinyint(4) NOT NULL DEFAULT '0',
-  `vendor_id` int(11) DEFAULT NULL,
+  `type` varchar(50) NOT NULL default '',
+  `maxlength` int(11) default NULL,
+  `size` int(11) default NULL,
+  `required` tinyint(4) default '0',
+  `ordering` int(11) default NULL,
+  `cols` int(11) default NULL,
+  `rows` int(11) default NULL,
+  `value` varchar(50) default NULL,
+  `default` int(11) default NULL,
+  `published` tinyint(1) NOT NULL default '1',
+  `registration` tinyint(1) NOT NULL default '0',
+  `shipping` tinyint(1) NOT NULL default '0',
+  `account` tinyint(1) NOT NULL default '1',
+  `readonly` tinyint(1) NOT NULL default '0',
+  `calculated` tinyint(1) NOT NULL default '0',
+  `sys` tinyint(4) NOT NULL default '0',
+  `vendor_id` int(11) default NULL,
   `params` mediumtext,
-  PRIMARY KEY (`fieldid`)
+  PRIMARY KEY  (`fieldid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=36 DEFAULT CHARSET=utf8 COMMENT='Holds the fields for the user information';
 
 -- ----------------------------
@@ -1475,13 +1475,13 @@ CREATE TABLE `jos_vm_userfield` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_userfield_values`;
 CREATE TABLE `jos_vm_userfield_values` (
-  `fieldvalueid` int(11) NOT NULL AUTO_INCREMENT,
-  `fieldid` int(11) NOT NULL DEFAULT '0',
-  `fieldtitle` varchar(255) NOT NULL DEFAULT '',
+  `fieldvalueid` int(11) NOT NULL auto_increment,
+  `fieldid` int(11) NOT NULL default '0',
+  `fieldtitle` varchar(255) NOT NULL default '',
   `fieldvalue` varchar(255) NOT NULL,
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `sys` tinyint(4) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`fieldvalueid`)
+  `ordering` int(11) NOT NULL default '0',
+  `sys` tinyint(4) NOT NULL default '0',
+  PRIMARY KEY  (`fieldvalueid`)
 ) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='Holds the different values for dropdown and radio lists';
 
 -- ----------------------------
@@ -1489,41 +1489,41 @@ CREATE TABLE `jos_vm_userfield_values` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_vendor`;
 CREATE TABLE `jos_vm_vendor` (
-  `vendor_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_name` varchar(64) DEFAULT NULL,
-  `contact_last_name` varchar(32) NOT NULL DEFAULT '',
-  `contact_first_name` varchar(32) NOT NULL DEFAULT '',
-  `contact_middle_name` varchar(32) DEFAULT NULL,
-  `contact_title` varchar(32) DEFAULT NULL,
-  `contact_phone_1` varchar(32) NOT NULL DEFAULT '',
-  `contact_phone_2` varchar(32) DEFAULT NULL,
-  `contact_fax` varchar(32) DEFAULT NULL,
-  `contact_email` varchar(255) DEFAULT NULL,
-  `vendor_phone` varchar(32) DEFAULT NULL,
-  `vendor_address_1` varchar(64) NOT NULL DEFAULT '',
-  `vendor_address_2` varchar(64) DEFAULT NULL,
-  `vendor_city` varchar(32) NOT NULL DEFAULT '',
-  `vendor_state` varchar(32) NOT NULL DEFAULT '',
-  `vendor_country` varchar(32) NOT NULL DEFAULT 'US',
-  `vendor_zip` varchar(32) NOT NULL DEFAULT '',
-  `vendor_store_name` varchar(128) NOT NULL DEFAULT '',
+  `vendor_id` int(11) NOT NULL auto_increment,
+  `vendor_name` varchar(64) default NULL,
+  `contact_last_name` varchar(32) NOT NULL default '',
+  `contact_first_name` varchar(32) NOT NULL default '',
+  `contact_middle_name` varchar(32) default NULL,
+  `contact_title` varchar(32) default NULL,
+  `contact_phone_1` varchar(32) NOT NULL default '',
+  `contact_phone_2` varchar(32) default NULL,
+  `contact_fax` varchar(32) default NULL,
+  `contact_email` varchar(255) default NULL,
+  `vendor_phone` varchar(32) default NULL,
+  `vendor_address_1` varchar(64) NOT NULL default '',
+  `vendor_address_2` varchar(64) default NULL,
+  `vendor_city` varchar(32) NOT NULL default '',
+  `vendor_state` varchar(32) NOT NULL default '',
+  `vendor_country` varchar(32) NOT NULL default 'US',
+  `vendor_zip` varchar(32) NOT NULL default '',
+  `vendor_store_name` varchar(128) NOT NULL default '',
   `vendor_store_desc` text,
-  `vendor_category_id` int(11) DEFAULT NULL,
-  `vendor_thumb_image` varchar(255) DEFAULT NULL,
-  `vendor_full_image` varchar(255) DEFAULT NULL,
-  `vendor_currency` varchar(16) DEFAULT NULL,
-  `cdate` int(11) DEFAULT NULL,
-  `mdate` int(11) DEFAULT NULL,
-  `vendor_image_path` varchar(255) DEFAULT NULL,
+  `vendor_category_id` int(11) default NULL,
+  `vendor_thumb_image` varchar(255) default NULL,
+  `vendor_full_image` varchar(255) default NULL,
+  `vendor_currency` varchar(16) default NULL,
+  `cdate` int(11) default NULL,
+  `mdate` int(11) default NULL,
+  `vendor_image_path` varchar(255) default NULL,
   `vendor_terms_of_service` text NOT NULL,
-  `vendor_url` varchar(255) NOT NULL DEFAULT '',
-  `vendor_min_pov` decimal(10,2) DEFAULT NULL,
-  `vendor_freeshipping` decimal(10,2) NOT NULL DEFAULT '0.00',
-  `vendor_currency_display_style` varchar(64) NOT NULL DEFAULT '',
+  `vendor_url` varchar(255) NOT NULL default '',
+  `vendor_min_pov` decimal(10,2) default NULL,
+  `vendor_freeshipping` decimal(10,2) NOT NULL default '0.00',
+  `vendor_currency_display_style` varchar(64) NOT NULL default '',
   `vendor_accepted_currencies` text NOT NULL,
   `vendor_address_format` text NOT NULL,
   `vendor_date_format` varchar(255) NOT NULL,
-  PRIMARY KEY (`vendor_id`),
+  PRIMARY KEY  (`vendor_id`),
   KEY `idx_vendor_name` (`vendor_name`),
   KEY `idx_vendor_category_id` (`vendor_category_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8 COMMENT='Vendors manage their products in your store';
@@ -1533,10 +1533,10 @@ CREATE TABLE `jos_vm_vendor` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_vendor_category`;
 CREATE TABLE `jos_vm_vendor_category` (
-  `vendor_category_id` int(11) NOT NULL AUTO_INCREMENT,
-  `vendor_category_name` varchar(64) DEFAULT NULL,
+  `vendor_category_id` int(11) NOT NULL auto_increment,
+  `vendor_category_name` varchar(64) default NULL,
   `vendor_category_desc` text,
-  PRIMARY KEY (`vendor_category_id`),
+  PRIMARY KEY  (`vendor_category_id`),
   KEY `idx_vendor_category_category_name` (`vendor_category_name`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8 COMMENT='The categories that vendors are assigned to';
 
@@ -1545,13 +1545,13 @@ CREATE TABLE `jos_vm_vendor_category` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_waiting_list`;
 CREATE TABLE `jos_vm_waiting_list` (
-  `waiting_list_id` int(11) NOT NULL AUTO_INCREMENT,
-  `product_id` int(11) NOT NULL DEFAULT '0',
-  `user_id` int(11) NOT NULL DEFAULT '0',
-  `notify_email` varchar(150) NOT NULL DEFAULT '',
-  `notified` enum('0','1') DEFAULT '0',
-  `notify_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-  PRIMARY KEY (`waiting_list_id`),
+  `waiting_list_id` int(11) NOT NULL auto_increment,
+  `product_id` int(11) NOT NULL default '0',
+  `user_id` int(11) NOT NULL default '0',
+  `notify_email` varchar(150) NOT NULL default '',
+  `notified` enum('0','1') default '0',
+  `notify_date` timestamp NOT NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP,
+  PRIMARY KEY  (`waiting_list_id`),
   KEY `product_id` (`product_id`),
   KEY `notify_email` (`notify_email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8 COMMENT='Stores notifications, users waiting f. products out of stock';
@@ -1561,13 +1561,13 @@ CREATE TABLE `jos_vm_waiting_list` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_vm_zone_shipping`;
 CREATE TABLE `jos_vm_zone_shipping` (
-  `zone_id` int(11) NOT NULL AUTO_INCREMENT,
-  `zone_name` varchar(255) DEFAULT NULL,
-  `zone_cost` decimal(10,2) DEFAULT NULL,
-  `zone_limit` decimal(10,2) DEFAULT NULL,
+  `zone_id` int(11) NOT NULL auto_increment,
+  `zone_name` varchar(255) default NULL,
+  `zone_cost` decimal(10,2) default NULL,
+  `zone_limit` decimal(10,2) default NULL,
   `zone_description` text NOT NULL,
-  `zone_tax_rate` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`zone_id`)
+  `zone_tax_rate` int(11) NOT NULL default '0',
+  PRIMARY KEY  (`zone_id`)
 ) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COMMENT='The Zones managed by the Zone Shipping Module';
 
 -- ----------------------------
@@ -1575,23 +1575,23 @@ CREATE TABLE `jos_vm_zone_shipping` (
 -- ----------------------------
 DROP TABLE IF EXISTS `jos_weblinks`;
 CREATE TABLE `jos_weblinks` (
-  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-  `catid` int(11) NOT NULL DEFAULT '0',
-  `sid` int(11) NOT NULL DEFAULT '0',
-  `title` varchar(250) NOT NULL DEFAULT '',
-  `alias` varchar(255) NOT NULL DEFAULT '',
-  `url` varchar(250) NOT NULL DEFAULT '',
+  `id` int(11) unsigned NOT NULL auto_increment,
+  `catid` int(11) NOT NULL default '0',
+  `sid` int(11) NOT NULL default '0',
+  `title` varchar(250) NOT NULL default '',
+  `alias` varchar(255) NOT NULL default '',
+  `url` varchar(250) NOT NULL default '',
   `description` text NOT NULL,
-  `date` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `hits` int(11) NOT NULL DEFAULT '0',
-  `published` tinyint(1) NOT NULL DEFAULT '0',
-  `checked_out` int(11) NOT NULL DEFAULT '0',
-  `checked_out_time` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
-  `ordering` int(11) NOT NULL DEFAULT '0',
-  `archived` tinyint(1) NOT NULL DEFAULT '0',
-  `approved` tinyint(1) NOT NULL DEFAULT '1',
+  `date` datetime NOT NULL default '0000-00-00 00:00:00',
+  `hits` int(11) NOT NULL default '0',
+  `published` tinyint(1) NOT NULL default '0',
+  `checked_out` int(11) NOT NULL default '0',
+  `checked_out_time` datetime NOT NULL default '0000-00-00 00:00:00',
+  `ordering` int(11) NOT NULL default '0',
+  `archived` tinyint(1) NOT NULL default '0',
+  `approved` tinyint(1) NOT NULL default '1',
   `params` text NOT NULL,
-  PRIMARY KEY (`id`),
+  PRIMARY KEY  (`id`),
   KEY `catid` (`catid`,`published`,`archived`)
 ) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
@@ -1604,8 +1604,8 @@ INSERT INTO `jos_banner` VALUES ('3', '1', '', 'Joomla!', 'joomla', '0', '49', '
 INSERT INTO `jos_banner` VALUES ('4', '1', '', 'JoomlaCode', 'joomlacode', '0', '49', '0', '', 'http://joomlacode.org', '2006-05-29 14:19:26', '1', '0', '0000-00-00 00:00:00', '', '<a href=\"{CLICKURL}\" target=\"_blank\">{NAME}</a>\r\n<br/>\r\nJoomlaCode, development and distribution made easy.', '14', '', '0', '2', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
 INSERT INTO `jos_banner` VALUES ('5', '1', '', 'Joomla! Extensions', 'joomla-extensions', '0', '44', '0', '', 'http://extensions.joomla.org', '2006-05-29 14:23:21', '1', '0', '0000-00-00 00:00:00', '', '<a href=\"{CLICKURL}\" target=\"_blank\">{NAME}</a>\r\n<br/>\r\nJoomla! Components, Modules, Plugins and Languages by the bucket load.', '14', '', '0', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
 INSERT INTO `jos_banner` VALUES ('6', '1', '', 'Joomla! Shop', 'joomla-shop', '0', '44', '0', '', 'http://shop.joomla.org', '2006-05-29 14:23:21', '1', '0', '0000-00-00 00:00:00', '', '<a href=\"{CLICKURL}\" target=\"_blank\">{NAME}</a>\r\n<br/>\r\nFor all your Joomla! merchandise.', '14', '', '0', '4', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
-INSERT INTO `jos_banner` VALUES ('7', '1', '', 'Joomla! Promo Shop', 'joomla-promo-shop', '0', '92', '1', 'shop-ad.jpg', 'http://shop.joomla.org', '2007-09-19 17:26:24', '1', '0', '0000-00-00 00:00:00', '', '', '33', '', '0', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
-INSERT INTO `jos_banner` VALUES ('8', '1', '', 'Joomla! Promo Books', 'joomla-promo-books', '0', '118', '0', 'shop-ad-books.jpg', 'http://shop.joomla.org/amazoncom-bookstores.html', '2007-09-19 17:28:01', '1', '0', '0000-00-00 00:00:00', '', '', '33', '', '0', '4', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
+INSERT INTO `jos_banner` VALUES ('7', '1', '', 'Joomla! Promo Shop', 'joomla-promo-shop', '0', '100', '1', 'shop-ad.jpg', 'http://shop.joomla.org', '2007-09-19 17:26:24', '1', '0', '0000-00-00 00:00:00', '', '', '33', '', '0', '3', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
+INSERT INTO `jos_banner` VALUES ('8', '1', '', 'Joomla! Promo Books', 'joomla-promo-books', '0', '115', '0', 'shop-ad-books.jpg', 'http://shop.joomla.org/amazoncom-bookstores.html', '2007-09-19 17:28:01', '1', '0', '0000-00-00 00:00:00', '', '', '33', '', '0', '4', '0000-00-00 00:00:00', '0000-00-00 00:00:00', '', '');
 INSERT INTO `jos_bannerclient` VALUES ('1', 'Open Source Matters', 'Administrator', 'admin@opensourcematters.org', '', '0', '00:00:00', null);
 INSERT INTO `jos_categories` VALUES ('1', '0', 'Latest', '', 'latest-news', 'taking_notes.jpg', '1', 'left', 'The latest news from the Joomla! Team', '1', '0', '0000-00-00 00:00:00', '', '1', '0', '1', '');
 INSERT INTO `jos_categories` VALUES ('2', '0', 'Joomla! Specific Links', '', 'joomla-specific-links', 'clock.jpg', 'com_weblinks', 'left', 'A selection of links that are all related to the Joomla! Project.', '1', '0', '0000-00-00 00:00:00', null, '1', '0', '0', '');
@@ -1630,6 +1630,10 @@ INSERT INTO `jos_categories` VALUES ('32', '0', 'Languages', '', 'languages', ''
 INSERT INTO `jos_categories` VALUES ('33', '0', 'Joomla! Promo', '', 'joomla-promo', '', 'com_banner', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '1', '0', '0', '');
 INSERT INTO `jos_categories` VALUES ('34', '0', 'Giới Thiệu Công Ty', '', 'gioithieucongty', '', '5', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '1', '0', '0', '');
 INSERT INTO `jos_categories` VALUES ('35', '0', 'Liên Hệ', '', 'lienhe', '', '4', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '4', '0', '0', '');
+INSERT INTO `jos_categories` VALUES ('36', '0', 'Kinh Tế', '', 'kinhte', '', '1', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '3', '0', '0', '');
+INSERT INTO `jos_categories` VALUES ('37', '0', 'Tin Xã Hội', '', 'xahoi', '', '1', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '4', '0', '0', '');
+INSERT INTO `jos_categories` VALUES ('38', '0', 'Tinvpp', '', 'tinvpp', '', '1', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '5', '0', '0', '');
+INSERT INTO `jos_categories` VALUES ('39', '0', 'Dịch Vụ', '', 'dichvu', '', '6', 'left', '', '1', '0', '0000-00-00 00:00:00', null, '1', '0', '0', '');
 INSERT INTO `jos_components` VALUES ('1', 'Banners', '', '0', '0', '', 'Banner Management', 'com_banners', '0', 'js/ThemeOffice/component.png', '0', 'track_impressions=0\ntrack_clicks=0\ntag_prefix=\n\n', '1');
 INSERT INTO `jos_components` VALUES ('2', 'Banners', '', '0', '1', 'option=com_banners', 'Active Banners', 'com_banners', '1', 'js/ThemeOffice/edit.png', '0', '', '1');
 INSERT INTO `jos_components` VALUES ('3', 'Clients', '', '0', '1', 'option=com_banners&c=client', 'Manage Clients', 'com_banners', '2', 'js/ThemeOffice/categories.png', '0', '', '1');
@@ -1652,7 +1656,7 @@ INSERT INTO `jos_components` VALUES ('19', 'Media Manager', '', '0', '0', 'optio
 INSERT INTO `jos_components` VALUES ('20', 'Articles', 'option=com_content', '0', '0', '', '', 'com_content', '0', '', '1', 'show_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\nfeed_summary=0\n\n', '1');
 INSERT INTO `jos_components` VALUES ('21', 'Configuration Manager', '', '0', '0', '', 'Configuration', 'com_config', '0', '', '1', '', '1');
 INSERT INTO `jos_components` VALUES ('22', 'Installation Manager', '', '0', '0', '', 'Installer', 'com_installer', '0', '', '1', '', '1');
-INSERT INTO `jos_components` VALUES ('23', 'Language Manager', '', '0', '0', '', 'Languages', 'com_languages', '0', '', '1', 'site=vi-VN\n\n', '1');
+INSERT INTO `jos_components` VALUES ('23', 'Language Manager', '', '0', '0', '', 'Languages', 'com_languages', '0', '', '1', '', '1');
 INSERT INTO `jos_components` VALUES ('24', 'Mass mail', '', '0', '0', '', 'Mass Mail', 'com_massmail', '0', '', '1', 'mailSubjectPrefix=\nmailBodySuffix=\n\n', '1');
 INSERT INTO `jos_components` VALUES ('25', 'Menu Editor', '', '0', '0', '', 'Menu Editor', 'com_menus', '0', '', '1', '', '1');
 INSERT INTO `jos_components` VALUES ('27', 'Messaging', '', '0', '0', '', 'Messages', 'com_messages', '0', '', '1', '', '1');
@@ -1666,6 +1670,7 @@ INSERT INTO `jos_components` VALUES ('34', 'VirtueMart', 'option=com_virtuemart'
 INSERT INTO `jos_components` VALUES ('35', 'virtuemart_version', '', '0', '9999', '', '', '', '0', '', '0', 'RELEASE=1.1.9\nDEV_STATUS=stable', '1');
 INSERT INTO `jos_contact_details` VALUES ('1', 'Name', 'name', 'Position', 'Street', 'Suburb', 'State', 'Country', 'Zip Code', 'Telephone', 'Fax', 'Miscellanous info', 'powered_by.png', 'top', 'email@email.com', '1', '1', '0', '0000-00-00 00:00:00', '1', 'show_name=1\r\nshow_position=1\r\nshow_email=0\r\nshow_street_address=1\r\nshow_suburb=1\r\nshow_state=1\r\nshow_postcode=1\r\nshow_country=1\r\nshow_telephone=1\r\nshow_mobile=1\r\nshow_fax=1\r\nshow_webpage=1\r\nshow_misc=1\r\nshow_image=1\r\nallow_vcard=0\r\ncontact_icons=0\r\nicon_address=\r\nicon_email=\r\nicon_telephone=\r\nicon_fax=\r\nicon_misc=\r\nshow_email_form=1\r\nemail_description=1\r\nshow_email_copy=1\r\nbanned_email=\r\nbanned_subject=\r\nbanned_text=', '0', '12', '0', '', '');
 INSERT INTO `jos_content` VALUES ('1', 'Giới Thiệu', 'gioithieu', '', '<p>Văn Phòng Phẩm Đức Mạnh Xin Kinh Chào Quý Khách</p>', '', '1', '5', '0', '34', '2008-08-12 10:00:00', '62', '', '2011-09-19 09:26:09', '62', '0', '0000-00-00 00:00:00', '2006-01-03 01:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '31', '0', '1', '', '', '0', '96', 'robots=\nauthor=');
+INSERT INTO `jos_content` VALUES ('48', 'Giao Hàng Tận Nơi', 'giaohang', '', '<p>Chỉ cần nhấc máy và gọi chúng tôi sẽ đem đến tận nơi những j bạn cần.</p>', '', '1', '6', '0', '39', '2011-09-20 02:01:52', '62', '', '0000-00-00 00:00:00', '0', '0', '0000-00-00 00:00:00', '2011-09-20 02:01:52', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '1', '0', '1', '', '', '0', '1', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('2', 'Newsflash 1', 'newsflash-1', '', '<p>Joomla! makes it easy to launch a Web site of any kind. Whether you want a brochure site or you are building a large online community, Joomla! allows you to deploy a new site in minutes and add extra functionality as you need it. The hundreds of available Extensions will help to expand your site and allow you to deliver new services that extend your reach into the Internet.</p>', '', '1', '1', '0', '3', '2008-08-10 06:30:34', '62', '', '2008-08-10 06:30:34', '62', '0', '0000-00-00 00:00:00', '2004-08-09 10:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '7', '0', '3', '', '', '0', '1', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('3', 'Newsflash 2', 'newsflash-2', '', '<p>The one thing about a Web site, it always changes! Joomla! makes it easy to add Articles, content, images, videos, and more. Site administrators can edit and manage content \'in-context\' by clicking the \'Edit\' link. Webmasters can also edit content through a graphical Control Panel that gives you complete control over your site.</p>', '', '1', '1', '0', '3', '2008-08-09 22:30:34', '62', '', '2008-08-09 22:30:34', '62', '0', '0000-00-00 00:00:00', '2004-08-09 06:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '6', '0', '4', '', '', '0', '0', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('4', 'Newsflash 3', 'newsflash-3', '', '<p>With a library of thousands of free <a href=\"http://extensions.joomla.org\" target=\"_blank\" title=\"The Joomla! Extensions Directory\">Extensions</a>, you can add what you need as your site grows. Don\'t wait, look through the <a href=\"http://extensions.joomla.org/\" target=\"_blank\" title=\"Joomla! Extensions\">Joomla! Extensions</a>  library today. </p>', '', '1', '1', '0', '3', '2008-08-10 06:30:34', '62', '', '2008-08-10 06:30:34', '62', '0', '0000-00-00 00:00:00', '2004-08-09 10:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '7', '0', '5', '', '', '0', '1', 'robots=\nauthor=');
@@ -1681,12 +1686,12 @@ INSERT INTO `jos_content` VALUES ('15', 'Can Joomla! 1.5 operate with PHP Safe M
 INSERT INTO `jos_content` VALUES ('16', 'Only one edit window! How do I create \"Read more...\"?', 'only-one-edit-window-how-do-i-create-read-more', '', '<p>This is now implemented by inserting a <strong>Read more...</strong> tag (the button is located below the editor area) a dotted line appears in the edited text showing the split location for the <em>Read more....</em> A new Plugin takes care of the rest.</p><p>It is worth mentioning that this does not have a negative effect on migrated data from older sites. The new implementation is fully backward compatible.</p>', '', '1', '3', '0', '28', '2008-08-06 19:29:28', '62', '', '2008-08-06 19:29:28', '62', '0', '0000-00-00 00:00:00', '2006-10-05 14:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '7', '0', '4', '', '', '0', '20', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('17', 'My MySQL database does not support UTF-8. Do I have a problem?', 'my-mysql-database-does-not-support-utf-8-do-i-have-a-problem', '', 'No you don\'t. Versions of MySQL lower than 4.1 do not have built in UTF-8 support. However, Joomla! 1.5 has made provisions for backward compatibility and is able to use UTF-8 on older databases. Let the installer take care of all the settings and there is no need to make any changes to the database (charset, collation, or any other).', '', '1', '3', '0', '31', '2008-08-07 09:30:37', '62', '', '2008-08-07 09:30:37', '62', '0', '0000-00-00 00:00:00', '2006-10-05 20:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '10', '0', '7', '', '', '0', '9', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('18', 'Joomla! Features', 'joomla-features', '', '<h4><font color=\"#ff6600\">Joomla! features:</font></h4> <ul><li>Completely database driven site engines </li><li>News, products, or services sections fully editable and manageable</li><li>Topics sections can be added to by contributing Authors </li><li>Fully customisable layouts including <em>left</em>, <em>center</em>, and <em>right </em>Menu boxes </li><li>Browser upload of images to your own library for use anywhere in the site </li><li>Dynamic Forum/Poll/Voting booth for on-the-spot results </li><li>Runs on Linux, FreeBSD, MacOSX server, Solaris, and AIX', '  </li></ul> <h4>Extensive Administration:</h4> <ul><li>Change order of objects including news, FAQs, Articles etc. </li><li>Random Newsflash generator </li><li>Remote Author submission Module for News, Articles, FAQs, and Links </li><li>Object hierarchy - as many Sections, departments, divisions, and pages as you want </li><li>Image library - store all your PNGs, PDFs, DOCs, XLSs, GIFs, and JPEGs online for easy use </li><li>Automatic Path-Finder. Place a picture and let Joomla! fix the link </li><li>News Feed Manager. Easily integrate news feeds into your Web site.</li><li>E-mail a friend and Print format available for every story and Article </li><li>In-line Text editor similar to any basic word processor software </li><li>User editable look and feel </li><li>Polls/Surveys - Now put a different one on each page </li><li>Custom Page Modules. Download custom page Modules to spice up your site </li><li>Template Manager. Download Templates and implement them in seconds </li><li>Layout preview. See how it looks before going live </li><li>Banner Manager. Make money out of your site.</li></ul>', '1', '4', '0', '29', '2008-08-08 23:32:45', '62', '', '2008-08-08 23:32:45', '62', '0', '0000-00-00 00:00:00', '2006-10-07 06:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '11', '0', '4', '', '', '0', '59', 'robots=\nauthor=');
-INSERT INTO `jos_content` VALUES ('19', 'Joomla! Overview', 'joomla-overview', '', '<p>If you\'re new to Web publishing systems, you\'ll find that Joomla! delivers sophisticated solutions to your online needs. It can deliver a robust enterprise-level Web site, empowered by endless extensibility for your bespoke publishing needs. Moreover, it is often the system of choice for small business or home users who want a professional looking site that\'s simple to deploy and use. <em>We do content right</em>.<br /> </p><p>So what\'s the catch? How much does this system cost?</p><p> Well, there\'s good news ... and more good news! Joomla! 1.5 is free, it is released under an Open Source license - the GNU/General Public License v 2.0. Had you invested in a mainstream, commercial alternative, there\'d be nothing but moths left in your wallet and to add new functionality would probably mean taking out a second mortgage each time you wanted something adding!</p><p>Joomla! changes all that ... <br />Joomla! is different from the normal models for content management software. For a start, it\'s not complicated. Joomla! has been developed for everybody, and anybody can develop it further. It is designed to work (primarily) with other Open Source, free, software such as PHP, MySQL, and Apache. </p><p>It is easy to install and administer, and is reliable. </p><p>Joomla! doesn\'t even require the user or administrator of the system to know HTML to operate it once it\'s up and running.</p><p>To get the perfect Web site with all the functionality that you require for your particular application may take additional time and effort, but with the Joomla! Community support that is available and the many Third Party Developers actively creating and releasing new Extensions for the 1.5 platform on an almost daily basis, there is likely to be something out there to meet your needs. Or you could develop your own Extensions and make these available to the rest of the community. </p>', '', '1', '4', '0', '29', '2008-08-09 07:49:20', '62', '', '2008-08-09 07:49:20', '62', '0', '0000-00-00 00:00:00', '2006-10-07 10:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '13', '0', '2', '', '', '0', '154', 'robots=\nauthor=');
+INSERT INTO `jos_content` VALUES ('19', 'Joomla! Overview', 'joomla-overview', '', '<p>If you\'re new to Web publishing systems, you\'ll find that Joomla! delivers sophisticated solutions to your online needs. It can deliver a robust enterprise-level Web site, empowered by endless extensibility for your bespoke publishing needs. Moreover, it is often the system of choice for small business or home users who want a professional looking site that\'s simple to deploy and use. <em>We do content right</em>.<br /> </p><p>So what\'s the catch? How much does this system cost?</p><p> Well, there\'s good news ... and more good news! Joomla! 1.5 is free, it is released under an Open Source license - the GNU/General Public License v 2.0. Had you invested in a mainstream, commercial alternative, there\'d be nothing but moths left in your wallet and to add new functionality would probably mean taking out a second mortgage each time you wanted something adding!</p><p>Joomla! changes all that ... <br />Joomla! is different from the normal models for content management software. For a start, it\'s not complicated. Joomla! has been developed for everybody, and anybody can develop it further. It is designed to work (primarily) with other Open Source, free, software such as PHP, MySQL, and Apache. </p><p>It is easy to install and administer, and is reliable. </p><p>Joomla! doesn\'t even require the user or administrator of the system to know HTML to operate it once it\'s up and running.</p><p>To get the perfect Web site with all the functionality that you require for your particular application may take additional time and effort, but with the Joomla! Community support that is available and the many Third Party Developers actively creating and releasing new Extensions for the 1.5 platform on an almost daily basis, there is likely to be something out there to meet your needs. Or you could develop your own Extensions and make these available to the rest of the community. </p>', '', '1', '4', '0', '29', '2008-08-09 07:49:20', '62', '', '2008-08-09 07:49:20', '62', '0', '0000-00-00 00:00:00', '2006-10-07 10:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '13', '0', '2', '', '', '0', '152', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('20', 'Liên Hệ Với Chúng Tôi', 'lienhe', '', '<h1>Support</h1>\r\n<p>Hãy liên hệ với chúng tối qua những thông tin sau.</p>', '', '1', '4', '0', '35', '2008-08-09 08:33:57', '62', '', '2011-09-19 09:21:47', '62', '0', '0000-00-00 00:00:00', '2006-10-07 10:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '14', '0', '1', '', '', '0', '7', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('21', 'Joomla! Facts', 'joomla-facts', '', '<p>Here are some interesting facts about Joomla!</p><ul><li><span>Over 210,000 active registered Users on the <a href=\"http://forum.joomla.org\" target=\"_blank\" title=\"Joomla Forums\">Official Joomla! community forum</a> and more on the many international community sites.</span><ul><li><span>over 1,000,000 posts in over 200,000 topics</span></li><li>over 1,200 posts per day</li><li>growing at 150 new participants each day!</li></ul></li><li><span>1168 Projects on the JoomlaCode (<a href=\"http://joomlacode.org/\" target=\"_blank\" title=\"JoomlaCode\">joomlacode.org</a> ). All for open source addons by third party developers.</span><ul><li><span>Well over 6,000,000 downloads of Joomla! since the migration to JoomlaCode in March 2007.<br /></span></li></ul></li><li><span>Nearly 4,000 extensions for Joomla! have been registered on the <a href=\"http://extensions.joomla.org\" target=\"_blank\" title=\"http://extensions.joomla.org\">Joomla! Extension Directory</a>  </span></li><li><span>Joomla.org exceeds 2 TB of traffic per month!</span></li></ul>', '', '1', '4', '0', '30', '2008-08-09 16:46:37', '62', '', '2008-08-09 16:46:37', '62', '0', '0000-00-00 00:00:00', '2006-10-07 14:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '13', '0', '1', '', '', '0', '50', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('22', 'What\'s New in 1.5?', 'whats-new-in-15', '', '<p>As with previous releases, Joomla! provides a unified and easy-to-use framework for delivering content for Web sites of all kinds. To support the changing nature of the Internet and emerging Web technologies, Joomla! required substantial restructuring of its core functionality and we also used this effort to simplify many challenges within the current user interface. Joomla! 1.5 has many new features.</p>', '<p style=\"margin-bottom: 0in\">In Joomla! 1.5, you\'ll notice: </p>    <ul><li>     <p style=\"margin-bottom: 0in\">       Substantially improved usability, manageability, and scalability far beyond the original Mambo foundations</p>   </li><li>     <p style=\"margin-bottom: 0in\"> Expanded accessibility to support internationalisation, double-byte characters and right-to-left support for Arabic, Farsi, and Hebrew languages among others</p>   </li><li>     <p style=\"margin-bottom: 0in\"> Extended integration of external applications through Web services and remote authentication such as the Lightweight Directory Access Protocol (LDAP)</p>   </li><li>     <p style=\"margin-bottom: 0in\"> Enhanced content delivery, template and presentation capabilities to support accessibility standards and content delivery to any destination</p>   </li><li>     <p style=\"margin-bottom: 0in\">       A more sustainable and flexible framework for Component and Extension developers</p>   </li><li>     <p style=\"margin-bottom: 0in\">Backward compatibility with previous releases of Components, Templates, Modules, and other Extensions</p></li></ul>', '1', '4', '0', '29', '2008-08-11 22:13:58', '62', '', '2008-08-11 22:13:58', '62', '0', '0000-00-00 00:00:00', '2006-10-10 18:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '10', '0', '1', '', '', '0', '92', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('23', 'Platforms and Open Standards', 'platforms-and-open-standards', '', '<p class=\"MsoNormal\">Joomla! runs on any platform including Windows, most flavours of Linux, several Unix versions, and the Apple OS/X platform.  Joomla! depends on PHP and the MySQL database to deliver dynamic content.  </p>            <p class=\"MsoNormal\">The minimum requirements are:</p>      <ul><li>Apache 1.x, 2.x and higher</li><li>PHP 4.3 and higher</li><li>MySQL 3.23 and higher</li></ul>It will also run on alternative server platforms such as Windows IIS - provided they support PHP and MySQL - but these require additional configuration in order for the Joomla! core package to be successful installed and operated.', '', '1', '4', '0', '25', '2008-08-11 04:22:14', '62', '', '2008-08-11 04:22:14', '62', '0', '0000-00-00 00:00:00', '2006-10-10 08:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '7', '0', '3', '', '', '0', '11', 'robots=\nauthor=');
-INSERT INTO `jos_content` VALUES ('24', 'Content Layouts', 'content-layouts', '', '<p>Joomla! provides plenty of flexibility when displaying your Web content. Whether you are using Joomla! for a blog site, news or a Web site for a company, you\'ll find one or more content styles to showcase your information. You can also change the style of content dynamically depending on your preferences. Joomla! calls how a page is laid out a <strong>layout</strong>. Use the guide below to understand which layouts are available and how you might use them. </p> <h2>Content </h2> <p>Joomla! makes it extremely easy to add and display content. All content  is placed where your mainbody tag in your template is located. There are three main types of layouts available in Joomla! and all of them can be customised via parameters. The display and parameters are set in the Menu Item used to display the content your working on. You create these layouts by creating a Menu Item and choosing how you want the content to display.</p> <h3>Blog Layout<br /> </h3> <p>Blog layout will show a listing of all Articles of the selected blog type (Section or Category) in the mainbody position of your template. It will give you the standard title, and Intro of each Article in that particular Category and/or Section. You can customise this layout via the use of the Preferences and Parameters, (See Article Parameters) this is done from the Menu not the Section Manager!</p> <h3>Blog Archive Layout<br /> </h3> <p>A Blog Archive layout will give you a similar output of Articles as the normal Blog Display but will add, at the top, two drop down lists for month and year plus a search button to allow Users to search for all Archived Articles from a specific month and year.</p> <h3>List Layout<br /> </h3> <p>Table layout will simply give you a <em>tabular </em>list<em> </em>of all the titles in that particular Section or Category. No Intro text will be displayed just the titles. You can set how many titles will be displayed in this table by Parameters. The table layout will also provide a filter Section so that Users can reorder, filter, and set how many titles are listed on a single page (up to 50)</p> <h2>Wrapper</h2> <p>Wrappers allow you to place stand alone applications and Third Party Web sites inside your Joomla! site. The content within a Wrapper appears within the primary content area defined by the \"mainbody\" tag and allows you to display their content as a part of your own site. A Wrapper will place an IFRAME into the content Section of your Web site and wrap your standard template navigation around it so it appears in the same way an Article would.</p> <h2>Content Parameters</h2> <p>The parameters for each layout type can be found on the right hand side of the editor boxes in the Menu Item configuration screen. The parameters available depend largely on what kind of layout you are configuring.</p>', '', '1', '4', '0', '29', '2008-08-12 22:33:10', '62', '', '2008-08-12 22:33:10', '62', '0', '0000-00-00 00:00:00', '2006-10-11 06:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '11', '0', '5', '', '', '0', '71', 'robots=\nauthor=');
+INSERT INTO `jos_content` VALUES ('24', 'Content Layouts', 'content-layouts', '', '<p>Joomla! provides plenty of flexibility when displaying your Web content. Whether you are using Joomla! for a blog site, news or a Web site for a company, you\'ll find one or more content styles to showcase your information. You can also change the style of content dynamically depending on your preferences. Joomla! calls how a page is laid out a <strong>layout</strong>. Use the guide below to understand which layouts are available and how you might use them. </p> <h2>Content </h2> <p>Joomla! makes it extremely easy to add and display content. All content  is placed where your mainbody tag in your template is located. There are three main types of layouts available in Joomla! and all of them can be customised via parameters. The display and parameters are set in the Menu Item used to display the content your working on. You create these layouts by creating a Menu Item and choosing how you want the content to display.</p> <h3>Blog Layout<br /> </h3> <p>Blog layout will show a listing of all Articles of the selected blog type (Section or Category) in the mainbody position of your template. It will give you the standard title, and Intro of each Article in that particular Category and/or Section. You can customise this layout via the use of the Preferences and Parameters, (See Article Parameters) this is done from the Menu not the Section Manager!</p> <h3>Blog Archive Layout<br /> </h3> <p>A Blog Archive layout will give you a similar output of Articles as the normal Blog Display but will add, at the top, two drop down lists for month and year plus a search button to allow Users to search for all Archived Articles from a specific month and year.</p> <h3>List Layout<br /> </h3> <p>Table layout will simply give you a <em>tabular </em>list<em> </em>of all the titles in that particular Section or Category. No Intro text will be displayed just the titles. You can set how many titles will be displayed in this table by Parameters. The table layout will also provide a filter Section so that Users can reorder, filter, and set how many titles are listed on a single page (up to 50)</p> <h2>Wrapper</h2> <p>Wrappers allow you to place stand alone applications and Third Party Web sites inside your Joomla! site. The content within a Wrapper appears within the primary content area defined by the \"mainbody\" tag and allows you to display their content as a part of your own site. A Wrapper will place an IFRAME into the content Section of your Web site and wrap your standard template navigation around it so it appears in the same way an Article would.</p> <h2>Content Parameters</h2> <p>The parameters for each layout type can be found on the right hand side of the editor boxes in the Menu Item configuration screen. The parameters available depend largely on what kind of layout you are configuring.</p>', '', '1', '4', '0', '29', '2008-08-12 22:33:10', '62', '', '2008-08-12 22:33:10', '62', '0', '0000-00-00 00:00:00', '2006-10-11 06:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '11', '0', '5', '', '', '0', '70', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('25', 'What are the requirements to run Joomla! 1.5?', 'what-are-the-requirements-to-run-joomla-15', '', '<p>Joomla! runs on the PHP pre-processor. PHP comes in many flavours, for a lot of operating systems. Beside PHP you will need a Web server. Joomla! is optimized for the Apache Web server, but it can run on different Web servers like Microsoft IIS it just requires additional configuration of PHP and MySQL. Joomla! also depends on a database, for this currently you can only use MySQL. </p>Many people know from their own experience that it\'s not easy to install an Apache Web server and it gets harder if you want to add MySQL, PHP and Perl. XAMPP, WAMP, and MAMP are easy to install distributions containing Apache, MySQL, PHP and Perl for the Windows, Mac OSX and Linux operating systems. These packages are for localhost installations on non-public servers only.<br />The minimum version requirements are:<br /><ul><li>Apache 1.x or 2.x</li><li>PHP 4.3 or up</li><li>MySQL 3.23 or up</li></ul>For the latest minimum requirements details, see <a href=\"http://www.joomla.org/about-joomla/technical-requirements.html\" target=\"_blank\" title=\"Joomla! Technical Requirements\">Joomla! Technical Requirements</a>.', '', '1', '3', '0', '31', '2008-08-11 00:42:31', '62', '', '2008-08-11 00:42:31', '62', '0', '0000-00-00 00:00:00', '2006-10-10 06:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '6', '0', '5', '', '', '0', '25', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('26', 'Extensions', 'extensions', '', '<p>Out of the box, Joomla! does a great job of managing the content needed to make your Web site sing. But for many people, the true power of Joomla! lies in the application framework that makes it possible for developers all around the world to create powerful add-ons that are called <strong>Extensions</strong>. An Extension is used to add capabilities to Joomla! that do not exist in the base core code. Here are just some examples of the hundreds of available Extensions:</p> <ul>   <li>Dynamic form builders</li>   <li>Business or organisational directories</li>   <li>Document management</li>   <li>Image and multimedia galleries</li>   <li>E-commerce and shopping cart engines</li>   <li>Forums and chat software</li>   <li>Calendars</li>   <li>E-mail newsletters</li>   <li>Data collection and reporting tools</li>   <li>Banner advertising systems</li>   <li>Paid subscription services</li>   <li>and many, many, more</li> </ul> <p>You can find more examples over at our ever growing <a href=\"http://extensions.joomla.org\" target=\"_blank\" title=\"Joomla! Extensions Directory\">Joomla! Extensions Directory</a>. Prepare to be amazed at the amount of exciting work produced by our active developer community!</p><p>A useful guide to the Extension site can be found at:<br /><a href=\"http://extensions.joomla.org/content/view/15/63/\" target=\"_blank\" title=\"Guide to the Joomla! Extension site\">http://extensions.joomla.org/content/view/15/63/</a> </p> <h3>Types of Extensions </h3><p>There are five types of extensions:</p> <ul>   <li>Components</li>   <li>Modules</li>   <li>Templates</li>   <li>Plugins</li>   <li>Languages</li> </ul> <p>You can read more about the specifics of these using the links in the Article Index - a Table of Contents (yet another useful feature of Joomla!) - at the top right or by clicking on the <strong>Next </strong>link below.<br /> </p> <hr title=\"Components\" class=\"system-pagebreak\" /> <h3><img src=\"images/stories/ext_com.png\" border=\"0\" alt=\"Component - Joomla! Extension Directory\" title=\"Component - Joomla! Extension Directory\" width=\"17\" height=\"17\" /> Components</h3> <p>A Component is the largest and most complex of the Extension types.  Components are like mini-applications that render the main body of the  page. An analogy that might make the relationship easier to understand  would be that Joomla! is a book and all the Components are chapters in  the book. The core Article Component (<font face=\"courier new,courier\">com_content</font>), for example, is the  mini-application that handles all core Article rendering just as the  core registration Component (<font face=\"courier new,courier\">com_user</font>) is the mini-application  that handles User registration.</p> <p>Many of Joomla!\'s core features are provided by the use of default Components such as:</p> <ul>   <li>Contacts</li>   <li>Front Page</li>   <li>News Feeds</li>   <li>Banners</li>   <li>Mass Mail</li>   <li>Polls</li></ul><p>A Component will manage data, set displays, provide functions, and in general can perform any operation that does not fall under the general functions of the core code.</p> <p>Components work hand in hand with Modules and Plugins to provide a rich variety of content display and functionality aside from the standard Article and content display. They make it possible to completely transform Joomla! and greatly expand its capabilities.</p>  <hr title=\"Modules\" class=\"system-pagebreak\" /> <h3><img src=\"images/stories/ext_mod.png\" border=\"0\" alt=\"Module - Joomla! Extension Directory\" title=\"Module - Joomla! Extension Directory\" width=\"17\" height=\"17\" /> Modules</h3> <p>A more lightweight and flexible Extension used for page rendering is a Module. Modules are used for small bits of the page that are generally  less complex and able to be seen across different Components. To  continue in our book analogy, a Module can be looked at as a footnote  or header block, or perhaps an image/caption block that can be rendered  on a particular page. Obviously you can have a footnote on any page but  not all pages will have them. Footnotes also might appear regardless of  which chapter you are reading. Simlarly Modules can be rendered  regardless of which Component you have loaded.</p> <p>Modules are like little mini-applets that can be placed anywhere on your site. They work in conjunction with Components in some cases and in others are complete stand alone snippets of code used to display some data from the database such as Articles (Newsflash) Modules are usually used to output data but they can also be interactive form items to input data for example the Login Module or Polls.</p> <p>Modules can be assigned to Module positions which are defined in your Template and in the back-end using the Module Manager and editing the Module Position settings. For example, \"left\" and \"right\" are common for a 3 column layout. </p> <h4>Displaying Modules</h4> <p>Each Module is assigned to a Module position on your site. If you wish it to display in two different locations you must copy the Module and assign the copy to display at the new location. You can also set which Menu Items (and thus pages) a Module will display on, you can select all Menu Items or you can pick and choose by holding down the control key and selecting multiple locations one by one in the Modules [Edit] screen</p> <p>Note: Your Main Menu is a Module! When you create a new Menu in the Menu Manager you are actually copying the Main Menu Module (<font face=\"courier new,courier\">mod_mainmenu</font>) code and giving it the name of your new Menu. When you copy a Module you do not copy all of its parameters, you simply allow Joomla! to use the same code with two separate settings.</p> <h4>Newsflash Example</h4> <p>Newsflash is a Module which will display Articles from your site in an assignable Module position. It can be used and configured to display one Category, all Categories, or to randomly choose Articles to highlight to Users. It will display as much of an Article as you set, and will show a <em>Read more...</em> link to take the User to the full Article.</p> <p>The Newsflash Component is particularly useful for things like Site News or to show the latest Article added to your Web site.</p>  <hr title=\"Plugins\" class=\"system-pagebreak\" /> <h3><img src=\"images/stories/ext_plugin.png\" border=\"0\" alt=\"Plugin - Joomla! Extension Directory\" title=\"Plugin - Joomla! Extension Directory\" width=\"17\" height=\"17\" /> Plugins</h3> <p>One  of the more advanced Extensions for Joomla! is the Plugin. In previous  versions of Joomla! Plugins were known as Mambots. Aside from changing their name their  functionality has been expanded. A Plugin is a section of code that  runs when a pre-defined event happens within Joomla!. Editors are Plugins, for example, that execute when the Joomla! event <font face=\"courier new,courier\">onGetEditorArea</font> occurs. Using a Plugin allows a developer to change  the way their code behaves depending upon which Plugins are installed  to react to an event.</p>  <hr title=\"Languages\" class=\"system-pagebreak\" /> <h3><img src=\"images/stories/ext_lang.png\" border=\"0\" alt=\"Language - Joomla! Extensions Directory\" title=\"Language - Joomla! Extensions Directory\" width=\"17\" height=\"17\" /> Languages</h3> <p>New  to Joomla! 1.5 and perhaps the most basic and critical Extension is a Language. Joomla! is released with multiple Installation Languages but the base Site and Administrator are packaged in just the one Language <strong>en-GB</strong> - being English with GB spelling for example. To include all the translations currently available would bloat the core package and make it unmanageable for uploading purposes. The Language files enable all the User interfaces both Front-end and Back-end to be presented in the local preferred language. Note these packs do not have any impact on the actual content such as Articles. </p> <p>More information on languages is available from the <br />   <a href=\"http://community.joomla.org/translations.html\" target=\"_blank\" title=\"Joomla! Translation Teams\">http://community.joomla.org/translations.html</a></p>', '', '1', '4', '0', '29', '2008-08-11 06:00:00', '62', '', '2008-08-11 06:00:00', '62', '0', '0000-00-00 00:00:00', '2006-10-10 22:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '24', '0', '3', 'About Joomla!, General, Extensions', '', '0', '102', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('27', 'The Joomla! Community', 'the-joomla-community', '', '<p><strong>Got a question? </strong>With more than 210,000 members, the Joomla! Discussion Forums at <a href=\"http://forum.joomla.org/\" target=\"_blank\" title=\"Forums\">forum.joomla.org</a> are a great resource for both new and experienced users. Ask your toughest questions the community is waiting to see what you\'ll do with your Joomla! site.</p><p><strong>Do you want to show off your new Joomla! Web site?</strong> Visit the <a href=\"http://forum.joomla.org/viewforum.php?f=514\" target=\"_blank\" title=\"Site Showcase\">Site Showcase</a> section of our forum.</p><p><strong>Do you want to contribute?</strong></p><p>If you think working with Joomla is fun, wait until you start working on it. We\'re passionate about helping Joomla users become contributors. There are many ways you can help Joomla\'s development:</p><ul>	<li>Submit news about Joomla. We syndicate Joomla-related news on <a href=\"http://news.joomla.org\" target=\"_blank\" title=\"JoomlaConnect\">JoomlaConnect<sup>TM</sup></a>. If you have Joomla news that you would like to share with the community, find out how to get connected <a href=\"http://community.joomla.org/connect.html\" target=\"_blank\" title=\"JoomlaConnect\">here</a>.</li>	<li>Report bugs and request features in our <a href=\"http://joomlacode.org/gf/project/joomla/tracker/\" target=\"_blank\" title=\"Joomla! developement trackers\">trackers</a>. Please read <a href=\"http://docs.joomla.org/Filing_bugs_and_issues\" target=\"_blank\" title=\"Reporting Bugs\">Reporting Bugs</a>, for details on how we like our bug reports served up</li><li>Submit patches for new and/or fixed behaviour. Please read <a href=\"http://docs.joomla.org/Patch_submission_guidelines\" target=\"_blank\" title=\"Submitting Patches\">Submitting Patches</a>, for details on how to submit a patch.</li><li>Join the <a href=\"http://forum.joomla.org/viewforum.php?f=509\" target=\"_blank\" title=\"Joomla! development forums\">developer forums</a> and share your ideas for how to improve Joomla. We\'re always open to suggestions, although we\'re likely to be sceptical of large-scale suggestions without some code to back it up.</li><li>Join any of the <a href=\"http://www.joomla.org/about-joomla/the-project/working-groups.html\" target=\"_blank\" title=\"Joomla! working groups\">Joomla Working Groups</a> and bring your personal expertise to the Joomla community. </li></ul><p>These are just a few ways you can contribute. See <a href=\"http://www.joomla.org/about-joomla/contribute-to-joomla.html\" target=\"_blank\" title=\"Contribute\">Contribute to Joomla</a> for many more ways.</p>', '', '1', '4', '0', '30', '2008-08-12 16:50:48', '62', '', '2008-08-12 16:50:48', '62', '0', '0000-00-00 00:00:00', '2006-10-11 02:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '12', '0', '2', '', '', '0', '52', 'robots=\nauthor=');
@@ -1709,6 +1714,7 @@ INSERT INTO `jos_content` VALUES ('43', 'Example Pages and Menu Links', 'example
 INSERT INTO `jos_content` VALUES ('44', 'Joomla! Security Strike Team', 'joomla-security-strike-team', '', '<p>The Joomla! Project has assembled a top-notch team of experts to form the new Joomla! Security Strike Team. This new team will solely focus on investigating and resolving security issues. Instead of working in relative secrecy, the JSST will have a strong public-facing presence at the <a href=\"http://developer.joomla.org/security.html\" target=\"_blank\" title=\"Joomla! Security Center\">Joomla! Security Center</a>.</p>', '<p>The new JSST will call the new <a href=\"http://developer.joomla.org/security.html\" target=\"_blank\" title=\"Joomla! Security Center\">Joomla! Security Center</a> their home base. The Security Center provides a public presence for <a href=\"http://developer.joomla.org/security/news.html\" target=\"_blank\" title=\"Joomla! Security News\">security issues</a> and a platform for the JSST to <a href=\"http://developer.joomla.org/security/articles-tutorials.html\" target=\"_blank\" title=\"Joomla! Security Articles\">help the general public better understand security</a> and how it relates to Joomla!. The Security Center also offers users a clearer understanding of how security issues are handled. There\'s also a <a href=\"http://feeds.joomla.org/JoomlaSecurityNews\" target=\"_blank\" title=\"Joomla! Security News Feed\">news feed</a>, which provides subscribers an up-to-the-minute notification of security issues as they arise.</p>', '1', '1', '0', '1', '2007-07-07 09:54:06', '62', '', '2007-07-07 09:54:06', '62', '0', '0000-00-00 00:00:00', '2004-07-06 22:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '1', '0', '4', '', '', '0', '0', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('45', 'Joomla! Community Portal', 'joomla-community-portal', '', '<p>The <a href=\"http://community.joomla.org/\" target=\"_blank\" title=\"Joomla! Community Portal\">Joomla! Community Portal</a> is now online. There, you will find a constant source of information about the activities of contributors powering the Joomla! Project. Learn about <a href=\"http://community.joomla.org/events.html\" target=\"_blank\" title=\"Joomla! Events\">Joomla! Events</a> worldwide, and see if there is a <a href=\"http://community.joomla.org/user-groups.html\" target=\"_blank\" title=\"Joomla! User Groups\">Joomla! User Group</a> nearby.</p><p>The <a href=\"http://magazine.joomla.org/\" target=\"_blank\" title=\"Joomla! Community Magazine\">Joomla! Community Magazine</a> promises an interesting overview of feature articles, community accomplishments, learning topics, and project updates each month. Also, check out <a href=\"http://community.joomla.org/connect.html\" target=\"_blank\" title=\"JoomlaConnect\">JoomlaConnect&#0153;</a>. This aggregated RSS feed brings together Joomla! news from all over the world in your language. Get the latest and greatest by clicking <a href=\"http://community.joomla.org/connect.html\" target=\"_blank\" title=\"JoomlaConnect\">here</a>.</p>', '', '1', '1', '0', '1', '2007-07-07 09:54:06', '62', '', '2007-07-07 09:54:06', '62', '0', '0000-00-00 00:00:00', '2004-07-06 22:00:00', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '2', '0', '3', '', '', '0', '5', 'robots=\nauthor=');
 INSERT INTO `jos_content` VALUES ('46', 'Tin Tức Khuyến Mãi', 'khuyenmai', '', '<p>Các chương tình khuyến mãi lỡn</p>', '', '1', '1', '0', '1', '2011-09-19 08:53:47', '62', '', '0000-00-00 00:00:00', '0', '0', '0000-00-00 00:00:00', '2011-09-19 08:53:47', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '1', '0', '1', '', '', '0', '1', 'robots=\nauthor=');
+INSERT INTO `jos_content` VALUES ('47', 'Cho Thuê Xe', 'thuexe', '', '<p>Dịch vụ cho thuê xe 7 chỗ</p>', '', '1', '6', '0', '39', '2011-09-20 01:58:22', '62', '', '0000-00-00 00:00:00', '0', '0', '0000-00-00 00:00:00', '2011-09-20 01:58:22', '0000-00-00 00:00:00', '', '', 'show_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_vote=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nlanguage=\nkeyref=\nreadmore=', '1', '0', '2', '', '', '0', '0', 'robots=\nauthor=');
 INSERT INTO `jos_content_frontpage` VALUES ('45', '1');
 INSERT INTO `jos_content_frontpage` VALUES ('6', '2');
 INSERT INTO `jos_content_frontpage` VALUES ('44', '3');
@@ -1751,7 +1757,7 @@ INSERT INTO `jos_menu` VALUES ('27', 'mainmenu', 'Tin Tức', 'joomla-overview',
 INSERT INTO `jos_menu` VALUES ('28', 'topmenu', 'About Joomla!', 'about-joomla', 'index.php?option=com_content&view=article&id=25', 'component', '1', '0', '20', '0', '1', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('29', 'topmenu', 'Features', 'features', 'index.php?option=com_content&view=article&id=22', 'component', '1', '0', '20', '0', '2', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('30', 'topmenu', 'The Community', 'the-community', 'index.php?option=com_content&view=article&id=27', 'component', '1', '0', '20', '0', '4', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
-INSERT INTO `jos_menu` VALUES ('34', 'mainmenu', 'What\'s New in 1.5?', 'what-is-new-in-1-5', 'index.php?option=com_content&view=article&id=22', 'component', '1', '27', '20', '1', '1', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('34', 'mainmenu', 'What\'s New in 1.5?', 'what-is-new-in-1-5', 'index.php?option=com_content&view=article&id=22', 'component', '0', '27', '20', '1', '1', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('40', 'keyconcepts', 'Extensions', 'extensions', 'index.php?option=com_content&view=article&id=26', 'component', '1', '0', '20', '0', '1', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('37', 'mainmenu', 'Giới Thiệu', 'gioithieu', 'index.php?option=com_content&view=article&id=1', 'component', '1', '0', '20', '0', '2', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=0\nshow_title=1\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('43', 'keyconcepts', 'Example Pages', 'example-pages', 'index.php?option=com_content&view=article&id=43', 'component', '1', '0', '20', '0', '3', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'pageclass_sfx=\nmenu_image=-1\nsecure=0\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
@@ -1764,8 +1770,14 @@ INSERT INTO `jos_menu` VALUES ('49', 'mainmenu', 'News Feeds', 'news-feeds', 'in
 INSERT INTO `jos_menu` VALUES ('50', 'mainmenu', 'The News', 'the-news', 'index.php?option=com_content&view=category&layout=blog&id=1', 'component', '0', '0', '20', '0', '6', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_page_title=1\npage_title=The News\nshow_description=0\nshow_description_image=0\nnum_leading_articles=1\nnum_intro_articles=4\nnum_columns=2\nnum_links=4\nshow_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\norderby_pri=\norderby_sec=\nshow_pagination=2\nshow_pagination_results=1\nshow_noauth=0\nlink_titles=0\nshow_intro=1\nshow_section=0\nlink_section=0\nshow_category=0\nlink_category=0\nshow_author=1\nshow_create_date=1\nshow_modify_date=1\nshow_item_navigation=0\nshow_readmore=1\nshow_vote=0\nshow_icons=1\nshow_pdf_icon=1\nshow_print_icon=1\nshow_email_icon=1\nshow_hits=1\n\n', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('51', 'usermenu', 'Submit an Article', 'submit-an-article', 'index.php?option=com_content&view=article&layout=form', 'component', '1', '0', '20', '0', '2', '0', '0000-00-00 00:00:00', '0', '0', '2', '0', '', '0', '0', '0');
 INSERT INTO `jos_menu` VALUES ('52', 'usermenu', 'Submit a Web Link', 'submit-a-web-link', 'index.php?option=com_weblinks&view=weblink&layout=form', 'component', '1', '0', '4', '0', '3', '0', '0000-00-00 00:00:00', '0', '0', '2', '0', '', '0', '0', '0');
-INSERT INTO `jos_menu` VALUES ('53', 'mainmenu', 'Tin Khuyến Mãi', 'khuyenmai', 'index.php?option=com_content&view=article&id=46', 'component', '1', '27', '20', '1', '2', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
-INSERT INTO `jos_menu` VALUES ('54', 'mainmenu', 'Liên Hệ', 'lienhe', 'index.php?option=com_content&view=article&id=20', 'component', '1', '0', '20', '0', '9', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('53', 'mainmenu', 'Khuyến Mãi', 'khuyenmai', 'index.php?option=com_content&view=article&id=46', 'component', '1', '27', '20', '1', '4', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('54', 'mainmenu', 'Liên Hệ', 'lienhe', 'index.php?option=com_content&view=article&id=20', 'component', '1', '0', '20', '0', '10', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('55', 'mainmenu', 'Kinh Tế', 'kinhte', 'index.php?option=com_content&view=category&id=36', 'component', '1', '27', '20', '1', '2', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'display_num=10\nshow_headings=1\nshow_date=0\ndate_format=\nfilter=1\nfilter_type=title\norderby_sec=\nshow_pagination=1\nshow_pagination_limit=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('56', 'mainmenu', 'Xã Hội', 'xahoi', 'index.php?option=com_content&view=category&id=37', 'component', '1', '27', '20', '1', '3', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'display_num=10\nshow_headings=1\nshow_date=0\ndate_format=\nfilter=1\nfilter_type=title\norderby_sec=\nshow_pagination=1\nshow_pagination_limit=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('57', 'mainmenu', 'Văn Phòng Phẩm', 'vpp', 'index.php?option=com_content&view=category&id=38', 'component', '1', '27', '20', '1', '5', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'display_num=10\nshow_headings=1\nshow_date=0\ndate_format=\nfilter=1\nfilter_type=title\norderby_sec=\nshow_pagination=1\nshow_pagination_limit=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('58', 'mainmenu', 'Dịch Vụ', 'dichvu', 'index.php?option=com_content&view=category&id=39', 'component', '1', '0', '20', '0', '9', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'display_num=10\nshow_headings=0\nshow_date=0\ndate_format=\nfilter=0\nfilter_type=title\norderby_sec=\nshow_pagination=0\nshow_pagination_limit=1\nshow_feed_link=1\nshow_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('59', 'mainmenu', 'Cho Thuê Xe', 'chothuexe', 'index.php?option=com_content&view=article&id=47', 'component', '1', '58', '20', '1', '1', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
+INSERT INTO `jos_menu` VALUES ('60', 'mainmenu', 'Giao Hàng Tận Nơi', 'dvgiaohang', 'index.php?option=com_content&view=article&id=48', 'component', '1', '58', '20', '1', '2', '0', '0000-00-00 00:00:00', '0', '0', '0', '0', 'show_noauth=\nshow_title=\nlink_titles=\nshow_intro=\nshow_section=\nlink_section=\nshow_category=\nlink_category=\nshow_author=\nshow_create_date=\nshow_modify_date=\nshow_item_navigation=\nshow_readmore=\nshow_vote=\nshow_icons=\nshow_pdf_icon=\nshow_print_icon=\nshow_email_icon=\nshow_hits=\nfeed_summary=\npage_title=\nshow_page_title=1\npageclass_sfx=\nmenu_image=-1\nsecure=0\n\n', '0', '0', '0');
 INSERT INTO `jos_menu_types` VALUES ('1', 'mainmenu', 'Main Menu', 'The main menu for the site');
 INSERT INTO `jos_menu_types` VALUES ('2', 'usermenu', 'User Menu', 'A Menu for logged in Users');
 INSERT INTO `jos_menu_types` VALUES ('3', 'topmenu', 'Top Menu', 'Top level navigation');
@@ -1926,47 +1938,77 @@ INSERT INTO `jos_poll_date` VALUES ('9', '2007-05-14 14:18:00', '6', '14');
 INSERT INTO `jos_poll_date` VALUES ('10', '2007-06-10 15:20:29', '6', '14');
 INSERT INTO `jos_poll_date` VALUES ('11', '2007-07-03 12:37:53', '2', '14');
 INSERT INTO `jos_polls` VALUES ('14', 'Joomla! is used for?', 'joomla-is-used-for', '11', '0', '0000-00-00 00:00:00', '1', '0', '86400');
-INSERT INTO `jos_sections` VALUES ('1', 'Tin Tức', '', 'tintuc', 'articles.jpg', 'content', 'right', '<p>Select a news topic from the list below, then select a news article to read.</p>', '1', '0', '0000-00-00 00:00:00', '3', '0', '2', '');
+INSERT INTO `jos_sections` VALUES ('1', 'Tin Tức', '', 'tintuc', 'articles.jpg', 'content', 'right', '<p>Select a news topic from the list below, then select a news article to read.</p>', '1', '0', '0000-00-00 00:00:00', '3', '0', '5', '');
 INSERT INTO `jos_sections` VALUES ('3', 'FAQs', '', 'faqs', 'key.jpg', 'content', 'left', 'From the list below choose one of our FAQs topics, then select an FAQ to read. If you have a question which is not in this section, please contact us.', '1', '0', '0000-00-00 00:00:00', '5', '0', '23', '');
 INSERT INTO `jos_sections` VALUES ('4', 'Liên Hệ', '', 'about-joomla', '', 'content', 'left', '', '1', '0', '0000-00-00 00:00:00', '2', '0', '15', '');
 INSERT INTO `jos_sections` VALUES ('5', 'Giới Thiệu', '', 'gioithieu', '', 'content', 'left', '', '1', '0', '0000-00-00 00:00:00', '6', '0', '1', '');
-INSERT INTO `jos_session` VALUES ('', '1316527691', '22c5ca7995f07b1c3ed22b996d611fcc', '1', '0', '', '0', '0', '__default|a:5:{s:22:\"session.client.browser\";s:67:\"Mozilla/5.0 (Windows NT 6.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2\";s:15:\"session.counter\";i:1;s:8:\"registry\";O:9:\"JRegistry\":3:{s:17:\"_defaultNameSpace\";s:7:\"session\";s:9:\"_registry\";a:1:{s:7:\"session\";a:1:{s:4:\"data\";O:8:\"stdClass\":0:{}}}s:7:\"_errors\";a:0:{}}s:4:\"user\";O:5:\"JUser\":19:{s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";s:15:\"Public Frontend\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:3:\"gid\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:3:\"aid\";i:0;s:5:\"guest\";i:1;s:7:\"_params\";O:10:\"JParameter\":7:{s:4:\"_raw\";s:0:\"\";s:4:\"_xml\";N;s:9:\"_elements\";a:0:{}s:12:\"_elementPath\";a:1:{i:0;s:55:\"C:\\xampp\\htdocs\\libraries\\joomla\\html\\parameter\\element\";}s:17:\"_defaultNameSpace\";s:8:\"_default\";s:9:\"_registry\";a:1:{s:8:\"_default\";a:1:{s:4:\"data\";O:8:\"stdClass\":0:{}}}s:7:\"_errors\";a:0:{}}s:9:\"_errorMsg\";N;s:7:\"_errors\";a:0:{}}s:13:\"session.token\";s:32:\"4c0671a87b3a7013dece04c0705fd2c8\";}auth|a:11:{s:11:\"show_prices\";i:1;s:7:\"user_id\";i:0;s:8:\"username\";s:4:\"demo\";s:5:\"perms\";s:0:\"\";s:10:\"first_name\";s:5:\"guest\";s:9:\"last_name\";s:0:\"\";s:16:\"shopper_group_id\";s:1:\"5\";s:22:\"shopper_group_discount\";s:4:\"0.00\";s:24:\"show_price_including_tax\";s:1:\"1\";s:21:\"default_shopper_group\";i:1;s:22:\"is_registered_customer\";b:0;}cart|a:1:{s:3:\"idx\";i:0;}recent|a:1:{s:3:\"idx\";i:0;}ps_vendor_id|i:1;minimum_pov|s:4:\"0.00\";vendor_currency|s:3:\"VND\";userstate|a:1:{s:10:\"product_id\";i:0;}last_page|s:29:\"product.product_discount_list\";');
-INSERT INTO `jos_session` VALUES ('admin', '1316527699', '3f60cb50bdbed2995fc1fd6856472224', '0', '62', 'Super Administrator', '25', '0', '__default|a:8:{s:22:\"session.client.browser\";s:67:\"Mozilla/5.0 (Windows NT 6.1; rv:6.0.2) Gecko/20100101 Firefox/6.0.2\";s:15:\"session.counter\";i:4;s:8:\"registry\";O:9:\"JRegistry\":3:{s:17:\"_defaultNameSpace\";s:7:\"session\";s:9:\"_registry\";a:1:{s:7:\"session\";a:1:{s:4:\"data\";O:8:\"stdClass\":0:{}}}s:7:\"_errors\";a:0:{}}s:4:\"user\";O:5:\"JUser\":19:{s:2:\"id\";s:2:\"62\";s:4:\"name\";s:13:\"Administrator\";s:8:\"username\";s:5:\"admin\";s:5:\"email\";s:25:\"pool-uaf@googlegroups.com\";s:8:\"password\";s:65:\"7371c2320819c620711e22e4798ced87:WqPWotSAeu51PTn48fcj9LxM1oVmyAxx\";s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";s:19:\"Super Administrator\";s:5:\"block\";s:1:\"0\";s:9:\"sendEmail\";s:1:\"1\";s:3:\"gid\";s:2:\"25\";s:12:\"registerDate\";s:19:\"2011-09-17 07:00:41\";s:13:\"lastvisitDate\";s:19:\"2011-09-20 14:08:11\";s:10:\"activation\";s:0:\"\";s:6:\"params\";s:0:\"\";s:3:\"aid\";i:2;s:5:\"guest\";i:0;s:7:\"_params\";O:10:\"JParameter\":7:{s:4:\"_raw\";s:0:\"\";s:4:\"_xml\";N;s:9:\"_elements\";a:0:{}s:12:\"_elementPath\";a:1:{i:0;s:55:\"C:\\xampp\\htdocs\\libraries\\joomla\\html\\parameter\\element\";}s:17:\"_defaultNameSpace\";s:8:\"_default\";s:9:\"_registry\";a:1:{s:8:\"_default\";a:1:{s:4:\"data\";O:8:\"stdClass\":0:{}}}s:7:\"_errors\";a:0:{}}s:9:\"_errorMsg\";N;s:7:\"_errors\";a:0:{}}s:13:\"session.token\";s:32:\"4c0671a87b3a7013dece04c0705fd2c8\";s:19:\"session.timer.start\";i:1316527691;s:18:\"session.timer.last\";i:1316527691;s:17:\"session.timer.now\";i:1316527699;}auth|a:13:{s:11:\"show_prices\";i:1;s:7:\"user_id\";s:2:\"62\";s:8:\"username\";s:5:\"admin\";s:5:\"perms\";s:5:\"admin\";s:10:\"first_name\";N;s:9:\"last_name\";N;s:16:\"shopper_group_id\";s:1:\"5\";s:22:\"shopper_group_discount\";s:4:\"0.00\";s:24:\"show_price_including_tax\";s:1:\"1\";s:21:\"default_shopper_group\";s:1:\"1\";s:22:\"is_registered_customer\";b:1;s:7:\"country\";s:2:\"US\";s:3:\"zip\";s:0:\"\";}cart|a:1:{s:3:\"idx\";i:0;}recent|a:1:{s:3:\"idx\";i:0;}ps_vendor_id|s:1:\"1\";minimum_pov|s:4:\"0.00\";vendor_currency|s:3:\"VND\";userstate|a:1:{s:10:\"product_id\";i:0;}last_page|s:10:\"shop.index\";VMCHECK|s:2:\"OK\";product_sess|a:7:{i:5;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";s:4:\"2.00\";s:10:\"is_percent\";s:1:\"0\";s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:1;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:8;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:17;a:4:{s:7:\"flypage\";s:15:\"flypage-ask.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:10;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";s:4:\"2.00\";s:10:\"is_percent\";s:1:\"0\";s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:7;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:4;a:4:{s:7:\"flypage\";s:18:\"garden_flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316527700;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}}vmMiniCart|b:1;taxrate|a:1:{i:1;i:0;}');
+INSERT INTO `jos_sections` VALUES ('6', 'Dịch Vụ', '', 'dichvu', '', 'content', 'left', '', '1', '0', '0000-00-00 00:00:00', '7', '0', '1', '');
+INSERT INTO `jos_session` VALUES ('', '1316612753', '206cf72ae71a073e04da313bd850a263', '1', '0', '', '0', '0', '__default|a:8:{s:15:\"session.counter\";i:8;s:19:\"session.timer.start\";i:1316612625;s:18:\"session.timer.last\";i:1316612747;s:17:\"session.timer.now\";i:1316612753;s:22:\"session.client.browser\";s:63:\"Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/6.0\";s:8:\"registry\";O:9:\"JRegistry\":3:{s:17:\"_defaultNameSpace\";s:7:\"session\";s:9:\"_registry\";a:1:{s:7:\"session\";a:1:{s:4:\"data\";O:8:\"stdClass\":0:{}}}s:7:\"_errors\";a:0:{}}s:4:\"user\";O:5:\"JUser\":19:{s:2:\"id\";i:0;s:4:\"name\";N;s:8:\"username\";N;s:5:\"email\";N;s:8:\"password\";N;s:14:\"password_clear\";s:0:\"\";s:8:\"usertype\";s:15:\"Public Frontend\";s:5:\"block\";N;s:9:\"sendEmail\";i:0;s:3:\"gid\";i:0;s:12:\"registerDate\";N;s:13:\"lastvisitDate\";N;s:10:\"activation\";N;s:6:\"params\";N;s:3:\"aid\";i:0;s:5:\"guest\";i:1;s:7:\"_params\";O:10:\"JParameter\":7:{s:4:\"_raw\";s:0:\"\";s:4:\"_xml\";N;s:9:\"_elements\";a:0:{}s:12:\"_elementPath\";a:1:{i:0;s:55:\"C:\\xampp\\htdocs\\libraries\\joomla\\html\\parameter\\element\";}s:17:\"_defaultNameSpace\";s:8:\"_default\";s:9:\"_registry\";a:1:{s:8:\"_default\";a:1:{s:4:\"data\";O:8:\"stdClass\":0:{}}}s:7:\"_errors\";a:0:{}}s:9:\"_errorMsg\";N;s:7:\"_errors\";a:0:{}}s:13:\"session.token\";s:32:\"80513f052e4fe5cf180394a31737c3fd\";}VMCHECK|s:2:\"OK\";auth|a:11:{s:11:\"show_prices\";i:1;s:7:\"user_id\";i:0;s:8:\"username\";s:4:\"demo\";s:5:\"perms\";s:0:\"\";s:10:\"first_name\";s:5:\"guest\";s:9:\"last_name\";s:0:\"\";s:16:\"shopper_group_id\";s:1:\"5\";s:22:\"shopper_group_discount\";s:4:\"0.00\";s:24:\"show_price_including_tax\";s:1:\"1\";s:21:\"default_shopper_group\";i:1;s:22:\"is_registered_customer\";b:0;}cart|a:1:{s:3:\"idx\";i:0;}recent|a:1:{s:3:\"idx\";i:0;}ps_vendor_id|i:1;minimum_pov|s:4:\"0.00\";vendor_currency|s:3:\"VND\";userstate|a:1:{s:10:\"product_id\";i:0;}last_page|s:11:\"shop.browse\";product_sess|a:38:{i:8;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:1;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612740;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:5;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";s:4:\"2.00\";s:10:\"is_percent\";s:1:\"0\";s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:58;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:57;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:46;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612731;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:34;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612754;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:26;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612740;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:54;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612747;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:37;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612627;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:17;a:4:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612739;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;s:7:\"flypage\";s:15:\"flypage-ask.tpl\";}i:56;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612638;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:29;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612731;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:27;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:47;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612638;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:23;a:3:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612654;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:24;a:4:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612754;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;s:7:\"flypage\";s:11:\"flypage.tpl\";}i:25;a:3:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612654;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:21;a:4:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;s:7:\"flypage\";s:11:\"flypage.tpl\";}i:20;a:3:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612654;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:22;a:4:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612654;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;s:7:\"flypage\";s:11:\"flypage.tpl\";}i:19;a:4:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;s:7:\"flypage\";s:11:\"flypage.tpl\";}i:18;a:4:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612670;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;s:7:\"flypage\";s:11:\"flypage.tpl\";}i:50;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612747;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:53;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612747;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:31;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612655;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:41;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612740;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:51;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:7;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612731;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:4;a:4:{s:7:\"flypage\";s:18:\"garden_flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612731;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:10;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";s:4:\"2.00\";s:10:\"is_percent\";s:1:\"0\";s:11:\"create_time\";i:1316612740;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:3;a:4:{s:7:\"flypage\";s:18:\"garden_flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612740;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";s:7:\"0.09750\";}i:35;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612740;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:55;a:3:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612747;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:52;a:3:{s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612747;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:44;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612748;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:39;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612754;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}i:42;a:4:{s:7:\"flypage\";s:11:\"flypage.tpl\";s:13:\"discount_info\";a:3:{s:6:\"amount\";i:0;s:10:\"is_percent\";i:0;s:11:\"create_time\";i:1316612754;}s:9:\"vendor_id\";s:1:\"1\";s:8:\"tax_rate\";i:0;}}vmMiniCart|b:1;taxrate|a:1:{i:1;i:0;}last_browse_parameters|a:7:{s:11:\"category_id\";s:2:\"10\";s:15:\"manufacturer_id\";i:0;s:7:\"keyword\";b:0;s:8:\"keyword1\";s:0:\"\";s:8:\"keyword2\";s:0:\"\";s:8:\"featured\";s:1:\"N\";s:10:\"discounted\";s:1:\"N\";}');
 INSERT INTO `jos_templates_menu` VALUES ('ja_zeolite_ii', '0', '0');
 INSERT INTO `jos_templates_menu` VALUES ('khepri', '0', '1');
-INSERT INTO `jos_users` VALUES ('62', 'Administrator', 'admin', 'pool-uaf@googlegroups.com', '7371c2320819c620711e22e4798ced87:WqPWotSAeu51PTn48fcj9LxM1oVmyAxx', 'Super Administrator', '0', '1', '25', '2011-09-17 07:00:41', '2011-09-20 14:08:11', '', '');
+INSERT INTO `jos_users` VALUES ('62', 'Administrator', 'admin', 'pool-uaf@googlegroups.com', '7371c2320819c620711e22e4798ced87:WqPWotSAeu51PTn48fcj9LxM1oVmyAxx', 'Super Administrator', '0', '1', '25', '2011-09-17 07:00:41', '2011-09-21 04:45:23', '', '');
 INSERT INTO `jos_vm_auth_group` VALUES ('1', 'admin', '0');
 INSERT INTO `jos_vm_auth_group` VALUES ('2', 'storeadmin', '250');
 INSERT INTO `jos_vm_auth_group` VALUES ('3', 'shopper', '500');
 INSERT INTO `jos_vm_auth_group` VALUES ('4', 'demo', '750');
 INSERT INTO `jos_vm_auth_user_group` VALUES ('62', '2');
 INSERT INTO `jos_vm_auth_user_vendor` VALUES ('62', '1');
-INSERT INTO `jos_vm_category` VALUES ('1', '1', 'Hand Tools', 'Hand Tools', 'ee024e46399e792cc8ba4bf097d0fa6a.jpg', 'fc2f001413876a374484df36ed9cf775.jpg', 'Y', '950319905', '960304194', 'browse_3', '3', '', '1');
-INSERT INTO `jos_vm_category` VALUES ('2', '1', 'Power Tools', 'Power Tools', 'fc8802c7eaa1149bde98a541742217de.jpg', 'fe2f63f4c46023e3b33404c80bdd2bfe.jpg', 'Y', '950319916', '960304104', 'browse_4', '4', '', '2');
-INSERT INTO `jos_vm_category` VALUES ('3', '1', 'Garden Tools', 'Garden Tools', '702168cd91e8b7bbb7a36be56f86e9be.jpg', '756ff6d140e11079caf56955060f1162.jpg', 'Y', '950321122', '960304338', 'browse_2', '2', 'garden_flypage.tpl', '3');
-INSERT INTO `jos_vm_category` VALUES ('4', '1', 'Outdoor Tools', 'Outdoor Tools', null, null, 'Y', '955626629', '958889528', 'browse_1', '1', null, '4');
-INSERT INTO `jos_vm_category` VALUES ('5', '1', 'Indoor Tools', 'Indoor Tools', null, null, 'Y', '958892894', '958892894', 'browse_1', '1', null, '5');
-INSERT INTO `jos_vm_category` VALUES ('6', '1', 'Bút Các Loại', '<p>Bao gồm các loại bút viết</p>', '', '', 'Y', '1316278651', '1316420502', 'browse_5', '2', 'flypage-ask.tpl', '4');
-INSERT INTO `jos_vm_category` VALUES ('7', '1', 'Giấy Các Loại', '<p>Giấy in, giấy fax, Giấy than....</p>', '', '', 'Y', '1316420297', '1316420489', 'browse_5', '2', 'flypage.tpl', '5');
-INSERT INTO `jos_vm_category` VALUES ('8', '1', 'Bấm Kim', '', '', '', 'Y', '1316420525', '1316420525', 'browse_5', '2', 'flypage.tpl', '6');
-INSERT INTO `jos_vm_category` VALUES ('9', '1', 'Bấm Lỗ', '', '', '', 'Y', '1316420556', '1316420556', 'browse_5', '2', 'flypage.tpl', '7');
-INSERT INTO `jos_vm_category` VALUES ('10', '1', 'Bảng Tên & Giây Đeo', '', '', '', 'Y', '1316420595', '1316420595', 'browse_5', '2', 'flypage.tpl', '8');
-INSERT INTO `jos_vm_category` VALUES ('11', '1', 'Băng Keo', '', '', '', 'Y', '1316420628', '1316420628', 'browse_5', '2', 'flypage.tpl', '9');
-INSERT INTO `jos_vm_category` VALUES ('12', '1', 'Phân Trang', '', '', '', 'Y', '1316420644', '1316420644', 'browse_5', '2', 'flypage.tpl', '10');
-INSERT INTO `jos_vm_category` VALUES ('13', '1', 'Sản Phẩm Khác', '', '', '', 'Y', '1316420713', '1316420713', 'browse_5', '2', 'flypage.tpl', '11');
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '1', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '2', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '3', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('2', '4', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('2', '5', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '6', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '7', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '8', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '9', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '10', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '11', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '12', null);
-INSERT INTO `jos_vm_category_xref` VALUES ('0', '13', null);
+INSERT INTO `jos_vm_category` VALUES ('1', '1', 'Hand Tools', 'Hand Tools', 'ee024e46399e792cc8ba4bf097d0fa6a.jpg', 'fc2f001413876a374484df36ed9cf775.jpg', 'Y', '950319905', '960304194', 'browse_3', '3', '', '11');
+INSERT INTO `jos_vm_category` VALUES ('2', '1', 'Power Tools', 'Power Tools', 'fc8802c7eaa1149bde98a541742217de.jpg', 'fe2f63f4c46023e3b33404c80bdd2bfe.jpg', 'Y', '950319916', '960304104', 'browse_4', '4', '', '12');
+INSERT INTO `jos_vm_category` VALUES ('3', '1', 'Garden Tools', 'Garden Tools', '702168cd91e8b7bbb7a36be56f86e9be.jpg', '756ff6d140e11079caf56955060f1162.jpg', 'Y', '950321122', '960304338', 'browse_2', '2', 'garden_flypage.tpl', '10');
+INSERT INTO `jos_vm_category` VALUES ('4', '1', 'Outdoor Tools', 'Outdoor Tools', null, null, 'Y', '955626629', '958889528', 'browse_1', '1', null, '2');
+INSERT INTO `jos_vm_category` VALUES ('5', '1', 'Indoor Tools', 'Indoor Tools', null, null, 'Y', '958892894', '958892894', 'browse_1', '1', null, '1');
+INSERT INTO `jos_vm_category` VALUES ('6', '1', 'Bút Các Loại', '<p>Bao gồm các loại bút viết</p>', '', '', 'Y', '1316278651', '1316420502', 'browse_5', '2', 'flypage-ask.tpl', '6');
+INSERT INTO `jos_vm_category` VALUES ('7', '1', 'Giấy Các Loại', '<p>Giấy in, giấy fax, Giấy than....</p>', '', '', 'Y', '1316420297', '1316420489', 'browse_5', '2', 'flypage.tpl', '7');
+INSERT INTO `jos_vm_category` VALUES ('8', '1', 'Bấm Kim', '', '', '', 'Y', '1316420525', '1316420525', 'browse_5', '2', 'flypage.tpl', '1');
+INSERT INTO `jos_vm_category` VALUES ('9', '1', 'Bấm Lỗ', '', '', '', 'Y', '1316420556', '1316420556', 'browse_5', '2', 'flypage.tpl', '2');
+INSERT INTO `jos_vm_category` VALUES ('10', '1', 'Bảng Tên & Giây Đeo', '', '', '', 'Y', '1316420595', '1316420595', 'browse_5', '2', 'flypage.tpl', '4');
+INSERT INTO `jos_vm_category` VALUES ('11', '1', 'Băng Keo', '', '', '', 'Y', '1316420628', '1316420628', 'browse_5', '2', 'flypage.tpl', '3');
+INSERT INTO `jos_vm_category` VALUES ('12', '1', 'Phân Trang', '', '', '', 'Y', '1316420644', '1316420644', 'browse_5', '2', 'flypage.tpl', '8');
+INSERT INTO `jos_vm_category` VALUES ('13', '1', 'Sản Phẩm Khác', '', '', '', 'Y', '1316420713', '1316420713', 'browse_5', '2', 'flypage.tpl', '9');
+INSERT INTO `jos_vm_category` VALUES ('14', '1', 'Bút Bi', '', '', '', 'Y', '1316488693', '1316488693', 'browse_5', '2', 'flypage.tpl', '1');
+INSERT INTO `jos_vm_category` VALUES ('15', '1', 'Bút Dạ Quang', '', '', '', 'Y', '1316488716', '1316488716', 'browse_5', '2', 'flypage.tpl', '3');
+INSERT INTO `jos_vm_category` VALUES ('16', '1', 'Bút Chì - Chuốt Chì', '', '', '', 'Y', '1316488806', '1316488806', 'browse_5', '2', 'flypage.tpl', '2');
+INSERT INTO `jos_vm_category` VALUES ('17', '1', 'Bút Lông', '', '', '', 'Y', '1316488899', '1316488899', 'browse_5', '2', 'flypage.tpl', '4');
+INSERT INTO `jos_vm_category` VALUES ('18', '1', 'Bút Xóa', '', '', '', 'Y', '1316489121', '1316489121', 'browse_5', '2', 'flypage.tpl', '5');
+INSERT INTO `jos_vm_category` VALUES ('19', '1', 'Giấy Can', '', '', '', 'Y', '1316580466', '1316580466', 'browse_5', '2', 'flypage.tpl', '1');
+INSERT INTO `jos_vm_category` VALUES ('20', '1', 'Giấy Fax', '', '', '', 'Y', '1316580491', '1316580491', 'browse_5', '2', 'flypage.tpl', '3');
+INSERT INTO `jos_vm_category` VALUES ('21', '1', 'Giấy Cuộn', '', '', '', 'Y', '1316580532', '1316580532', 'browse_5', '2', 'flypage.tpl', '2');
+INSERT INTO `jos_vm_category` VALUES ('22', '1', 'Giấy Than', '', '', '', 'Y', '1316580582', '1316580582', 'browse_5', '2', 'flypage.tpl', '7');
+INSERT INTO `jos_vm_category` VALUES ('23', '1', 'Giấy In', '', '', '', 'Y', '1316580631', '1316580631', 'browse_5', '2', 'flypage.tpl', '4');
+INSERT INTO `jos_vm_category` VALUES ('24', '1', 'Giấy In Màu', '', '', '', 'Y', '1316580653', '1316580653', 'browse_5', '2', 'flypage.tpl', '5');
+INSERT INTO `jos_vm_category` VALUES ('25', '1', 'Giấy Vệ Sinh', '', '', '', 'Y', '1316580704', '1316580704', 'browse_5', '2', 'flypage.tpl', '8');
+INSERT INTO `jos_vm_category` VALUES ('26', '1', 'Giấy Liên Tục', '', '', '', 'Y', '1316580726', '1316580726', 'browse_5', '2', 'flypage.tpl', '6');
+INSERT INTO `jos_vm_category` VALUES ('27', '1', 'Bìa-File', '', '', '', 'Y', '1316581018', '1316581018', 'browse_5', '2', 'flypage.tpl', '5');
+INSERT INTO `jos_vm_category` VALUES ('28', '1', 'Bao Thư', '', '', '', 'Y', '1316582937', '1316582937', 'browse_5', '2', 'flypage.tpl', '13');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '1', '9');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '2', '11');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '3', '7');
+INSERT INTO `jos_vm_category_xref` VALUES ('2', '4', '2');
+INSERT INTO `jos_vm_category_xref` VALUES ('2', '5', '1');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '6', '6');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '7', '8');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '8', '1');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '9', '2');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '10', '4');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '11', '3');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '12', '10');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '13', '12');
+INSERT INTO `jos_vm_category_xref` VALUES ('6', '14', '1');
+INSERT INTO `jos_vm_category_xref` VALUES ('6', '15', '3');
+INSERT INTO `jos_vm_category_xref` VALUES ('6', '16', '2');
+INSERT INTO `jos_vm_category_xref` VALUES ('6', '17', '4');
+INSERT INTO `jos_vm_category_xref` VALUES ('6', '18', '5');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '19', '1');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '20', '3');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '21', '2');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '22', '7');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '23', '4');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '24', '5');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '25', '8');
+INSERT INTO `jos_vm_category_xref` VALUES ('7', '26', '6');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '27', '5');
+INSERT INTO `jos_vm_category_xref` VALUES ('0', '28', null);
 INSERT INTO `jos_vm_country` VALUES ('1', '1', 'Afghanistan', 'AFG', 'AF');
 INSERT INTO `jos_vm_country` VALUES ('2', '1', 'Albania', 'ALB', 'AL');
 INSERT INTO `jos_vm_country` VALUES ('3', '1', 'Algeria', 'DZA', 'DZ');
@@ -2594,6 +2636,47 @@ INSERT INTO `jos_vm_product` VALUES ('14', '1', '2', 'L01', '', '', '', '', 'Y',
 INSERT INTO `jos_vm_product` VALUES ('15', '1', '2', 'L02', '', '', '', '', 'Y', '10.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '0', '', '', '0', null, '962351165', '962351165', 'Wooden Ladder', '0', null, '', '0', '', '0', null, null, null, null);
 INSERT INTO `jos_vm_product` VALUES ('16', '1', '2', 'L03', '', '', '', '', 'Y', '10.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '0', '', '', '0', null, '962351180', '962351180', 'Plastic Ladder', '0', null, '', '0', '', '0', null, null, null, null);
 INSERT INTO `jos_vm_product` VALUES ('17', '1', '0', 'BC', 'Loại bút 2B, giúp học sinh viết chữ đẹp hơn.', '<p>Loại bút 2B, giúp học sinh viết chữ đẹp hơn.</p>', 'resized/B__t_ch___4e74d29d401eb_90x90.jpg', 'B__t_ch___4e74d29d4f2a5.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316217600', '', 'N', '0', null, '1316278941', '1316280682', 'Bút chì', '0', '', '', '0', 'piece', '0', 'Y,N,N,N,N,Y,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('18', '1', '0', 'B01', 'Vạn Hoa Gel-B04...', '<p>Đầu bi: 0,5 mm.<br /><br />Số lương: 20 chiếc/hộp.<br /><br />Xuất xứ: Việt Nam.<br /><br />Màu mực: Xanh, đen, đỏ</p>', 'resized/B__t_bi_V___n_Ho_4e780b223668e_90x90.jpg', 'B__t_bi_V___n_Ho_4e780b2240ad9.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316489945', '1316491069', 'Vạn Hoa Gel-B04', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('19', '1', '0', 'TL-304', 'Thiên Long TL-304...', '<p><strong>Đặc điểm</strong>:<br />Đầu bi: 0.5mm, sản suất tại Thụy Sĩ.<br /> Bút bi dạng đậy nắp.<br /> Độ dài viết được: 1.300-1.500m<br /> Mực đạt chuẩn: ASTM D-4236, ASTM F 963-91, EN71/3, TSCA.	<br /><br /><strong>Lợi ích</strong>:<br />Đầu bi nhỏ tạo nét chữ thanh mảnh.<br /> Thiết kế thon gọn vừa tay cầm cho các em học sinh.	<br /><br /><strong>Đóng gói</strong>:<br />20 cây/hộp, 60 hộp/thùng, 1.200 cây/thùng.</p>', 'resized/Thi__n_Long_TL_3_4e780cfd5bec8_90x90.jpg', 'Thi__n_Long_TL_3_4e780cfd6e154.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316490493', '1316490790', 'Thiên Long TL-304', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('21', '1', '0', 'TL-023', 'Thiên Long TL-023...', '<p><strong>Đặc điểm</strong>:<br />Đầu bi: 0.8 mm, sản xuất tại Thụy Sĩ.<br /> Bút bi dạng bấm khế.<br /> Độ dài viết được: 1.300-1.700m.<br /> Mực đạt tiêu chuẩn: ASTM D-4236, ASTM F 963-91, EN71/3, TSCA.	<br /><br /><strong>Lợi ích</strong>:<br />Thân bút thanh mảnh cơ chế bấm khế tiện dụng phù hợp cho mọi người.<br /> Thay ruột khi hết mực</p>', 'resized/Thi__n_Long_TL_0_4e780e8c9d967_90x90.jpg', 'Thi__n_Long_TL_0_4e780e8cb1c73.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316490892', '1316490892', 'Thiên Long TL-023', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('20', '1', '0', 'TL-027', 'Thiên Long TL-027...', '<p><strong>Đặc điểm</strong>:<br />•	Đầu bi: 0.5mm, sản suất tại Thụy Sĩ.<br /> Bút bi dạng bấm cò.<br /> Nơi tì ngón tay có tiết diện hình tam giác vừa vặn với tay cầm giúp giảm trơn tuột khi viết thường xuyên.<br /> Độ dài viết được: 1.600-2.000m<br /> Mực đạt chuẩn: ASTM D-4236, ASTM F 963-91, EN71/3, TSCA.	<br /><br /><strong>Lợi ích</strong>:<br />Đầu bi nhỏ cho nét chữ thanh mảnh.<br /> Cơ chế bấm nằm gọn dưới giắt bút, giúp thuận tay khi sử dụng.<br /> Thay ruột khi hết mực.</p>', 'resized/Thi__n_Long_TL_0_4e780dff3ae58_90x90.jpg', 'Thi__n_Long_TL_0_4e780dff4d9c0.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316490751', '1316490751', 'Thiên Long TL-027', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('22', '1', '0', 'TL-08', 'Thiên Long TL-08...', '<p><strong>Đặc điểm</strong>:<br />Đầu bi: 0.8 mm, sản xuất tại Thụy Sĩ.<br /> Bút bi dạng bấm cò.<br /> Độ dài viết được: 1.200-1.500m.<br /> Mực đạt tiêu chuẩn: ASTM D-4236, ASTM F 963-91, EN71/3, TSCA.	<br /><br /><strong>Lợi ích</strong>:<br />Đa dạng màu sắc rất tiện dụng phù hợp cho mọi người nên TL-08 là loại bút bi được khách hàng tin tưởng sử dụng suốt 17 năm qua.<br /> Thay ruột khi hết mực.</p>', 'resized/Thi__n_Long_TL_0_4e780ee3d81a7_90x90.jpg', 'Thi__n_Long_TL_0_4e780ee3ea668.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316490979', '1316490979', 'Thiên Long TL-08', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('23', '1', '0', 'B-34', 'Bến Nghé B-34...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> <img src=\"http://www.bennghe.com/images/inkimage/xanh.gif\" border=\"0\" /><img src=\"http://www.bennghe.com/images/inkimage/den.gif\" border=\"0\" /></strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />\r\n<p class=\"class\"><span>-    Ng<span>òi b<span>út  : <span>đ<span>ầu bi 0.8mm, s<span>ử d<span>ụng <span>đ<span>ầu bi Th<span>ụy S<span>ỹ.</span></span></span></span></span></span></span></span></span></span><br /> -    Ru<span>ột b<span>út  : s<span>ử d<span>ụng ru<span>ột b<span>út bi lo<span>ại th<span>ư<span>ờng.</span></span></span></span></span></span></span></span></span></span></p>\r\n<p class=\"class\"><span>-    Th<span>ân b<span>út </span></span>: ti<span>êm v<span>à c<span>án b<span>út li<span>ền nhau, m<span>àu s<span>ắc theo m<span>ực.</span></span></span></span></span></span></span></span></span></p>\r\n<p class=\"class\"><span>-    Ch<span>ụp b<span>út  : m<span>àu <span>đen.</span></span></span></span></span></p>\r\n<p class=\"class\"><span>-    Gi<span>ắt b<span>út     : m<span>àu s<span>ắc theo m<span>ực.</span></span></span></span></span></span></p>\r\n<p class=\"class\"><span>-    M<span>àu m<span>ực   : xanh, <span>đen; <span>đ<span>ư<span>ợc nh<span>ập t<span>ừ <span>Đ<span>ức</span></span></span></span></span></span></span></span></span></span></span></p>\r\n<p class=\"class\"><span><span><strong><span style=\"text-decoration: underline;\">Ưu <span>đi<span>ểm:</span></span></span></strong></span></span></p>\r\n<p class=\"class\"><span>Sản phẩm được cải tiến với tiêm và giắt được sử dụng nhựa ABS + AS, cho kiểu dáng trang nhã.</span></p>\r\n<p class=\"class\"><span>Nút bấm nhạy, nét viết trơn đều với đầu bi 0.8mm và 2 màu mực xanh, đen</span></p>\r\n<p class=\"class\"><span>Cho nét viết êm, rõ nét từ đầu đến cuối. </span></p>\r\n<span>Duyên dáng, thích hợp với tuổi trẻ, nhân viên văn phòng.</span></div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 30cây/ca ; 40ca/thùng carton</p>', 'resized/B___n_Ngh___B_34_4e7810279cc5a_90x90.jpg', 'B___n_Ngh___B_34_4e781027a5f73.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316491303', '1316491303', 'Bến Nghé B-34', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('24', '1', '0', 'D-20', 'Bến Nghé D-20...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> <img src=\"http://www.bennghe.com/images/inkimage/xanh.gif\" border=\"0\" /><img src=\"http://www.bennghe.com/images/inkimage/do.gif\" border=\"0\" /><img src=\"http://www.bennghe.com/images/inkimage/den.gif\" border=\"0\" /></strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />-    Đầu bi: 0.6mm<br /> -    Cán: nhựa AS<br /> -    Giắt/ Đuôi: nhựa ABS<br /> -    Đệm: nhựa TBR<br /> <br /> 03 màu tiêu chuẩn, bi 0.6mm cho nét viết êm, rõ nét từ đầu đến cuối.<br /> Kiểu dáng thanh mảnh phù hợp cho học sinh, sinh viên, nhân viên làm công tác tại văn phòng và thành phần tự do sử dụng. <br /> Rất thích hợp để in ấn quảng cáo, tặng phẩm.</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 25 cây/hộp ; 600 cây/thùng</p>', 'resized/B___n_Ngh___D_20_4e78115b9e265_90x90.jpg', 'B___n_Ngh___D_20_4e78115ba8fd6.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316491611', '1316491611', 'Bến Nghé D-20', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('25', '1', '0', 'L-09', 'Bến Nghé L-09...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> </strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />\r\n<p class=\"class\"><span>- Ng<span style=\"font-family: Arial;\">òi b<span style=\"font-family: Arial;\">út         : <span style=\"font-family: Arial;\">đ<span style=\"font-family: Arial;\">ầu bi 0.5mm, s<span style=\"font-family: Arial;\">ử d<span style=\"font-family: Arial;\">ụng <span style=\"font-family: Arial;\">đ<span style=\"font-family: Arial;\">ầu bi Th<span style=\"font-family: Arial;\">ụy S<span style=\"font-family: Arial;\">ỹ</span></span></span></span></span></span></span></span></span></span></span></p>\r\n<p class=\"class\"><span>- Ru<span style=\"font-family: Arial;\">ột b<span style=\"font-family: Arial;\">út         : s<span style=\"font-family: Arial;\">ử d<span style=\"font-family: Arial;\">ụng ru<span style=\"font-family: Arial;\">ột b<span style=\"font-family: Arial;\">út bi lo<span style=\"font-family: Arial;\">ại th<span style=\"font-family: Arial;\">ư<span style=\"font-family: Arial;\">ờng.</span></span></span></span></span></span></span></span></span></span></p>\r\n<p class=\"class\"><span>- Th<span style=\"font-family: Arial;\">ân b<span style=\"font-family: Arial;\">út         : m<span style=\"font-family: Arial;\">àu s<span style=\"font-family: Arial;\">ắc theo m<span style=\"font-family: Arial;\">ực, c<span style=\"font-family: Arial;\">ó in logo c<span style=\"font-family: Arial;\">ông ty v<span style=\"font-family: Arial;\">à m<span style=\"font-family: Arial;\">ã s<span style=\"font-family: Arial;\">ản ph<span style=\"font-family: Arial;\">ẩm.</span></span></span></span></span></span></span></span></span></span></span> </span></p>\r\n<p class=\"class\">- Ch<span style=\"font-family: Arial;\">ụp b<span style=\"font-family: Arial;\">út         : m<span style=\"font-family: Arial;\">àu tr<span style=\"font-family: Arial;\">ắng <span style=\"font-family: Arial;\">đ<span style=\"font-family: Arial;\">ục.</span></span></span></span></span></span></p>\r\n<p class=\"class\"><span>- <span style=\"font-family: Arial;\">Đ<span style=\"font-family: Arial;\">ối t<span style=\"font-family: Arial;\">ư<span style=\"font-family: Arial;\">ợng s<span style=\"font-family: Arial;\">ử d<span style=\"font-family: Arial;\">ụng : ph<span style=\"font-family: Arial;\">ù h<span style=\"font-family: Arial;\">ợp v<span style=\"font-family: Arial;\">ới h<span style=\"font-family: Arial;\">ọc sinh c<span style=\"font-family: Arial;\">âp II, c<span style=\"font-family: Arial;\">ấp III, sinh vi<span style=\"font-family: Arial;\">ên, c<span style=\"font-family: Arial;\">ông nh<span style=\"font-family: Arial;\">ân - nh<span style=\"font-family: Arial;\">ân vi<span style=\"font-family: Arial;\">ên ch<span style=\"font-family: Arial;\">ức.</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></p>\r\n<p class=\"class\"><span><span style=\"font-family: Arial;\"><strong><span style=\"text-decoration: underline;\">Ưu <span style=\"font-family: Arial;\">đi<span style=\"font-family: Arial;\">ểm:</span></span></span></strong></span> </span></p>\r\n<p class=\"class\"><span>Kiểu dáng sang trọng với kỹ thuật hiện đại.</span></p>\r\n<p class=\"class\"><span>Deep Blue, Deep Black, Deep Purple & Deep Red cho 04 màu tuyệt đẹp.</span></p>\r\n<p class=\"class\"><span>Phù hợp cho mọi đối tượng sử dụng.</span></p>\r\n<p class=\"class\"><span>L-09 “Sự Chọn Lựa Thích Đáng” </span></p>\r\n</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 20 cây/lon; 60lon/thùng</p>', 'resized/B___n_Ngh___L_09_4e781237175e4_90x90.jpg', 'B___n_Ngh___L_09_4e781237209cc.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316491781', '1316491831', 'Bến Nghé L-09', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('26', '1', '0', 'GP-01', 'Bút chì gỗ GP-01...', '<p><strong>Đặc điểm</strong>:<br />Thân lục giác, 2B		<br /><br /><strong>Đóng gói</strong>:<br />96 hộp/thùng, 1.152 cây/thùng	<br /><br /><strong>Bảo quản</strong>:<br />Tránh va đập mạnh làm gãy chì<br /> <br /> Tránh xa nguồn nhiệt, vì sản phẩm dễ gây cháy nổ</p>', 'resized/B__t_Ch___G____G_4e78151dd1f2c_90x90.jpg', 'B__t_Ch___G____G_4e78151de5030.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316492573', '1316492573', 'Bút Chì Gỗ GP-01', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('27', '1', '0', 'GP-03', 'Bút Chì Gỗ GP-03...', '<p><strong>Đặc điểm</strong>:<br />Thân lục giác, 2B		<br /><br /><strong>Đóng gói</strong>:<br />32 lon/thùng, 960 cây/thùng	<br /><br /><strong>Bảo quản</strong>:<br />Tránh va đập mạnh làm gãy chì<br /> <br /> Tránh xa nguồn nhiệt, vì sản phẩm dễ gây cháy nổ</p>', 'resized/B__t_Ch___G____G_4e7815594fb9b_90x90.jpg', 'B__t_Ch___G____G_4e78155961ae3.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316492633', '1316492791', 'Bút Chì Gỗ GP-03', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('28', '1', '0', 'GP-04', 'Bút Chì Gỗ GP-04...', '<p><strong>Đặc điểm</strong>:<br />Thân lục giác, có thêm gôm ở đuôi chì, HB		<br /><br /><strong>Đóng gói</strong>:<br />96 hộp/thùng, 1.152 cây/thùng	<br /><br /><strong>Bảo quản</strong>:<br />Tránh va đập mạnh làm gãy chì<br /> <br /> Tránh xa nguồn nhiệt, vì sản phẩm dễ gây cháy nổ</p>', 'resized/B__t_Ch___G____G_4e78159e4214b_90x90.jpg', 'B__t_Ch___G____G_4e78159e549c4.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316492702', '1316492819', 'Bút Chì Gỗ GP-04', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('29', '1', '0', 'PC-09', 'Bút Chì Bấm PC-09...', '<p><strong>Đặc điểm</strong>:<br />Thân tròn, ruột 11 khúc chì, có nắp đậy, trên nắp có gôm, có thể thay được ruột chì, lon nhựa PVC,		<br /><br /><strong>Đóng gói</strong>:<br />48 lon/thùng, 960 cây/thùng	<br /><br /><strong>Bảo quản</strong>:<br />Tránh va đập mạnh làm gãy chì<br /> <br /> Tránh xa nguồn nhiệt, vì sản phẩm dễ gây cháy nổ</p>', 'resized/B__t_Ch___B___m__4e7816adb25e9_90x90.jpg', 'B__t_Ch___B___m__4e7816adc6845.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316492973', '1316492973', 'Bút Chì Bấm PC-09', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('30', '1', '0', 'PC-018', 'Bút chì bấm PC-018', '<p><strong>Đặc điểm</strong>:<br />Harajuku - xuất phát từ Nhật Bản - đã trở  thành tên của cả một xu hướng thời trang khi giới trẻ nơi đây tìm ra cho  mình một phong cách “không giống ai”: phá cách, nổi loạn, đầy sắc màu  và rất ấn tượng. Dựa trên phong cách Harajuku đến từ Nhật Bản, được Việt  hóa cho phù hợp với các bạn học sinh Việt Nam; Bút chì bấm PC-018 được  phối màu sinh động, cá tính, ấn tượng theo một quy luật không trật tự -  Bút chi bấm PC-018</p>\r\n<p>– Quy luật Harajuku.<br /> Kiểu dáng giống bút chì bấm thông thường nhưng thân bút được thiết kế  theo phong cách thời trang Harajuku của Nhật Bản, phù hợp cho tuổi teen.</p>', 'resized/B__t_Ch___B___m__4e78170902f1b_90x90.jpg', 'B__t_Ch___B___m__4e7817091524e.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493065', '1316493065', 'Bút Chì Bấm PC-018', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('31', '1', '0', 'S-01', 'Chuốt Bút Chì S-01...', '<p><strong>Đặc điểm</strong>:<br /> Lưỡi chuốt được làm bằng kim loại sáng bóng, không gỉ, sử  dụng được lâu, kiểu dáng nhỏ gọn, sử dụng cho các loại chì gỗ 																		<br /><br /><strong>Đóng gói</strong>:<br />12hộp inner/thùng, 3.456 cái/thùng						<br /><br /><strong>Bảo quản</strong>:<br />Tránh va đập mạnh làm rách hộp PVC rơi chuốt ra ngoà</p>', 'resized/Chu___t_B__t_Ch__4e781788a6d02_90x90.jpg', 'Chu___t_B__t_Ch__4e781788b9309.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493192', '1316493192', 'Chuốt Bút Chì S-01', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('32', '1', '0', 'HL-03', 'Bút Dạ Quang HL-03...', '<p><strong>Đặc điểm</strong>:<br />Kiểu dáng thon gọn, trẻ trung. Sản phẩm thích hợp với tất cả khách hàng<br /> Bút có 2 đầu, đầu tròn: 0.8 – 1.1mm, đầu dẹp: 4mm giúp tăng thêm tính năng sử dụng.<br /> Mực tươi sáng, độ phản quang cao. Thích hợp trên nhiều loại giấy.<br /> Mực đạt TC EN71/3, ASTM D-4236	<br /><br /><strong>Lợi ích</strong>:<br />Kiểu dáng trẻ trung, tiện lợi, được khách hàng ưa chuộng.	<br /><br /><strong>Đóng gói</strong>:<br />5 cây/vỉ, 120 vỉ/thùng, 600 cây/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp khi không sử dụng.</p>', 'resized/B__t_D____Quang__4e78191ad1ddb_90x90.jpg', 'B__t_D____Quang__4e78191ae7de8.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493594', '1316493594', 'Bút Dạ Quang HL-03', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('33', '1', '0', 'HL-06', 'Bút Dạ Quang HL-06...', '<p><strong>Đặc điểm</strong>:<br />Thân bút dạng dẹp, vừa tay cầm và không lăn khi để trên bàn.<br /> Đầu bút bằng Polyethylene, dạng vát xéo, bề rộng nét viết 5mm.<br /> Màu mực tươi sáng, phản quang tốt.<br /> Thích hợp trên nhiều loại giấy.<br /> Mực đạt TC EN71/3, ASTM D-4236.	<br /><br /><strong>Lợi ích</strong>:<br />Kiểu dáng trẻ trung, tiện lợi, được khách hàng ưa chuộng.	<br /><br /><strong>Đóng gói</strong>:<br />Dạng hộp: 10 cây/hộp giấy, 54 hộp/thùng, 540 cây/thùng.<br /> Dạng vỉ: 2 cây/vỉ, 10 vỉ/hộp inner, 24 hộp inner/thùng, 480cây/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp khi không sử dụng</p>', 'resized/B__t_D____Quang__4e78196e5fe4a_90x90.jpg', 'B__t_D____Quang__4e78196e72c92.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493678', '1316493992', 'Bút Dạ Quang HL-06', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('34', '1', '0', 'HL-07', 'Bút Dạ Quang HL-07...', '<p><strong>Đặc điểm</strong>:<br />Bút có dạng 2 đầu, thiết kế nhỏ gọn thích hợp với tay cầm học sinh.  Đầu bút bằng polyethylen, Màu mực đậm tươi, phản quang tốt.<br /> <br /> Đầu nhỏ: 0.8-1.0 mm, đầu to: 4.0 mm<br /> <br /> Màu sắc: Vàng, Cam, Hồng, Lá, Xanh biển		<br /><br /><strong>Đóng gói</strong>:<br />36 bút / hộp, 20 hộp/ thùng, 720 bút/ thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp ngay sau khi sử dụng. Tránh nơi có nhiệt độ cao và tiếp xúc trực tiếp với ánh sáng mặt trời.</p>', 'resized/B__t_D____Quang__4e7819c597d43_90x90.jpg', 'B__t_D____Quang__4e7819c5ab78d.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493765', '1316493765', 'Bút Dạ Quang HL-07', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('35', '1', '0', 'HL-08', 'Bút Dạ Quang HL-08...', '<p><strong>Đặc điểm</strong>:<br />•	Thân bút nhỏ gọn, màu sắc trẻ trung, sinh động<br /> Một đầu bút bằng Polyethylene, dạng vát xéo, bề rộng nét viết 5mm.<br /> Màu mực tươi sáng, phản quang tốt<br /> Thích hợp trên nhiều loại giấy<br /> Mực đạt TC EN71/3, ASTM D-4236	<br /><br /><strong>Lợi ích</strong>:<br />Kiểu dáng trẻ trung, tiện lợi, được khách hàng ưa chuộng.	<br /><br /><strong>Đóng gói</strong>:<br />Dạng hộp: 10 cây/hộp giấy, 54 hộp/thùng, 540 cây/thùng.<br /> Dạng vỉ: 2 cây/vỉ, 10 vỉ/hộp inner, 24 hộp inner/thùng, 480cây/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp khi không sử dụng.</p>', 'resized/B__t_D____Quang__4e781a0defca3_90x90.jpg', 'B__t_D____Quang__4e781a0e0f10b.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493838', '1316493838', 'Bút Dạ Quang HL-08', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('36', '1', '0', 'HL-09', 'Bút Dạ Quang HL-09...', '<p><strong>Đặc điểm</strong>:<br />Bút có thiết kế ấn tượng, dạng hình oval  thon gọn, rất thuận tiện cho tay cầm.  Đầu bút bằng polyethylen, dạng  vát xéo, bề rộng nét viết: 5mm. Màu mực đậm tươi, phản quang tốt.<br /> <br /> Đầu bút dạng vát xéo, KT 4.5-5.5mm<br /> <br /> Màu sắc: Vàng, Cam, Hồng, Lá, Xanh biển		<br /><br /><strong>Đóng gói</strong>:<br />10 cây/hộp, 54 hộp/thùng, 540 cây/thùng	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp ngay sau khi sử dụng. Tránh nơi có nhiệt độ cao và tiếp xúc trực tiếp với ánh sáng mặt trời</p>', 'resized/B__t_D____Quang__4e781a5a66cd1_90x90.jpg', 'B__t_D____Quang__4e781a5a7b35f.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316493914', '1316493914', 'Bút Dạ Quang HL-09', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('37', '1', '0', 'DC-05', 'Bút Xóa DC-05...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> </strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />-    Vỏ hộp : nhựa AS<br /> -    Bánh răng: POM<br /> -    Bánh răng trong: AS<br /> -    Nắp: PP<br /> -    Bao bì:      12cây/hộp ; 144cây/thùng<br /> -    Rộng 5mm x dài 8mm</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 12cây/hộp ; 144cây/thùng</p>', 'resized/B__t_X__a_DC_05_4e781ec7d55d3_90x90.jpg', 'B__t_X__a_DC_05_4e781ec7db91f.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316495047', '1316495047', 'Bút Xóa DC-05', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('38', '1', '0', 'DC-09', 'Bút Xóa DC-09...', '<p> </p>\r\n<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> </strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />\r\n<p class=\"class\">- <span>Dung tích: 12ml</span></p>\r\n</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 12cây/hộp ; 288cây/thùng</p>', 'resized/B__t_X__a_DC_09_4e781f17c44ba_90x90.jpg', 'B__t_X__a_DC_09_4e781f17cd3df.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316495127', '1316495127', 'Bút Xóa DC-09', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('39', '1', '0', 'DC-01', 'Bút Xóa DC-01...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> </strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />\r\n<p class=\"class\"><span>Dung tích: 12ml</span></p>\r\n</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 12cây/hộp ; 288cây/thùng</p>', 'resized/B__t_X__a_DC_01_4e781f59372e4_90x90.jpg', 'B__t_X__a_DC_01_4e781f593dde1.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316495193', '1316495193', 'Bút Xóa DC-01', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('40', '1', '0', 'CP-02', 'Bút Xóa Thiên Long CP-02', '', 'resized/B__t_X__a_CP_02_4e7828a390023_90x90.jpg', 'B__t_X__a_CP_02_4e7828a3a2082.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316497571', '1316497571', 'Bút Xóa CP-02', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('41', '1', '0', 'CP-05', 'Bút Xóa Thiên Long CP-05', '', 'resized/B__t_X__a_CP_05_4e7828e47f3b1_90x90.jpg', 'B__t_X__a_CP_05_4e7828e490762.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316497636', '1316497636', 'Bút Xóa CP-05', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('42', '1', '0', 'WH -504', 'Bút xóa kéo Plus WH 504', '', 'resized/B__t_x__a_k__o_P_4e7829168708d_90x90.jpg', 'B__t_x__a_k__o_P_4e7829168f0a6.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316497686', '1316497686', 'Bút xóa kéo Plus WH 504', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('43', '1', '0', 'WB-03', 'Bút Lông Bảng WB-03...', '<p><strong>Đặc điểm</strong>:<br />Thân bút lớn thích hợp cho giáo viên, khối văn phòng ...<br /> Đầu bút ngoại nhập chất lượng cao, nét viết êm, có thể sử dụng được nhiều lần .<br /> Màu mực tươi sáng, mau khô và dễ dàng lau sạch mực sau khi viết .<br /> Lượng mực vượt trội, viết được dài 600m .<br /> Mực bút không độc hại .<br /> Đạt TC EN71/3, ASTM D-4236 .	<br /><br /><strong>Lợi ích</strong>:<br />Có thể bơm thêm mực tái sử dụng nhiều lần.	<br /><br /><strong>Đóng gói</strong>:<br />12 cây/hộp, 60 hộp/thùng, 720 cây/thùng .	<br /><br /><strong>Bảo quản</strong>:<br />Luôn đặt bút nằm ngang và đậy nắp sau khi sử dụng.</p>', 'resized/B__t_L__ng_B___n_4e782aa298028_90x90.jpg', 'B__t_L__ng_B___n_4e782aa2a9f18.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498082', '1316498082', 'Bút Lông Bảng WB-03', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('44', '1', '0', 'WB-08', 'Bút Lông Bảng WB-08', '<p><strong>Đặc điểm</strong>:<br />Thân bút lớn thích hợp cho giáo viên, khối văn phòng ...<br /> Đầu bút ngoại nhập chất lượng cao, nét bút 2.5mm.<br /> Ruột bằng polyester, Mực ra đều, liêu tục, màu mực đậm,tươi, dễ dàng lau sạch, bút viết lâu hết mực.<br /> Đạt TC EN71/3, ASTM D-4236.	<br /><br /><strong>Lợi ích</strong>:<br />Có thể bơm thêm mực tái sử dụng nhiều lần.	<br /><br /><strong>Đóng gói</strong>:<br />12 cây/hộp, 60 hộp/thùng, 720 cây/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Luôn đặt bút nằm ngang và đậy nắp sau khi sử dụng.</p>', 'resized/B__t_L__ng_B___n_4e782ae9e52a5_90x90.jpg', 'B__t_L__ng_B___n_4e782aea0472c.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498154', '1316498154', 'Bút Lông Bảng WB-08', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('45', '1', '0', 'WB-02', 'Bút Lông Bảng WB-02...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> </strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />-    Ngòi đầu đạn<br /> -    Cán: nhựa PP<br /> -    Nắp: nhựa PE<br /> -    Đuôi cán : nhựa PE<br /> <br /> Khác với WB-01; WB-02 với công nghệ in trên thân cán cũng khác hơn.<br /> Mẫu in không in trực tiếp trên thân cán mà qua một màng OPP mỏng và được ép lên thân cán qua máy ép nhiệt.<br /> Hình dáng gọn, đẹp, viết êm và dễ dàng lau sạch với một miếng vải khô.</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây/Pcs  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: Bao bì: 04cây/vỉ</p>', 'resized/B__t_L__ng_B___n_4e782b4329f7d_90x90.jpg', 'B__t_L__ng_B___n_4e782b4334599.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498243', '1316498243', 'Bút Lông Bảng WB-02', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('46', '1', '0', 'WB-05', 'Bút Lông Bảng WB-05...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> </strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />\r\n<p>- Ngòi bút        : Đầu bút lớn, được làm từ Polyester, nhập từ Nhật.</p>\r\n<p>- Thân bút       : màu sắc theo mực, có in tên sản phẩm, mã sản phẩm,  mã vạch, công dụng của mực bằng tiếng Anh, tiêu chuẩn sản xuất.</p>\r\n<p>- Nắp bút        : màu sắc theo mực.</p>\r\n<p>- Màu mực      :  xanh, đỏ, đen ; được nhập từ Đức.</p>\r\n<p><strong><span style=\"text-decoration: underline;\">Ưu điểm: </span></strong></p>\r\n<p>- Mực ra đều, nét rõ, mau khô, dễ xóa, không gây độc hại đến sức khỏe người sử dụng.</p>\r\n<p>- Hình dáng đẹp, đơn giản, dễ sử dụng.</p>\r\n<p>- Thích hợp với học sinh, giáo viên, văn phòng, cơ quan.</p>\r\n</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 12 cây/hộp ; 288 cây/thùng</p>', 'resized/B__t_L__ng_B___n_4e782b8f3694c_90x90.jpg', 'B__t_L__ng_B___n_4e782b8f4e384.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498319', '1316498319', 'Bút Lông Bảng WB-05', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('47', '1', '0', 'PM-07', 'Bút Lông Dầu PM-07...', '<p><strong>Đặc điểm</strong>:<br />Kiểu dáng được thiết kế vừa tay cầm, giúp êm tay khi viết.<br /> Đầu viết chất lượng cao, nét rộng viết 1.0mm.<br /> Màu mực đậm tươi, mau khô và viết được trên các bề mặt khác nhau như: giấy, nhựa, thủy tinh, kim loại...<br /> Vỏ bút có độ kín hơi tốt, đặc biệt không độc hại đối với người sử dụng..<br /> Đạt TC EN71/3, ASTM D-4236.	<br /><br /><strong>Lợi ích</strong>:<br />Có thể bơm thêm mực tái sử dụng nhiều lần.	<br /><br /><strong>Đóng gói</strong>:<br />12 cây/hộp, 60 hộp/thùng, 720 cây/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp sau khi sử dụng.</p>', 'resized/B__t_L__ng_D___u_4e782c01a7c9f_90x90.jpg', 'B__t_L__ng_D___u_4e782c01b9cb4.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498433', '1316498433', 'Bút Lông Dầu PM-07', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('48', '1', '0', 'PM-09', 'Bút Lông Dầu PM-09...', '<p><strong>Đặc điểm</strong>:<br />Kiểu dáng được thiết kế vừa tay cầm, giúp êm tay khi viết.<br /> Kiểu dáng được thiết kế vừa tay cầm, phù hợp với nhân NVVP, Người lao động... <br /> Đầu viết chất lượng cao, bút lông dầu 2 đầu (6mm và 0.8mm).<br /> Màu mực đậm tươi, mau khô và viết được trên các bề mặt khác nhau như: giấy, gỗ, nhựa, thủy tinh, kim loại…<br /> Màu nhẹ, dễ chịu, không độc hại đối với người sử dụng . <br /> Đạt TC EN71/3, ASTM D-4236.		<br /><br /><strong>Đóng gói</strong>:<br />12 cây/hộp, 60 hộp/thùng, 720 cây/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Đậy nắp sau khi sử dụng .</p>', 'resized/B__t_L__ng_D___u_4e782c4fab2be_90x90.jpg', 'B__t_L__ng_D___u_4e782c4fbdc41.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498511', '1316498511', 'Bút Lông Dầu PM-09', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('49', '1', '0', 'M-04', 'Bút Lông Dâu M-04...', '<div><span style=\"text-decoration: underline;\"><strong>Màu mực</strong></span>:<strong> <img src=\"http://www.bennghe.com/images/inkimage/xanh.gif\" border=\"0\" /><img src=\"http://www.bennghe.com/images/inkimage/do.gif\" border=\"0\" /><img src=\"http://www.bennghe.com/images/inkimage/den.gif\" border=\"0\" /></strong> <br /> <span style=\"text-decoration: underline;\"><strong>Mô tả</strong></span>: <br />\r\n<p class=\"class\">-  <span>Ngòi đầu đạn</span></p>\r\n<p class=\"class\">-  <span>Cán/ ti<span style=\"font-family: Arial;\">ê</span>m: nhựa PP</span></p>\r\n<p class=\"class\">-  <span>Đuôi/ nắp nhựa PE</span></p>\r\n<p class=\"class\"><span>3 Màu mực: xanh, đỏ, đen</span></p>\r\n<p class=\"class\"><span>Khác với M-01; M-04 mập hơn & công nghệ in trên cán cũng khác hơn.</span></p>\r\n<p class=\"class\"><span>Hình dáng gọn, đẹp,viết êm với hai đầu tiện lợi.</span></p>\r\n<p class=\"class\"> </p>\r\n</div>\r\n<p><br /> <span style=\"text-decoration: underline;\"><strong>Đơn vị tính</strong></span>: Cây  							<br /> <span style=\"text-decoration: underline;\"><strong>Đóng gói</strong></span>: 12cây/ hộp ; 288cây/thùng</p>', 'resized/B__t_L__ng_D__u__4e782cb7a65fd_90x90.jpg', 'B__t_L__ng_D__u__4e782cb7b2bcb.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316476800', '', 'N', '0', null, '1316498615', '1316498615', 'Bút Lông Dâu M-04', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('50', '1', '0', 'TL-E 310:A4', 'Bìa Lá TL-E310:A4...', '<p><strong>Đặc điểm</strong>:<br />Được sản xuất từ nguyên liệu nhựa PP chất lượng cao<br /> Sản phẩm trong suốt, ít phản quang, có thể copy trực tiếp.<br /> Sản xuất theo tiêu chuẩn: TLLTKTSXS007	<br /><br /><strong>Lợi ích</strong>:<br />Nhựa PP không độc hại, thân thiện với môi trường.	<br /><br /><strong>Đóng gói</strong>:<br />Bìa/ bao nilong; 10 bìa/túi nilong / 500 bìa/thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Nhiệt độ: 10 ~ 55º C.<br /> Độ ẩm: 55 ~ 95% RH.<br /> Tránh xa nguồn nhiệt, dầu mỡ.</p>', 'resized/B__a_L___TL_E310_4e7970df7a671_90x90.jpg', 'B__a_L___TL_E310_4e7970df8df94.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316581599', '1316581599', 'Bìa Lá TL-E310:A4', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('51', '1', '0', 'TL-LAF70-A4', 'Folder TL-LAF70-A4...', '<div id=\"diProDesc\" class=\"fck_details\"><strong>Đặc điểm</strong>:<br />Được sản xuất từ bìa cứng, bọc simili cao cấp.		<br /><br /><strong>Đóng gói</strong>:<br />50 bìa/ thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Nhiệt độ: 10 ~ 55º C.<br /> Độ ẩm: 55 ~ 95% RH.<br /> Tránh xa nguồn nhiệt, dầu mỡ.				<br /><br />Màu sắc:<br /> <img src=\"http://static.thienlong.vn/images/icons/xanhduong.gif\" border=\"0\" /> <img src=\"http://static.thienlong.vn/images/icons/do.gif\" border=\"0\" /></div>', 'resized/Folder_TL_LAF70__4e797147634c8_90x90.jpg', 'Folder_TL_LAF70__4e79714776c4d.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316581703', '1316581703', 'Folder TL-LAF70-A4', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('52', '1', '0', 'TL-LAF50-F4', 'Folder TL-LAF50-F4...', '<div id=\"diProDesc\" class=\"fck_details\"><strong>Đặc điểm</strong>:<br />Được sản xuất từ bìa cứng, bọc simili cao cấp.		<br /><br /><strong>Đóng gói</strong>:<br />50 bìa/ thùng.	<br /><br /><strong>Bảo quản</strong>:<br />Nhiệt độ: 10 ~ 55º C.<br /> Độ ẩm: 55 ~ 95% RH.<br /> Tránh xa nguồn nhiệt, dầu mỡ.				<br /><br />Màu sắc:<br /> <img src=\"http://static.thienlong.vn/images/icons/xanhdam.gif\" border=\"0\" /> <img src=\"http://static.thienlong.vn/images/icons/xanhla.gif\" border=\"0\" /></div>', 'resized/Folder_TL_LAF50__4e79719b824cc_90x90.jpg', 'Folder_TL_LAF50__4e79719b95548.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316581787', '1316581787', 'Folder TL-LAF50-F4', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('53', '1', '0', 'BN02', 'Bìa Nút BN02...', '', 'resized/B__a_N__t_BN02_4e7973d4be9f3_90x90.jpg', 'B__a_N__t_BN02_4e7973d4d7763.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316582356', '1316582356', 'Bìa Nút BN02', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('54', '1', '0', 'BA01', 'Bìa Acsord BA01...', '', 'resized/B__a_Acsord_BA01_4e79741ed1d78_90x90.jpg', 'B__a_Acsord_BA01_4e79741eea417.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316582430', '1316582430', 'Bìa Acsord BA01', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('55', '1', '0', 'BC03', 'Bìa Còng 5F...', '', 'resized/B__a_C__ng_5F_4e7974e4830c4_90x90.jpg', 'B__a_C__ng_5F_4e7974e4a03b4.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316582628', '1316582628', 'Bìa Còng 5F', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('56', '1', '0', 'BT01', 'Bao Thư BT01...', '<p>Bao Thư BT01...</p>', 'resized/Bao_Th___BT01_4e79764f04bd4_90x90.jpg', 'Bao_Th___BT01_4e79764f278ae.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316582991', '1316582991', 'Bao Thư BT01', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('57', '1', '0', 'BT02', 'Bao Thư BT02...', '<p>Bao Thư BT02...</p>', 'resized/Bao_Th___BT02_4e797685f19e9_90x90.jpg', 'Bao_Th___BT02_4e7976861ca69.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316583046', '1316583046', 'Bao Thư BT02', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
+INSERT INTO `jos_vm_product` VALUES ('58', '1', '0', 'BT03', 'Bao Thư BT03...', '<p>Bao Thư BT03...</p>', 'resized/Bao_Th___BT03_4e7976b81ddcd_90x90.jpg', 'Bao_Th___BT03_4e7976b83283b.jpg', 'Y', '0.0000', 'pounds', '0.0000', '0.0000', '0.0000', 'inches', '', '0', '1316563200', '', 'N', '0', null, '1316583096', '1316583096', 'Bao Thư BT03', '0', '', '', '0', 'piece', '0', 'N,N,N,N,N,N,20%,10%,', 'none,0,0,1', '', '0,0');
 INSERT INTO `jos_vm_product_attribute` VALUES ('1', '11', 'Color', 'Red');
 INSERT INTO `jos_vm_product_attribute` VALUES ('2', '12', 'Color', 'Green');
 INSERT INTO `jos_vm_product_attribute` VALUES ('3', '13', 'Color', 'Blue');
@@ -2617,6 +2700,47 @@ INSERT INTO `jos_vm_product_category_xref` VALUES ('2', '8', null);
 INSERT INTO `jos_vm_product_category_xref` VALUES ('5', '9', null);
 INSERT INTO `jos_vm_product_category_xref` VALUES ('2', '10', null);
 INSERT INTO `jos_vm_product_category_xref` VALUES ('6', '17', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '18', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '19', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '20', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '21', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '22', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '23', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '24', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('14', '25', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('16', '26', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('16', '28', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('16', '29', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('16', '27', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('16', '30', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('16', '31', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('15', '32', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('15', '33', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('15', '34', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('15', '35', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('15', '36', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('18', '37', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('18', '38', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('18', '39', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('18', '40', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('18', '41', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('18', '42', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '43', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '44', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '45', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '46', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '47', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '48', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('17', '49', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('27', '50', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('27', '51', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('27', '52', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('27', '53', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('27', '54', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('27', '55', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('28', '56', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('28', '57', '1');
+INSERT INTO `jos_vm_product_category_xref` VALUES ('28', '58', '1');
 INSERT INTO `jos_vm_product_discount` VALUES ('1', '20.00', '1', '1097704800', '1194390000');
 INSERT INTO `jos_vm_product_discount` VALUES ('2', '2.00', '0', '1098655200', '0');
 INSERT INTO `jos_vm_product_mf_xref` VALUES ('1', '1');
@@ -2636,6 +2760,47 @@ INSERT INTO `jos_vm_product_mf_xref` VALUES ('14', '1');
 INSERT INTO `jos_vm_product_mf_xref` VALUES ('15', '1');
 INSERT INTO `jos_vm_product_mf_xref` VALUES ('16', '1');
 INSERT INTO `jos_vm_product_mf_xref` VALUES ('17', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('18', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('19', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('20', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('21', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('22', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('23', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('24', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('25', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('26', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('27', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('28', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('29', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('30', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('31', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('32', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('33', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('34', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('35', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('36', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('37', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('38', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('39', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('40', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('41', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('42', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('43', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('44', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('45', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('46', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('47', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('48', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('49', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('50', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('51', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('52', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('53', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('54', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('55', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('56', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('57', '1');
+INSERT INTO `jos_vm_product_mf_xref` VALUES ('58', '1');
 INSERT INTO `jos_vm_product_price` VALUES ('1', '5', '24.99000', 'USD', '0', '0', '950321309', '950321309', '5', '0', '0');
 INSERT INTO `jos_vm_product_price` VALUES ('2', '1', '4.99000', 'USD', '0', '0', '950321324', '950321324', '5', '0', '0');
 INSERT INTO `jos_vm_product_price` VALUES ('3', '2', '49.99000', 'USD', '0', '0', '950321340', '950321340', '5', '0', '0');
@@ -2653,6 +2818,46 @@ INSERT INTO `jos_vm_product_price` VALUES ('14', '15', '49.99000', 'USD', '0', '
 INSERT INTO `jos_vm_product_price` VALUES ('15', '16', '59.99000', 'USD', '0', '0', '962351259', '962351259', '5', '0', '0');
 INSERT INTO `jos_vm_product_price` VALUES ('16', '7', '2.99000', 'USD', '0', '0', '966589140', '966589140', '6', '0', '0');
 INSERT INTO `jos_vm_product_price` VALUES ('17', '17', '10000.00000', 'VND', '0', '0', '1316278941', '1316280682', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('18', '18', '5.00000', 'VND', '0', '0', '1316489945', '1316491069', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('19', '20', '3.00000', 'VND', '0', '0', '1316490751', '1316490751', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('20', '19', '2.00000', 'VND', '0', '0', '1316490790', '1316490790', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('21', '21', '3.00000', 'VND', '0', '0', '1316490892', '1316490892', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('22', '22', '2.50000', 'VND', '0', '0', '1316490979', '1316490979', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('23', '23', '3.00000', 'VND', '0', '0', '1316491303', '1316491303', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('24', '24', '3.00000', 'VND', '0', '0', '1316491611', '1316491611', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('25', '25', '5.00000', 'VND', '0', '0', '1316491781', '1316491831', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('26', '26', '2.00000', 'VND', '0', '0', '1316492573', '1316492573', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('27', '27', '4.00000', 'VND', '0', '0', '1316492633', '1316492791', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('28', '28', '3.00000', 'VND', '0', '0', '1316492702', '1316492819', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('29', '29', '3.50000', 'VND', '0', '0', '1316492973', '1316492973', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('30', '30', '4.00000', 'VND', '0', '0', '1316493065', '1316493065', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('31', '31', '2.50000', 'VND', '0', '0', '1316493192', '1316493192', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('32', '32', '6.00000', 'VND', '0', '0', '1316493594', '1316493594', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('33', '33', '5.00000', 'VND', '0', '0', '1316493678', '1316493992', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('34', '34', '4.50000', 'VND', '0', '0', '1316493765', '1316493765', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('35', '35', '5.50000', 'VND', '0', '0', '1316493838', '1316493838', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('36', '36', '6.00000', 'VND', '0', '0', '1316493914', '1316493914', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('37', '37', '6.00000', 'VND', '0', '0', '1316495047', '1316495047', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('38', '38', '4.00000', 'VND', '0', '0', '1316495127', '1316495127', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('39', '39', '4.00000', 'VND', '0', '0', '1316495193', '1316495193', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('40', '40', '13.00000', 'VND', '0', '0', '1316497571', '1316497571', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('41', '41', '10.00000', 'VND', '0', '0', '1316497636', '1316497636', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('42', '42', '15.00000', 'VND', '0', '0', '1316497686', '1316497686', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('43', '43', '4.50000', 'VND', '0', '0', '1316498082', '1316498082', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('44', '44', '5.00000', 'VND', '0', '0', '1316498154', '1316498154', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('45', '45', '10.00000', 'VND', '0', '0', '1316498243', '1316498243', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('46', '46', '13.00000', 'VND', '0', '0', '1316498319', '1316498319', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('47', '47', '14.00000', 'VND', '0', '0', '1316498433', '1316498433', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('48', '48', '14.00000', 'VND', '0', '0', '1316498511', '1316498511', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('49', '49', '12.00000', 'VND', '0', '0', '1316498615', '1316498615', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('50', '50', '1.00000', 'VND', '0', '0', '1316581599', '1316581599', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('51', '51', '13.00000', 'VND', '0', '0', '1316581703', '1316581703', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('52', '52', '15.00000', 'VND', '0', '0', '1316581787', '1316581787', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('53', '54', '2.50000', 'VND', '0', '0', '1316582430', '1316582430', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('54', '55', '9000.00000', 'VND', '0', '0', '1316582628', '1316582628', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('55', '56', '2.00000', 'VND', '0', '0', '1316582991', '1316582991', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('56', '57', '4.00000', 'VND', '0', '0', '1316583046', '1316583046', '5', '0', '0');
+INSERT INTO `jos_vm_product_price` VALUES ('57', '58', '7000.00000', 'VND', '0', '0', '1316583096', '1316583096', '5', '0', '0');
 INSERT INTO `jos_vm_shipping_carrier` VALUES ('1', 'DHL', '0');
 INSERT INTO `jos_vm_shipping_carrier` VALUES ('2', 'UPS', '1');
 INSERT INTO `jos_vm_shipping_rate` VALUES ('1', 'Inland > 4kg', '1', 'DEU', '00000', '99999', '0.000', '4.000', '5.62', '2.00', '47', '0', '1');
