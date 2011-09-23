@@ -64,10 +64,17 @@ if( $db->num_rows() > 0 ){ ?>
 				$sectioncolor = "sectiontableentry2";
 			else
 				$sectioncolor = "sectiontableentry1";
+            if ($i % $products_per_row == 0) {
+                $sectionclass = "cbvsp1";
+                $sectionrow = "cbvsprow";
+            } else {
+                $sectionclass = "cbvsp1 borleft";
+                $sectionrow = "cbvsprows";
+            }
               
 			if( $display_style == "vertical" ) {
 				?>
-				<tr align="center" class="<?php echo $sectioncolor ?>">
+				<tr align="center" class="<?php echo $sectioncolor ?> ">
 					<td><?php $ps_product->show_snapshot($db->f("product_sku"), $show_price, $show_addtocart); ?><br /></td>
 				</tr>
 				<?php
@@ -83,12 +90,12 @@ if( $db->num_rows() > 0 ){ ?>
 			}
 			elseif( $display_style== "table" ) {
 				if( $i == 0 )
-					echo "<tr>\n";
-				echo "<td align=\"center\">";
+					echo "<tr class=\"$sectionrow\">\n";
+				echo "<td align=\"center\" class=\" $sectionclass\">";
 				$ps_product->show_snapshot($db->f("product_sku"), $show_price, $show_addtocart);
 				echo "</td>\n";
 				if ( ($i+1) % $products_per_row == 0)
-					echo "</tr><tr>\n";
+					echo "</tr><tr class=\"$sectionrow\">\n";
 				if( ($i+1) == $max_items )
 					echo "</tr>\n";
 			}
