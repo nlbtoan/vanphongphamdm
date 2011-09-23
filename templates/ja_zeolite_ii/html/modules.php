@@ -38,7 +38,7 @@ function modChrome_JAxhtml($module, &$params, &$attribs)
 { 
 	$badge = preg_match ('/badge/', $params->get('moduleclass_sfx'))?"<span class=\"badge\">&nbsp;</span>\n":"";
 ?>
-	<div class="ja-moduletable moduletable<?php echo $params->get('moduleclass_sfx'); ?>  clearfix" id="Mod<?php echo $module->id; ?>">
+	<div class="ja-moduletable moduletable_black<?php echo $params->get('moduleclass_sfx'); ?>  clearfix" id="Mod<?php echo $module->id; ?>">
 		<?php echo $badge; ?>
 		<?php if ($module->showtitle != 0) : ?>
 		<h3><span><?php echo $module->title; ?></span></h3>
