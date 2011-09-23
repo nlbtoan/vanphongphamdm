@@ -50,22 +50,22 @@ define( 'PAGEPATH', ADMINPATH.'html/' );
 define( 'IMAGEPATH', $mosConfig_absolute_path.'/components/com_virtuemart/shop_image/' );
 
 define('PSHOP_IS_OFFLINE', '');
-define('PSHOP_OFFLINE_MESSAGE', 'Our Shop is currently down for maintenance. Please check back again soon.');
+define('PSHOP_OFFLINE_MESSAGE', 'Website chúng tôi đang nâng cấp. Xin quý khách quạy sau.');
 define('USE_AS_CATALOGUE', '');
 define('VM_TABLEPREFIX', 'vm');
 define('VM_PRICE_SHOW_PACKAGING_PRICELABEL', '');
 define('VM_PRICE_SHOW_INCLUDINGTAX', '');
 define('VM_PRICE_ACCESS_LEVEL', 'Public Frontend');
 define('VM_REGISTRATION_TYPE', 'NORMAL_REGISTRATION');
-define('VM_BROWSE_ORDERBY_FIELD', 'product_name');
+define('VM_BROWSE_ORDERBY_FIELD', 'product_cdate');
 define('VM_GENERALLY_PREVENT_HTTPS', '1');
 define('VM_ALLOW_EXTENDED_CLASSES', '');
 define('VM_SHOW_REMEMBER_ME_BOX', '');
 define('VM_REVIEWS_MINIMUM_COMMENT_LENGTH', '100');
 define('VM_REVIEWS_MAXIMUM_COMMENT_LENGTH', '2000');
-define('VM_SHOW_PRINTICON', '1');
-define('VM_SHOW_EMAILFRIEND', '1');
-define('PSHOP_PDF_BUTTON_ENABLE', '1');
+define('VM_SHOW_PRINTICON', '');
+define('VM_SHOW_EMAILFRIEND', '');
+define('PSHOP_PDF_BUTTON_ENABLE', '');
 define('VM_REVIEWS_AUTOPUBLISH', '');
 define('VM_PROXY_URL', '');
 define('VM_PROXY_PORT', '');
@@ -103,14 +103,14 @@ define('PAYMENT_DISCOUNT_BEFORE', '');
 define('PAYMENT_DISCOUNT_VAT_ID', '');
 define('PSHOP_ALLOW_REVIEWS', '');
 define('PSHOP_AGREE_TO_TOS_ONORDER', '');
-define('SHOW_CHECKOUT_BAR', '1');
+define('SHOW_CHECKOUT_BAR', '');
 define('CHECK_STOCK', '');
 define('ENCODE_KEY', '647eb761344c6e6f32221dbb275fc33c');
-define('NO_SHIPPING', '');
-define('NO_SHIPTO', '');
+define('NO_SHIPPING', '1');
+define('NO_SHIPTO', '1');
 define('AFFILIATE_ENABLE', '');
 define('PSHOP_ALLOW_FRONTENDADMIN_FOR_NOBACKENDERS', '');
-define('PSHOP_IMG_RESIZE_ENABLE', '');
+define('PSHOP_IMG_RESIZE_ENABLE', '1');
 define('PSHOP_IMG_WIDTH', '90');
 define('PSHOP_IMG_HEIGHT', '90');
 define('PSHOP_COUPONS_ENABLE', '1');
@@ -151,13 +151,12 @@ $VM_MODULES_FORCE_HTTPS = array( 'account','checkout' );
 
 // Checkout Steps and their order
 global $VM_CHECKOUT_MODULES;
-$VM_CHECKOUT_MODULES = array( 'CHECK_OUT_GET_SHIPPING_ADDR'=>array('order'=>1,'enabled'=>1),
-'CHECK_OUT_GET_SHIPPING_METHOD'=>array('order'=>2,'enabled'=>1),
+$VM_CHECKOUT_MODULES = array( 'CHECK_OUT_GET_SHIPPING_ADDR'=>array('order'=>1,'enabled'=>0),
+'CHECK_OUT_GET_SHIPPING_METHOD'=>array('order'=>2,'enabled'=>0),
 'CHECK_OUT_GET_PAYMENT_METHOD'=>array('order'=>3,'enabled'=>1),
 'CHECK_OUT_GET_FINAL_CONFIRMATION'=>array('order'=>4,'enabled'=>1) );
 
 /* Shipping Methods Definition */
 global $PSHOP_SHIPPING_MODULES;
-$PSHOP_SHIPPING_MODULES[0] = "flex";
-$PSHOP_SHIPPING_MODULES[1] = "standard_shipping";
+$PSHOP_SHIPPING_MODULES[0] = "no_shipping";
 ?>
