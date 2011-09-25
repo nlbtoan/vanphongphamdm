@@ -243,8 +243,8 @@ if ( $show_login_form == "yes" ) {
 			// Set user name reminder to nothing
 			$remind_url = '';
 		}
-		?> 	  
-		<tr>
+		?>
+        <tr>
 		  <td colspan="2" align="left" valign="top" style="margin: 0px; padding: 0px;">
 			<form action="<?php echo $action ?>" method="post" name="login" id="login">
 			<label for="username_vm_login"><?php echo $VM_LANG->_('USERNAME') ?></label><br/>
