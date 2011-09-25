@@ -14,14 +14,17 @@ if( empty( $categories )) {
 <br/>
 <table width="100%" cellspacing="0" cellpadding="0">
 <?php
+//BT  modify view
+$sectionrow = "cbvsprow";
 foreach( $categories as $category ) {
 	if ($iCol == 1) { // this is an indicator wether a row needs to be opened or not
-		echo "<tr>\n";
+		echo "<tr class=\"$sectionrow\">\n";
+        $sectionclass = "cbvsp1";
 	}
 	?>
 	
 	
-	<td align="center" width="<?php echo $cellwidth ?>%" >
+	<td align="center" width="<?php echo $cellwidth ?>%" class="<?php echo $sectionclass ?>" >
 		<br />
          <a title="<?php echo $category["category_name"] ?>" href="<?php $sess->purl(URL."index.php?option=com_virtuemart&amp;page=shop.browse&amp;category_id=".$category["category_id"]) ?>"> 
 			<?php
@@ -41,8 +44,10 @@ foreach( $categories as $category ) {
 	if ($iCol == $categories_per_row) { // If the number of products per row has been reached
 		echo "</tr>\n";
 		$iCol = 1;
+        $sectionrow = "cbvsprows";
 	}
 	else {
+        $sectionclass = "cbvsp1 borleft";
 		$iCol++;
 	}
 }
