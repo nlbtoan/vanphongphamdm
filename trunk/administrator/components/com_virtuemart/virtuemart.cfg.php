@@ -86,7 +86,7 @@ define('ENABLE_DOWNLOAD_STATUS', 'C');
 define('DISABLE_DOWNLOAD_STATUS', 'X');
 define('DOWNLOADROOT', 'C:\xampp\htdocs/');
 define('VM_DOWNLOADABLE_PRODUCTS_KEEP_STOCKLEVEL', '');
-define('_SHOW_PRICES', '1');
+define('_SHOW_PRICES', '');
 define('ORDER_MAIL_HTML', '1');
 define('HOMEPAGE', 'shop.index');
 define('CATEGORY_TEMPLATE', 'managed');
