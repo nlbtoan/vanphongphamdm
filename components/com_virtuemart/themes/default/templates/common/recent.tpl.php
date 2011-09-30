@@ -2,7 +2,7 @@
 <?php if( empty($recent_products)) return; 
 ?>
 <!-- List of recent products -->
-<h3><?php echo $VM_LANG->_('VM_RECENT_PRODUCTS') ?></h3>
+<h3><span><?php echo $VM_LANG->_('VM_RECENT_PRODUCTS') ?></span></h3>
 <ul class="vmRecentDetail">
 <?php 
 foreach( $recent_products as $recent ) { // Loop through all recent products

@@ -2,18 +2,13 @@
 <div id="ja-main" style="width:<?php echo $this->getColumnWidth('m') ?>%">
 <div class="inner clearfix">
 
-    <?php if ( !$this->isContentEdit() && ($this->countModules('vm-fp') || $this->countModules('ja-slider')) ) { ?>
+<!-- //BT modify template -->
+    <?php if ( !$this->isContentEdit() && ($this->countModules('vm-fp')) ) { ?>
       <div id="ja-productwrap"><div id="ja-product-bot"><div id="ja-product-top" class="clearfix">
       
         <?php if ( $this->countModules('vm-fp') ) { ?>
         <div id="ja-fp">
           <jdoc:include type="modules" name="vm-fp" style="JAxhtml" />
-        </div>
-        <?php } ?>
-        
-        <?php if ( $this->countModules('ja-slider') ) { ?>
-        <div id="ja-slider">
-          <jdoc:include type="modules" name="ja-slider" style="JAxhtml" />
         </div>
         <?php } ?>
       
@@ -76,6 +71,18 @@
 		</div>
 		<?php endif; ?>
 	</div>
+    <!-- //BT modify template -->
+    <?php if ( $this->countModules('ja-slider') ) { ?>
+      <div id="ja-productwrap"><div id="ja-product-bot"><div id="ja-product-top" class="clearfix">
+        
+        <?php if ( $this->countModules('ja-slider') ) { ?>
+        <div id="ja-slider">
+          <jdoc:include type="modules" name="ja-slider" style="JAxhtml" />
+        </div>
+        <?php } ?>
+      
+      </div></div></div>
+    <?php } ?>
 
 	<?php 
 	$mass_bottom = $this->getPositionName ('content-mass-bottom');

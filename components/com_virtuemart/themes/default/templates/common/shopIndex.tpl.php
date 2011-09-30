@@ -2,8 +2,8 @@
 
 <?php
 defined( 'vmToolTipCalled') or define('vmToolTipCalled', 1);
-echo $vendor_store_desc = vmCommonHTML::ParseContentByPlugins( $vendor_store_desc )."<br />";
-echo "<br /><h4>".$VM_LANG->_('PHPSHOP_CATEGORIES')."</h4>";
+//echo $vendor_store_desc = vmCommonHTML::ParseContentByPlugins( $vendor_store_desc )."<br />";
+echo "<h3><span>".$VM_LANG->_('PHPSHOP_CATEGORIES')."</span></h3>";
 echo $categories; ?>
 <div class="vmRecent">
 <?php echo $recent_products; ?>
@@ -23,8 +23,8 @@ if( $this->get_cfg( 'showlatest', 1 )) {
 }
 ?>
 
-<?php if( isset($paypalLogo)) : ?>
-<div class="vmRecent" style="padding: 10px; text-align: center;">
-	<?php echo $paypalLogo; ?>
-</div>
-<?php endif; ?>
+<!--?php if( isset($paypalLogo)) : ?>
+<div class="vmRecent" style="padding: 10px; text-align: center;"-->
+	<!--?php echo $paypalLogo; ?>
+</div-->
+<!--?php endif; ?-->

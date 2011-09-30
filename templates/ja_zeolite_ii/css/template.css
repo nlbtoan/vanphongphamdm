@@ -223,6 +223,7 @@ a.button {
 	padding: 0 5px !important;
 }
 
+
 /* JOOMLA STYLE
 --------------------------------------------------------- */
 .article_separator, .article_seperator {
@@ -651,7 +652,7 @@ ul.latestnews a:hover, ul.mostread a:hover {
 
 .ja-l1 #ja-current-content {
 	background: url(../images/content-top2.gif) no-repeat center top;	
-	padding: 20px;
+	padding: 8px 0;
 }
 
 .ja-l1 #ja-productwrap {
@@ -731,6 +732,8 @@ ul.latestnews a:hover, ul.mostread a:hover {
 
 /* MODULE
 --------------------------------------------------------- */
+/* BT modify title contain */
+div.ja-content-main h3,
 div.moduletable h3,
 div.moduletable_default h3,
 div.moduletable_menu h3,
@@ -746,6 +749,8 @@ div.moduletable_black h3 {
 	padding: 0;
 }
 
+/*BT modify contain */
+div.ja-content-main h3 span,
 div.moduletable h3 span,
 div.moduletable_menu h3 span,
 div.moduletable_text h3 span,
@@ -777,11 +782,15 @@ div.moduletable_hilite h3 span {
 }
 
 /* Black module */
+/* BT modify title contain */
+div.ja-content-main h3,
 div.moduletable_black h3 {
 	background: url(../images/h3-r-black.gif) no-repeat right top #666666;
 	color: #FFFFFF;
 }
 
+/* BT modify title contain */
+div.ja-content-main h3 span,
 div.moduletable_black h3 span {
 	background: url(../images/h3-l-black.gif) no-repeat left top;
 }
