@@ -483,15 +483,15 @@ if( file_exists( CLASSPATH.'payment/ps_paypal_api.php') ) {
 			$lang_iso = 'en_US';
 		}
 
-		$html = '<img id="paypalLogo" src="'.$paypal_buttonurls[$lang_iso].'" alt="PayPal Checkout Available" border="0" style="cursor:pointer;" /></a>';
-		$html .= '<script type="text/javascript">window.addEvent("domready", function() {
-			$("paypalLogo").addEvent("click", function() {
-				window.open(\''.$paypal_infolink[$lang_iso].'\',\'olcwhatispaypal\',\'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=500\');
-				});
-			});
-			</script>';
+//		$html = '<img id="paypalLogo" src="'.$paypal_buttonurls[$lang_iso].'" alt="PayPal Checkout Available" border="0" style="cursor:pointer;" /></a>';
+//		$html .= '<script type="text/javascript">window.addEvent("domready", function() {
+//			$("paypalLogo").addEvent("click", function() {
+//				window.open(\''.$paypal_infolink[$lang_iso].'\',\'olcwhatispaypal\',\'toolbar=no, location=no, directories=no, status=no, menubar=no, scrollbars=yes, resizable=yes, width=400, height=500\');
+//				});
+//			});
+//			</script>';
 		
-		$tpl->set('paypalLogo', $html);
+//		$tpl->set('paypalLogo', $html);
 	}
 }
 /* Finish and Print out the Page */
