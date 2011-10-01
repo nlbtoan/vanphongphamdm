@@ -501,3 +501,20 @@ ul.pagination li {
 	background: none;
 }
 .clr { clear: both; overflow:hidden; }
+/* BT modify css */
+/*
+.chdt_nbcc {
+    background: none repeat scroll 0 0 #FFFFFF;
+    padding: 4px 0 0 11px;
+}
+.chdt_box {
+    padding: 0 8px 10px 0;
+}
+.chdt_box1 {
+    border: 1px solid #B5B6B7;
+    float: left;
+    padding: 4px;
+    text-align: center;
+    width: 90%;
+}
+*/

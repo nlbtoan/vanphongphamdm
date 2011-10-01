@@ -6,11 +6,13 @@ mm_showMyFileName(__FILE__); ?>
 <?php echo $parameter_form // The Parameter search form ?>
 <?php echo $orderby_form // The sort-by, order-by form PLUS top page navigation ?>
 
-<div id="product_list" style="width:100%; float:none;">
+<div id="product_list" style="width:100%; float:none;" class="chdt_nbcc">
 <?php
 $data =array(); // Holds the rows of products
 $i = $row = $tmp_row = 0; // Counters
 $num_products = count( $products );
+$cbvsprow = "cbvsprow";
+$cbvsp = " cbvsp1";
 
 foreach( $products as $product ) {
 	
@@ -29,8 +31,11 @@ foreach( $products as $product ) {
 		if( $cell_count < 1 ) {
 			$cell_count = 1;
 		}
-
-		echo "<div style=\"margin-right: 5px; width:". intval(round(100/$cell_count)-2) ."%; float:left;\" id=\"".uniqid( "row_" ) ."\">";
+        if ( ($i) % $products_per_row == 0) {
+            echo "<div class=\"$cbvsprow\">\n";
+            $cbvsp = "cbvsp1";
+        }
+		echo "<div style=\"width:". intval(round(100/$cell_count)-3) ."%; float:left;\" id=\"".uniqid( "row_" ) ."\" class=\"chdt_box  $cbvsp\">";
 		
 		foreach( $product as $attr => $val ) {
 			// Using this we make all the variables available in the template
@@ -47,13 +52,18 @@ foreach( $products as $product ) {
 			$row++;
 			/** if yes, close the current "row" ***/
 			echo "\n</div><br class=\"clr\" />";
+            echo "\n</div>";
+            $cbvsprow = "cbvsprows";
 		}
 		else {
 			echo "\n</div>";
-			
+			$cbvsp = "cbvsp1 borleft";
 		}
 		
 }
+        if ( ($i) % $products_per_row != 0) {
+            echo "\n</div>";
+        }
 ?>
 </div>
 <br class="clr" />
