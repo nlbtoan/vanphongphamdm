@@ -16,14 +16,14 @@ if( CHECK_STOCK == '1' && ( $quantity_in_stock < 1 ) ) {
 
 <!-- The product name DIV. -->
  <?php if( $show_product_name ) : ?>
-<div style="height:77px; float:left; width: 100%;line-height:14px;">
+<div style="float:left; width: 100%;">
 <a title="<?php echo $product_name ?>" href="<?php echo $product_link ?>"><?php echo $product_name; ?></a>
 <br />
 </div>
 <?php endif;?>
 
 <!-- The product image DIV. -->
-<div style="height:90px;width: 100%;float:left;margin-top:-15px;">
+<div style="height:90px;width: 100%;float:left;margin:2px;overflow: hidden;">
 <a title="<?php echo $product_name ?>" href="<?php echo $product_link ?>">
 	<?php
 		// Print the product image or the "no image available" image

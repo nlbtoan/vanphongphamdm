@@ -59,6 +59,7 @@ if( $db->num_rows() > 0 ){ ?>
       <table border="0" cellpadding="0" cellspacing="0" width="100%">        
         <?php
         $i = 0;
+        $sectionrow = "cbvsprow";
         while($db->next_record() ){
 			if ($i%2)
 				$sectioncolor = "sectiontableentry2";
@@ -66,7 +67,7 @@ if( $db->num_rows() > 0 ){ ?>
 				$sectioncolor = "sectiontableentry1";
             if ($i % $products_per_row == 0) {
                 $sectionclass = "cbvsp1";
-                $sectionrow = "cbvsprow";
+                $i=0;
             } else {
                 $sectionclass = "cbvsp1 borleft";
                 $sectionrow = "cbvsprows";
@@ -94,10 +95,9 @@ if( $db->num_rows() > 0 ){ ?>
 				echo "<td align=\"center\" class=\" $sectionclass\">";
 				$ps_product->show_snapshot($db->f("product_sku"), $show_price, $show_addtocart);
 				echo "</td>\n";
-				if ( ($i+1) % $products_per_row == 0)
-					echo "</tr><tr class=\"$sectionrow\">\n";
-				if( ($i+1) == $max_items )
-					echo "</tr>\n";
+				if ( ($i+1) % $products_per_row == 0 || ($i+1) == $max_items )
+					echo "</tr>";
+				
 			}
 			$i++;
         }
