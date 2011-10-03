@@ -1,0 +1,10 @@
+div.icon-48-sef {
+	background: url(../images/sef-48.png) no-repeat left;
+}
+
+.icon-32-lock {
+	background-image: url("../images/lock.png");
+}
+.icon-32-unlock {
+	background-image: url("../images/unlock.png");
+}
