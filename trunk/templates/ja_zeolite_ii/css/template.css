@@ -1,4 +1,4 @@
- /*
+r /*
 
 # ------------------------------------------------------------------------
 # JA Zeolite II Template for Joomla 1.5
@@ -11,7 +11,8 @@
 # Websites:  http://www.joomlart.com -  http://www.joomlancers.com
 # Redistribution, Modification or Re-licensing of this file in part of full, 
 # is bound by the License applied. 
-# ------------------------------------------------------------------------
+# ------------------------------------------------------------------------header
+
 
 */
 
@@ -23,15 +24,22 @@ html, body, form, fieldset {
 }
 
 body {
-	background: #FFFFFF;
-	color: #000000;
+ 
+	background: url(../background_061.jpg) no-repeat 20px 8px;
+    margin-top: 0px; 
+	margin-right: 0px; 
+	margin-bottom: 0px; 
+	margin-left: 0px; 
+	background-color: #EEF3F5; 
+	color: #6D7383;
 	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
 	line-height: 1.5;
 }
 
 body#bd {
 	color: #666666;
-	background: #F0F0F0;
+	background: url(../background_061.jpg) repeat;
+	background-position: top;
 	padding: 0;
 	margin: 0;
 }
@@ -506,6 +514,7 @@ ul.latestnews a:hover, ul.mostread a:hover {
 	font-weight: bold;
  }
 
+
 /* META
 --------------------------------------------------------- */
 .buttonheading {
@@ -925,9 +934,9 @@ div.module_blank .ja-box-ct {
 }
 
 #ja-header .main {
-	height:150px;
-	min-height:150px;
-	background-color: #54992F;
+	height:200px;
+	min-height:200px;
+	background-color: red;
 }
 
 #ja-header .inner {
@@ -1396,12 +1405,14 @@ ul.menu li li li.active a {
 }
 
 #ja-footer .main {
-	background:  url(../images/Footer.jpg);
+	background:  url(../images/Footer.png);
 	/*border-top: 3px solid #04A504;*/
 	position: relative;
 	/*color: #CCCCCC;*/
-	padding: 100px 0px;
-	margin: 0 160px 5px;
+	padding: 60px 0px;
+	/*margin: 0 160px 5px;*/
+	margin-bottom:3px;
+	
 	
 }
 
