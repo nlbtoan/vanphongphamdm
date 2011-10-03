@@ -16,9 +16,5 @@
 
 // no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
-<div id="ja-poweredby">
-	<a id="t3-logo" href="http://t3.joomlart.com" title="Powered By T3 Framework" target="_blank">Powered By T3 Framework</a>
-</div>
-<small><?php echo $lineone; ?> Designed by 
-<a href="http://www.joomlart.com/" title="Visit Joomlart.com!" target="blank">JoomlArt.com</a>.</small>
-<!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
+<div id="ja-poweredby"><!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
+  <img src="../../images/Footer.jpg" width="1022" height="359" /></div>
