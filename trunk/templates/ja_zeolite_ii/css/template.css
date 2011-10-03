@@ -1258,7 +1258,9 @@ ul.menu li li li.active a {
 
 /* JA Slideshow */
 #ja-slideshow {
-	margin: 0;
+    background: #FFFFFF;
+	width:auto;
+	margin: 0 160px 0;
 	padding: 0;
 }
 
@@ -1394,11 +1396,13 @@ ul.menu li li li.active a {
 }
 
 #ja-footer .main {
-	background: #34383B;
-	border-top: 3px solid #04A504;
+	background:  url(../images/Footer.jpg);
+	/*border-top: 3px solid #04A504;*/
 	position: relative;
-	color: #CCCCCC;
-	padding: 15px 0;
+	/*color: #CCCCCC;*/
+	padding: 100px 0px;
+	margin: 0 160px 5px;
+	
 }
 
 #ja-footer .inner {
