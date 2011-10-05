@@ -205,6 +205,7 @@ input, select, textarea, .inputbox {
 	padding: 1px 8px;
 	border: 1px solid #333333;
 	background: url(../images/but-bg.gif) repeat-x left center #333333;
+    /*background: url(../images/h3-r-hilite.gif) repeat-x left center #04A504;*/
 	color: #FFFFFF;
 	font-weight: bold;
 	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
@@ -781,25 +782,29 @@ div.moduletable_blank {
 }
 
 /* Highlight module */
+/* BT modify title contain */
+div.ja-content-main h3,
 div.moduletable_hilite h3 {
 	background: url(../images/h3-r-hilite.gif) no-repeat right top #04A504;
 	color: #FFFFFF;
 }
 
+/* BT modify title contain */
+div.ja-content-main h3 span,
 div.moduletable_hilite h3 span {
 	background: url(../images/h3-l-hilite.gif) no-repeat left top;
 }
 
 /* Black module */
-/* BT modify title contain */
-div.ja-content-main h3,
+/* BT modify title contain 
+div.ja-content-main h3,*/
 div.moduletable_black h3 {
 	background: url(../images/h3-r-black.gif) no-repeat right top #666666;
 	color: #FFFFFF;
 }
 
-/* BT modify title contain */
-div.ja-content-main h3 span,
+/* BT modify title contain 
+div.ja-content-main h3 span,*/
 div.moduletable_black h3 span {
 	background: url(../images/h3-l-black.gif) no-repeat left top;
 }
@@ -1851,5 +1856,28 @@ html[xmlns] .clearfix { /* O */
 
 .browseProductDescription div {
 	margin-top: 0px !important;
+}
+/* BT Highlight module */
+div.ja-col .moduletable_hilite {
+	padding: 0;
+	background: url(../images/box-br.gif) no-repeat bottom right #FFFFFF;
+	margin-bottom: 10px;
+}
+div.ja-col .moduletable_hilite .ja-box-bl {
+    background: url("../images/box-bl.gif") no-repeat scroll left bottom transparent;
+    margin: 0;
+    padding: 0;
+}
+div.ja-col .moduletable_hilite .ja-box-bl .ja-box-tr{
+	padding: 0;
+	margin: 0;
+	background: url(../images/box-tr.gif) no-repeat top right;
+}
+div.moduletable_hilite .ja-box-bl .ja-box-tr .ja-box-tl {
+	padding: 8px 0 15px;
+	background: url(../images/box-tl.gif) no-repeat top left;
+}
+div.ja-col .moduletable_hilite .jamod-content {
+	margin: 0 15px;
 }
 

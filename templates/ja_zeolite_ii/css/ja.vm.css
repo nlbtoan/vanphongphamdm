@@ -268,3 +268,19 @@ a#active_menu {
 #lbCenter , #lbBottomContainer{
 	z-index: 1000;
 }
+/*BT custom menu for pre-fix _hilite*/
+a.mainlevel_hilite {
+	background: url(../images/mainlevel-bg.gif) repeat-x right bottom;
+	display: block;
+	outline: none;
+	padding: 5px 0 5px 0;
+	margin: 0;
+	text-decoration: none;
+	color: #666666;
+}
+
+a.mainlevel_hilite:hover, a.mainlevel_hilite:active, a.mainlevel_hilite:focus {
+	background: url(../images/mainlevel-hover.gif) repeat-x right bottom;
+	text-decoration: none;
+	color: #C01122;
+}
