@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 /*
 # ------------------------------------------------------------------------
 # JA Zeolite II Template for Joomla 1.5
@@ -15,6 +15,23 @@
 */
 
 // no direct access
+
+// no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
-<div id="ja-poweredby"><!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
-  <img src="../../images/Footer.jpg" width="1022" height="359" /></div>
+<div class="copyright">
+		<div align ="center">
+			Công ty TNHH thương mại dịch vụ Đức Mạnh
+		</div>
+	<div align="center">
+	ĐC:Đường 16,Ô12 LôA13,Khu Phố1,Phường Hoà Phú,Thị Xã TDM, Bình Dương.
+	</div>
+
+<div align="center">
+	Điện thoại: 0650.3628 232 - Fax: 0650.3635 348 <br/>
+	MST:3701408466 - E.mail: ducmanh.linh@gmail.com  <br/>
+	<?php echo $lineone; ?> Designed by 
+<a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>
+<!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
+</div>
+	</div>
+
