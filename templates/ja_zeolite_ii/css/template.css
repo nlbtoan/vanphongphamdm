@@ -84,7 +84,7 @@ a img {
 /* Small text */
 small, .small, .smalldark, .article-meta, .modifydate, .img_caption p, .site-slogan, a.readon,
 #ja-pathway, #ja-left, #ja-right, #ja-footer, #ja-botsl {
-	font-size: 92%;
+	font-size: 100%;
 }
 
 /*article image*/
@@ -1411,11 +1411,12 @@ ul.menu li li li.active a {
 
 #ja-footer .main {
 	background:  url(../images/Footer.png);
-	/*border-top: 3px solid #04A504;*/
+	border-top: 3px solid #04A504;
 	position: relative;
-	/*color: #CCCCCC;*/
-	padding: 60px 0px;
-	/*margin: 0 160px 5px;*/
+	color: #18658B;
+	font-size: 12px;
+	padding: 10px 0px;
+	margin: 0 160px 5px;
 	margin-bottom:3px;
 	
 	
