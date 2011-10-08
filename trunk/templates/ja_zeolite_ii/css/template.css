@@ -1274,7 +1274,7 @@ ul.menu li li li.active a {
 #ja-slideshow {
     background: #FFFFFF;
 	width:auto;
-	margin: 0 160px 0;
+	/*margin: 0 160px 0;*/
 	padding: 0;
 }
 
@@ -1416,7 +1416,7 @@ ul.menu li li li.active a {
 	color: #18658B;
 	font-size: 12px;
 	padding: 10px 0px;
-	margin: 0 160px 5px;
+	/*margin: 0 160px 5px;*/
 	margin-bottom:3px;
 	
 	
