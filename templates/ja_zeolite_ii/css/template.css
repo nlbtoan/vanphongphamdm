@@ -1272,7 +1272,7 @@ ul.menu li li li.active a {
 
 /* JA Slideshow */
 #ja-slideshow {
-    background: #FFFFFF;
+    /*background: #FFFFFF;*/
 	width:auto;
 	/*margin: 0 160px 0;*/
 	padding: 0;
