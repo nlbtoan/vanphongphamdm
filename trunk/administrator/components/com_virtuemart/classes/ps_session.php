@@ -65,7 +65,7 @@ class vm_ps_session {
 		}
 		else {
 			if( empty( $_COOKIE['virtuemart']) ) {
-				setcookie('virtuemart', $this->getSessionId() );			
+				//setcookie('virtuemart', $this->getSessionId() );			
 				if( USE_AS_CATALOGUE == '' ) {
 					$vmLogger->debug( 'A Cookie had to be set to keep the session (there was none - does your Browser keep the Cookie?) although a Session already has been started! If you see this message on each page load, your browser doesn\'t accept Cookies from this site.' );
 				}

@@ -127,7 +127,7 @@ class JATemplateHelper1 {
 			}
 
 		}else{
-			setcookie ($this->template.'_tpl', $this->template, $exp, '/');
+			//setcookie ($this->template.'_tpl', $this->template, $exp, '/');
 		}
 		return $this;
 	}
