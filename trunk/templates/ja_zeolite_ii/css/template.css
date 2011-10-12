@@ -941,7 +941,8 @@ div.module_blank .ja-box-ct {
 #ja-header .main {
 	height:200px;
 	min-height:200px;
-	background-color: red;
+	background-color: green;
+    background: url(../images/ducmanh_header.png) no-repeat center center;
 }
 
 #ja-header .inner {
