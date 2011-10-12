@@ -99,10 +99,10 @@ class JSession extends JObject
 		}
 
 		//set default sessios save handler
-		//ini_set('session.save_handler', 'files');
+		ini_set('session.save_handler', 'files');
 
 		//disable transparent sid support
-		//ini_set('session.use_trans_sid', '0');
+		ini_set('session.use_trans_sid', '0');
 
 		//create handler
 		$this->_store =& JSessionStorage::getInstance($store, $options);
@@ -420,10 +420,10 @@ class JSession extends JObject
 		}
 
 		session_cache_limiter('none');
-		//session_start();
+		session_start();
 
 		// Send modified header for IE 6.0 Security Policy
-		//header('P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"');
+		header('P3P: CP="NOI ADM DEV PSAi COM NAV OUR OTRo STP IND DEM"');
 
 		return true;
 	}
@@ -652,7 +652,7 @@ class JSession extends JObject
 		}
 
 		//sync the session maxlifetime
-		//ini_set('session.gc_maxlifetime', $this->_expire);
+		ini_set('session.gc_maxlifetime', $this->_expire);
 
 		return true;
 	}
