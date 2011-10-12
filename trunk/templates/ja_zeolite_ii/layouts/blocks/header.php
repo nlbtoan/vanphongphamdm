@@ -1,4 +1,4 @@
-<!-- CPANEL -->
+<!-- CPANEL
 <div id="ja-cpanel" class="wrap">
     <div class="main clearfix">
 		<?php if ($this->countModules('search')) { ?>
@@ -12,6 +12,8 @@
         </div>
 	</div>
 </div>
+-->
+
 <!-- //CPANEL -->
 
 <div id="ja-header" class="wrap">
