@@ -20,6 +20,6 @@ if( !defined( '_VALID_MOS' ) && !defined( '_JEXEC' ) ) die( 'Direct Access to '.
 <br />
 <div align="center">
 	<a href="" target="_blank" style="display:block;width:90%; filter: alpha(opacity=60);" onmouseover="if( this.filters) { this.filters.alpha.opacity=100; }" onmouseout="if( this.filters) { this.filters.alpha.opacity=60; }">
-    		<img align="middle" style="-moz-opacity: 0.6;" onmouseover="this.style.MozOpacity=1.0;" onmouseout="this.style.MozOpacity = 0.6;" src="<?php echo IMAGEURL ?>ps_image/powered-by-virtuemart.png" border="0" alt="Powered by VirtueMart" />
+    		<img align="middle" style="-moz-opacity: 0.6;" onmouseover="this.style.MozOpacity=1.0;" onmouseout="this.style.MozOpacity = 0.6;" src="<?php echo IMAGEURL ?>ps_image/powered-by-virtuemart.png" border="0" alt="VPP Duc Manh" />
 	</a>
 </div>
