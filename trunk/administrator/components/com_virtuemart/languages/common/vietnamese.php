@@ -814,7 +814,7 @@ An Account allows you to come back to this shop and view all the orders you have
 	'VM_FEDEX_LBL_METHOD' => 'Shipping Method',
 	'VM_FEDEX_LBL_PRICE' => 'Giá',
 	'VM_FEATURED_PRODUCT' => 'Featured Products',
-	'VM_RECENT_PRODUCTS' => 'Recently Viewed Products',
+	'VM_RECENT_PRODUCTS' => 'Sản phẩm bạn đã xem',
 	'VM_ADMIN_SIMPLE_LAYOUT' => 'Giao diện thường',
 	'VM_ADMIN_EXTENDED_LAYOUT' => 'Giao diện chuẩn',
 	'VM_YOUR_VERSION' => 'Your Version',
