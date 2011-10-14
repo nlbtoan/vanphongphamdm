@@ -78,7 +78,7 @@ if( vmIsJoomla('1.0') && strstr( $_SERVER['PHP_SELF'], 'index3.php')) {
 		}
 		?>
 			<a href="http://virtuemart.net" target="_blank">
-				<img align="middle" hspace="15" src="<?php echo IMAGEURL ?>ps_image/menu_logo.gif" alt="VirtueMart Cart Logo" />
+				<img align="middle" hspace="15" src="<?php echo IMAGEURL ?>ps_image/menu_logo.png" alt="VirtueMart Cart Logo" />
 			</a>
 		
 			<h2><?php echo $VM_LANG->_('PHPSHOP_ADMIN')	?></h2>
