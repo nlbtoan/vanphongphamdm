@@ -195,7 +195,7 @@ if( $only_page != 1 && $vmLayout == 'extended') {
 		
 		echo '<div class="smallgrey" align="center">'
 	                .$VMVERSION->PRODUCT.' '.$VMVERSION->RELEASE
-	                .' (<a href="http://virtuemart.net/index2.php?option=com_versions&amp;catid=1&amp;myVersion='.@$VMVERSION->RELEASE.'" onclick="javascript:void window.open(this.href, \'win2\', \'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=580,directories=no,location=no\'); return false;" title="'.$VM_LANG->_('VM_VERSIONCHECK_TITLE').'" target="_blank">'.$VM_LANG->_('VM_VERSIONCHECK_NOW').'</a>)</div>';
+	                .' (<a href="http://vanphongphamducmanh.com/index2.php?option=com_versions&amp;catid=1&amp;myVersion='.@$VMVERSION->RELEASE.'" onclick="javascript:void window.open(this.href, \'win2\', \'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=580,directories=no,location=no\'); return false;" title="'.$VM_LANG->_('VM_VERSIONCHECK_TITLE').'" target="_blank">'.$VM_LANG->_('VM_VERSIONCHECK_NOW').'</a>)</div>';
 		
 	}
 }
