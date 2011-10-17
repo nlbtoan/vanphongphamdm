@@ -51,8 +51,8 @@ class JConfig {
 	var $session_handler = 'database';
 	var $password = '';
 	var $sitename = 'Văn phòng phẩm Đức Mạnh';
-	var $MetaDesc = 'Joomla! - the dynamic portal engine and content management system';
-	var $MetaKeys = 'joomla, Joomla';
+	var $MetaDesc = 'Van phong pham, vpp, thiet bi van phong, mua ban thiet bi van phong, mua ban van phong pham';
+	var $MetaKeys = 'van phong pham, vpp, thiet bi van phong';
 	var $offline_message = 'This site is down for maintenance. Please check back again soon.';
 }
 ?>
