@@ -115,33 +115,3 @@ html[xmlns] .clearfix { /* O */
 .right	{float: right;}
 
 .auto-width {width: auto;}
-/*BT modify*/
-.clearfix:after {
-    clear: both;
-    content: ".";
-    display: block;
-    height: 0;
-    visibility: hidden;
-}
-.clearfix {
-    display: block;
-}
-.clearfix {
-    display: inline-block;
-}
-/*
-.cbvsprow, .cbvsprows {
-    padding: 20px 0;
-}
-*/
-.cbvsp1 {
-    padding: 0 1%;
-    text-align: center;
-}
-.borleft {
-    border-left: 1px dashed #04A504;
-}
-
-.cbvsprows {
-    border-top: 1px dashed #04A504;
-}

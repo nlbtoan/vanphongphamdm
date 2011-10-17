@@ -50,10 +50,14 @@ ul.pagination a:hover, ul.pagination a:active, ul.pagination a:focus {
 	border-top: 3px solid #006699;
 }
 
+/* BT modify title contain */
+div.ja-content-main h3,
 div.moduletable_hilite h3 {
 	background-image: url(../../images/blue/h3-r-hilite.gif);
 }
 
+/* BT modify title contain */
+div.ja-content-main h3 span,
 div.moduletable_hilite h3 span {
 	background-image: url(../../images/blue/h3-l-hilite.gif);
 }
@@ -237,4 +241,74 @@ a#active_menu {
 
 #ja-mainnav ul.level0 li ul .group-content .ja-box-ct a {
 	color: #006699 !important;
+}
+/*BT modify*/
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+.clearfix {
+    display: block;
+}
+.clearfix {
+    display: inline-block;
+}
+/*
+.cbvsprow, .cbvsprows {
+    padding: 20px 0;
+}
+*/
+.cbvsp1 {
+    padding: 0 1%;
+    text-align: center;
+}
+.borleft {
+    border-left: 1px dashed #006699;
+}
+
+.cbvsprows {
+    border-top: 1px dashed #006699;
+}
+
+/* BT Highlight module border box menu*/
+div.ja-col .moduletable_hilite {
+	padding: 0;
+	background: url(../../images/box-br.gif) no-repeat bottom right #FFFFFF;
+	margin-bottom: 10px;
+}
+div.ja-col .moduletable_hilite .ja-box-bl {
+    background: url("../../images/box-bl.gif") no-repeat scroll left bottom transparent;
+    margin: 0;
+    padding: 0;
+}
+div.ja-col .moduletable_hilite .ja-box-bl .ja-box-tr{
+	padding: 0;
+	margin: 0;
+	background: url(../../images/box-tr.gif) no-repeat top right;
+}
+div.moduletable_hilite .ja-box-bl .ja-box-tr .ja-box-tl {
+	padding: 8px 0 15px;
+	background: url(../../images/box-tl.gif) no-repeat top left;
+}
+div.ja-col .moduletable_hilite .jamod-content {
+	margin: 0 15px;
+}
+/*BT custom menu for pre-fix _hilite*/
+a.mainlevel_hilite {
+	background: url(../../images/mainlevel-bg.gif) repeat-x right bottom;
+	display: block;
+	outline: none;
+	padding: 5px 0 5px 0;
+	margin: 0;
+	text-decoration: none;
+	color: #666666;
+}
+
+a.mainlevel_hilite:hover, a.mainlevel_hilite:active, a.mainlevel_hilite:focus {
+	background: url(../../images/mainlevel-hover.gif) repeat-x right bottom;
+	text-decoration: none;
+	color: #C01122;
 }
