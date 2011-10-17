@@ -1859,27 +1859,5 @@ html[xmlns] .clearfix { /* O */
 .browseProductDescription div {
 	margin-top: 0px !important;
 }
-/* BT Highlight module */
-div.ja-col .moduletable_hilite {
-	padding: 0;
-	background: url(../images/box-br.gif) no-repeat bottom right #FFFFFF;
-	margin-bottom: 10px;
-}
-div.ja-col .moduletable_hilite .ja-box-bl {
-    background: url("../images/box-bl.gif") no-repeat scroll left bottom transparent;
-    margin: 0;
-    padding: 0;
-}
-div.ja-col .moduletable_hilite .ja-box-bl .ja-box-tr{
-	padding: 0;
-	margin: 0;
-	background: url(../images/box-tr.gif) no-repeat top right;
-}
-div.moduletable_hilite .ja-box-bl .ja-box-tr .ja-box-tl {
-	padding: 8px 0 15px;
-	background: url(../images/box-tl.gif) no-repeat top left;
-}
-div.ja-col .moduletable_hilite .jamod-content {
-	margin: 0 15px;
-}
+
 
