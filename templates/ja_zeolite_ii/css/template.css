@@ -25,7 +25,7 @@ html, body, form, fieldset {
 
 body {
  
-	background: url(../background_061.jpg) no-repeat 20px 8px;
+	background: url(../background_061.gif) no-repeat;
     margin-top: 0px; 
 	margin-right: 0px; 
 	margin-bottom: 0px; 
@@ -33,12 +33,12 @@ body {
 	background-color: #EEF3F5; 
 	color: #6D7383;
 	font-family: "Lucida Grande", Arial, Helvetica, sans-serif;
-	line-height: 1.5;
+	/*line-height: 1.5;*/
 }
 
 body#bd {
 	color: #666666;
-	background: url(../background_061.jpg) repeat;
+	background: url(../background_061.gif) repeat;
 	background-position: top;
 	padding: 0;
 	margin: 0;
