@@ -18,20 +18,30 @@
 
 // no direct access
 defined('_JEXEC') or die('Restricted access'); ?>
+<style type="text/css">
+<!--
+.style1 {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-weight: bold;
+	color: #000000;
+	font-size: 16px;
+}
+-->
+</style>
+
 <div class="copyright">
-		<div align ="center">
-			Công ty TNHH thương mại dịch vụ Đức Mạnh
-		</div>
-	<div align="center">
-	ĐC:Đường 16,Ô12 LôA13,Khu Phố1,Phường Hoà Phú,Thị Xã TDM, Bình Dương.
-	</div>
+  <div align ="center" class="style1">
+  Công ty TNHH thương mại dịch vụ Đức Mạnh		</div>
+<div></div>
+	<div align="center" class="style1">
+	ĐC:Đường 16, Ô12 LôA13, Khu Phố1, Phường Hoà Phú, Thị Xã TDM, Tỉnh Bình Dương.	</div>
 
-<div align="center">
-	Điện thoại: 0650.3628 232 - Fax: 0650.3635 348 <br/>
-	MST:3701408466 - E.mail: ducmanh.linh@gmail.com  <br/>
+<div align="center"><span class="style1">
+	Điện thoại: 0650.3628.232  -  Fax: 0650.3635.348 <br/>
+	MST: 3701408466  -  E.mail: ducmanh.linh@gmail.com  <br/>
 	<?php echo $lineone; ?> Designed by 
-<a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>
-<!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
+    <a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>
+</span>
+  <!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
 </div>
-	</div>
-
+</div>
