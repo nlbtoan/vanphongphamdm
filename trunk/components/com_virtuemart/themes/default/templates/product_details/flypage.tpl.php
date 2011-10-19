@@ -39,9 +39,9 @@ if( $this->get_cfg( 'product_navigation', 1 )) {
       	<?php echo $product_price ?><br /></td>
       <td valign="top"><?php echo $product_packaging ?><br /></td>
 	</tr>
-	<tr>
-	  <td colspan="2"><?php echo $ask_seller ?></td>
-	</tr>
+	<!--tr>
+	  <td colspan="2"><!?php echo $ask_seller ?></td>
+	</tr-->
 	<tr>
 	  <td rowspan="1" colspan="2"><hr />
 	  	<?php echo $product_description ?><br/>
