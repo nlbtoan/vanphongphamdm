@@ -242,7 +242,7 @@ a.mainlevel {
 	background: url(../images/mainlevel-bg.gif) repeat-x right bottom;
 	display: block;
 	outline: none;
-	padding: 5px 0 5px 0;
+	padding: 15px 0 5px 0;
 	margin: 0;
 	text-decoration: none;
 	color: #666666;
@@ -267,4 +267,8 @@ a#active_menu {
 
 #lbCenter , #lbBottomContainer{
 	z-index: 1000;
+}
+
+.jamod-content a.sublevel {
+    padding: 5px 0;
 }

@@ -3,7 +3,7 @@ mm_showMyFileName(__FILE__);
 
 $iCol = 1;
 if( !isset( $categories_per_row )) {
-	$categories_per_row = 4;
+	$categories_per_row = 2;
 }
 $cellwidth = intval( 100 / $categories_per_row );
 

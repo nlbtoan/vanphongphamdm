@@ -1860,4 +1860,7 @@ html[xmlns] .clearfix { /* O */
 	margin-top: 0px !important;
 }
 
-
+#ja-content .ja-content-main a {
+    font-weight: bold; 
+    font-size: 15px;
+}
