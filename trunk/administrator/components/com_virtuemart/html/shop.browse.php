@@ -66,10 +66,11 @@ if( $category_id ) {
 	/**
     * CATEGORY DESCRIPTION
     */
+    
 	$db->query( "SELECT category_id, category_name FROM #__{vm}_category WHERE category_id='$category_id'");
 	$db->next_record();
 	$category_name = shopMakeHtmlSafe( $db->f('category_name') );
-
+    
 	// Set Dynamic Page Title
 	$vm_mainframe->setPageTitle( $db->f("category_name") );
 
@@ -84,7 +85,53 @@ if ($num_rows == 0 && (!empty($keyword)||!empty($keyword1))) {
 	echo $VM_LANG->_('PHPSHOP_NO_SEARCH_RESULT');
 }
 elseif( $num_rows == 0 && empty($product_type_id) && empty($child_list)) {
-	echo $VM_LANG->_('EMPTY_CATEGORY');
+    //BT
+    	if( $category_id ) {
+        $tpl = vmTemplate::getInstance();
+		/**
+	    * CATEGORY DESCRIPTION
+	    */
+		$browsepage_lbl = $category_name;
+		$tpl->set( 'browsepage_lbl', $browsepage_lbl );
+
+		$tpl->set( 'desc', $desc );
+
+		$category_childs = $ps_product_category->get_child_list($category_id);
+		$tpl->set( 'categories', $category_childs );
+		$navigation_childlist = $tpl->fetch( 'common/categoryChildlist.tpl.php');
+		$tpl->set( 'navigation_childlist', $navigation_childlist );
+
+		// Set up the CMS pathway
+		$category_list = array_reverse( $ps_product_category->get_navigation_list($category_id) );
+		$pathway = $ps_product_category->getPathway( $category_list );
+		$vm_mainframe->vmAppendPathway( $pathway );
+
+		$tpl->set( 'category_id', $category_id );
+		$tpl->set( 'category_name', $category_name );
+
+		$browsepage_header = $tpl->fetch( 'browse/includes/browse_header_category.tpl.php' );
+        $tpl->set( 'browsepage_header', $browsepage_header );
+        	$tpl->set( 'parameter_form', $parameter_form );
+
+        // Decide whether to show the limit box
+        $show_limitbox = ( $num_rows > 5 && @$_REQUEST['output'] != "pdf" );
+        $tpl->set( 'show_limitbox', $show_limitbox );
+
+        // Decide whether to show the top navigation
+        $show_top_navigation = ( PSHOP_SHOW_TOP_PAGENAV =='1' && $num_rows > $limit );
+        $tpl->set( 'show_top_navigation', $show_top_navigation );
+
+        // Prepare Page Navigation
+        require_once( CLASSPATH . 'pageNavigation.class.php' );
+        $pagenav = new vmPageNav( $num_rows, $limitstart, $limit );
+        $tpl->set( 'pagenav', $pagenav );
+        $tpl->set( 'VM_BROWSE_ORDERBY_FIELDS', $VM_BROWSE_ORDERBY_FIELDS);
+        echo "<h3><span>$category_name</span></h3>";
+        echo $tpl->fetch( "common/categoryChildlist.tpl.php" );
+        } else {
+            echo $VM_LANG->_('EMPTY_CATEGORY');
+        }
+	
 }
 
 elseif( $num_rows == 1 && ( !empty($keyword) || !empty($keyword1) ) ) {
