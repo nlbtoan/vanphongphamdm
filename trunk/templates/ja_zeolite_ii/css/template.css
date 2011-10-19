@@ -1866,3 +1866,14 @@ html[xmlns] .clearfix { /* O */
     text-shadow: 1px 1px 1px #E2E2E2;
     
 }
+
+h2.contentheading {
+    padding: 10px 35px 10px 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 2px #E2E2E2;
+    color: #0088CC;
+}
+
+div.article-tools, div.article-content {
+    padding: 10px 35px 10px 30px;
+}
