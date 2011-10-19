@@ -1863,4 +1863,6 @@ html[xmlns] .clearfix { /* O */
 #ja-content .ja-content-main a {
     font-weight: bold; 
     font-size: 15px;
+    text-shadow: 1px 1px 1px #E2E2E2;
+    
 }
