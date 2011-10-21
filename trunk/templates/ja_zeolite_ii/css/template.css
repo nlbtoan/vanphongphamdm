@@ -573,7 +573,7 @@ ul.latestnews a:hover, ul.mostread a:hover {
 }
 
 #ja-container .main {
-	padding: 10px 0 0;
+	padding: 2px 0 0;
 }
 
 #ja-mainbodywrap {
@@ -633,7 +633,7 @@ ul.latestnews a:hover, ul.mostread a:hover {
 /* COLLAPSIBLE LAYOUT
 --------------------------------------------------------- */
 #ja-container {
-	padding: 0 0 20px;
+	padding: 0 0 2px;
 	margin: 0;
 	clear: both;
 }
@@ -926,7 +926,7 @@ div.module_blank .ja-box-ct {
 }
 
 #ja-left .ja-colswrap{
-	padding-right: 10px;
+	padding-right: 2px;
 }
 
 /* HEADER
@@ -1876,4 +1876,14 @@ h2.contentheading, h1.componentheading {
 
 div.article-tools, div.article-content {
     padding: 10px 35px 10px 30px;
+}
+
+/*BT background contain*/
+#ja-wrapper {
+
+    background: none repeat scroll 0 0 #EFEFEF;
+    border: 1px solid white;
+    margin: 20px auto;
+    width: 950px;
+
 }
