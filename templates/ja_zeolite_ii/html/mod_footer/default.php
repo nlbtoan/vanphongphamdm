@@ -22,10 +22,15 @@ defined('_JEXEC') or die('Restricted access'); ?>
 <!--
 .style3 {
 	font-family: Arial, Helvetica, sans-serif;
-font-size:12px;
+font-size:17px;
 	color: #FFFFFF;
 	padding-top:3px;
-	line-height:16px;
+	line-height:20px;
+}
+.style5 {
+	font-size: 18px;
+	font-weight: bold;
+	line-height:25px;
 }
 -->
 </style>
@@ -34,10 +39,10 @@ font-size:12px;
 <tbody>
 <tr valign="top">
 <td width="100%" align="center">
-    <span class="style3"><strong>Công ty TNHH thương mại dịch vụ Đức Mạnh</strong><br/>
+    <span class="style3"><span class="style5">Công ty TNHH thương mại dịch vụ Đức Mạnh</span><br/>
     <strong>Địa chỉ:</strong> Đường 16, Ô12 LôA13, Khu Phố1, Phường Hoà Phú, Thị Xã TDM, Tỉnh Bình Dương.<br/>
     
-    <strong>Email:</strong> 	<a href="mailto:ducmanh@vanphongphamdducmanh.com">ducmanh@vanphongphamdducmanh.com</a><br/>
+    <strong>Email:</strong> 	<a href="mailto:ducmanh.linh@gmail.com">ducmanh.linh@gmail.com</a><br/>
     <strong>Điện thoại:</strong> 0650.3628.232 - <strong>Fax:</strong>0650.3635.348 - <strong>MST:</strong> 3701408466     </br>
     <?php echo $lineone; ?> Designed by 
     <a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>    </span>
