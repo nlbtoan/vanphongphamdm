@@ -24,8 +24,8 @@ html, body, form, fieldset {
 }
 
 body {
- 
-	background: url(../background_061.gif) no-repeat;
+ background: url("../bg-web.jpg") repeat-x scroll center top #48A2EC;
+	/*background: url(../background_061.gif) no-repeat;*/
     margin-top: 0px; 
 	margin-right: 0px; 
 	margin-bottom: 0px; 
@@ -37,11 +37,16 @@ body {
 }
 
 body#bd {
+    background: url("../bg-web.jpg") repeat-x scroll center top #48A2EC;
+    color: #333333;
+    margin: 0;
+    padding: 0;
+	/*
 	color: #666666;
 	background: url(../background_061.gif) repeat;
 	background-position: top;
 	padding: 0;
-	margin: 0;
+	margin: 0;*/
 }
 
 body.contentpane {
@@ -1411,20 +1416,26 @@ ul.menu li li li.active a {
 }
 
 #ja-footer .main {
-	background:  url(../images/Footer.png);
+
+	background:  url(../images/footernew.png);
 	border-top: 3px solid #04A504;
 	position: relative;
 	color: #18658B;
 	font-size: 12px;
-	padding: 10px 0px;
+	padding: 10px 0px;*/
 	/*margin: 0 160px 5px;*/
-	margin-bottom:3px;
-	
-	
+	/*margin-bottom:3px;*/
+	/*
+	background: none repeat scroll 0 0 #0052AA;
+    border-top: 5px solid #004792;
+    color: #CCCCCC;
+    padding: 10px 0px;
+    position: relative;
+	*/
 }
 
 #ja-footer .inner {
-	padding: 0 10px;
+	padding: 1 10px;
 }
 
 #ja-footer a {

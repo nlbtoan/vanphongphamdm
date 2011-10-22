@@ -20,28 +20,46 @@
 defined('_JEXEC') or die('Restricted access'); ?>
 <style type="text/css">
 <!--
-.style1 {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	font-weight: bold;
-	color: #000000;
-	font-size: 16px;
+.style3 {
+	font-family: Arial, Helvetica, sans-serif;
+font-size:12px;
+	color: #FFFFFF;
+	padding-top:3px;
+	line-height:16px;
 }
 -->
 </style>
 
-<div class="copyright">
-  <div align ="center" class="style1">
-  Công ty TNHH thương mại dịch vụ Đức Mạnh		</div>
-<div></div>
-	<div align="center" class="style1">
-	ĐC:Đường 16, Ô12 LôA13, Khu Phố1, Phường Hoà Phú, Thị Xã TDM, Tỉnh Bình Dương.	</div>
-
-<div align="center"><span class="style1">
-	Điện thoại: 0650.3628.232  -  Fax: 0650.3635.348 <br/>
-	MST: 3701408466  -  E.mail: ducmanh.linh@gmail.com  <br/>
-	<?php echo $lineone; ?> Designed by 
+<table style="width: 100%; padding-top:7px; border-collapse: collapse;" summary="" border="0" bordercolor="#000000" cellpadding="3" cellspacing="0">
+<tbody>
+<tr valign="top">
+<td width="100%" align="center">
+    <span class="style3"><strong>Công ty TNHH thương mại dịch vụ Đức Mạnh</strong><br/>
+    <strong>Địa chỉ:</strong> Đường 16, Ô12 LôA13, Khu Phố1, Phường Hoà Phú, Thị Xã TDM, Tỉnh Bình Dương.<br/>
+    
+    <strong>Email:</strong> 	<a href="mailto:ducmanh@vanphongphamdducmanh.com">ducmanh@vanphongphamdducmanh.com</a><br/>
+    <strong>Điện thoại:</strong> 0650.3628.232 - <strong>Fax:</strong>0650.3635.348 - <strong>MST:</strong> 3701408466     </br>
+    <?php echo $lineone; ?> Designed by 
+    <a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>    </span>
+    <span class="style3">
+    <!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
+    </span></td>
+</tr>
+</tbody></table>
+<!--
+<div class="style3">
+  <div align ="center">
+    <strong>
+  Công ty TNHH thương mại dịch vụ Đức Mạnh	<strong></div>
+  <div></div>
+  <div align="center"> ĐC: Đường 16, Ô12 LôA13, Khu Phố1, Phường Hoà Phú, Thị Xã TDM, Tỉnh Bình Dương. </div>
+  </br>
+  
+  <div align="center"> Điện thoại: 0650.3628.232  -  Fax: 0650.3635.348 <br/>
+  MST: 3701408466  -  E.mail: ducmanh.linh@gmail.com <br/>
+    <?php echo $lineone; ?> Designed by 
     <a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>
-</span>
-  <!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
-</div>
+    
+    <!--<small><?php echo JText::_( 'FOOTER_LINE2' ); ?></small> -->
+  </div>
 </div>
