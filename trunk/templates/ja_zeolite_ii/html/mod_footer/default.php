@@ -28,9 +28,9 @@ font-size:17px;
 	line-height:20px;
 }
 .style5 {
-	font-size: 18px;
+	font-size: 30px;
 	font-weight: bold;
-	line-height:25px;
+	line-height:35px;
 }
 -->
 </style>
@@ -41,9 +41,9 @@ font-size:17px;
 <td width="100%" align="center">
     <span class="style3"><span class="style5">Công ty TNHH thương mại dịch vụ Đức Mạnh</span><br/>
     <strong>Địa chỉ:</strong> Đường 16, Ô12 LôA13, Khu Phố1, Phường Hoà Phú, Thị Xã TDM, Tỉnh Bình Dương.<br/>
+    <strong>Điện thoại:</strong> 0650.3628.232 - <strong>Fax:</strong>0650.3635.348    </br>
+    <strong>Email:</strong> 	<a href="mailto:ducmanh.linh@gmail.com">ducmanh.linh@gmail.com</a>  - <strong>MST:</strong> 3701408466 <br/>
     
-    <strong>Email:</strong> 	<a href="mailto:ducmanh.linh@gmail.com">ducmanh.linh@gmail.com</a><br/>
-    <strong>Điện thoại:</strong> 0650.3628.232 - <strong>Fax:</strong>0650.3635.348 - <strong>MST:</strong> 3701408466     </br>
     <?php echo $lineone; ?> Designed by 
     <a href="#" title="developer" target="blank">JoomlArt-TBC</a>.</small>    </span>
     <span class="style3">
