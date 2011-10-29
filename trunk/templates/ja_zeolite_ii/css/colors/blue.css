@@ -4,6 +4,7 @@ a {
 
 a:hover, a:active, a:focus {
 	color: #000000;
+    text-decoration: none;
 }
 
 #ja-subnav a:hover,
