@@ -1898,3 +1898,6 @@ div.article-tools, div.article-content {
     width: 950px;
 
 }
+div.column {
+    background: none repeat scroll 0 0 #EFEFEF;
+}
