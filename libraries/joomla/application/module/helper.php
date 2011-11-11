@@ -197,7 +197,7 @@ class JModuleHelper
 
 		//dynamically add outline style
 		if(JRequest::getBool('tp')) {
-			$attribs['style'] .= ' outline';
+			//$attribs['style'] .= ' outline';
 		}
 
 		foreach(explode(' ', $attribs['style']) as $style)

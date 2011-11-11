@@ -817,7 +817,7 @@ An Account allows you to come back to this shop and view all the orders you have
 	'VM_RECENT_PRODUCTS' => 'Sản phẩm bạn đã xem',
 	'VM_ADMIN_SIMPLE_LAYOUT' => 'Giao diện thường',
 	'VM_ADMIN_EXTENDED_LAYOUT' => 'Giao diện chuẩn',
-	'VM_YOUR_VERSION' => 'Your Version',
+	'VM_YOUR_VERSION' => 'Phiên bản',
 	'VM_ADMIN_BACKTOJOOMLA' => 'Quay về',
 	'VM_ADMIN_PANELTITLE' => 'Quản Trị Gian Hàng',
 	'VM_VERSIONCHECK_TITLE' => 'Kiểm tra phiên bản',
