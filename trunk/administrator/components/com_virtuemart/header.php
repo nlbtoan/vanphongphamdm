@@ -77,7 +77,7 @@ if( vmIsJoomla('1.0') && strstr( $_SERVER['PHP_SELF'], 'index3.php')) {
 			}
 		}
 		?>
-			<a href="http://virtuemart.net" target="_blank">
+			<a href="http://vanphongphamducmanh.com" target="_blank">
 				<img align="middle" hspace="15" src="<?php echo IMAGEURL ?>ps_image/menu_logo.png" alt="VirtueMart Cart Logo" />
 			</a>
 		
@@ -539,9 +539,9 @@ if( vmIsJoomla('1.0') && strstr( $_SERVER['PHP_SELF'], 'index3.php')) {
 	</div>
 	<div style="text-align:center;">
 	<h5><?php echo $VM_LANG->_('VM_YOUR_VERSION') ?></h5>
-	<a href="http://virtuemart.net/index2.php?option=com_versions&amp;catid=1&amp;myVersion=<?php echo @$VMVERSION->RELEASE ?>" onclick="javascript:void window.open(this.href, 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=580,directories=no,location=no'); return false;" title="<?php echo $VM_LANG->_('VM_VERSIONCHECK_TITLE') ?>" target="_blank">
-	<?php echo $VMVERSION->PRODUCT .'&nbsp;' . $VMVERSION->RELEASE .'&nbsp;'. $VMVERSION->DEV_STATUS
-	?>
+	<a href="http://vanphongphamducmanh.com" onclick="javascript:void window.open(this.href, 'win2', 'status=no,toolbar=no,scrollbars=yes,titlebar=no,menubar=no,resizable=yes,width=640,height=580,directories=no,location=no'); return false;" title="<?php echo $VM_LANG->_('VM_VERSIONCHECK_TITLE') ?>" target="_blank">
+	<?php echo @$VMVERSION->RELEASE ?>
+    
 	</a>
 	 </div>
       </div>
