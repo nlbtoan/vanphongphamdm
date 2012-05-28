@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+/* CSS Document */
+#container {width:1024px; height:700px; margin:0 auto;}
+
+.menu_horizontal li {position: relative;float: left;}
+.menu_horizontal li a {display: block; color: #292929; font-weight: bold; text-decoration: none;padding: 10px;}
+
+.menu_horizontal li ul {background: yellow; position: absolute; display: none; width: 100px;}
+.menu_horizontal li li {border: 1px solid #686; width: 100%;}
+
+.menu_horizontal li li ul{top: -1px; left: 100px;}
+/*.menu_horizontal li:hover > ul {display: block;} */
+.menu_horizontal li a:hover {color: white; background: orange;}
+
+
+.menu_vertical {width: 100px; line-height: 2em;}
+
+.menu_vertical ul {border: 1px solid #bccbd8;}
+
+.menu_vertical li {position: relative; border-bottom: 1px solid #bccbd8;}
+.menu_vertical li a {color: #1e5b7e; text-decoration: none; padding: 5px;}
+
+.menu_vertical li ul {position: absolute; top: -1px; left: 98px; display: none; border: 1px solid #bccbd8;}
+*html .menu_vertical li li ul{left:100px;}
+
+.menu_vertical li:hover > ul {display: block; width: 100%;}
+.menu_vertical li a:hover {text-decoration: underline;}

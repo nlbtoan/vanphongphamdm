@@ -1,0 +1,898 @@
+1291563426TS---><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title></title>
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/styles/default/css/reset.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/styles/default/css/typography.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/styles/default/css/screen.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="http://greencruise.com.vn/assets/ui/base/jquery.ui.all.css" type="text/css" media="screen" />
+<!--[if lte IE 6]>
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/styles/default/css/ie6.css" type="text/css" media="projection, screen" />
+<![endif]-->
+<!--[if lte IE 7]>
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/styles/default/css/ie7.css" type="text/css" media="projection, screen" />
+<![endif]-->
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/assets/buttons/screen.css" type="text/css" media="screen" />
+
+<script type="text/javascript" src="http://greencruise.com.vn/assets/base"></script>
+<script type="text/javascript" src="http://greencruise.com.vn/themes/_admin/assets/jquery_cookie.js"></script>
+
+
+<link rel="stylesheet" href="http://greencruise.com.vn/assets/ui/base/jquery.ui.all.css" type="text/css" media="screen" />
+
+<!-- LOAD JS -->
+<script type="text/javascript" src="http://greencruise.com.vn/assets/jquery-ui-1.8.2.custom.min.js"></script>
+<script type="text/javascript" src="http://greencruise.com.vn/assets/jquery.easy-confirm-dialog.js"></script>
+<script type="text/javascript" src="http://greencruise.com.vn/assets/tinymce.jquery/jquery.tinymce.js"></script>
+<script type="text/javascript" src="http://greencruise.com.vn/assets/tinymce.jquery/tiny_mce.js"></script>
+<!-- LOAD CSS -->
+<link rel="stylesheet" href="http://greencruise.com.vn/themes/_admin/assets/message/screen.css" type="text/css" media="screen" />
+
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$('#message, .notice').show().delay(10000).fadeOut('slow');
+
+	$("#date_start").datepicker({
+		 showOn: 'button',
+		 buttonImage: 'http://greencruise.com.vn/themes/_admin/styles/default/images/calendar_icon.png', 
+		 buttonImageOnly: true,
+		 changeMonth: true,
+		 changeYear: true,
+		 minDate: 'today', 
+		 maxDate: ''
+	 });
+
+	 $('input[name*=adult]').bind('change', function(){
+		change($(this), parseInt($('input[name*=baby]').val()), parseInt($('input[name*=child]').val()));
+	});
+
+	$('input[name*=child]').bind('change', function(){
+		change($(this), parseInt($('input[name*=baby]').val()), parseInt($('input[name*=adult]').val()));
+	});
+
+	$('input[name*=baby]').bind('change', function(){
+		change($(this), parseInt($('input[name*=child]').val()), parseInt($('input[name*=adult]').val()));
+	});
+
+	function change( obj, var1, var2 ){
+		if ( isNaN(obj.val()) ){
+			obj.val(0);
+			my_alert('Không phải là số');
+		}
+		if ( obj.val() == "" ){
+			obj.val(0);
+		}
+		var in_tol = $('input[name*=total_person]');
+		var rs = parseInt(obj.val()) + var1 + var2;
+		
+		if ( rs == 0 ){
+			rs = 1;
+			$('input[name*=adult]').val(rs);
+		} else if ( rs > 100 ){
+			alert('du lieu qua lon');
+			rs = 1;
+			$('input[name*=adult]').val(1);
+			$('input[name*=child]').val(0);
+			$('input[name*=baby]').val(0);
+		}
+		
+		in_tol.val(rs);
+
+	}
+
+	var event_change = function(e){
+		var i_arr = new Array('adult','child','baby');
+		
+		if ( $('select[name*=sl_age] option[value=0]:selected').length == 0 ){
+			my_alert('Tour phải có ít nhất một người lớn đăng ký');
+			$('option[value=0]', $(this)).attr('selected', 'selected');
+		} else {
+			for ( var i = 0; i < i_arr.length; i++ ){
+				$('input[name*='+i_arr[i]+']').val($('select[name*=sl_age] option[value='+i+']:selected').length);
+			}
+		}
+
+	}
+
+	$('select[name*=sl_age]').bind('change', event_change);
+
+	var event_remove = function(e){
+		e.preventDefault();
+		/*if ( $('select[name*=sl_age] option[value=0]:selected').length < 1 ){
+			my_alert('Tour phải có ít nhất một người lớn đăng ký');
+		} 
+		else {*/
+			var tr = $(this).parent().parent();
+			var sl_val = $('select[name*=sl_age] option:selected', tr).val();
+			var i_arr = new Array('adult','child','baby');
+			 
+			var idx= tr.index();
+			tr.remove();
+
+			if ( $("#list_p tr").length > 2 ){
+				if ( $("#list_p tr").length > idx ){
+					for ( var j = idx; j < $("#list_p tr").length ; j++ ){
+						$('td:first', $("#list_p tr").eq(j) ).html(j);
+					}
+				}
+			}
+		     
+			var total_person = parseInt($("#list_p tr:last td:first").html());
+	
+			$('input[name*='+i_arr[sl_val]+']').val($('select[name*=sl_age] option[value='+sl_val+']:selected').length);
+			$('input[name*=total_person]').val(total_person);
+			
+			if ( $(this).attr('rel') != "" ){
+				var url = site_url('admin/flight/delete_book_detail');
+				var adult = $('input[name*=adult]').val();
+				var child = $('input[name*=child]').val();
+				var baby = $('input[name*=baby]').val();
+				var book = $('input[name*=book]').val();
+				var data = { id: $(this).attr('rel'), total_person: total_person, adult: adult, child: child, baby: baby, book: book  };
+				$.post(url, data, function(data){
+					my_alert(data.success);
+				}, 'json');
+			}
+		//}
+	 }
+
+	$('a.remove_row').bind('click', event_remove);
+
+	 $('#add_client').bind('click', function(e){
+		e.preventDefault();
+		var total_person = parseInt($("#list_p tr:last td:first").html()) + 1;
+		
+		var html = '<tr>';
+		html += '<td align="center">'+total_person+'</td>';
+		html += '<td><input type="text" name="txt_name_i[]" autocomplete="off" class="txt_name"/></td>';
+		html += '<td><input type="text" name="txt_birthday_i[]" autocomplete="off" size="8" readonly="readonly" style="background:#FFF; border:1px solid #7F9DB9; height:18px;"/></td>';
+		html += '<td><input type="text" name="txt_address_i[]" autocomplete="off"/></td>';
+		html += '<td>';
+			html += '<select name="sl_sex_i[]" style="width:70px;">';
+				html += '<option value="0">Nữ</option>';
+				html += '<option value="1">Nam</option>';
+			html += '</select>';
+		html += '</td>';
+
+		html += '<td>';
+			html += '<select name="sl_age_i[]" style="width:82px;">';
+				html += '<option value="0">Người lớn</option>';
+				html += '<option value="1">Trẻ em</option>';
+				html += '<option value="2">Trẻ nhỏ</option>';
+			html += '</select>';
+		html += '</td>';
+		
+		html += '<td>';
+		html += 	'<a href="" class="remove_row"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/delete-icon-large.gif" alt="remove"></a>';
+		html += '</td>';
+		
+		html += '</tr>';
+		html += '</tr>';
+		
+		$('#list_p').append(html);
+
+		$("input[name*=txt_birthday]", "#list_p tr:last" ).datepicker({
+			 changeMonth: true,
+			 changeYear: true,
+			 minDate: new Date(1920, 0, 1),
+			 maxDate: 'today'
+		 });
+
+		$('a.remove_row', "#list_p tr:last").bind('click', event_remove);
+
+		$('select[name*=sl_age]').bind('change', event_change);
+		
+		$('input[name*=total_person]').val(total_person);
+
+		$('input[name*=adult]').val(parseInt($('input[name*=adult]').val())+1);
+		
+	});
+
+	$("input[name*=txt_birthday]").datepicker({
+		changeMonth: true,
+		changeYear: true,
+		minDate: new Date(1920, 0, 1),
+		maxDate: 'today'
+	});
+
+	 $('#btn_submit').click(function(e){
+		 
+		e.preventDefault();
+	 	var flag = true;
+
+	 	$('input[name*=txt_name]').each(function(idx){
+	 		if ( $(this).val().trim().length < 1 ){
+				flag = false;
+	 		}	
+		});
+		
+	 	$('input[name*=txt_name_i]').each(function(idx){
+	 		if ( $(this).val().trim().length < 1 ){
+				flag = false;
+	 		}	
+		});
+
+	 	if ( flag == true ){
+	 		$('#frm_edit_book').submit();
+	 	} else {
+			my_alert('Chưa điền đầy đủ dữ liệu trong danh sách người tham gia');
+	 	}
+	 });
+
+});
+
+</script>
+</head>
+
+<body>	
+    <div id="container">    	   
+        <!-- ########################## HEADER ########################## -->
+		<div id="header">
+       	<p><a href="http://greencruise.com.vn/" target="_blank">Xem website</a> | 
+<a href="http://greencruise.com.vn/admin/auth/profile">Tài khoản</a> | 
+<a href="http://greencruise.com.vn/admin/auth/logout">Thoát</a></p>
+<h3>Chào Admin !</h3>
+<div class="header_menu">
+    <div class="hor_menu">
+        <div class="left_hor"></div>
+        <div class="center_hor"><a href="http://greencruise.com.vn/admin">Quản trị nội dung</a></div>
+        <div class="right_hor"></div>
+    </div><!--hor_menu-->
+    
+    <div class="hor_menu">
+        <div class="left_hor"></div>
+        <div class="center_hor"><a href="http://greencruise.com.vn/admin/setting">Cấu hình website</a></div>
+        <div class="right_hor"></div>
+    </div><!--hor_menu-->    
+    <div class="clear"></div>        
+</div>
+                
+        </div>          
+		<!-- ########################## END HEADER ###################### -->
+        
+       <!-- ########################## LEFT ########################## -->
+        <div id="left" class="panel">        	            
+			<script>
+$(document).ready(function()
+{	
+	var ocl = $.cookie("open_close");
+	
+	if(ocl != "" && typeof ocl != 'object')
+	{
+		ocl = ocl.split(',');
+
+		length = ocl.length;
+		for(var i = 0; i < length; i ++)
+		{
+			if( $('h5').eq(ocl[i]).hasClass('open') == false )
+			{
+				$('h5').eq(ocl[i]).removeClass('close');
+				$('h5').eq(ocl[i]).addClass('open');
+
+				$('h5').eq(ocl[i]).children('span').removeClass('close_img');
+				$('h5').eq(ocl[i]).children('span').addClass('open_img');
+
+				$(this).css('border-bottom','1px solid #F0F0F0');
+			}
+		}
+	}
+	
+	var open = function(index, obj)
+	{
+		var ocl = $.cookie("open_close");
+		
+		if(ocl != "" && typeof ocl != "object") ocl = ocl.split(',');
+		else ocl = new Array();
+		ocl.push(index);
+		ocl = ocl.join(",");
+		$.cookie("open_close", ocl, { path: '/'});
+		
+		$(obj).removeClass('open');
+		$(obj).addClass('close');
+
+		$(obj).children('span').removeClass('close_img');
+		$(obj).children('span').addClass('open_img');
+
+		$(obj).css('border-bottom','1px solid #F0F0F0');
+
+		$(obj).next().animate({
+			'height' : 'show',
+			'opacity' : 'show'
+		}, 300);
+
+		$(obj).unbind('click');
+		$(obj).click( function(){close(index, this)} );
+	};
+	
+	var close = function(index, obj)
+	{	
+		var ocl = $.cookie("open_close");
+		ocl = ocl.split(',');
+		
+		if(ocl.length > 0)
+		{
+			ocl = jQuery.grep(ocl, function(value) {
+				return value != index;
+			});
+			
+			ocl = ocl.join(",");
+			$.cookie("open_close", ocl, { path: '/'});
+		}
+		
+		$(obj).removeClass('close');
+		$(obj).addClass('open');
+
+		$(obj).children('span').removeClass('open_img');
+		$(obj).children('span').addClass('close_img');
+		
+		$(obj).css('border-bottom','0');
+
+		$(obj).next().animate({
+			'height' : 'hide',
+			'opacity' : 'hide'
+		}, 300);
+
+		$(obj).unbind('click');
+		$(obj).click( function(){open(index, this)} );
+	};
+	
+	$('h5').each(function(index) 
+	{	
+		if( $(this).hasClass('open') )
+		{
+			$(this).next().show();
+			$(this).css('border-bottom','1px solid #F0F0F0');
+			
+			$(this).click( function(){close(index, this)} );
+		}
+		else if( $(this).hasClass('close') )
+		{
+			$(this).next().hide();
+			$(this).css('border-bottom', '');
+			
+			$(this).click( function(){open(index, this)} )
+		}
+	});
+	
+});
+</script>
+
+<div class="panel_top"><div></div></div>            
+<div class="panel_left">
+	<div class="panel_right">
+		<div class="panel">
+    		<div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">MENUS<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li class="manage">
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/menu">Quản lý nhóm menu</a>			                </li>
+			                <li class="setting">
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/menu/create_menu">Thêm nhóm menu</a>			                </li>                
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+		    </div>
+		    
+			<!-- Page -->
+		   	<div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">NỘI DUNG<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/page">Quản lý nội dung</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/page/create">Quản lý nội dung</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+		    </div>
+
+			<!-- Tour -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">TOUR<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			            	<li>
+			            		<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/setting.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/setting/tour">Thiết lập thông tin tour</a>			            	</li>
+			            	<li>
+			            	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/book.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/tour/manage_book_seft">Quản lý đặt Tour tự thiết kế</a>			            	</li>
+			            	<li>
+			            		<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/book.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/tour/manage_book">Quản lý đặt Tour</a>			            	</li>
+			            	<li>
+			            		<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/tour/manage_cat">Quản lý danh mục tour</a>			            	</li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/tour/create">Thêm tour mới</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/tour/manage_region">Quản lý địa danh</a>			                </li>
+		            		<li>
+		            			<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+		            			<a href="http://greencruise.com.vn/admin/tour/create_region">Thêm địa danh</a>		            		</li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			 </div>
+			
+			 <!-- Hotel -->	    
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">HOTEL<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			            	<li>
+			            		<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/book.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/hotel/manage_book">Quản lý đặt khách sạn</a>			            	</li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/hotel/manage">Quản lý khách sạn</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/hotel/create">Thêm khách sạn mới</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/hotel/manage_cat_room">Danh mục phòng</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/hotel/create_cat_room">Thêm danh mục phòng</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/hotel/manage_room">Quản lý phòng</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/hotel/create_room">Thêm phòng mới</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+			
+			<!-- Support -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">TƯ VẤN VÀ HỎI ĐÁP<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/consult/manage_faq">Quản lý câu hỏi thường gặp (FAQ)</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/consult/manage_feedback">Thắc mắc khách hàng</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+		    
+			<!-- News -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">TIN TỨC<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/news/category">Quản lý danh mục</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/news/create_category">Thêm danh mục</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/news/create_news">Thêm tin tức</a>			                </li>                
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+		    
+		    <!-- flight -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">CHUYẾN BAY<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			            	<li>
+			            		<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/book.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/flight/manage_book">Quản lý đặt vé máy bay</a>			            	</li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/flight/manage">Quản lý chuyến bay</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/flight/create">Thêm chuyến bay</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+		    
+		    <!-- vehicle -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">PHƯƠNG TIỆN<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			            	<li>
+			            		<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/book.png" class="left_img"/>
+			            		<a href="http://greencruise.com.vn/admin/vehicle/manage_book">Quản lý đặt vé tàu - xe</a>			            	</li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/vehicle/manage">Quản lý phương tiện</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/vehicle/create">Thêm phương tiện</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+			
+			<!-- advert -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">QUẢNG CÁO<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/advert/manage">Quản lý danh mục</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/advert/create">Thêm danh mục</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/advert/create_advert">Thêm quảng cáo</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+		    
+		    <!-- nickchat -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">NICKCHAT<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/nickchat/manage">Quản lý nickchat</a>			                </li>
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/nickchat/create">Thêm nickchat</a>			                </li>
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+		    		    
+			<!-- Account -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">THÀNH VIÊN<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/manage.png" class="left_img"/>
+			                	<a href="http://greencruise.com.vn/admin/auth/manage">Quản lý thành viên</a>			                </li>                
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+			
+			<!-- Statistic -->
+		    <div class="panel_content">
+			    <div class="panel_top"><div></div></div>
+			    <div class="panel_left">
+			        <div class="panel_right">
+			        	<h5 class="title close">THỐNG KÊ<span class="close_img"></span></h5>
+			            <ul class="vmenu">
+			                <li>
+			                	<img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/icon-statistics.png" class="left_img"/>
+			                	<a href="https://www.google.com/accounts/ServiceLogin?service=analytics&passive=true&nui=1&continue=https://www.google.com/analytics/settings/&followup=https://www.google.com/analytics/settings/" target="_blank">Quản lý thống kê</a>			                </li>                
+			            </ul>
+			        </div><!--bg_centerleftt-->
+			    </div><!--bg_centerright-->
+			    <div class="panel_bottom"><div></div></div>
+			</div>
+		</div>
+		</div>
+	</div>
+<div class="panel_bottom"><div></div></div>
+<p style="margin-top:10px;"></p>                                                    
+        </div>        
+        <!-- ########################## END LEFT ###################### -->
+        
+        <!-- ########################## WRAPPER ########################## -->
+        <form action="http://greencruise.com.vn/admin/flight/edit_book/1" id="frm_edit_book" method="post">        <div id="wrapper" class="panel">
+            <div class="panel_top"><div></div></div>            
+            <div class="panel_left">
+                <div class="panel_right">
+                	<!-- ########################## ICON & BREADCRUMB ########################## --> 
+				    <p class="float_l"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/user.gif"  title=""/></p>					
+				    <p class="float_l">
+				        <span class="large"></span><br />
+				        <span class="quiet"></span>
+				    </p>
+				    <div class="clear"></div>
+				    
+				    <!-- ########################## TOOLBAR ########################## -->
+				    <div class="toolbar">
+				    	<button title="" class="negative" type="button" onclick="window.location = 'http://greencruise.com.vn/admin/flight/manage_book'"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/back.png"/><br/>Thoát</button>
+				    	<button title="" class="positive" type="submit" id="btn_submit"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/insert_row.png"/><br/>Lưu</button>
+				    </div>
+				    
+				    <!-- ########################## MESSAGE ########################## -->
+				    <div id="message">
+				    					    </div>
+				    <div class="clear"></div>
+				
+				<!-- ########################## CONTENT ########################## -->
+					<fieldset>
+						<legend>Thông tin</legend>
+						<a id="save_xsl" class="button" href="http://greencruise.com.vn/admin/flight/xsl/1"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/icons/xls.png"/>Xuất file Exel</a>
+						<div class="clear"></div>
+						<table class="editing">
+							<tr>
+			            		<th>Đã check  : </th>
+			            		<td>
+			            			<input name= "is_checked"  value="0" type="radio" autocomplete="off"/>
+			            			Đóng			            			<input name= "is_checked"  checked="checked" value="1" type="radio" autocomplete="off"/>
+			            			Mở			            		</td>
+			            	</tr>
+							<tr>
+			            		<th>Ngày đăng : </th>
+			            		<td>
+			            			<input type="hidden" name="book" value="1"/>
+			            			04:46:13 - 07/10/2010			            			
+			            			<input name= "type_ticket"  checked="checked" value="0" type="radio" autocomplete="off"/>
+			            			Một chiều			            			<input name= "type_ticket"  value="1" type="radio" autocomplete="off"/>
+			            			Khứ hồi			            		</td>
+			            	</tr>
+							<tr>
+			            		<th>Họ và tên: </th>
+			            		<td>
+			            			<input name="fullname" value="asdfasdf" autocomplete="off"  type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Điện thoại: </th>
+			            		<td>
+			            			<input name="phone" value="12345678" autocomplete="off"  type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Email: </th>
+			            		<td>
+			            			<input name="email" value="asdfasdf@yahoo.com" autocomplete="off"  type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Ngày khởi hành: </th>
+			            		<td>
+			            			<input id="date_start" name="date_start" value="10/12/2010" style="margin-right:2px;" autocomplete="off"  type="text" size="50"  readonly="readonly"/>
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Từ: </th>
+			            		<td>
+			            			<input name="departure"  value="asdfasdfasdf"  autocomplete="off" type="text" size="50"/>
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Đến: </th>
+			            		<td>
+			            			<input name="arrival" value="asdfasdfasdf" autocomplete="off" type="text" size="50"/>
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Số lượng khách: </th>
+			            		<td>
+			            			<input name="total_person" value="5" autocomplete="off" size="1" maxlength="2" type="text" style="text-align:center" readonly="readonly" />
+			            			<span style="padding-left:12px;">Người lớn</span>: 
+			            			<input name="adult" value="4"  autocomplete="off" size="1" maxlength="2" type="text" style="text-align:center" readonly="readonly" />
+			            			<span style="padding-left:12px;">Trẻ em</span>: 
+			            			<input name="child" value="1" autocomplete="off" size="1" maxlength="2" type="text" style="text-align:center" readonly="readonly" />
+			            			<span style="padding-left:12px;">Trẻ nhỏ</span>: 
+			            			<input name="baby" value="0" autocomplete="off" size="1" maxlength="2" type="text" style="text-align:center" readonly="readonly" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Hình thức thanh toán: </th>
+			            		<td>
+			            			<input name= "payment_method"  value="0" type="radio" autocomplete="off"/>
+			            			Tiền mặt			            			<input name= "payment_method"  checked="checked" value="1" type="radio" autocomplete="off"/>
+			            			Chuyển khoản			            			<input name= "payment_method"  value="2" type="radio" autocomplete="off"/>
+			            			Thẻ quốc tế			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Yêu cầu khác: </th>
+			            		<td>
+			            			<textarea name="other_requirement" autocomplete="off" style="width:322px; height:70px;" >asdfasdfasdf</textarea>
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Địa chỉ: </th>
+			            		<td>
+			            			<input name="address" value="" autocomplete="off" type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Công ty: </th>
+			            		<td>
+			            			<input name="company" value="" autocomplete="off" type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Mã số thuế: </th>
+			            		<td>
+			            			<input name="tax_code" value="" autocomplete="off" type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<th>Quốc gia: </th>
+			            		<td>
+			            			<input name="nation" value="" autocomplete="off" type="text" size="50" />
+			            		</td>
+			            	</tr>
+			            	<tr>
+			            		<td colspan="2">
+			            			
+			            			<h5>Danh sách người tham gia</h5>
+			            			
+			            			<table id="list_p" cellspacing="1">
+										<tr>
+											<td align="center">STT</td>
+											<td>Họ tên <span style="color:red;">*</span> </td>
+											<td>Ngày sinh </td>
+											<td>Địa chỉ </td>
+											<td>Giới tính </td>
+											<td>Độ tuổi </td>
+										</tr>
+										
+																				<tr>
+											<td align="center">1</td>
+											<td><input name="txt_name[]" value="asdfasdf" autocomplete="off" type="text"/><input name="hd_id[]" value="1" type="hidden" /></td>
+											<td><input name="txt_birthday[]" value="" type="text" autocomplete="off" size="8" readonly="readonly" style="background:#FFF; border:1px solid #7F9DB9; height:18px;"/></td>
+											<td><input name="txt_address[]" value="" autocomplete="off" type="text"/></td>
+											<td>
+												<select name="sl_sex[]" style="width:70px;" autocomplete="off">
+													<option value="0"  selected="selected">Nữ</option>
+													<option value="1" >Nam</option>
+												</select>
+											</td>
+											<td>	
+												<select name="sl_age[]" style="width:82px;" autocomplete="off">
+													<option value="0" >Người lớn</option>
+													<option value="1"  selected="selected">Trẻ em</option>
+													<option value="2" >Trẻ nhỏ</option>
+												</select>
+											</td>
+																					</tr>
+																				<tr>
+											<td align="center">2</td>
+											<td><input name="txt_name[]" value="124124124" autocomplete="off" type="text"/><input name="hd_id[]" value="6" type="hidden" /></td>
+											<td><input name="txt_birthday[]" value="" type="text" autocomplete="off" size="8" readonly="readonly" style="background:#FFF; border:1px solid #7F9DB9; height:18px;"/></td>
+											<td><input name="txt_address[]" value="" autocomplete="off" type="text"/></td>
+											<td>
+												<select name="sl_sex[]" style="width:70px;" autocomplete="off">
+													<option value="0"  selected="selected">Nữ</option>
+													<option value="1" >Nam</option>
+												</select>
+											</td>
+											<td>	
+												<select name="sl_age[]" style="width:82px;" autocomplete="off">
+													<option value="0"  selected="selected">Người lớn</option>
+													<option value="1" >Trẻ em</option>
+													<option value="2" >Trẻ nhỏ</option>
+												</select>
+											</td>
+																						<td><a href="" class="remove_row" rel="6"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/delete-icon-large.gif" alt="remove"></a></td>
+																					</tr>
+																				<tr>
+											<td align="center">3</td>
+											<td><input name="txt_name[]" value="eryeryery" autocomplete="off" type="text"/><input name="hd_id[]" value="7" type="hidden" /></td>
+											<td><input name="txt_birthday[]" value="" type="text" autocomplete="off" size="8" readonly="readonly" style="background:#FFF; border:1px solid #7F9DB9; height:18px;"/></td>
+											<td><input name="txt_address[]" value="" autocomplete="off" type="text"/></td>
+											<td>
+												<select name="sl_sex[]" style="width:70px;" autocomplete="off">
+													<option value="0"  selected="selected">Nữ</option>
+													<option value="1" >Nam</option>
+												</select>
+											</td>
+											<td>	
+												<select name="sl_age[]" style="width:82px;" autocomplete="off">
+													<option value="0"  selected="selected">Người lớn</option>
+													<option value="1" >Trẻ em</option>
+													<option value="2" >Trẻ nhỏ</option>
+												</select>
+											</td>
+																						<td><a href="" class="remove_row" rel="7"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/delete-icon-large.gif" alt="remove"></a></td>
+																					</tr>
+																				<tr>
+											<td align="center">4</td>
+											<td><input name="txt_name[]" value="eryeryery" autocomplete="off" type="text"/><input name="hd_id[]" value="8" type="hidden" /></td>
+											<td><input name="txt_birthday[]" value="" type="text" autocomplete="off" size="8" readonly="readonly" style="background:#FFF; border:1px solid #7F9DB9; height:18px;"/></td>
+											<td><input name="txt_address[]" value="" autocomplete="off" type="text"/></td>
+											<td>
+												<select name="sl_sex[]" style="width:70px;" autocomplete="off">
+													<option value="0"  selected="selected">Nữ</option>
+													<option value="1" >Nam</option>
+												</select>
+											</td>
+											<td>	
+												<select name="sl_age[]" style="width:82px;" autocomplete="off">
+													<option value="0"  selected="selected">Người lớn</option>
+													<option value="1" >Trẻ em</option>
+													<option value="2" >Trẻ nhỏ</option>
+												</select>
+											</td>
+																						<td><a href="" class="remove_row" rel="8"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/delete-icon-large.gif" alt="remove"></a></td>
+																					</tr>
+																				<tr>
+											<td align="center">5</td>
+											<td><input name="txt_name[]" value="346346346" autocomplete="off" type="text"/><input name="hd_id[]" value="9" type="hidden" /></td>
+											<td><input name="txt_birthday[]" value="" type="text" autocomplete="off" size="8" readonly="readonly" style="background:#FFF; border:1px solid #7F9DB9; height:18px;"/></td>
+											<td><input name="txt_address[]" value="" autocomplete="off" type="text"/></td>
+											<td>
+												<select name="sl_sex[]" style="width:70px;" autocomplete="off">
+													<option value="0"  selected="selected">Nữ</option>
+													<option value="1" >Nam</option>
+												</select>
+											</td>
+											<td>	
+												<select name="sl_age[]" style="width:82px;" autocomplete="off">
+													<option value="0"  selected="selected">Người lớn</option>
+													<option value="1" >Trẻ em</option>
+													<option value="2" >Trẻ nhỏ</option>
+												</select>
+											</td>
+																						<td><a href="" class="remove_row" rel="9"><img src="http://greencruise.com.vn/themes/_admin/styles/default/images/delete-icon-large.gif" alt="remove"></a></td>
+																					</tr>
+																			</table>
+									<a href="" id="add_client">Thêm khách</a>
+			            			
+			            		</td>
+			            	</tr>
+						</table>
+					</fieldset>
+				<!-- ########################## END CONTENT ########################## -->  				  	    				   				    				                                                                                                                                                                            
+                </div>
+            </div>
+            <div class="panel_bottom"><div></div></div>
+        </div><!--/wrapper-->
+        </form>        <!-- ########################## END WRAPPER ###################### -->
+        <div class="clear"></div>        
+    </div><!--/containner-->
+</body>
+</html>

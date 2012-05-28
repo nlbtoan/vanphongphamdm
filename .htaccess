@@ -1,0 +1,23 @@
+#------------------------------
+<IfModule mod_rewrite.c>
+        DirectoryIndex index.php
+        RewriteEngine On
+        RewriteBase /
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteCond %{REQUEST_FILENAME} !-d
+
+        #RewriteCond $1 !^(index\.php|themes|robots\.txt)
+        RewriteRule ^(.*)$ /index.php/$1 [P]
+
+
+        RewriteCond %{HTTP_REFERER} !^http://forum.phuquocsmile.com/.*$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://forum.phuquocsmile.com$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://phuquocsmile.com/.*$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://phuquocsmile.com$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://www.forum.phuquocsmile.com/.*$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://www.forum.phuquocsmile.com$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://www.phuquocsmile.com/.*$      [NC]
+        RewriteCond %{HTTP_REFERER} !^http://www.phuquocsmile.com$      [NC]
+        RewriteCond %{HTTP_REFERER} !^$
+        #RewriteRule .*\.(jpe?g|JPE?G|gif|GIF|png|PNG|bmp|BMP|swf|SWF)$ http://www.phuquocsmile.com/upload/image/noimage.gif [R,NC]
+</IfModule>

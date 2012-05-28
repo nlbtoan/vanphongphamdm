@@ -1,0 +1,12 @@
+RewriteEngine on
+
+RewriteCond %{HTTP_REFERER} !^http://forum.phuquocsmile.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://forum.phuquocsmile.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://phuquocsmile.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://phuquocsmile.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.forum.phuquocsmile.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.forum.phuquocsmile.com$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.phuquocsmile.com/.*$      [NC]
+RewriteCond %{HTTP_REFERER} !^http://www.phuquocsmile.com$      [NC]
+RewriteRule .*\.(jpg|jpeg|gif|png|bmp|swf)$ http://www.phuquocsmile.com/upload/image/noimage.gif [R,NC]
+

@@ -1,0 +1,44 @@
+   .menu_horizontal {
+  
+            position: relative;
+            overflow: hidden;    
+            background:#f2ede4;
+			height: 30px;
+			width: 784px;
+			padding: 0;
+			margin: 0 8px;
+            
+
+        }
+                .menu_horizontal li {
+                    float: left;
+                    list-style: none;
+                }
+                    .menu_horizontal li.back {
+ 
+                        background-color: #dbeaef;
+                        width: 9px;
+                        height: 30px;
+                        z-index: 8;
+                        position: absolute;
+                    }
+                    .menu_horizontal li a {
+                        font: bold 12px arial;
+                        text-decoration: none;
+                        color: #0f5d98;
+                        outline: none;
+                        text-align: center;
+                        top: 7px;
+                        text-transform: uppercase;
+                        letter-spacing: 0;
+                        z-index: 10;
+                        display: block;
+                        float: left;
+                        height: 30px;
+                        position: relative;
+                        overflow: hidden;
+                        margin: auto 10px;
+                    }
+                        .menu_horizontal li a:hover, .menu_horizontal li a:active, .menu_horizontal li a:visited {
+                            border: none;
+                        }                    

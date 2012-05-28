@@ -1,0 +1,52 @@
+/*PRIMARY VIEW*/
+
+
+/*SECONDARY VIEW*/
+div.thumb-view .text, div.thumb-view .danhlam .line{ 
+	display: none; 
+}
+
+div.thumb-view .danhlam .pic_boxs{
+	height:170px;
+	width:170px;
+}
+
+div.thumb-view .danhlam .pic_boxs .fprice{
+	width:auto !important;
+	margin:7px 0 0 5px;
+}
+
+div.thumb-view .danhlam img{
+	height:160px;
+	width:160px;
+	margin:5px 0 0 5px;
+}
+
+div.thumb-view .danhlam .text_2{
+	margin:8px 0 0 5px;
+	font-weight: bold;
+	color:#197DAB;
+	font-size:13px;
+	display: block !important;
+}
+div.thumb-view .danhlam{
+	float:left;
+	width:183px;
+	min-height:250px;
+}
+
+a.switch-thumb {
+    width: 49px;
+    height: 26px;
+    line-height: 26px;
+    padding: 0;
+    margin: 0 20px 0 0;
+    display: block;
+    background: url(images/switch.png) no-repeat;
+    outline: none;
+    text-indent: -9999px;
+    float:right;
+}
+a.swap { 
+	background-position: left bottom; 
+}
