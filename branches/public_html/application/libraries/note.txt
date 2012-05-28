@@ -1,0 +1,24 @@
+- Finder.php :  lớp tiện ích hỗ trợ việc tìm view ở các themes
+
+- Ion_auth.php : lớp tiện ích hỗ trợ quản lý phần quyền
+
+- MY_Controller : 
++ Controller::MY_Controller : lớp Controller cha cao nhất trong hệ thống
++ MY_Controller::MY_Base : lớp cha của các trang Front-End
++ MY_Controller::MY_Admin : lớp cha của các trang Back-End
+
+- MY_Loader.php:
++ Loader::MY_Loader : Overwrite lại các phương thức sau 
+	+ view : khi gọi $this->load->view('ten_view'), phương thức sẽ tìm trong /themes trước, nếu không có "ten_view.php", 
+	phương thức sẽ tìm tiếp trong application/views trước khi báo lỗi 404;
+	
+- MY_Router.php:
++ Router::MY_Router : Overwrite lại các phương thức sau:
+	+ MY_Router : thêm phần load DB
+	+ _validate_request: giúp tìm đường dẫn trong DB trước, sau khi tìm trên đĩa cứng
+	
+- Setting.php : ánh xạ của bảng setting vào 1 đối tượng setting
+
+- Sitemap.php : lớp tiện ích hỗ trợ phát sinh và cập nhập lên các công cụ quản trị web của google, yahoo, bing...
+
+- Theme : lớp tiện ích để quản lý theme

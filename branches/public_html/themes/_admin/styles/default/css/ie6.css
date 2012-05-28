@@ -1,0 +1,28 @@
+ul{behavior: url(js/whateverhover.htc);}
+/* but IE5.x and IE6 need this lot to style the flyouts and path followed */
+/* show next level */
+.menu_horizontal li:hover ul,
+.menu_horizontal li:hover li:hover ul,
+.menu_horizontal li:hover li:hover li:hover ul,
+.menu_horizontal li:hover li:hover li:hover li:hover ul,
+.menu_horizontal li:hover li:hover li:hover li:hover li:hover ul {display: block;}
+
+.menu_vertical li:hover ul,
+.menu_vertical li:hover li:hover ul,
+.menu_vertical li:hover li:hover li:hover ul,
+.menu_vertical li:hover li:hover li:hover li:hover ul,
+.menu_vertical li:hover li:hover li:hover li:hover li:hover ul {display: block;  width: 100%;}
+
+/* keep further levels hidden */
+.menu_horizontal li:hover ul ul,
+.menu_horizontal li:hover li:hover ul ul,
+.menu_horizontal li:hover li:hover li:hover ul ul,
+.menu_horizontal li:hover li:hover li:hover li:hover ul ul,
+.menu_horizontal li:hover li:hover li:hover li:hover li:hover ul ul {display:none;}
+
+.menu_vertical li:hover ul ul,
+.menu_vertical li:hover li:hover ul ul,
+.menu_vertical li:hover li:hover li:hover ul ul,
+.menu_vertical li:hover li:hover li:hover li:hover ul ul,
+.menu_vertical li:hover li:hover li:hover li:hover li:hover ul ul {display:none;}
+

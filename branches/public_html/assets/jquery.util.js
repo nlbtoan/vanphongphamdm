@@ -1,0 +1,5 @@
+(function($){
+$.util = {
+	
+};
+})(jQuery);

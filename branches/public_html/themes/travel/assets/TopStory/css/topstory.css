@@ -1,0 +1,52 @@
+div.HomeTopStory{
+	overflow:hidden;
+	position:absolute;
+	z-index:1;
+}
+
+div.HomeTopStoryColorLayer{
+	overflow:hidden;
+	position:absolute;
+	background-color:black;
+	filter:alpha(opacity=40);
+	-moz-opacity:0.40;
+	opacity:0.40;
+	z-index:3;
+}
+div.HomeTopStoryColorLayerContent{
+	overflow:hidden;
+	position:absolute;
+	z-index:4;
+}
+div.HomeTopStoryColorLayerSubImage{
+	position:absolute;
+	z-index:6;
+}
+div.HomeTopStoryTitle{
+	cursor:pointer;
+	position:absolute;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:#d6f451;
+	z-index:10;
+	text-align:left;
+}
+div.HomeTopStoryTitleShadow{
+	position:absolute;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	color:black;
+	z-index:9;
+	text-align:left;
+}
+div.HomeTopStoryLead{
+	position:absolute;
+	font-family:Arial;
+	font-size:11px;
+	color:white;
+	z-index:10;
+	text-align: left;
+	overflow: hidden;
+}

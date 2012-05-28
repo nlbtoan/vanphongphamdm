@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+
+/* CSS Document */
+#container{width:960px; margin:0 auto;}
+.container_child{margin-top:10px;}
+
+#header{text-align:right; margin:0 0 20px 0; height:150px; position:relative;}
+#header p{padding:30px;}
+#header h3{color: #999; padding:0 50px 0 0;}
+.header_menu{position:absolute; bottom:0; left:0;}
+.hor_menu{margin-right:5px; float:left; font-weight:bold;}
+.left_hor, .right_hor{background-repeat:no-repeat; background-position:left top;height:30px; width:2px; float:left;}
+.left_hor{background-image:url(../images/menu_left.png)}
+.right_hor{background-image:url(../images/menu_right.png)}
+.center_hor{background:url(../images/menu_center.png); height:30px; float:left; line-height:30px; padding:0 10px;}
+
+#left{width:250px; text-align:center; float:left; padding-right:10px}
+
+
+ul.vmenu {padding:7px 5px; line-height:24px;}
+ul.vmenu li{border:1px dotted #e9e9e9; border-width: 0 0 1px 0;}
+ul.vmenu li a:hover{color:#FF7802; font-weight:bold;}
+
+#wrapper{width:700px;float:left;}
+/*icon*/
+.icon_insert{ margin-top:7px; }
+.icon_button{ padding:0; margin:0; }
+
+.textcenter{ text-align:center; }
+.bg_centerleft p{ margin:3px; padding:0; }
+
+/*toolbar*/
+.toolbar{background-color: #FBFBFB; height:46px; border:1px solid #E9E9E9;}
+.toolbar button{width:44px;height:42px;margin:2px 2px;padding:0px !important;float:right;}
+.toolbar button img{width:24px;height:24px;padding-left:3px;}
+
+/*table info*/
+table.editing {border-collapse: inherit; border-spacing: 3px;}
+table.editing td, table.editing th{padding:3px;}
+table.editing th{vertical-align:top;background-color:#F6F6F6;border-bottom:1px solid #E9E9E9;border-right:1px solid #E9E9E9;color:#666666;font-weight:bold;text-align:right;width:140px;}
+.textfield_small {width:50px;text-align:center}
+.textfield_medium {width:150px;}
+.textfield_large {width:250px;}
+.moreimage {padding:0 0 7px 0;}
+
+/*Left*/
+.left_img {width:15px; height:15px; margin:-4px 2px;}
+
+#message { display: none; }

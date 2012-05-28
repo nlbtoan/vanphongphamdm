@@ -1,0 +1,23 @@
+#<IfModule mod_rewrite.c>
+#DirectoryIndex index.php
+#Options +FollowSymlinks
+#RewriteEngine On
+#RewriteBase /
+#RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+#RewriteCond $1 !^(index\.php|themes|install|files|robots\.txt)
+#RewriteRule ^(.*)$ index.php/$1 [L]
+
+#       Options +FollowSymlinks
+#	RewriteEngine On
+#	RewriteBase /
+	
+#	RewriteCond %{REQUEST_FILENAME} !-f
+#	RewriteCond %{REQUEST_FILENAME} !-d
+#	RewriteRule ^(.*)$ index.php/$1 [L]
+	
+#	RewriteCond %{HTTP_REFERER} !^$
+#	RewriteCond %{HTTP_REFERER} !^http://(www.)?phuquocsmile.com/.*$ [NC]
+#	RewriteRule .(gif|jpg|swf|flv|png)$ / [R=302,L]
+#<IfModule>
