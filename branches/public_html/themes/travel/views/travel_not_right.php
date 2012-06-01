@@ -6,7 +6,21 @@
 <meta name="keywords" content="<?php echo $this->setting->item('ceo_value')?>" />
 <meta name="description" content="Green Cruise Tourism - Công ty du lịch" />
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title><?php echo $title?></title>
+<title><?php echo $title?>, tour du lich phu quoc, du lich phu quoc</title>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32290915-1']);
+  _gaq.push(['_setDomainName', 'phuquocsmile.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 
 <?php load_css('styles/default/default.css') ?>
 <?php load_css('styles/default/menu.css') ?>
@@ -224,19 +238,6 @@ $slide_data = $ci->tour_model->get_data( 'id, title, image, is_hot');
 </div>
 </div>
 
-<script type="text/javascript">
-
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-19478149-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 
 </body>
 </html>
