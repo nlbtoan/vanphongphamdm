@@ -561,7 +561,7 @@ class Consult extends MY_Admin{
 					  
 					$this->load->library('email');
 					
-					$this->email->from('dtthaison@gmail.com',$name_mail);  
+					$this->email->from('thanhminh@phuquocsmile.com',$name_mail);  
 					$this->email->to($email_to);  
 					$this->email->subject($subject);  
 					$this->email->message($mail_content);  
