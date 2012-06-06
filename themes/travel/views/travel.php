@@ -329,5 +329,7 @@ if ( empty($list_images) ) {
 <?php load_js('assets/TopStory/AjaxRequest.js');?>
 <?php load_js('assets/TopStory/Library.js');?>
 <?php load_js('assets/TopStory/TopStory.js');?>
+<a href="http://www.prchecker.info/" title="Free PageRank Checker" target="_blank">
+<img src="http://pr.prchecker.info/getpr.php?codex=aHR0cDovL3BodXF1b2NzbWlsZS5jb20=&tag=1" alt="Free PageRank Checker" style="border:0;" /></a>
 </body>
 </html>
