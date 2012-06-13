@@ -5,7 +5,20 @@ p{line-height:18px;}
 ul { list-style:none;}
 body,td,th {font-family: Arial;}
 img{border:0;}
-body {font-size:12px; color:#666666;}
+
+
+html {
+    background: url("images/bckgPattern.jpg") repeat scroll 0 0 #EEE9CC;
+    display: block;
+}
+
+/*body {
+    font-size:12px; color:#666666;
+    background: url("images/bckg.jpg") repeat-x scroll 0 0 transparent;
+    font-family: Arial;
+    line-height: 130%;
+    display: block;
+}*/
 /*link*/
 
 a{
@@ -24,21 +37,59 @@ a:focus{ outline:none; }
 #mpage {
 	background::#f7f5e8;
 	height: auto;
-	width: 800px;
+	width: 965px;
 	margin-right: auto;	margin-left: auto;
+}
+#page {
+    font-size:12px; color:#666666;
+    background: url("images/bckg.jpg") repeat-x scroll 0 0 transparent;
+    font-family: Arial;
+    line-height: 130%;
+    display: block;
+}
+#top {
+    height: 29px !important;
+    margin: 0 auto;
+    padding-top: 20px !important;
+    width: 960px;
+}
+#topNav ul {
+    margin-top: -10px;
+}
+#topNav {
+    float: right;
+}
+#topNav li {
+    background: url("images/topnav-li-bg.gif") no-repeat scroll left center transparent;
+    float: left;
+    line-height: normal !important;
+    margin-left: 5px;
+    padding-left: 3px;
+}
+li {
+    list-style: none outside none;
+}
+#topNav li a {
+    background: url("images/topnav-li-bg02.gif") no-repeat scroll right center transparent;
+    color: #D3E2E9;
+    display: block;
+    padding: 5px 10px 5px 5px;
 }
 #header {
 	margin: 0px;
 	padding: 0px;
-	height: 150px;
-	width: 800px;
+	width: 965px;
+    background: url("images/gore.jpg") no-repeat scroll left top transparent;
+    height: 185px;
+    position: relative;
 }
 #header #logo {
-	padding: 0px;
-	float: left;
-	height: 127px;
-	width: 175px;
-	margin:10px 0 0 30px;
+    display: block;
+    height: 114px;
+    left: 415px;
+    position: absolute;
+    /*top: -22px;*/
+    width: 283px;
 }
 
 #main {
@@ -48,7 +99,7 @@ a:focus{ outline:none; }
 
 #c_main {
 	/*height: 1000px;*/
-	width: 800px;
+	width: 965px;
 	background-color: #dbeaef;
 	margin: -3px 0px;
 	padding: 0px;
@@ -56,7 +107,7 @@ a:focus{ outline:none; }
 }
 #c_main #slide {
 	height: 183px;
-	width: 800px;
+	width: 965px;
 	margin-top: 12px;
 	background-color: #f2ede4;
 	margin-right: 0px;
@@ -70,7 +121,7 @@ a:focus{ outline:none; }
 }
 #top_cmain {
 	height: 20px;
-	width: 800px;
+	width: 965px;
 	padding: 0px;
 	background-image: url(images/to_cmain.gif);
 	background-repeat: no-repeat;
@@ -79,7 +130,7 @@ a:focus{ outline:none; }
 	clear: both;
 }
 #Lajax {
-	width: 784px;
+	width: 948px;
 	margin-right: 8px;
 	margin-left: 8px;
 	/*height: 764px;*/
@@ -90,7 +141,7 @@ a:focus{ outline:none; }
 }
 #bot_cmain{
 	height: 10px;
-	width: 784px;
+	width: 965px;
 	padding: 0;
 	margin-bottom:10px;
 	background-image: url(images/bot_cmain.jpg);
@@ -103,13 +154,12 @@ a:focus{ outline:none; }
 	font-size:12px;
 	color:#999;
 	text-align:center;
-	background-repeat: no-repeat;
-	background-position: center top;
-	margin: 3px 0;
+    background: url("images/footer-bg.gif") repeat-x scroll 0 0 transparent;
+    margin: 3px 0 0;
 	padding: 20px 0px;
 	clear: both;
 	height: 140px;
-	width: 800px;
+	width: 965px;
 	background-color: #F7F5E8;
 	opacity: 0.85;
 	-ms-filter:"alpha(opacity=85)";
@@ -149,7 +199,7 @@ a:focus{ outline:none; }
 	/* required settings */
 	position:relative;
 	overflow:hidden;
-	width: 735px;
+	width: 900px;
 	height:180px;
 }
 

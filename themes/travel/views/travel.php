@@ -136,30 +136,38 @@ if ( empty($list_images) ) {
 //echo'<pre>';var_dump($list_images);die();
 ?>
 <body>
-<img id="background" src="<?php echo base_url().$this->setting->item('background');?>"/>
+
 <div id="page">
 <div id="mpage">
+    <div id="top">
+        <div id="topNav">
+            <ul>
+                <li>
+                    <?php echo lang('language');?>
+                </li>
+                <?php foreach($lang as $item):?>
+                <li>
+                    <a href="<?php echo base_url().$item['abbr'];?>"><img src="<?php echo theme_url('styles/default/images/lang/'.$item['abbr'].'.jpg')?>" alt="" /></a>
+                </li>
+                <?php endforeach;?>
+            </ul>
+        </div>
+    </div>
   <div id="header">
     <div id="logo"><img src="<?php echo base_url().$logo;?>" alt="" width="173" height="128" /></div>
-    <div id="lang">
-       <p style="width:62px; float:left; padding-left:2px;"><?php echo lang('language');?></p>
-       <?php foreach($lang as $item):?>
-           <a href="<?php echo base_url().$item['abbr'];?>"><img src="<?php echo theme_url('styles/default/images/lang/'.$item['abbr'].'.jpg')?>" alt="" width="26" height="16" border="0" /></a>
-       <?php endforeach;?>
-       <div style="clear:both;"></div>
-     </div>
+
     <?php if(!empty($banner)): ?><div id="banner"><a href="<?php echo $banner_url?>"><img src="<?php echo base_url().$banner;?>" width="450" height="90" alt="" /></a></div><?php endif; ?>
   </div>
   <div id="main">
-  	<div id="menu" style="width:784px">
+  	<div id="menu" style="width:965px">
   		<?php echo $list_of_menu = menu('main_menu'); ?>
   	</div>
 <div>
-	    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="800" height="250">
+	    <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="965" height="250">
 		 	<param name="movie" value="<?php echo base_url()?>/upload/flash/bcastr.swf?bcastr_xml_url=<?php echo site_url('slides')?>"><param name="quality" value="high">
 		 	<param name="menu" value="false"><param name=wmode value="opaque">
 		 	<param name="FlashVars" value="bcastr_config=|2|||0xFFFFFF|0xFF6600||4|3|1|_blank">
-		 	<embed src="<?php echo base_url()?>/upload/flash/bcastr.swf?bcastr_xml_url=<?php echo site_url('slides')?>" wmode="opaque" FlashVars="bcastr_config=|2|||0xFFFFFF|0xFF6600||4|3|1|_blank" menu="false" quality="high" width="800" height="250" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent"/>
+		 	<embed src="<?php echo base_url()?>/upload/flash/bcastr.swf?bcastr_xml_url=<?php echo site_url('slides')?>" wmode="opaque" FlashVars="bcastr_config=|2|||0xFFFFFF|0xFF6600||4|3|1|_blank" menu="false" quality="high" width="965" height="250" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent"/>
 		 </object>
   	</div>
     <div id="c_main">
@@ -280,7 +288,7 @@ if ( empty($list_images) ) {
       <div style="height:1px;"></div>
     </div>
     <div id="footerpanel">
-   		<div style="width:800px; margin:auto; font-weight:bold; position: relative;">
+   		<div style="width:965px; margin:auto; font-weight:bold; position: relative;">
    			<div style="position: absolute; bottom:-25px; left:-25px; *bottom:0px"><img src="<?php echo base_url().'upload/image/logo1.png';?>" width="26px"/></div>
    			<p style="float:left; color:#39B449; vertical-align: middle; padding:0 7px; line-height:26px;">
    				<span>GREEN CRUISE TOURISM</span>
