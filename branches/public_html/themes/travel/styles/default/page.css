@@ -2,7 +2,7 @@
 #left_main {
 	float: left;
 	/*height: 731px;*/
-	width: 550px;
+	width: 710px;
 	padding-top: 5px;
 	margin: 0
 	padding-bottom: 7px;
@@ -96,7 +96,7 @@
 }
 .text{
 	float:left;
-	width:400px;
+	width:560px;
 }
 .text_nd{
 	font-size:12px;
